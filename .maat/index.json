@@ -147,6 +147,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-205943-casprine-5c8c |\n| Time | 2026-05-26T20:59:43+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-205943-6859 |\n\n## Summary\n\nCreated ticket T-20260526-205943-6859.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-205945-casprine-6669.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-205945-casprine-6669 |\n| Time | 2026-05-26T20:59:45+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | goal.created |\n| Object | G-20260526-205945-61ac |\n\n## Summary\n\nCreated goal G-20260526-205945-61ac.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
       "title": "Goal: Improve initialize dogfood experience",
@@ -163,6 +169,12 @@
       "path": "projects/maat/goals/G-20260526-205935-0b9f.md",
       "title": "Goal: Provide terminal and TUI state visibility",
       "content": "# Goal: Provide terminal and TUI state visibility\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-205935-0b9f |\n| Project | maat |\n| Status | active |\n| Created | 2026-05-26T20:59:35+02:00 |\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/maat/goals/G-20260526-205945-61ac.md",
+      "title": "Goal: Keep state rebuildable on every machine",
+      "content": "# Goal: Keep state rebuildable on every machine\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-205945-61ac |\n| Project | maat |\n| Status | active |\n| Created | 2026-05-26T20:59:45+02:00 |\n"
     },
     {
       "type": "project",
