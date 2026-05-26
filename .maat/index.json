@@ -321,6 +321,12 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210359-casprine-60fd |\n| Time | 2026-05-26T21:03:59+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.commented |\n| Object | T-20260526-210357-2839 |\n\n## Summary\n\nFrom Orion setup: explicit push touches personal/shared memory and may be policy-sensitive. Maat should show remote URL and branch with language such as: This will push shared Maat memory to the configured remote.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-210401-casprine-fb3e.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210401-casprine-fb3e |\n| Time | 2026-05-26T21:04:01+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-210401-12c5 |\n\n## Summary\n\nCreated ticket T-20260526-210401-12c5.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
       "title": "Goal: Improve initialize dogfood experience",
@@ -553,6 +559,12 @@
       "path": "projects/maat/tickets/T-20260526-210357-2839.md",
       "title": "Ticket: Make remote storage pushes explicit and intentional",
       "content": "# Ticket: Make remote storage pushes explicit and intentional\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-210357-2839 |\n| Project | maat |\n| Goal | G-20260526-210331-013f |\n| Status | active |\n| Created | 2026-05-26T21:03:57+02:00 |\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-210401-12c5.md",
+      "title": "Ticket: Print compact ticket state transitions",
+      "content": "# Ticket: Print compact ticket state transitions\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-210401-12c5 |\n| Project | maat |\n| Goal | G-20260526-210331-013f |\n| Status | active |\n| Created | 2026-05-26T21:04:01+02:00 |\n"
     },
     {
       "type": "event",
