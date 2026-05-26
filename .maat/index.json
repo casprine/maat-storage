@@ -123,6 +123,12 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211351-casprine-d671 |\n| Time | 2026-05-26T21:13:51+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.commented |\n| Object | T-20260526-211343-4263 |\n\n## Summary\n\nStatus from docs/backend-tasks.md and current code: job lease/complete/fail and document events exist, and worker/API job flow is tested. Remaining process/status work called out by docs: review the user-facing document status vocabulary against queued/processing/partial-ready/ready/failed, keep stable IDs and no filesystem paths, and finish transactional complete/fail plus richer step timelines if not already covered by current implementation. Treat this as a contract-sensitive backend ticket.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-211357-casprine-bcd9.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211357-casprine-bcd9 |\n| Time | 2026-05-26T21:13:57+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.created |\n| Object | T-20260526-211357-ce4b |\n\n## Summary\n\nCreated ticket T-20260526-211357-ce4b.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-205351-2c15.md",
       "title": "Goal: Initialize Maat project memory",
@@ -205,6 +211,12 @@
       "path": "projects/driver/tickets/T-20260526-211343-4263.md",
       "title": "Ticket: Align processing statuses, job transactions, and timelines",
       "content": "# Ticket: Align processing statuses, job transactions, and timelines\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-211343-4263 |\n| Project | driver |\n| Goal | G-20260526-211231-a8ea |\n| Status | active |\n| Created | 2026-05-26T21:13:43+02:00 |\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/driver/tickets/T-20260526-211357-ce4b.md",
+      "title": "Ticket: Maintain watcher registration and document lifecycle",
+      "content": "# Ticket: Maintain watcher registration and document lifecycle\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-211357-ce4b |\n| Project | driver |\n| Goal | G-20260526-211237-c244 |\n| Status | active |\n| Created | 2026-05-26T21:13:57+02:00 |\n"
     },
     {
       "type": "event",
