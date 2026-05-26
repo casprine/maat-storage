@@ -31,6 +31,15 @@
           "created": "2026-05-26T21:49:40+02:00",
           "outcome": "The Go API owns OpenAPI and exposes authenticated setup, auth, documents, upload, search, settings, tags, collections, user grants, ingestion, and job routes with stable IDs, explicit statuses, and no filesystem path leaks.",
           "path": "projects/driver/goals/G-20260526-214940-f930.md"
+        },
+        {
+          "id": "G-20260526-214948-2ed0",
+          "project_key": "driver",
+          "title": "Run ingestion and indexing worker reliably",
+          "status": "active",
+          "created": "2026-05-26T21:49:48+02:00",
+          "outcome": "The always-on Go worker detects stable files, reports changes to the API, leases jobs, extracts/OCRs/translates/embeds/indexes text, records step outcomes, and writes generated artifacts outside the document directory.",
+          "path": "projects/driver/goals/G-20260526-214948-2ed0.md"
         }
       ],
       "events": [
@@ -53,6 +62,16 @@
           "object_id": "G-20260526-214940-f930",
           "summary": "Created goal G-20260526-214940-f930.",
           "path": "projects/driver/events/2026/05/E-20260526-214940-casprine-703f.md"
+        },
+        {
+          "id": "E-20260526-214948-casprine-d502",
+          "time": "2026-05-26T21:49:48+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "goal.created",
+          "object_id": "G-20260526-214948-2ed0",
+          "summary": "Created goal G-20260526-214948-2ed0.",
+          "path": "projects/driver/events/2026/05/E-20260526-214948-casprine-d502.md"
         }
       ]
     },
@@ -298,6 +317,12 @@
       "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214940-casprine-703f |\n| Time | 2026-05-26T21:49:40+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | goal.created |\n| Object | G-20260526-214940-f930 |\n\n## Summary\n\nCreated goal G-20260526-214940-f930.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-214948-casprine-d502.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214948-casprine-d502 |\n| Time | 2026-05-26T21:49:48+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | goal.created |\n| Object | G-20260526-214948-2ed0 |\n\n## Summary\n\nCreated goal G-20260526-214948-2ed0.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-214932-bfdb.md",
       "title": "Goal: Ship v1 private document drive",
@@ -308,6 +333,12 @@
       "path": "projects/driver/goals/G-20260526-214940-f930.md",
       "title": "Goal: Keep backend API contract stable and tested",
       "content": "# Goal: Keep backend API contract stable and tested\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-214940-f930 |\n| Project | driver |\n| Status | active |\n| Created | 2026-05-26T21:49:40+02:00 |\n\n## Outcome\n\nThe Go API owns OpenAPI and exposes authenticated setup, auth, documents, upload, search, settings, tags, collections, user grants, ingestion, and job routes with stable IDs, explicit statuses, and no filesystem path leaks.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/driver/goals/G-20260526-214948-2ed0.md",
+      "title": "Goal: Run ingestion and indexing worker reliably",
+      "content": "# Goal: Run ingestion and indexing worker reliably\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-214948-2ed0 |\n| Project | driver |\n| Status | active |\n| Created | 2026-05-26T21:49:48+02:00 |\n\n## Outcome\n\nThe always-on Go worker detects stable files, reports changes to the API, leases jobs, extracts/OCRs/translates/embeds/indexes text, records step outcomes, and writes generated artifacts outside the document directory.\n"
     },
     {
       "type": "project",
