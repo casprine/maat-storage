@@ -305,6 +305,15 @@
           "created": "2026-05-26T21:50:53+02:00",
           "outcome": "The Agent can preserve important local operational state across restarts and outages when real usage shows in-memory retry behavior is not enough.",
           "path": "projects/orion/goals/G-20260526-215053-8210.md"
+        },
+        {
+          "id": "G-20260526-215126-c321",
+          "project_key": "orion",
+          "title": "Improve alert operations",
+          "status": "active",
+          "created": "2026-05-26T21:51:26+02:00",
+          "outcome": "Alert channels can be tested and diagnosed intentionally, and non-critical notification delivery work no longer risks slowing Agent report ingestion.",
+          "path": "projects/orion/goals/G-20260526-215126-c321.md"
         }
       ],
       "tickets": [
@@ -606,6 +615,16 @@
           "object_id": "T-20260526-215106-b99e",
           "summary": "Tags: #agent #state #reliability #offline-spool #updates #token-rotation #post-deploy. Sources: docs/architecture/persistence-and-lifecycle.md Agent local state layer, docs/agent-core-contract.md open contract decisions, docs/milestones/m5-first-deploy-candidate.md deferred list.",
           "path": "projects/orion/events/2026/05/E-20260526-215114-casprine-20b4.md"
+        },
+        {
+          "id": "E-20260526-215126-casprine-a62f",
+          "time": "2026-05-26T21:51:26+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260526-215126-c321",
+          "summary": "Created goal G-20260526-215126-c321.",
+          "path": "projects/orion/events/2026/05/E-20260526-215126-casprine-a62f.md"
         }
       ]
     }
@@ -864,6 +883,12 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215114-casprine-20b4 |\n| Time | 2026-05-26T21:51:14+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-215106-b99e |\n\n## Summary\n\nTags: #agent #state #reliability #offline-spool #updates #token-rotation #post-deploy. Sources: docs/architecture/persistence-and-lifecycle.md Agent local state layer, docs/agent-core-contract.md open contract decisions, docs/milestones/m5-first-deploy-candidate.md deferred list.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215126-casprine-a62f.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215126-casprine-a62f |\n| Time | 2026-05-26T21:51:26+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-215126-c321 |\n\n## Summary\n\nCreated goal G-20260526-215126-c321.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-214751-82ed.md",
       "title": "Goal: Adopt Maat project memory",
@@ -898,6 +923,12 @@
       "path": "projects/orion/goals/G-20260526-215053-8210.md",
       "title": "Goal: Harden Agent local state durability",
       "content": "# Goal: Harden Agent local state durability\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215053-8210 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:50:53+02:00 |\n\n## Outcome\n\nThe Agent can preserve important local operational state across restarts and outages when real usage shows in-memory retry behavior is not enough.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260526-215126-c321.md",
+      "title": "Goal: Improve alert operations",
+      "content": "# Goal: Improve alert operations\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215126-c321 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:51:26+02:00 |\n\n## Outcome\n\nAlert channels can be tested and diagnosed intentionally, and non-critical notification delivery work no longer risks slowing Agent report ingestion.\n"
     },
     {
       "type": "project",
