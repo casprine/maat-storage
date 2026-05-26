@@ -9,6 +9,12 @@
       "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-205351-casprine-1ca8 |\n| Time | 2026-05-26T20:53:51+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | goal.created |\n| Object | G-20260526-205351-2c15 |\n\n## Summary\n\nCreated goal G-20260526-205351-2c15.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-205400-casprine-8c9a.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-205400-casprine-8c9a |\n| Time | 2026-05-26T20:54:00+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.created |\n| Object | T-20260526-205400-d863 |\n\n## Summary\n\nCreated ticket T-20260526-205400-d863.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-205351-2c15.md",
       "title": "Goal: Initialize Maat project memory",
@@ -19,6 +25,12 @@
       "path": "projects/driver/project.md",
       "title": "Project: Driver",
       "content": "# Project: Driver\n\n| Field | Value |\n|---|---|\n| Project Key | driver |\n| Display Name | Driver |\n| Status | active |\n| Created | 2026-05-26T20:52:36+02:00 |\n| Updated | 2026-05-26T20:52:36+02:00 |\n\n## Summary\n\nLinked from `/Users/casprine/Desktop/vendor/sunday-studio/drive`.\n\n## Identity\n\n| Field | Value |\n|---|---|\n| Primary Repo | /Users/casprine/Desktop/vendor/sunday-studio/drive |\n| Remote | git@github.com:sunday-studio/driver.git |\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/driver/tickets/T-20260526-205400-d863.md",
+      "title": "Ticket: Wire Maat instructions into repo",
+      "content": "# Ticket: Wire Maat instructions into repo\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-205400-d863 |\n| Project | driver |\n| Goal | G-20260526-205351-2c15 |\n| Status | active |\n| Created | 2026-05-26T20:54:00+02:00 |\n"
     },
     {
       "type": "project",
