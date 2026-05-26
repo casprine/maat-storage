@@ -85,6 +85,19 @@
             "The friction points are captured in Markdown with concrete symptoms and recommended improvements, and the result is available for future Maat product work."
           ],
           "path": "projects/orion/tickets/T-20260526-214824-a803.md"
+        },
+        {
+          "id": "T-20260526-214853-0007",
+          "project_key": "orion",
+          "goal_id": "G-20260526-214843-eaa4",
+          "title": "Split agent availability from monitor health",
+          "status": "active",
+          "created": "2026-05-26T21:48:53+02:00",
+          "description": "Implement and document a clearer health model that separates agent process availability, missing agent reports, stale monitor reports, monitor check failures, and threshold-based monitor rollups.",
+          "acceptance": [
+            "Agent and monitor health are computed and presented so one or a few monitor failures do not incorrectly make a live agent look fully down, and the UI explains why a status is degraded or down."
+          ],
+          "path": "projects/orion/tickets/T-20260526-214853-0007.md"
         }
       ],
       "events": [
@@ -153,6 +166,16 @@
           "object_id": "G-20260526-214843-eaa4",
           "summary": "Created goal G-20260526-214843-eaa4.",
           "path": "projects/orion/events/2026/05/E-20260526-214843-casprine-9ace.md"
+        },
+        {
+          "id": "E-20260526-214853-casprine-3193",
+          "time": "2026-05-26T21:48:53+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260526-214853-0007",
+          "summary": "Created ticket T-20260526-214853-0007.",
+          "path": "projects/orion/events/2026/05/E-20260526-214853-casprine-3193.md"
         }
       ]
     }
@@ -207,6 +230,12 @@
       "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214843-casprine-9ace |\n| Time | 2026-05-26T21:48:43+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-214843-eaa4 |\n\n## Summary\n\nCreated goal G-20260526-214843-eaa4.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-214853-casprine-3193.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214853-casprine-3193 |\n| Time | 2026-05-26T21:48:53+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-214853-0007 |\n\n## Summary\n\nCreated ticket T-20260526-214853-0007.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-214751-82ed.md",
       "title": "Goal: Adopt Maat project memory",
@@ -235,6 +264,12 @@
       "path": "projects/orion/tickets/T-20260526-214824-a803.md",
       "title": "Ticket: Document Maat setup friction",
       "content": "# Ticket: Document Maat setup friction\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-214824-a803 |\n| Project | orion |\n| Goal | G-20260526-214751-82ed |\n| Status | active |\n| Created | 2026-05-26T21:48:24+02:00 |\n\n## Description\n\nCapture the friction discovered while initializing and using Maat with Orion, including storage access, setup output, upstream tracking, SQLite cache dirtiness, push boundaries, and ticket state clarity.\n\n## Acceptance\n\n- The friction points are captured in Markdown with concrete symptoms and recommended improvements, and the result is available for future Maat product work.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-214853-0007.md",
+      "title": "Ticket: Split agent availability from monitor health",
+      "content": "# Ticket: Split agent availability from monitor health\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-214853-0007 |\n| Project | orion |\n| Goal | G-20260526-214843-eaa4 |\n| Status | active |\n| Created | 2026-05-26T21:48:53+02:00 |\n\n## Description\n\nImplement and document a clearer health model that separates agent process availability, missing agent reports, stale monitor reports, monitor check failures, and threshold-based monitor rollups.\n\n## Acceptance\n\n- Agent and monitor health are computed and presented so one or a few monitor failures do not incorrectly make a live agent look fully down, and the UI explains why a status is degraded or down.\n"
     }
   ]
 }
