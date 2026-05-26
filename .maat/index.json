@@ -1215,6 +1215,12 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211740-casprine-9110 |\n| Time | 2026-05-26T21:17:40+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-211731-5e33 |\n\n## Summary\n\nTags: #agent #state #reliability #offline-spool #updates #token-rotation #post-deploy. Sources: docs/architecture/persistence-and-lifecycle.md Agent local state layer, docs/milestones/m3-home-server-monitoring-baseline.md open risks, docs/milestones/m5-first-deploy-candidate.md deferred list, docs/agent-core-contract.md open contract decisions. Scope: durable offline report spool, retry metadata, local event/check cache, update bookkeeping, and future token rotation/revocation metadata.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-211747-casprine-9ef8.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211747-casprine-9ef8 |\n| Time | 2026-05-26T21:17:47+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-211747-653d |\n\n## Summary\n\nCreated goal G-20260526-211747-653d.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-204807-419c.md",
       "title": "Goal: Adopt Maat project memory",
@@ -1249,6 +1255,12 @@
       "path": "projects/orion/goals/G-20260526-211724-03ce.md",
       "title": "Goal: Harden Agent local state durability",
       "content": "# Goal: Harden Agent local state durability\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-211724-03ce |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:17:24+02:00 |\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260526-211747-653d.md",
+      "title": "Goal: Improve alert operations",
+      "content": "# Goal: Improve alert operations\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-211747-653d |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:17:47+02:00 |\n"
     },
     {
       "type": "project",
