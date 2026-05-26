@@ -327,6 +327,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210401-casprine-fb3e |\n| Time | 2026-05-26T21:04:01+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-210401-12c5 |\n\n## Summary\n\nCreated ticket T-20260526-210401-12c5.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-210403-casprine-7a44.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210403-casprine-7a44 |\n| Time | 2026-05-26T21:04:03+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.commented |\n| Object | T-20260526-210401-12c5 |\n\n## Summary\n\nFrom Orion setup: after create, claim, and complete it was hard to trust the current ticket state. Ticket commands should print compact transitions such as created, claimed by agent, completed, evidence recorded, and synced.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
       "title": "Goal: Improve initialize dogfood experience",
