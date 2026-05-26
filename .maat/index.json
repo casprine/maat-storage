@@ -584,7 +584,1249 @@
         "Primary Repo": "/Users/casprine/Desktop/vendor/sunday-studio/maat",
         "Remote": "git@github.com:sunday-studio/maat.git"
       },
-      "path": "projects/maat/project.md"
+      "path": "projects/maat/project.md",
+      "goals": [
+        {
+          "id": "G-20260526-215622-b461",
+          "project_key": "maat",
+          "title": "Enable autonomous agent project management",
+          "status": "active",
+          "created": "2026-05-26T21:56:22+02:00",
+          "outcome": "Agents can register projects, create actionable goals and tickets, claim work, leave progress notes, complete tickets with evidence, validate state, and sync storage without hand-editing Markdown.",
+          "path": "projects/maat/goals/G-20260526-215622-b461.md"
+        },
+        {
+          "id": "G-20260526-215622-fb74",
+          "project_key": "maat",
+          "title": "Improve initialize dogfood experience",
+          "status": "active",
+          "created": "2026-05-26T21:56:22+02:00",
+          "outcome": "Agents can initialize Maat in a new product repo, understand exactly where the storage repo is, copy concise agent instructions, and recover from common storage, Git, and PATH setup failures without guessing.",
+          "path": "projects/maat/goals/G-20260526-215622-fb74.md"
+        },
+        {
+          "id": "G-20260526-215623-2f6a",
+          "project_key": "maat",
+          "title": "Resolve Orion first-run setup friction",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "outcome": "The first Orion-on-Maat setup path is clear, recoverable, and honest about local storage, Git upstream, auto-sync, index cache, and ticket state, so agents can use Maat without accidental data loss or misleading status.",
+          "path": "projects/maat/goals/G-20260526-215623-2f6a.md"
+        },
+        {
+          "id": "G-20260526-215623-4775",
+          "project_key": "maat",
+          "title": "Keep search reliable across project state",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "outcome": "Agents can search projects, goals, tickets, and events reliably, with SQLite search when available and a Markdown fallback when local indexes are missing or stale.",
+          "path": "projects/maat/goals/G-20260526-215623-4775.md"
+        },
+        {
+          "id": "G-20260526-215623-69c5",
+          "project_key": "maat",
+          "title": "Reduce conflicts for many concurrent agents",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "outcome": "Multiple agents can add goals, tickets, comments, and completion evidence with minimal merge conflicts by writing object files and append-only events instead of shared mutable logs.",
+          "path": "projects/maat/goals/G-20260526-215623-69c5.md"
+        },
+        {
+          "id": "G-20260526-215623-8373",
+          "project_key": "maat",
+          "title": "Keep state rebuildable on every machine",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "outcome": "Maat project state remains plain Markdown in Git, while indexes, config, install metadata, and local caches can be rebuilt or repaired independently on each machine.",
+          "path": "projects/maat/goals/G-20260526-215623-8373.md"
+        },
+        {
+          "id": "G-20260526-215623-d877",
+          "project_key": "maat",
+          "title": "Provide terminal and TUI state visibility",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "outcome": "Humans and agents can inspect project state quickly from the terminal, including project summaries, ticket lists, ticket details, and a TUI dashboard that is readable during daily work.",
+          "path": "projects/maat/goals/G-20260526-215623-d877.md"
+        },
+        {
+          "id": "G-20260526-215624-e456",
+          "project_key": "maat",
+          "title": "Build a proper terminal UI for daily project navigation",
+          "status": "active",
+          "created": "2026-05-26T21:56:24+02:00",
+          "outcome": "The TUI becomes a fast daily workspace for scanning projects, navigating tickets, seeing ownership/state, filtering work, and refreshing when Markdown state changes.",
+          "path": "projects/maat/goals/G-20260526-215624-e456.md"
+        }
+      ],
+      "tickets": [
+        {
+          "id": "T-20260526-215622-0123",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215622-fb74",
+          "title": "Keep initialize setup document concise",
+          "status": "active",
+          "created": "2026-05-26T21:56:22+02:00",
+          "description": "Keep the generated initialize instructions focused on the daily agent loop and required command forms instead of long background documentation.",
+          "acceptance": [
+            "The generated snippet includes setup, read, create or claim, comment, complete, validate, and sync commands.",
+            "The snippet avoids obsolete flags and fits comfortably in an agent instruction file."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215622-0123.md"
+        },
+        {
+          "id": "T-20260526-215622-1c53",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215622-fb74",
+          "title": "Clarify auto-pull permission warnings",
+          "status": "active",
+          "created": "2026-05-26T21:56:22+02:00",
+          "description": "Make auto-pull failures clear when storage exists but the agent cannot perform network or Git operations, without masking the command result.",
+          "acceptance": [
+            "Human output explains that the Markdown read or write still happened when only auto-pull failed.",
+            "Agent-use output emits a warning update with the Git error and storage path."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215622-1c53.md"
+        },
+        {
+          "id": "T-20260526-215622-3bd0",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215622-fb74",
+          "title": "Show storage access hint on permission failures",
+          "status": "active",
+          "created": "2026-05-26T21:56:22+02:00",
+          "description": "Improve setup, initialize, and read-path failures so permission errors explain which storage path failed, why access was denied, and what the agent should try next.",
+          "acceptance": [
+            "A denied read or write prints the failing path and a concrete remediation such as choosing a writable storage repo or granting access.",
+            "JSON and agent-use output include enough structured warning detail for an agent to decide whether to retry, ask for approval, or switch storage paths."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215622-3bd0.md"
+        },
+        {
+          "id": "T-20260526-215622-51fb",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215622-b461",
+          "title": "Maintain project registration with initialize and project link",
+          "status": "active",
+          "created": "2026-05-26T21:56:22+02:00",
+          "description": "Keep project linking reliable for existing and new repositories, including inferred project keys, display names, source paths, and remotes.",
+          "acceptance": [
+            "Project registration creates or updates projects/\u003cproject-key\u003e/project.md with key, display name, status, summary, and identity metadata.",
+            "Repeated project link or initialize runs are idempotent and do not duplicate project records."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215622-51fb.md"
+        },
+        {
+          "id": "T-20260526-215622-550e",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215622-fb74",
+          "title": "Add setup doctor command for storage and Git checks",
+          "status": "active",
+          "created": "2026-05-26T21:56:22+02:00",
+          "description": "Add a diagnostic command that validates the configured storage directory, Git repository health, branch/upstream state, write permissions, and index rebuildability.",
+          "acceptance": [
+            "The command reports pass, warning, or fail for storage path, Git repo, upstream, writable project directories, and local index state.",
+            "The command exits non-zero only for conditions that prevent reliable Maat use."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215622-550e.md"
+        },
+        {
+          "id": "T-20260526-215622-867e",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215622-fb74",
+          "title": "Expose binary version context during initialize",
+          "status": "active",
+          "created": "2026-05-26T21:56:22+02:00",
+          "description": "Include the running Maat binary version and commit context in initialize/setup output so agents can tell whether local instructions match the installed CLI.",
+          "acceptance": [
+            "Initialize output shows the Maat version and commit/date when available.",
+            "The generated instructions remain stable enough to paste into AGENTS.md without noisy machine-specific details."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215622-867e.md"
+        },
+        {
+          "id": "T-20260526-215623-1649",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215622-b461",
+          "title": "Maintain claim comment and completion workflow with evidence",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Keep the ticket lifecycle usable for agents by supporting claims, factual comments, and completion with evidence.",
+          "acceptance": [
+            "Claims record actor and expiration as append-only events.",
+            "Completion requires evidence and records it in a ticket.completed event."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-1649.md"
+        },
+        {
+          "id": "T-20260526-215623-21f1",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-69c5",
+          "title": "Keep SQLite local and rebuildable per agent",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Ensure each agent can maintain its own SQLite cache without sharing it as authoritative state.",
+          "acceptance": [
+            "SQLite indexes are regenerated from Markdown and can be deleted safely.",
+            "Storage workflows do not require committing local SQLite cache changes."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-21f1.md"
+        },
+        {
+          "id": "T-20260526-215623-2c12",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-2f6a",
+          "title": "Make remote storage pushes explicit and intentional",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Keep automatic remote pushes opt-in so agents do not publish state unexpectedly.",
+          "acceptance": [
+            "Auto-push remains configurable and off when requested.",
+            "Commands that push require explicit configuration or an explicit push flag."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-2c12.md"
+        },
+        {
+          "id": "T-20260526-215623-3e15",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-4775",
+          "title": "Keep search results usable for humans and JSON agents",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Keep search output concise for humans and structured for agents.",
+          "acceptance": [
+            "Human search output is scan-friendly and avoids dumping entire files.",
+            "JSON search output contains stable fields for type, path, line, title, and excerpt."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-3e15.md"
+        },
+        {
+          "id": "T-20260526-215623-456b",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215622-b461",
+          "title": "Maintain goal and ticket creation commands",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Keep goal and ticket creation commands strict enough that new work always has an outcome, a description, and at least one acceptance criterion.",
+          "acceptance": [
+            "Goal creation rejects missing outcomes.",
+            "Ticket creation rejects missing descriptions and missing acceptance criteria."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-456b.md"
+        },
+        {
+          "id": "T-20260526-215623-46a7",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-4775",
+          "title": "Maintain Markdown search fallback",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Keep search useful when SQLite is unavailable, stale, or cannot be opened.",
+          "acceptance": [
+            "maat search falls back to scanning Markdown files when the SQLite index cannot be used.",
+            "Fallback results remain readable and include enough context to open the matched file."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-46a7.md"
+        },
+        {
+          "id": "T-20260526-215623-4ec2",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-8373",
+          "title": "Remember installed binary path for bare uninstall",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Record the binary name, install directory, and target path during successful install/update so future bare uninstall commands remove the same binary.",
+          "acceptance": [
+            "Successful update or install script runs persist the binary location in local Maat config.",
+            "Bare maat uninstall uses the remembered location when --install-dir and --binary-name are omitted, and clears stale install metadata after removal."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-4ec2.md"
+        },
+        {
+          "id": "T-20260526-215623-51e1",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-69c5",
+          "title": "Keep index failure warnings from causing duplicate writes",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Make write commands preserve successful Markdown writes even when index refresh fails, and warn agents not to repeat the write.",
+          "acceptance": [
+            "A write that succeeds but fails index refresh reports the warning clearly.",
+            "Agent-use output includes a machine-readable index warning so agents can rebuild later instead of duplicating objects."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-51e1.md"
+        },
+        {
+          "id": "T-20260526-215623-5261",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-8373",
+          "title": "Keep Markdown in Git as the only source of truth",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Prevent hidden databases or generated caches from becoming authoritative project state.",
+          "acceptance": [
+            "All project, goal, ticket, and event facts are represented in Markdown files under projects/.",
+            "SQLite and JSON indexes are documented and treated as rebuildable caches."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-5261.md"
+        },
+        {
+          "id": "T-20260526-215623-55f6",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-8373",
+          "title": "Avoid false uninstall progress for missing binaries",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Fix uninstall output so users are not told that Maat is removing a binary when the configured target does not exist.",
+          "acceptance": [
+            "When the target binary is missing, human output shows only the missing-binary warning and the target path.",
+            "The behavior is covered by a CLI regression test."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-55f6.md"
+        },
+        {
+          "id": "T-20260526-215623-5f95",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-d877",
+          "title": "Maintain Bubble Tea project dashboard",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Keep the TUI as a terminal-native dashboard for scanning projects and active work.",
+          "acceptance": [
+            "maat tui launches without corrupting terminal state.",
+            "The dashboard shows project and ticket state from the configured storage repo."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-5f95.md"
+        },
+        {
+          "id": "T-20260526-215623-6043",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-69c5",
+          "title": "Preserve object-per-file storage layout",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Keep projects, goals, tickets, and events as separate files so concurrent writes usually touch different paths.",
+          "acceptance": [
+            "New goals and tickets are written as individual files under their project directory.",
+            "Generated views are treated as rebuildable and not required for coordination."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-6043.md"
+        },
+        {
+          "id": "T-20260526-215623-626e",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-d877",
+          "title": "Maintain status projects and project show commands",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Keep summary commands accurate for project counts, goal counts, ticket counts, and detailed project metadata.",
+          "acceptance": [
+            "maat status reports project, goal, ticket, active, done, and blocked counts accurately.",
+            "maat project show returns readable human output and JSON with project metadata."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-626e.md"
+        },
+        {
+          "id": "T-20260526-215623-6656",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-2f6a",
+          "title": "Keep runtime SQLite cache files out of tracked storage",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Ensure local SQLite/index cache files are not accidentally treated as project truth.",
+          "acceptance": [
+            "Documentation and tooling identify .maat cache files as rebuildable.",
+            "Workflows avoid committing cache changes unless explicitly required."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-6656.md"
+        },
+        {
+          "id": "T-20260526-215623-68c3",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-d877",
+          "title": "Maintain ticket list and ticket show commands",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Keep ticket list and detail views useful for deciding what to work on next.",
+          "acceptance": [
+            "maat ticket list can filter by project and returns open ticket metadata in human and JSON modes.",
+            "maat ticket show includes description, acceptance criteria, status, goal, and project references."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-68c3.md"
+        },
+        {
+          "id": "T-20260526-215623-6ed5",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-2f6a",
+          "title": "Warn when storage is outside the active workspace",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Make it clear when configured storage is outside the current product repo so agents know product changes and Maat state changes live in separate Git repositories.",
+          "acceptance": [
+            "Relevant setup or initialize output names the storage repo path.",
+            "Instructions tell agents not to commit storage state into the product repo."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-6ed5.md"
+        },
+        {
+          "id": "T-20260526-215623-6fb5",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-d877",
+          "title": "Keep human output colored concise and informative",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Keep command-line output readable for humans while preserving JSON and agent-use output for automation.",
+          "acceptance": [
+            "Human output uses concise labels and color only when enabled.",
+            "JSON output remains machine-readable and free of progress prose."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-6fb5.md"
+        },
+        {
+          "id": "T-20260526-215623-8459",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-8373",
+          "title": "Maintain install update and uninstall flows",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Keep Maat install, update, and uninstall behavior reliable across source installs and release downloads.",
+          "acceptance": [
+            "maat update installs from a source path or release asset and reports the target path.",
+            "maat uninstall can remove the installed binary without deleting project storage."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-8459.md"
+        },
+        {
+          "id": "T-20260526-215623-8d7d",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-2f6a",
+          "title": "Separate local memory commit status from remote push status",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Make CLI output distinguish local storage commits from successful remote pushes.",
+          "acceptance": [
+            "Sync output reports committed and pushed states separately.",
+            "Agent-use output exposes separate fields or warnings for commit and push results."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-8d7d.md"
+        },
+        {
+          "id": "T-20260526-215623-9b56",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-2f6a",
+          "title": "End initialize with a short next-step summary",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Finish initialize with a compact checklist of the next commands an agent should run.",
+          "acceptance": [
+            "The summary includes status, ticket list, goal create, ticket create, complete, validate, and sync examples.",
+            "The summary avoids long background explanation."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-9b56.md"
+        },
+        {
+          "id": "T-20260526-215623-9d40",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-69c5",
+          "title": "Keep high-frequency writes append-only through events",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Keep comments, claims, and completions as append-only event files to avoid rewriting shared ticket bodies for routine progress updates.",
+          "acceptance": [
+            "Ticket comments create ticket.commented events.",
+            "Claims and completions create separate event files with object references."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-9d40.md"
+        },
+        {
+          "id": "T-20260526-215623-af5a",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215622-b461",
+          "title": "Maintain validation and sync after agent writes",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Ensure agents can validate storage and sync changes after writing project state.",
+          "acceptance": [
+            "maat validate catches malformed project, goal, ticket, and event files.",
+            "maat sync can report status, commit completed state, and push when explicitly requested."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-af5a.md"
+        },
+        {
+          "id": "T-20260526-215623-b5f8",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-2f6a",
+          "title": "Detect storage repos with commits but no upstream branch",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Detect when the storage repo has local commits but no configured upstream so agents do not assume state has been shared.",
+          "acceptance": [
+            "Sync status reports when a branch has no upstream.",
+            "Push guidance distinguishes between local commit success and remote synchronization."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-b5f8.md"
+        },
+        {
+          "id": "T-20260526-215623-bfd5",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-8373",
+          "title": "Maintain JSON and SQLite index rebuild commands",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Keep local indexes rebuildable from Markdown so search and dashboards can recover from missing or stale cache files.",
+          "acceptance": [
+            "maat index rebuild regenerates JSON and SQLite indexes from project Markdown.",
+            "Deleting local index files does not destroy canonical project state."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-bfd5.md"
+        },
+        {
+          "id": "T-20260526-215623-e2d9",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-4775",
+          "title": "Maintain SQLite search over projects goals tickets and events",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Keep indexed search covering all primary object types and their important text fields.",
+          "acceptance": [
+            "Search results include project, goal, ticket, and event hits with path, title, line, and excerpt.",
+            "Index rebuild populates SQLite from Markdown without requiring external services."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-e2d9.md"
+        },
+        {
+          "id": "T-20260526-215623-e4b8",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215622-b461",
+          "title": "Require actionable details on created goals and tickets",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Enforce and document the requirement that all new goals and tickets contain enough context for another agent to continue the work without reading the conversation that created them.",
+          "acceptance": [
+            "Goal files include an Outcome section with a concrete result.",
+            "Ticket files include Description and Acceptance sections with actionable, testable criteria."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-e4b8.md"
+        },
+        {
+          "id": "T-20260526-215623-e970",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-8373",
+          "title": "Maintain setup config for storage path and auto-sync defaults",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Keep local setup config responsible for storage path, actor, and sync preferences without becoming the source of project truth.",
+          "acceptance": [
+            "maat setup persists storage path, default actor, auto-pull, auto-commit, and auto-push preferences.",
+            "Project state remains in the configured storage repo, not in the local config file."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-e970.md"
+        },
+        {
+          "id": "T-20260526-215623-f795",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-2f6a",
+          "title": "Detect ambiguous storage upstream and rebase configuration",
+          "status": "active",
+          "created": "2026-05-26T21:56:23+02:00",
+          "description": "Improve diagnostics for storage Git repositories whose remote, upstream, or pull-rebase settings make sync behavior unclear.",
+          "acceptance": [
+            "Doctor or sync status reports upstream branch, ahead/behind state, and pull strategy warnings.",
+            "The guidance tells agents when to ask before pushing."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215623-f795.md"
+        },
+        {
+          "id": "T-20260526-215624-07a5",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215624-e456",
+          "title": "Improve TUI visual hierarchy and polish",
+          "status": "active",
+          "created": "2026-05-26T21:56:24+02:00",
+          "description": "Refine spacing, colors, labels, and empty states so the TUI feels calm and usable for repeated daily work.",
+          "acceptance": [
+            "The TUI remains readable with color disabled.",
+            "Empty and error states tell the user what to do next."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215624-07a5.md"
+        },
+        {
+          "id": "T-20260526-215624-0cc5",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215624-e456",
+          "title": "Make the TUI refresh when Maat state changes",
+          "status": "active",
+          "created": "2026-05-26T21:56:24+02:00",
+          "description": "Refresh TUI data when project Markdown changes so long-running dashboard sessions reflect new goals, tickets, comments, and completions.",
+          "acceptance": [
+            "The TUI can reload state without restarting the process.",
+            "Refresh failures are shown as recoverable UI errors instead of crashing."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215624-0cc5.md"
+        },
+        {
+          "id": "T-20260526-215624-22ea",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215624-e456",
+          "title": "Support project and ticket filtering in the TUI",
+          "status": "active",
+          "created": "2026-05-26T21:56:24+02:00",
+          "description": "Allow users to narrow the TUI by project, status, text query, or ownership.",
+          "acceptance": [
+            "Filtering updates the visible ticket list without losing the selected context unnecessarily.",
+            "The active filter state is visible and easy to clear."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215624-22ea.md"
+        },
+        {
+          "id": "T-20260526-215624-3f16",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215624-e456",
+          "title": "Show ticket state and ownership clearly in the TUI",
+          "status": "active",
+          "created": "2026-05-26T21:56:24+02:00",
+          "description": "Display ticket status, goal linkage, current claim or owner, and age/update context where available.",
+          "acceptance": [
+            "A user can tell which tickets are active, waiting, claimed, or done without opening files.",
+            "Claim expiration or ownership metadata is visible when present."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215624-3f16.md"
+        },
+        {
+          "id": "T-20260526-215624-5784",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-2f6a",
+          "title": "Add a storage setup repair command",
+          "status": "active",
+          "created": "2026-05-26T21:56:24+02:00",
+          "description": "Provide a guided way to repair common storage setup issues such as missing config, unwritable paths, missing Git repo, no upstream, or stale indexes.",
+          "acceptance": [
+            "The command reports what it can fix automatically and what requires user approval.",
+            "It does not delete project history or rewrite events."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215624-5784.md"
+        },
+        {
+          "id": "T-20260526-215624-c871",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215624-e456",
+          "title": "Add focused ticket detail and action panes",
+          "status": "active",
+          "created": "2026-05-26T21:56:24+02:00",
+          "description": "Add a detail pane that shows description, acceptance criteria, recent events, and available actions for the selected ticket.",
+          "acceptance": [
+            "The detail pane includes the selected ticket title, description, and acceptance criteria.",
+            "Actions are discoverable without cluttering the main list."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215624-c871.md"
+        },
+        {
+          "id": "T-20260526-215624-e1dd",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215624-e456",
+          "title": "Design a column-based ticket board for the TUI",
+          "status": "active",
+          "created": "2026-05-26T21:56:24+02:00",
+          "description": "Design and implement a terminal layout that groups tickets by useful status columns while preserving compact project context.",
+          "acceptance": [
+            "Open, waiting, and done or recently completed work are visually distinct.",
+            "The layout remains readable at common terminal sizes."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215624-e1dd.md"
+        },
+        {
+          "id": "T-20260526-215624-eb54",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215624-e456",
+          "title": "Make ticket navigation fast and keyboard-first",
+          "status": "active",
+          "created": "2026-05-26T21:56:24+02:00",
+          "description": "Support keyboard navigation for moving between projects, tickets, and detail panes.",
+          "acceptance": [
+            "Users can move selection without typing commands.",
+            "The selected ticket remains visible and stable during navigation."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215624-eb54.md"
+        },
+        {
+          "id": "T-20260526-215624-f8fe",
+          "project_key": "maat",
+          "goal_id": "G-20260526-215623-2f6a",
+          "title": "Print compact ticket state transitions",
+          "status": "active",
+          "created": "2026-05-26T21:56:24+02:00",
+          "description": "Make ticket claim, comment, and complete output easy to scan during agent runs.",
+          "acceptance": [
+            "Human output names the ticket ID and resulting action.",
+            "JSON output includes action, project key, ticket ID, and event ID."
+          ],
+          "path": "projects/maat/tickets/T-20260526-215624-f8fe.md"
+        }
+      ],
+      "events": [
+        {
+          "id": "E-20260526-215622-casprine-2106",
+          "time": "2026-05-26T21:56:22+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "goal.created",
+          "object_id": "G-20260526-215622-fb74",
+          "summary": "Created goal G-20260526-215622-fb74.",
+          "path": "projects/maat/events/2026/05/E-20260526-215622-casprine-2106.md"
+        },
+        {
+          "id": "E-20260526-215622-casprine-4bf3",
+          "time": "2026-05-26T21:56:22+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215622-867e",
+          "summary": "Created ticket T-20260526-215622-867e.",
+          "path": "projects/maat/events/2026/05/E-20260526-215622-casprine-4bf3.md"
+        },
+        {
+          "id": "E-20260526-215622-casprine-52a5",
+          "time": "2026-05-26T21:56:22+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "goal.created",
+          "object_id": "G-20260526-215622-b461",
+          "summary": "Created goal G-20260526-215622-b461.",
+          "path": "projects/maat/events/2026/05/E-20260526-215622-casprine-52a5.md"
+        },
+        {
+          "id": "E-20260526-215622-casprine-5d31",
+          "time": "2026-05-26T21:56:22+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215622-550e",
+          "summary": "Created ticket T-20260526-215622-550e.",
+          "path": "projects/maat/events/2026/05/E-20260526-215622-casprine-5d31.md"
+        },
+        {
+          "id": "E-20260526-215622-casprine-9b60",
+          "time": "2026-05-26T21:56:22+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215622-1c53",
+          "summary": "Created ticket T-20260526-215622-1c53.",
+          "path": "projects/maat/events/2026/05/E-20260526-215622-casprine-9b60.md"
+        },
+        {
+          "id": "E-20260526-215622-casprine-9e6f",
+          "time": "2026-05-26T21:56:22+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215622-51fb",
+          "summary": "Created ticket T-20260526-215622-51fb.",
+          "path": "projects/maat/events/2026/05/E-20260526-215622-casprine-9e6f.md"
+        },
+        {
+          "id": "E-20260526-215622-casprine-dc7c",
+          "time": "2026-05-26T21:56:22+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215622-3bd0",
+          "summary": "Created ticket T-20260526-215622-3bd0.",
+          "path": "projects/maat/events/2026/05/E-20260526-215622-casprine-dc7c.md"
+        },
+        {
+          "id": "E-20260526-215622-casprine-f07b",
+          "time": "2026-05-26T21:56:22+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215622-0123",
+          "summary": "Created ticket T-20260526-215622-0123.",
+          "path": "projects/maat/events/2026/05/E-20260526-215622-casprine-f07b.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-1de4",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-f795",
+          "summary": "Created ticket T-20260526-215623-f795.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-1de4.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-26a6",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-e2d9",
+          "summary": "Created ticket T-20260526-215623-e2d9.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-26a6.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-2865",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-9b56",
+          "summary": "Created ticket T-20260526-215623-9b56.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-2865.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-2cfe",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-6043",
+          "summary": "Created ticket T-20260526-215623-6043.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-2cfe.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-39b5",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "goal.created",
+          "object_id": "G-20260526-215623-8373",
+          "summary": "Created goal G-20260526-215623-8373.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-39b5.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-42cc",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-6656",
+          "summary": "Created ticket T-20260526-215623-6656.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-42cc.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-43af",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-6ed5",
+          "summary": "Created ticket T-20260526-215623-6ed5.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-43af.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-47bd",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-bfd5",
+          "summary": "Created ticket T-20260526-215623-bfd5.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-47bd.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-4e65",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-55f6",
+          "summary": "Created ticket T-20260526-215623-55f6.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-4e65.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-5d5f",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "goal.created",
+          "object_id": "G-20260526-215623-2f6a",
+          "summary": "Created goal G-20260526-215623-2f6a.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-5d5f.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-63fd",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-68c3",
+          "summary": "Created ticket T-20260526-215623-68c3.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-63fd.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-6e15",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-8d7d",
+          "summary": "Created ticket T-20260526-215623-8d7d.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-6e15.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-6f62",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-e4b8",
+          "summary": "Created ticket T-20260526-215623-e4b8.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-6f62.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-6f65",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-5261",
+          "summary": "Created ticket T-20260526-215623-5261.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-6f65.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-7756",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-3e15",
+          "summary": "Created ticket T-20260526-215623-3e15.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-7756.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-851c",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-e970",
+          "summary": "Created ticket T-20260526-215623-e970.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-851c.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-953f",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-6fb5",
+          "summary": "Created ticket T-20260526-215623-6fb5.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-953f.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-9748",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.completed",
+          "object_id": "T-20260526-215623-4ec2",
+          "summary": "Completed ticket T-20260526-215623-4ec2.",
+          "evidence": [
+            "Implemented in sunday-studio/maat commit 328c1d9; go test ./cmd/maat, go test ./..., sh -n scripts/install.sh, and temp install/uninstall smoke passed."
+          ],
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-9748.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-9c8d",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-626e",
+          "summary": "Created ticket T-20260526-215623-626e.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-9c8d.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-9d90",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-51e1",
+          "summary": "Created ticket T-20260526-215623-51e1.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-9d90.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-b8d8",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-21f1",
+          "summary": "Created ticket T-20260526-215623-21f1.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-b8d8.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-bcd2",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-1649",
+          "summary": "Created ticket T-20260526-215623-1649.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-bcd2.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-bef7",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.completed",
+          "object_id": "T-20260526-215623-e4b8",
+          "summary": "Completed ticket T-20260526-215623-e4b8.",
+          "evidence": [
+            "Implemented in sunday-studio/maat commit 0093121; go test ./..., go vet ./..., and git diff --check passed."
+          ],
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-bef7.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-c0db",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-8459",
+          "summary": "Created ticket T-20260526-215623-8459.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-c0db.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-c146",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-2c12",
+          "summary": "Created ticket T-20260526-215623-2c12.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-c146.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-d3e1",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "goal.created",
+          "object_id": "G-20260526-215623-69c5",
+          "summary": "Created goal G-20260526-215623-69c5.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-d3e1.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-dade",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-4ec2",
+          "summary": "Created ticket T-20260526-215623-4ec2.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-dade.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-dcff",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "goal.created",
+          "object_id": "G-20260526-215623-d877",
+          "summary": "Created goal G-20260526-215623-d877.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-dcff.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-df96",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-46a7",
+          "summary": "Created ticket T-20260526-215623-46a7.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-df96.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-e147",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-b5f8",
+          "summary": "Created ticket T-20260526-215623-b5f8.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-e147.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-e336",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-5f95",
+          "summary": "Created ticket T-20260526-215623-5f95.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-e336.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-f307",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "goal.created",
+          "object_id": "G-20260526-215623-4775",
+          "summary": "Created goal G-20260526-215623-4775.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-f307.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-f6fa",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-af5a",
+          "summary": "Created ticket T-20260526-215623-af5a.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-f6fa.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-f829",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-9d40",
+          "summary": "Created ticket T-20260526-215623-9d40.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-f829.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-f927",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215623-456b",
+          "summary": "Created ticket T-20260526-215623-456b.",
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-f927.md"
+        },
+        {
+          "id": "E-20260526-215623-casprine-ff11",
+          "time": "2026-05-26T21:56:23+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.completed",
+          "object_id": "T-20260526-215623-55f6",
+          "summary": "Completed ticket T-20260526-215623-55f6.",
+          "evidence": [
+            "Implemented in sunday-studio/maat commit 318ae86; go test ./cmd/maat, go test ./..., and direct missing-binary uninstall smoke passed."
+          ],
+          "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-ff11.md"
+        },
+        {
+          "id": "E-20260526-215624-casprine-1b66",
+          "time": "2026-05-26T21:56:24+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215624-0cc5",
+          "summary": "Created ticket T-20260526-215624-0cc5.",
+          "path": "projects/maat/events/2026/05/E-20260526-215624-casprine-1b66.md"
+        },
+        {
+          "id": "E-20260526-215624-casprine-1bc9",
+          "time": "2026-05-26T21:56:24+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215624-e1dd",
+          "summary": "Created ticket T-20260526-215624-e1dd.",
+          "path": "projects/maat/events/2026/05/E-20260526-215624-casprine-1bc9.md"
+        },
+        {
+          "id": "E-20260526-215624-casprine-1fde",
+          "time": "2026-05-26T21:56:24+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215624-eb54",
+          "summary": "Created ticket T-20260526-215624-eb54.",
+          "path": "projects/maat/events/2026/05/E-20260526-215624-casprine-1fde.md"
+        },
+        {
+          "id": "E-20260526-215624-casprine-2bba",
+          "time": "2026-05-26T21:56:24+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215624-c871",
+          "summary": "Created ticket T-20260526-215624-c871.",
+          "path": "projects/maat/events/2026/05/E-20260526-215624-casprine-2bba.md"
+        },
+        {
+          "id": "E-20260526-215624-casprine-4ccf",
+          "time": "2026-05-26T21:56:24+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215624-22ea",
+          "summary": "Created ticket T-20260526-215624-22ea.",
+          "path": "projects/maat/events/2026/05/E-20260526-215624-casprine-4ccf.md"
+        },
+        {
+          "id": "E-20260526-215624-casprine-5229",
+          "time": "2026-05-26T21:56:24+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "goal.created",
+          "object_id": "G-20260526-215624-e456",
+          "summary": "Created goal G-20260526-215624-e456.",
+          "path": "projects/maat/events/2026/05/E-20260526-215624-casprine-5229.md"
+        },
+        {
+          "id": "E-20260526-215624-casprine-6e49",
+          "time": "2026-05-26T21:56:24+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.completed",
+          "object_id": "T-20260526-215624-0cc5",
+          "summary": "Completed ticket T-20260526-215624-0cc5.",
+          "evidence": [
+            "Implemented live TUI refresh in sunday-studio/maat commit 597c217; verified with GOCACHE=/private/tmp/maat-go-cache go test ./... and go vet ./..."
+          ],
+          "path": "projects/maat/events/2026/05/E-20260526-215624-casprine-6e49.md"
+        },
+        {
+          "id": "E-20260526-215624-casprine-79c7",
+          "time": "2026-05-26T21:56:24+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215624-5784",
+          "summary": "Created ticket T-20260526-215624-5784.",
+          "path": "projects/maat/events/2026/05/E-20260526-215624-casprine-79c7.md"
+        },
+        {
+          "id": "E-20260526-215624-casprine-c467",
+          "time": "2026-05-26T21:56:24+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215624-07a5",
+          "summary": "Created ticket T-20260526-215624-07a5.",
+          "path": "projects/maat/events/2026/05/E-20260526-215624-casprine-c467.md"
+        },
+        {
+          "id": "E-20260526-215624-casprine-cdb9",
+          "time": "2026-05-26T21:56:24+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215624-f8fe",
+          "summary": "Created ticket T-20260526-215624-f8fe.",
+          "path": "projects/maat/events/2026/05/E-20260526-215624-casprine-cdb9.md"
+        },
+        {
+          "id": "E-20260526-215624-casprine-d7d5",
+          "time": "2026-05-26T21:56:24+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215624-3f16",
+          "summary": "Created ticket T-20260526-215624-3f16.",
+          "path": "projects/maat/events/2026/05/E-20260526-215624-casprine-d7d5.md"
+        }
+      ]
     },
     {
       "key": "orion",
@@ -973,6 +2215,71 @@
             "The Core API supports the Core monitor management lifecycle, OpenAPI is regenerated from annotations, the Console SDK is regenerated when needed, and tests cover validation, owner handling, redaction, and unsupported monitor types."
           ],
           "path": "projects/orion/tickets/T-20260526-215601-1319.md"
+        },
+        {
+          "id": "T-20260526-215607-6bf1",
+          "project_key": "orion",
+          "goal_id": "G-20260526-215257-e70b",
+          "title": "Build Console Core monitor workflow",
+          "status": "active",
+          "created": "2026-05-26T21:56:07+02:00",
+          "description": "Update the Console monitor experience so users can create, test, pause, resume, edit, delete, filter, and inspect Core-managed monitors without editing Agent YAML.",
+          "acceptance": [
+            "Console has a Core monitor create/test flow, monitor rows and details show owner Core clearly, filters support owner/type, secret values are redacted on read, and the app builds successfully."
+          ],
+          "path": "projects/orion/tickets/T-20260526-215607-6bf1.md"
+        },
+        {
+          "id": "T-20260526-215619-f244",
+          "project_key": "orion",
+          "goal_id": "G-20260526-215257-e70b",
+          "title": "Add Core heartbeat monitors",
+          "status": "active",
+          "created": "2026-05-26T21:56:19+02:00",
+          "description": "Implement Core-owned heartbeat monitors for cron jobs, backups, scripts, and scheduled tasks that report success or failure to a generated Core endpoint.",
+          "acceptance": [
+            "A heartbeat monitor stays pending until the first signal, opens an incident after a missed expected interval plus grace period, records success and failure payloads with truncation, resolves on recovery, and exposes safe Console copy/test affordances."
+          ],
+          "path": "projects/orion/tickets/T-20260526-215619-f244.md"
+        },
+        {
+          "id": "T-20260526-215627-b569",
+          "project_key": "orion",
+          "goal_id": "G-20260526-215257-e70b",
+          "title": "Add Core monitor noise controls",
+          "status": "active",
+          "created": "2026-05-26T21:56:27+02:00",
+          "description": "Add confirmation periods, recovery periods, flapping-aware behavior, severity defaults, and maintenance handling for Core-managed monitors so transient failures do not create noisy incidents.",
+          "acceptance": [
+            "Core monitor incidents respect configured confirmation and recovery periods, maintenance suppresses incident creation and alert delivery, flapping is visible or degraded instead of noisy, and behavior is covered by reconciliation tests."
+          ],
+          "path": "projects/orion/tickets/T-20260526-215627-b569.md"
+        },
+        {
+          "id": "T-20260526-215629-53f6",
+          "project_key": "orion",
+          "goal_id": "G-20260526-215126-c321",
+          "title": "Draft alert routing redesign plan",
+          "status": "active",
+          "created": "2026-05-26T21:56:29+02:00",
+          "description": "Draft a reviewable planning document that rethinks Orion alert configuration, delivery services, webhook and SMTP support, grouping, routing, flow diagrams, and phased implementation before product work begins.",
+          "acceptance": [
+            "A committed docs plan explains the proposed alert model, key flows, grouping semantics, data/API/UI changes, rollout phases, and open questions for review."
+          ],
+          "path": "projects/orion/tickets/T-20260526-215629-53f6.md"
+        },
+        {
+          "id": "T-20260526-215635-f363",
+          "project_key": "orion",
+          "goal_id": "G-20260526-215257-e70b",
+          "title": "Design monitor component mapping for status pages",
+          "status": "active",
+          "created": "2026-05-26T21:56:35+02:00",
+          "description": "Design how Core and Agent monitors map to service or status-page components so incidents can identify impacted components and future status pages can publish relevant updates.",
+          "acceptance": [
+            "A design note identifies the component data model, monitor mapping UX, incident fields, status page consumption path, and migration steps without requiring status page implementation in the same ticket."
+          ],
+          "path": "projects/orion/tickets/T-20260526-215635-f363.md"
         }
       ],
       "events": [
@@ -1507,6 +2814,89 @@
           "object_id": "T-20260526-215601-1319",
           "summary": "Created ticket T-20260526-215601-1319.",
           "path": "projects/orion/events/2026/05/E-20260526-215601-casprine-4cd4.md"
+        },
+        {
+          "id": "E-20260526-215607-casprine-7d61",
+          "time": "2026-05-26T21:56:07+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215607-6bf1",
+          "summary": "Created ticket T-20260526-215607-6bf1.",
+          "path": "projects/orion/events/2026/05/E-20260526-215607-casprine-7d61.md"
+        },
+        {
+          "id": "E-20260526-215619-casprine-4822",
+          "time": "2026-05-26T21:56:19+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215619-f244",
+          "summary": "Created ticket T-20260526-215619-f244.",
+          "path": "projects/orion/events/2026/05/E-20260526-215619-casprine-4822.md"
+        },
+        {
+          "id": "E-20260526-215627-casprine-0f97",
+          "time": "2026-05-26T21:56:27+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215627-b569",
+          "summary": "Created ticket T-20260526-215627-b569.",
+          "path": "projects/orion/events/2026/05/E-20260526-215627-casprine-0f97.md"
+        },
+        {
+          "id": "E-20260526-215629-casprine-b667",
+          "time": "2026-05-26T21:56:29+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215629-53f6",
+          "summary": "Created ticket T-20260526-215629-53f6.",
+          "path": "projects/orion/events/2026/05/E-20260526-215629-casprine-b667.md"
+        },
+        {
+          "id": "E-20260526-215635-casprine-e2ff",
+          "time": "2026-05-26T21:56:35+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215635-f363",
+          "summary": "Created ticket T-20260526-215635-f363.",
+          "path": "projects/orion/events/2026/05/E-20260526-215635-casprine-e2ff.md"
+        },
+        {
+          "id": "E-20260526-215636-codex-9027",
+          "time": "2026-05-26T21:56:36+02:00",
+          "actor": "codex",
+          "project_key": "orion",
+          "type": "ticket.claimed",
+          "object_id": "T-20260526-215629-53f6",
+          "summary": "Claimed ticket T-20260526-215629-53f6 until 2026-05-26T23:56:36+02:00.",
+          "path": "projects/orion/events/2026/05/E-20260526-215636-codex-9027.md"
+        },
+        {
+          "id": "E-20260526-215716-casprine-df87",
+          "time": "2026-05-26T21:57:16+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260526-215303-4c65",
+          "summary": "Review note: Core-managed monitor plan is ready at docs/plans/core-managed-monitors.md. Please review the owner model decision, private-network target policy, MVP monitor type scope, heartbeat timing, and whether incident routing should stay deferred.",
+          "path": "projects/orion/events/2026/05/E-20260526-215716-casprine-df87.md"
+        },
+        {
+          "id": "E-20260526-215726-casprine-7fa8",
+          "time": "2026-05-26T21:57:26+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260526-215303-4c65",
+          "summary": "Completed ticket T-20260526-215303-4c65.",
+          "evidence": [
+            "Created docs/plans/core-managed-monitors.md, added Maat review note and implementation tickets, validated Maat store, and committed repo change 34ae394 docs(core): plan Core-managed monitors."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260526-215726-casprine-7fa8.md"
         }
       ]
     }
@@ -1813,10 +3203,646 @@
       "content": "# Ticket: Rebuild Driver Maat memory with structured fields\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215500-697b |\n| Project | driver |\n| Goal | G-20260526-215034-ba07 |\n| Status | active |\n| Created | 2026-05-26T21:55:00+02:00 |\n\n## Description\n\nRecreate the Driver Maat goals, tickets, and status events after old Driver entries were deleted, using the current schema requirements for goal outcomes, ticket descriptions, ticket acceptance criteria, and searchable data comments.\n\n## Acceptance\n\n- Driver has active goals with non-empty Outcome sections for product, backend, worker, frontend, deployment/configuration, access control, and repo process.\n- Driver has tickets with non-empty Description sections and acceptance bullets for the major workstreams from the repo docs.\n- Each workstream ticket has a comment with source docs, current repo paths, implementation status, and verification data where available.\n- maat validate passes after the rebuild.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215622-casprine-2106.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215622-casprine-2106 |\n| Time | 2026-05-26T21:56:22+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | goal.created |\n| Object | G-20260526-215622-fb74 |\n\n## Summary\n\nCreated goal G-20260526-215622-fb74.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215622-casprine-4bf3.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215622-casprine-4bf3 |\n| Time | 2026-05-26T21:56:22+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215622-867e |\n\n## Summary\n\nCreated ticket T-20260526-215622-867e.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215622-casprine-52a5.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215622-casprine-52a5 |\n| Time | 2026-05-26T21:56:22+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | goal.created |\n| Object | G-20260526-215622-b461 |\n\n## Summary\n\nCreated goal G-20260526-215622-b461.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215622-casprine-5d31.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215622-casprine-5d31 |\n| Time | 2026-05-26T21:56:22+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215622-550e |\n\n## Summary\n\nCreated ticket T-20260526-215622-550e.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215622-casprine-9b60.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215622-casprine-9b60 |\n| Time | 2026-05-26T21:56:22+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215622-1c53 |\n\n## Summary\n\nCreated ticket T-20260526-215622-1c53.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215622-casprine-9e6f.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215622-casprine-9e6f |\n| Time | 2026-05-26T21:56:22+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215622-51fb |\n\n## Summary\n\nCreated ticket T-20260526-215622-51fb.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215622-casprine-dc7c.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215622-casprine-dc7c |\n| Time | 2026-05-26T21:56:22+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215622-3bd0 |\n\n## Summary\n\nCreated ticket T-20260526-215622-3bd0.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215622-casprine-f07b.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215622-casprine-f07b |\n| Time | 2026-05-26T21:56:22+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215622-0123 |\n\n## Summary\n\nCreated ticket T-20260526-215622-0123.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-1de4.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-1de4 |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-f795 |\n\n## Summary\n\nCreated ticket T-20260526-215623-f795.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-26a6.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-26a6 |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-e2d9 |\n\n## Summary\n\nCreated ticket T-20260526-215623-e2d9.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-2865.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-2865 |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-9b56 |\n\n## Summary\n\nCreated ticket T-20260526-215623-9b56.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-2cfe.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-2cfe |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-6043 |\n\n## Summary\n\nCreated ticket T-20260526-215623-6043.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-39b5.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-39b5 |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | goal.created |\n| Object | G-20260526-215623-8373 |\n\n## Summary\n\nCreated goal G-20260526-215623-8373.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-42cc.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-42cc |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-6656 |\n\n## Summary\n\nCreated ticket T-20260526-215623-6656.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-43af.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-43af |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-6ed5 |\n\n## Summary\n\nCreated ticket T-20260526-215623-6ed5.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-47bd.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-47bd |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-bfd5 |\n\n## Summary\n\nCreated ticket T-20260526-215623-bfd5.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-4e65.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-4e65 |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-55f6 |\n\n## Summary\n\nCreated ticket T-20260526-215623-55f6.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-5d5f.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-5d5f |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | goal.created |\n| Object | G-20260526-215623-2f6a |\n\n## Summary\n\nCreated goal G-20260526-215623-2f6a.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-63fd.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-63fd |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-68c3 |\n\n## Summary\n\nCreated ticket T-20260526-215623-68c3.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-6e15.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-6e15 |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-8d7d |\n\n## Summary\n\nCreated ticket T-20260526-215623-8d7d.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-6f62.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-6f62 |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-e4b8 |\n\n## Summary\n\nCreated ticket T-20260526-215623-e4b8.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-6f65.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-6f65 |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-5261 |\n\n## Summary\n\nCreated ticket T-20260526-215623-5261.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-7756.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-7756 |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-3e15 |\n\n## Summary\n\nCreated ticket T-20260526-215623-3e15.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-851c.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-851c |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-e970 |\n\n## Summary\n\nCreated ticket T-20260526-215623-e970.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-953f.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-953f |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-6fb5 |\n\n## Summary\n\nCreated ticket T-20260526-215623-6fb5.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-9748.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-9748 |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.completed |\n| Object | T-20260526-215623-4ec2 |\n\n## Summary\n\nCompleted ticket T-20260526-215623-4ec2.\n\n## Evidence\n\n- Implemented in sunday-studio/maat commit 328c1d9; go test ./cmd/maat, go test ./..., sh -n scripts/install.sh, and temp install/uninstall smoke passed.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-9c8d.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-9c8d |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-626e |\n\n## Summary\n\nCreated ticket T-20260526-215623-626e.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-9d90.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-9d90 |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-51e1 |\n\n## Summary\n\nCreated ticket T-20260526-215623-51e1.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-b8d8.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-b8d8 |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-21f1 |\n\n## Summary\n\nCreated ticket T-20260526-215623-21f1.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-bcd2.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-bcd2 |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-1649 |\n\n## Summary\n\nCreated ticket T-20260526-215623-1649.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-bef7.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-bef7 |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.completed |\n| Object | T-20260526-215623-e4b8 |\n\n## Summary\n\nCompleted ticket T-20260526-215623-e4b8.\n\n## Evidence\n\n- Implemented in sunday-studio/maat commit 0093121; go test ./..., go vet ./..., and git diff --check passed.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-c0db.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-c0db |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-8459 |\n\n## Summary\n\nCreated ticket T-20260526-215623-8459.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-c146.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-c146 |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-2c12 |\n\n## Summary\n\nCreated ticket T-20260526-215623-2c12.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-d3e1.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-d3e1 |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | goal.created |\n| Object | G-20260526-215623-69c5 |\n\n## Summary\n\nCreated goal G-20260526-215623-69c5.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-dade.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-dade |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-4ec2 |\n\n## Summary\n\nCreated ticket T-20260526-215623-4ec2.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-dcff.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-dcff |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | goal.created |\n| Object | G-20260526-215623-d877 |\n\n## Summary\n\nCreated goal G-20260526-215623-d877.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-df96.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-df96 |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-46a7 |\n\n## Summary\n\nCreated ticket T-20260526-215623-46a7.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-e147.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-e147 |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-b5f8 |\n\n## Summary\n\nCreated ticket T-20260526-215623-b5f8.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-e336.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-e336 |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-5f95 |\n\n## Summary\n\nCreated ticket T-20260526-215623-5f95.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-f307.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-f307 |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | goal.created |\n| Object | G-20260526-215623-4775 |\n\n## Summary\n\nCreated goal G-20260526-215623-4775.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-f6fa.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-f6fa |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-af5a |\n\n## Summary\n\nCreated ticket T-20260526-215623-af5a.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-f829.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-f829 |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-9d40 |\n\n## Summary\n\nCreated ticket T-20260526-215623-9d40.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-f927.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-f927 |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215623-456b |\n\n## Summary\n\nCreated ticket T-20260526-215623-456b.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215623-casprine-ff11.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215623-casprine-ff11 |\n| Time | 2026-05-26T21:56:23+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.completed |\n| Object | T-20260526-215623-55f6 |\n\n## Summary\n\nCompleted ticket T-20260526-215623-55f6.\n\n## Evidence\n\n- Implemented in sunday-studio/maat commit 318ae86; go test ./cmd/maat, go test ./..., and direct missing-binary uninstall smoke passed.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215624-casprine-1b66.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215624-casprine-1b66 |\n| Time | 2026-05-26T21:56:24+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215624-0cc5 |\n\n## Summary\n\nCreated ticket T-20260526-215624-0cc5.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215624-casprine-1bc9.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215624-casprine-1bc9 |\n| Time | 2026-05-26T21:56:24+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215624-e1dd |\n\n## Summary\n\nCreated ticket T-20260526-215624-e1dd.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215624-casprine-1fde.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215624-casprine-1fde |\n| Time | 2026-05-26T21:56:24+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215624-eb54 |\n\n## Summary\n\nCreated ticket T-20260526-215624-eb54.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215624-casprine-2bba.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215624-casprine-2bba |\n| Time | 2026-05-26T21:56:24+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215624-c871 |\n\n## Summary\n\nCreated ticket T-20260526-215624-c871.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215624-casprine-4ccf.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215624-casprine-4ccf |\n| Time | 2026-05-26T21:56:24+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215624-22ea |\n\n## Summary\n\nCreated ticket T-20260526-215624-22ea.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215624-casprine-5229.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215624-casprine-5229 |\n| Time | 2026-05-26T21:56:24+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | goal.created |\n| Object | G-20260526-215624-e456 |\n\n## Summary\n\nCreated goal G-20260526-215624-e456.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215624-casprine-6e49.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215624-casprine-6e49 |\n| Time | 2026-05-26T21:56:24+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.completed |\n| Object | T-20260526-215624-0cc5 |\n\n## Summary\n\nCompleted ticket T-20260526-215624-0cc5.\n\n## Evidence\n\n- Implemented live TUI refresh in sunday-studio/maat commit 597c217; verified with GOCACHE=/private/tmp/maat-go-cache go test ./... and go vet ./...\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215624-casprine-79c7.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215624-casprine-79c7 |\n| Time | 2026-05-26T21:56:24+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215624-5784 |\n\n## Summary\n\nCreated ticket T-20260526-215624-5784.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215624-casprine-c467.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215624-casprine-c467 |\n| Time | 2026-05-26T21:56:24+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215624-07a5 |\n\n## Summary\n\nCreated ticket T-20260526-215624-07a5.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215624-casprine-cdb9.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215624-casprine-cdb9 |\n| Time | 2026-05-26T21:56:24+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215624-f8fe |\n\n## Summary\n\nCreated ticket T-20260526-215624-f8fe.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-215624-casprine-d7d5.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215624-casprine-d7d5 |\n| Time | 2026-05-26T21:56:24+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215624-3f16 |\n\n## Summary\n\nCreated ticket T-20260526-215624-3f16.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/maat/goals/G-20260526-215622-b461.md",
+      "title": "Goal: Enable autonomous agent project management",
+      "content": "# Goal: Enable autonomous agent project management\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215622-b461 |\n| Project | maat |\n| Status | active |\n| Created | 2026-05-26T21:56:22+02:00 |\n\n## Outcome\n\nAgents can register projects, create actionable goals and tickets, claim work, leave progress notes, complete tickets with evidence, validate state, and sync storage without hand-editing Markdown.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/maat/goals/G-20260526-215622-fb74.md",
+      "title": "Goal: Improve initialize dogfood experience",
+      "content": "# Goal: Improve initialize dogfood experience\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215622-fb74 |\n| Project | maat |\n| Status | active |\n| Created | 2026-05-26T21:56:22+02:00 |\n\n## Outcome\n\nAgents can initialize Maat in a new product repo, understand exactly where the storage repo is, copy concise agent instructions, and recover from common storage, Git, and PATH setup failures without guessing.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/maat/goals/G-20260526-215623-2f6a.md",
+      "title": "Goal: Resolve Orion first-run setup friction",
+      "content": "# Goal: Resolve Orion first-run setup friction\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215623-2f6a |\n| Project | maat |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Outcome\n\nThe first Orion-on-Maat setup path is clear, recoverable, and honest about local storage, Git upstream, auto-sync, index cache, and ticket state, so agents can use Maat without accidental data loss or misleading status.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/maat/goals/G-20260526-215623-4775.md",
+      "title": "Goal: Keep search reliable across project state",
+      "content": "# Goal: Keep search reliable across project state\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215623-4775 |\n| Project | maat |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Outcome\n\nAgents can search projects, goals, tickets, and events reliably, with SQLite search when available and a Markdown fallback when local indexes are missing or stale.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/maat/goals/G-20260526-215623-69c5.md",
+      "title": "Goal: Reduce conflicts for many concurrent agents",
+      "content": "# Goal: Reduce conflicts for many concurrent agents\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215623-69c5 |\n| Project | maat |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Outcome\n\nMultiple agents can add goals, tickets, comments, and completion evidence with minimal merge conflicts by writing object files and append-only events instead of shared mutable logs.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/maat/goals/G-20260526-215623-8373.md",
+      "title": "Goal: Keep state rebuildable on every machine",
+      "content": "# Goal: Keep state rebuildable on every machine\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215623-8373 |\n| Project | maat |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Outcome\n\nMaat project state remains plain Markdown in Git, while indexes, config, install metadata, and local caches can be rebuilt or repaired independently on each machine.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/maat/goals/G-20260526-215623-d877.md",
+      "title": "Goal: Provide terminal and TUI state visibility",
+      "content": "# Goal: Provide terminal and TUI state visibility\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215623-d877 |\n| Project | maat |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Outcome\n\nHumans and agents can inspect project state quickly from the terminal, including project summaries, ticket lists, ticket details, and a TUI dashboard that is readable during daily work.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/maat/goals/G-20260526-215624-e456.md",
+      "title": "Goal: Build a proper terminal UI for daily project navigation",
+      "content": "# Goal: Build a proper terminal UI for daily project navigation\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215624-e456 |\n| Project | maat |\n| Status | active |\n| Created | 2026-05-26T21:56:24+02:00 |\n\n## Outcome\n\nThe TUI becomes a fast daily workspace for scanning projects, navigating tickets, seeing ownership/state, filtering work, and refreshing when Markdown state changes.\n"
+    },
+    {
       "type": "project",
       "path": "projects/maat/project.md",
       "title": "Project: Maat",
       "content": "# Project: Maat\n\n| Field | Value |\n|---|---|\n| Project Key | maat |\n| Display Name | Maat |\n| Status | active |\n| Created | 2026-05-26T20:49:25+02:00 |\n| Updated | 2026-05-26T20:49:25+02:00 |\n\n## Summary\n\nLinked from `/Users/casprine/Desktop/vendor/sunday-studio/maat`.\n\n## Identity\n\n| Field | Value |\n|---|---|\n| Primary Repo | /Users/casprine/Desktop/vendor/sunday-studio/maat |\n| Remote | git@github.com:sunday-studio/maat.git |\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215622-0123.md",
+      "title": "Ticket: Keep initialize setup document concise",
+      "content": "# Ticket: Keep initialize setup document concise\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215622-0123 |\n| Project | maat |\n| Goal | G-20260526-215622-fb74 |\n| Status | active |\n| Created | 2026-05-26T21:56:22+02:00 |\n\n## Description\n\nKeep the generated initialize instructions focused on the daily agent loop and required command forms instead of long background documentation.\n\n## Acceptance\n\n- The generated snippet includes setup, read, create or claim, comment, complete, validate, and sync commands.\n- The snippet avoids obsolete flags and fits comfortably in an agent instruction file.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215622-1c53.md",
+      "title": "Ticket: Clarify auto-pull permission warnings",
+      "content": "# Ticket: Clarify auto-pull permission warnings\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215622-1c53 |\n| Project | maat |\n| Goal | G-20260526-215622-fb74 |\n| Status | active |\n| Created | 2026-05-26T21:56:22+02:00 |\n\n## Description\n\nMake auto-pull failures clear when storage exists but the agent cannot perform network or Git operations, without masking the command result.\n\n## Acceptance\n\n- Human output explains that the Markdown read or write still happened when only auto-pull failed.\n- Agent-use output emits a warning update with the Git error and storage path.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215622-3bd0.md",
+      "title": "Ticket: Show storage access hint on permission failures",
+      "content": "# Ticket: Show storage access hint on permission failures\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215622-3bd0 |\n| Project | maat |\n| Goal | G-20260526-215622-fb74 |\n| Status | active |\n| Created | 2026-05-26T21:56:22+02:00 |\n\n## Description\n\nImprove setup, initialize, and read-path failures so permission errors explain which storage path failed, why access was denied, and what the agent should try next.\n\n## Acceptance\n\n- A denied read or write prints the failing path and a concrete remediation such as choosing a writable storage repo or granting access.\n- JSON and agent-use output include enough structured warning detail for an agent to decide whether to retry, ask for approval, or switch storage paths.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215622-51fb.md",
+      "title": "Ticket: Maintain project registration with initialize and project link",
+      "content": "# Ticket: Maintain project registration with initialize and project link\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215622-51fb |\n| Project | maat |\n| Goal | G-20260526-215622-b461 |\n| Status | active |\n| Created | 2026-05-26T21:56:22+02:00 |\n\n## Description\n\nKeep project linking reliable for existing and new repositories, including inferred project keys, display names, source paths, and remotes.\n\n## Acceptance\n\n- Project registration creates or updates projects/\u003cproject-key\u003e/project.md with key, display name, status, summary, and identity metadata.\n- Repeated project link or initialize runs are idempotent and do not duplicate project records.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215622-550e.md",
+      "title": "Ticket: Add setup doctor command for storage and Git checks",
+      "content": "# Ticket: Add setup doctor command for storage and Git checks\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215622-550e |\n| Project | maat |\n| Goal | G-20260526-215622-fb74 |\n| Status | active |\n| Created | 2026-05-26T21:56:22+02:00 |\n\n## Description\n\nAdd a diagnostic command that validates the configured storage directory, Git repository health, branch/upstream state, write permissions, and index rebuildability.\n\n## Acceptance\n\n- The command reports pass, warning, or fail for storage path, Git repo, upstream, writable project directories, and local index state.\n- The command exits non-zero only for conditions that prevent reliable Maat use.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215622-867e.md",
+      "title": "Ticket: Expose binary version context during initialize",
+      "content": "# Ticket: Expose binary version context during initialize\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215622-867e |\n| Project | maat |\n| Goal | G-20260526-215622-fb74 |\n| Status | active |\n| Created | 2026-05-26T21:56:22+02:00 |\n\n## Description\n\nInclude the running Maat binary version and commit context in initialize/setup output so agents can tell whether local instructions match the installed CLI.\n\n## Acceptance\n\n- Initialize output shows the Maat version and commit/date when available.\n- The generated instructions remain stable enough to paste into AGENTS.md without noisy machine-specific details.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-1649.md",
+      "title": "Ticket: Maintain claim comment and completion workflow with evidence",
+      "content": "# Ticket: Maintain claim comment and completion workflow with evidence\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-1649 |\n| Project | maat |\n| Goal | G-20260526-215622-b461 |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nKeep the ticket lifecycle usable for agents by supporting claims, factual comments, and completion with evidence.\n\n## Acceptance\n\n- Claims record actor and expiration as append-only events.\n- Completion requires evidence and records it in a ticket.completed event.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-21f1.md",
+      "title": "Ticket: Keep SQLite local and rebuildable per agent",
+      "content": "# Ticket: Keep SQLite local and rebuildable per agent\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-21f1 |\n| Project | maat |\n| Goal | G-20260526-215623-69c5 |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nEnsure each agent can maintain its own SQLite cache without sharing it as authoritative state.\n\n## Acceptance\n\n- SQLite indexes are regenerated from Markdown and can be deleted safely.\n- Storage workflows do not require committing local SQLite cache changes.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-2c12.md",
+      "title": "Ticket: Make remote storage pushes explicit and intentional",
+      "content": "# Ticket: Make remote storage pushes explicit and intentional\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-2c12 |\n| Project | maat |\n| Goal | G-20260526-215623-2f6a |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nKeep automatic remote pushes opt-in so agents do not publish state unexpectedly.\n\n## Acceptance\n\n- Auto-push remains configurable and off when requested.\n- Commands that push require explicit configuration or an explicit push flag.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-3e15.md",
+      "title": "Ticket: Keep search results usable for humans and JSON agents",
+      "content": "# Ticket: Keep search results usable for humans and JSON agents\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-3e15 |\n| Project | maat |\n| Goal | G-20260526-215623-4775 |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nKeep search output concise for humans and structured for agents.\n\n## Acceptance\n\n- Human search output is scan-friendly and avoids dumping entire files.\n- JSON search output contains stable fields for type, path, line, title, and excerpt.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-456b.md",
+      "title": "Ticket: Maintain goal and ticket creation commands",
+      "content": "# Ticket: Maintain goal and ticket creation commands\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-456b |\n| Project | maat |\n| Goal | G-20260526-215622-b461 |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nKeep goal and ticket creation commands strict enough that new work always has an outcome, a description, and at least one acceptance criterion.\n\n## Acceptance\n\n- Goal creation rejects missing outcomes.\n- Ticket creation rejects missing descriptions and missing acceptance criteria.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-46a7.md",
+      "title": "Ticket: Maintain Markdown search fallback",
+      "content": "# Ticket: Maintain Markdown search fallback\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-46a7 |\n| Project | maat |\n| Goal | G-20260526-215623-4775 |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nKeep search useful when SQLite is unavailable, stale, or cannot be opened.\n\n## Acceptance\n\n- maat search falls back to scanning Markdown files when the SQLite index cannot be used.\n- Fallback results remain readable and include enough context to open the matched file.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-4ec2.md",
+      "title": "Ticket: Remember installed binary path for bare uninstall",
+      "content": "# Ticket: Remember installed binary path for bare uninstall\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-4ec2 |\n| Project | maat |\n| Goal | G-20260526-215623-8373 |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nRecord the binary name, install directory, and target path during successful install/update so future bare uninstall commands remove the same binary.\n\n## Acceptance\n\n- Successful update or install script runs persist the binary location in local Maat config.\n- Bare maat uninstall uses the remembered location when --install-dir and --binary-name are omitted, and clears stale install metadata after removal.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-51e1.md",
+      "title": "Ticket: Keep index failure warnings from causing duplicate writes",
+      "content": "# Ticket: Keep index failure warnings from causing duplicate writes\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-51e1 |\n| Project | maat |\n| Goal | G-20260526-215623-69c5 |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nMake write commands preserve successful Markdown writes even when index refresh fails, and warn agents not to repeat the write.\n\n## Acceptance\n\n- A write that succeeds but fails index refresh reports the warning clearly.\n- Agent-use output includes a machine-readable index warning so agents can rebuild later instead of duplicating objects.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-5261.md",
+      "title": "Ticket: Keep Markdown in Git as the only source of truth",
+      "content": "# Ticket: Keep Markdown in Git as the only source of truth\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-5261 |\n| Project | maat |\n| Goal | G-20260526-215623-8373 |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nPrevent hidden databases or generated caches from becoming authoritative project state.\n\n## Acceptance\n\n- All project, goal, ticket, and event facts are represented in Markdown files under projects/.\n- SQLite and JSON indexes are documented and treated as rebuildable caches.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-55f6.md",
+      "title": "Ticket: Avoid false uninstall progress for missing binaries",
+      "content": "# Ticket: Avoid false uninstall progress for missing binaries\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-55f6 |\n| Project | maat |\n| Goal | G-20260526-215623-8373 |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nFix uninstall output so users are not told that Maat is removing a binary when the configured target does not exist.\n\n## Acceptance\n\n- When the target binary is missing, human output shows only the missing-binary warning and the target path.\n- The behavior is covered by a CLI regression test.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-5f95.md",
+      "title": "Ticket: Maintain Bubble Tea project dashboard",
+      "content": "# Ticket: Maintain Bubble Tea project dashboard\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-5f95 |\n| Project | maat |\n| Goal | G-20260526-215623-d877 |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nKeep the TUI as a terminal-native dashboard for scanning projects and active work.\n\n## Acceptance\n\n- maat tui launches without corrupting terminal state.\n- The dashboard shows project and ticket state from the configured storage repo.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-6043.md",
+      "title": "Ticket: Preserve object-per-file storage layout",
+      "content": "# Ticket: Preserve object-per-file storage layout\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-6043 |\n| Project | maat |\n| Goal | G-20260526-215623-69c5 |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nKeep projects, goals, tickets, and events as separate files so concurrent writes usually touch different paths.\n\n## Acceptance\n\n- New goals and tickets are written as individual files under their project directory.\n- Generated views are treated as rebuildable and not required for coordination.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-626e.md",
+      "title": "Ticket: Maintain status projects and project show commands",
+      "content": "# Ticket: Maintain status projects and project show commands\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-626e |\n| Project | maat |\n| Goal | G-20260526-215623-d877 |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nKeep summary commands accurate for project counts, goal counts, ticket counts, and detailed project metadata.\n\n## Acceptance\n\n- maat status reports project, goal, ticket, active, done, and blocked counts accurately.\n- maat project show returns readable human output and JSON with project metadata.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-6656.md",
+      "title": "Ticket: Keep runtime SQLite cache files out of tracked storage",
+      "content": "# Ticket: Keep runtime SQLite cache files out of tracked storage\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-6656 |\n| Project | maat |\n| Goal | G-20260526-215623-2f6a |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nEnsure local SQLite/index cache files are not accidentally treated as project truth.\n\n## Acceptance\n\n- Documentation and tooling identify .maat cache files as rebuildable.\n- Workflows avoid committing cache changes unless explicitly required.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-68c3.md",
+      "title": "Ticket: Maintain ticket list and ticket show commands",
+      "content": "# Ticket: Maintain ticket list and ticket show commands\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-68c3 |\n| Project | maat |\n| Goal | G-20260526-215623-d877 |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nKeep ticket list and detail views useful for deciding what to work on next.\n\n## Acceptance\n\n- maat ticket list can filter by project and returns open ticket metadata in human and JSON modes.\n- maat ticket show includes description, acceptance criteria, status, goal, and project references.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-6ed5.md",
+      "title": "Ticket: Warn when storage is outside the active workspace",
+      "content": "# Ticket: Warn when storage is outside the active workspace\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-6ed5 |\n| Project | maat |\n| Goal | G-20260526-215623-2f6a |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nMake it clear when configured storage is outside the current product repo so agents know product changes and Maat state changes live in separate Git repositories.\n\n## Acceptance\n\n- Relevant setup or initialize output names the storage repo path.\n- Instructions tell agents not to commit storage state into the product repo.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-6fb5.md",
+      "title": "Ticket: Keep human output colored concise and informative",
+      "content": "# Ticket: Keep human output colored concise and informative\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-6fb5 |\n| Project | maat |\n| Goal | G-20260526-215623-d877 |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nKeep command-line output readable for humans while preserving JSON and agent-use output for automation.\n\n## Acceptance\n\n- Human output uses concise labels and color only when enabled.\n- JSON output remains machine-readable and free of progress prose.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-8459.md",
+      "title": "Ticket: Maintain install update and uninstall flows",
+      "content": "# Ticket: Maintain install update and uninstall flows\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-8459 |\n| Project | maat |\n| Goal | G-20260526-215623-8373 |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nKeep Maat install, update, and uninstall behavior reliable across source installs and release downloads.\n\n## Acceptance\n\n- maat update installs from a source path or release asset and reports the target path.\n- maat uninstall can remove the installed binary without deleting project storage.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-8d7d.md",
+      "title": "Ticket: Separate local memory commit status from remote push status",
+      "content": "# Ticket: Separate local memory commit status from remote push status\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-8d7d |\n| Project | maat |\n| Goal | G-20260526-215623-2f6a |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nMake CLI output distinguish local storage commits from successful remote pushes.\n\n## Acceptance\n\n- Sync output reports committed and pushed states separately.\n- Agent-use output exposes separate fields or warnings for commit and push results.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-9b56.md",
+      "title": "Ticket: End initialize with a short next-step summary",
+      "content": "# Ticket: End initialize with a short next-step summary\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-9b56 |\n| Project | maat |\n| Goal | G-20260526-215623-2f6a |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nFinish initialize with a compact checklist of the next commands an agent should run.\n\n## Acceptance\n\n- The summary includes status, ticket list, goal create, ticket create, complete, validate, and sync examples.\n- The summary avoids long background explanation.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-9d40.md",
+      "title": "Ticket: Keep high-frequency writes append-only through events",
+      "content": "# Ticket: Keep high-frequency writes append-only through events\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-9d40 |\n| Project | maat |\n| Goal | G-20260526-215623-69c5 |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nKeep comments, claims, and completions as append-only event files to avoid rewriting shared ticket bodies for routine progress updates.\n\n## Acceptance\n\n- Ticket comments create ticket.commented events.\n- Claims and completions create separate event files with object references.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-af5a.md",
+      "title": "Ticket: Maintain validation and sync after agent writes",
+      "content": "# Ticket: Maintain validation and sync after agent writes\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-af5a |\n| Project | maat |\n| Goal | G-20260526-215622-b461 |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nEnsure agents can validate storage and sync changes after writing project state.\n\n## Acceptance\n\n- maat validate catches malformed project, goal, ticket, and event files.\n- maat sync can report status, commit completed state, and push when explicitly requested.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-b5f8.md",
+      "title": "Ticket: Detect storage repos with commits but no upstream branch",
+      "content": "# Ticket: Detect storage repos with commits but no upstream branch\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-b5f8 |\n| Project | maat |\n| Goal | G-20260526-215623-2f6a |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nDetect when the storage repo has local commits but no configured upstream so agents do not assume state has been shared.\n\n## Acceptance\n\n- Sync status reports when a branch has no upstream.\n- Push guidance distinguishes between local commit success and remote synchronization.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-bfd5.md",
+      "title": "Ticket: Maintain JSON and SQLite index rebuild commands",
+      "content": "# Ticket: Maintain JSON and SQLite index rebuild commands\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-bfd5 |\n| Project | maat |\n| Goal | G-20260526-215623-8373 |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nKeep local indexes rebuildable from Markdown so search and dashboards can recover from missing or stale cache files.\n\n## Acceptance\n\n- maat index rebuild regenerates JSON and SQLite indexes from project Markdown.\n- Deleting local index files does not destroy canonical project state.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-e2d9.md",
+      "title": "Ticket: Maintain SQLite search over projects goals tickets and events",
+      "content": "# Ticket: Maintain SQLite search over projects goals tickets and events\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-e2d9 |\n| Project | maat |\n| Goal | G-20260526-215623-4775 |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nKeep indexed search covering all primary object types and their important text fields.\n\n## Acceptance\n\n- Search results include project, goal, ticket, and event hits with path, title, line, and excerpt.\n- Index rebuild populates SQLite from Markdown without requiring external services.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-e4b8.md",
+      "title": "Ticket: Require actionable details on created goals and tickets",
+      "content": "# Ticket: Require actionable details on created goals and tickets\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-e4b8 |\n| Project | maat |\n| Goal | G-20260526-215622-b461 |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nEnforce and document the requirement that all new goals and tickets contain enough context for another agent to continue the work without reading the conversation that created them.\n\n## Acceptance\n\n- Goal files include an Outcome section with a concrete result.\n- Ticket files include Description and Acceptance sections with actionable, testable criteria.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-e970.md",
+      "title": "Ticket: Maintain setup config for storage path and auto-sync defaults",
+      "content": "# Ticket: Maintain setup config for storage path and auto-sync defaults\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-e970 |\n| Project | maat |\n| Goal | G-20260526-215623-8373 |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nKeep local setup config responsible for storage path, actor, and sync preferences without becoming the source of project truth.\n\n## Acceptance\n\n- maat setup persists storage path, default actor, auto-pull, auto-commit, and auto-push preferences.\n- Project state remains in the configured storage repo, not in the local config file.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215623-f795.md",
+      "title": "Ticket: Detect ambiguous storage upstream and rebase configuration",
+      "content": "# Ticket: Detect ambiguous storage upstream and rebase configuration\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215623-f795 |\n| Project | maat |\n| Goal | G-20260526-215623-2f6a |\n| Status | active |\n| Created | 2026-05-26T21:56:23+02:00 |\n\n## Description\n\nImprove diagnostics for storage Git repositories whose remote, upstream, or pull-rebase settings make sync behavior unclear.\n\n## Acceptance\n\n- Doctor or sync status reports upstream branch, ahead/behind state, and pull strategy warnings.\n- The guidance tells agents when to ask before pushing.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215624-07a5.md",
+      "title": "Ticket: Improve TUI visual hierarchy and polish",
+      "content": "# Ticket: Improve TUI visual hierarchy and polish\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215624-07a5 |\n| Project | maat |\n| Goal | G-20260526-215624-e456 |\n| Status | active |\n| Created | 2026-05-26T21:56:24+02:00 |\n\n## Description\n\nRefine spacing, colors, labels, and empty states so the TUI feels calm and usable for repeated daily work.\n\n## Acceptance\n\n- The TUI remains readable with color disabled.\n- Empty and error states tell the user what to do next.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215624-0cc5.md",
+      "title": "Ticket: Make the TUI refresh when Maat state changes",
+      "content": "# Ticket: Make the TUI refresh when Maat state changes\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215624-0cc5 |\n| Project | maat |\n| Goal | G-20260526-215624-e456 |\n| Status | active |\n| Created | 2026-05-26T21:56:24+02:00 |\n\n## Description\n\nRefresh TUI data when project Markdown changes so long-running dashboard sessions reflect new goals, tickets, comments, and completions.\n\n## Acceptance\n\n- The TUI can reload state without restarting the process.\n- Refresh failures are shown as recoverable UI errors instead of crashing.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215624-22ea.md",
+      "title": "Ticket: Support project and ticket filtering in the TUI",
+      "content": "# Ticket: Support project and ticket filtering in the TUI\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215624-22ea |\n| Project | maat |\n| Goal | G-20260526-215624-e456 |\n| Status | active |\n| Created | 2026-05-26T21:56:24+02:00 |\n\n## Description\n\nAllow users to narrow the TUI by project, status, text query, or ownership.\n\n## Acceptance\n\n- Filtering updates the visible ticket list without losing the selected context unnecessarily.\n- The active filter state is visible and easy to clear.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215624-3f16.md",
+      "title": "Ticket: Show ticket state and ownership clearly in the TUI",
+      "content": "# Ticket: Show ticket state and ownership clearly in the TUI\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215624-3f16 |\n| Project | maat |\n| Goal | G-20260526-215624-e456 |\n| Status | active |\n| Created | 2026-05-26T21:56:24+02:00 |\n\n## Description\n\nDisplay ticket status, goal linkage, current claim or owner, and age/update context where available.\n\n## Acceptance\n\n- A user can tell which tickets are active, waiting, claimed, or done without opening files.\n- Claim expiration or ownership metadata is visible when present.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215624-5784.md",
+      "title": "Ticket: Add a storage setup repair command",
+      "content": "# Ticket: Add a storage setup repair command\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215624-5784 |\n| Project | maat |\n| Goal | G-20260526-215623-2f6a |\n| Status | active |\n| Created | 2026-05-26T21:56:24+02:00 |\n\n## Description\n\nProvide a guided way to repair common storage setup issues such as missing config, unwritable paths, missing Git repo, no upstream, or stale indexes.\n\n## Acceptance\n\n- The command reports what it can fix automatically and what requires user approval.\n- It does not delete project history or rewrite events.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215624-c871.md",
+      "title": "Ticket: Add focused ticket detail and action panes",
+      "content": "# Ticket: Add focused ticket detail and action panes\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215624-c871 |\n| Project | maat |\n| Goal | G-20260526-215624-e456 |\n| Status | active |\n| Created | 2026-05-26T21:56:24+02:00 |\n\n## Description\n\nAdd a detail pane that shows description, acceptance criteria, recent events, and available actions for the selected ticket.\n\n## Acceptance\n\n- The detail pane includes the selected ticket title, description, and acceptance criteria.\n- Actions are discoverable without cluttering the main list.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215624-e1dd.md",
+      "title": "Ticket: Design a column-based ticket board for the TUI",
+      "content": "# Ticket: Design a column-based ticket board for the TUI\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215624-e1dd |\n| Project | maat |\n| Goal | G-20260526-215624-e456 |\n| Status | active |\n| Created | 2026-05-26T21:56:24+02:00 |\n\n## Description\n\nDesign and implement a terminal layout that groups tickets by useful status columns while preserving compact project context.\n\n## Acceptance\n\n- Open, waiting, and done or recently completed work are visually distinct.\n- The layout remains readable at common terminal sizes.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215624-eb54.md",
+      "title": "Ticket: Make ticket navigation fast and keyboard-first",
+      "content": "# Ticket: Make ticket navigation fast and keyboard-first\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215624-eb54 |\n| Project | maat |\n| Goal | G-20260526-215624-e456 |\n| Status | active |\n| Created | 2026-05-26T21:56:24+02:00 |\n\n## Description\n\nSupport keyboard navigation for moving between projects, tickets, and detail panes.\n\n## Acceptance\n\n- Users can move selection without typing commands.\n- The selected ticket remains visible and stable during navigation.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-215624-f8fe.md",
+      "title": "Ticket: Print compact ticket state transitions",
+      "content": "# Ticket: Print compact ticket state transitions\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215624-f8fe |\n| Project | maat |\n| Goal | G-20260526-215623-2f6a |\n| Status | active |\n| Created | 2026-05-26T21:56:24+02:00 |\n\n## Description\n\nMake ticket claim, comment, and complete output easy to scan during agent runs.\n\n## Acceptance\n\n- Human output names the ticket ID and resulting action.\n- JSON output includes action, project key, ticket ID, and event ID.\n"
     },
     {
       "type": "event",
@@ -2131,6 +4157,54 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215601-casprine-4cd4 |\n| Time | 2026-05-26T21:56:01+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-215601-1319 |\n\n## Summary\n\nCreated ticket T-20260526-215601-1319.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215607-casprine-7d61.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215607-casprine-7d61 |\n| Time | 2026-05-26T21:56:07+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-215607-6bf1 |\n\n## Summary\n\nCreated ticket T-20260526-215607-6bf1.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215619-casprine-4822.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215619-casprine-4822 |\n| Time | 2026-05-26T21:56:19+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-215619-f244 |\n\n## Summary\n\nCreated ticket T-20260526-215619-f244.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215627-casprine-0f97.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215627-casprine-0f97 |\n| Time | 2026-05-26T21:56:27+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-215627-b569 |\n\n## Summary\n\nCreated ticket T-20260526-215627-b569.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215629-casprine-b667.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215629-casprine-b667 |\n| Time | 2026-05-26T21:56:29+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-215629-53f6 |\n\n## Summary\n\nCreated ticket T-20260526-215629-53f6.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215635-casprine-e2ff.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215635-casprine-e2ff |\n| Time | 2026-05-26T21:56:35+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-215635-f363 |\n\n## Summary\n\nCreated ticket T-20260526-215635-f363.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215636-codex-9027.md",
+      "title": "Event: ticket.claimed",
+      "content": "# Event: ticket.claimed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215636-codex-9027 |\n| Time | 2026-05-26T21:56:36+02:00 |\n| Actor | codex |\n| Project | orion |\n| Type | ticket.claimed |\n| Object | T-20260526-215629-53f6 |\n| Expires | 2026-05-26T23:56:36+02:00 |\n\n## Summary\n\nClaimed ticket T-20260526-215629-53f6 until 2026-05-26T23:56:36+02:00.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215716-casprine-df87.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215716-casprine-df87 |\n| Time | 2026-05-26T21:57:16+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-215303-4c65 |\n\n## Summary\n\nReview note: Core-managed monitor plan is ready at docs/plans/core-managed-monitors.md. Please review the owner model decision, private-network target policy, MVP monitor type scope, heartbeat timing, and whether incident routing should stay deferred.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215726-casprine-7fa8.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215726-casprine-7fa8 |\n| Time | 2026-05-26T21:57:26+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260526-215303-4c65 |\n\n## Summary\n\nCompleted ticket T-20260526-215303-4c65.\n\n## Evidence\n\n- Created docs/plans/core-managed-monitors.md, added Maat review note and implementation tickets, validated Maat store, and committed repo change 34ae394 docs(core): plan Core-managed monitors.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-214751-82ed.md",
       "title": "Goal: Adopt Maat project memory",
@@ -2333,6 +4407,36 @@
       "path": "projects/orion/tickets/T-20260526-215601-1319.md",
       "title": "Ticket: Add Core monitor management API",
       "content": "# Ticket: Add Core monitor management API\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215601-1319 |\n| Project | orion |\n| Goal | G-20260526-215257-e70b |\n| Status | active |\n| Created | 2026-05-26T21:56:01+02:00 |\n\n## Description\n\nCreate admin API routes for Core-managed monitor create, edit, delete, pause, resume, test-now, and redacted config retrieval, including route annotations and generated contracts.\n\n## Acceptance\n\n- The Core API supports the Core monitor management lifecycle, OpenAPI is regenerated from annotations, the Console SDK is regenerated when needed, and tests cover validation, owner handling, redaction, and unsupported monitor types.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-215607-6bf1.md",
+      "title": "Ticket: Build Console Core monitor workflow",
+      "content": "# Ticket: Build Console Core monitor workflow\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215607-6bf1 |\n| Project | orion |\n| Goal | G-20260526-215257-e70b |\n| Status | active |\n| Created | 2026-05-26T21:56:07+02:00 |\n\n## Description\n\nUpdate the Console monitor experience so users can create, test, pause, resume, edit, delete, filter, and inspect Core-managed monitors without editing Agent YAML.\n\n## Acceptance\n\n- Console has a Core monitor create/test flow, monitor rows and details show owner Core clearly, filters support owner/type, secret values are redacted on read, and the app builds successfully.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-215619-f244.md",
+      "title": "Ticket: Add Core heartbeat monitors",
+      "content": "# Ticket: Add Core heartbeat monitors\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215619-f244 |\n| Project | orion |\n| Goal | G-20260526-215257-e70b |\n| Status | active |\n| Created | 2026-05-26T21:56:19+02:00 |\n\n## Description\n\nImplement Core-owned heartbeat monitors for cron jobs, backups, scripts, and scheduled tasks that report success or failure to a generated Core endpoint.\n\n## Acceptance\n\n- A heartbeat monitor stays pending until the first signal, opens an incident after a missed expected interval plus grace period, records success and failure payloads with truncation, resolves on recovery, and exposes safe Console copy/test affordances.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-215627-b569.md",
+      "title": "Ticket: Add Core monitor noise controls",
+      "content": "# Ticket: Add Core monitor noise controls\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215627-b569 |\n| Project | orion |\n| Goal | G-20260526-215257-e70b |\n| Status | active |\n| Created | 2026-05-26T21:56:27+02:00 |\n\n## Description\n\nAdd confirmation periods, recovery periods, flapping-aware behavior, severity defaults, and maintenance handling for Core-managed monitors so transient failures do not create noisy incidents.\n\n## Acceptance\n\n- Core monitor incidents respect configured confirmation and recovery periods, maintenance suppresses incident creation and alert delivery, flapping is visible or degraded instead of noisy, and behavior is covered by reconciliation tests.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-215629-53f6.md",
+      "title": "Ticket: Draft alert routing redesign plan",
+      "content": "# Ticket: Draft alert routing redesign plan\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215629-53f6 |\n| Project | orion |\n| Goal | G-20260526-215126-c321 |\n| Status | active |\n| Created | 2026-05-26T21:56:29+02:00 |\n\n## Description\n\nDraft a reviewable planning document that rethinks Orion alert configuration, delivery services, webhook and SMTP support, grouping, routing, flow diagrams, and phased implementation before product work begins.\n\n## Acceptance\n\n- A committed docs plan explains the proposed alert model, key flows, grouping semantics, data/API/UI changes, rollout phases, and open questions for review.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-215635-f363.md",
+      "title": "Ticket: Design monitor component mapping for status pages",
+      "content": "# Ticket: Design monitor component mapping for status pages\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215635-f363 |\n| Project | orion |\n| Goal | G-20260526-215257-e70b |\n| Status | active |\n| Created | 2026-05-26T21:56:35+02:00 |\n\n## Description\n\nDesign how Core and Agent monitors map to service or status-page components so incidents can identify impacted components and future status pages can publish relevant updates.\n\n## Acceptance\n\n- A design note identifies the component data model, monitor mapping UX, incident fields, status page consumption path, and migration steps without requiring status page implementation in the same ticket.\n"
     }
   ]
 }
