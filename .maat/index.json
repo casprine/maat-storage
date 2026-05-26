@@ -1287,6 +1287,12 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211930-casprine-9a6d |\n| Time | 2026-05-26T21:19:30+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-211923-cb27 |\n\n## Summary\n\nTags: #logs #agent #core #console #operations #post-deploy. Sources: docs/milestones/m4-console-release-pass.md open risks and deploy/agent-install-upgrade logging notes. Scope: distinguish Orion operational events from service/file logs, collect Agent service logs where safe, and make them viewable for later diagnosis.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-211937-casprine-f6b1.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211937-casprine-f6b1 |\n| Time | 2026-05-26T21:19:37+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-211937-2a7f |\n\n## Summary\n\nCreated goal G-20260526-211937-2a7f.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-204807-419c.md",
       "title": "Goal: Adopt Maat project memory",
@@ -1345,6 +1351,12 @@
       "path": "projects/orion/goals/G-20260526-211916-2c73.md",
       "title": "Goal: Collect and expose service logs",
       "content": "# Goal: Collect and expose service logs\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-211916-2c73 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:19:16+02:00 |\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260526-211937-2a7f.md",
+      "title": "Goal: Automate data lifecycle scheduling",
+      "content": "# Goal: Automate data lifecycle scheduling\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-211937-2a7f |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:19:37+02:00 |\n"
     },
     {
       "type": "project",
