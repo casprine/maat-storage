@@ -745,6 +745,16 @@
           "object_id": "G-20260526-215153-31dc",
           "summary": "Created goal G-20260526-215153-31dc.",
           "path": "projects/orion/events/2026/05/E-20260526-215153-casprine-4443.md"
+        },
+        {
+          "id": "E-20260526-215154-codex-9fbc",
+          "time": "2026-05-26T21:51:54+02:00",
+          "actor": "codex",
+          "project_key": "orion",
+          "type": "ticket.claimed",
+          "object_id": "T-20260526-215146-5e99",
+          "summary": "Claimed ticket T-20260526-215146-5e99 until 2026-05-26T23:51:54+02:00.",
+          "path": "projects/orion/events/2026/05/E-20260526-215154-codex-9fbc.md"
         }
       ]
     }
@@ -1049,6 +1059,12 @@
       "path": "projects/orion/events/2026/05/E-20260526-215153-casprine-4443.md",
       "title": "Event: goal.created",
       "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215153-casprine-4443 |\n| Time | 2026-05-26T21:51:53+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-215153-31dc |\n\n## Summary\n\nCreated goal G-20260526-215153-31dc.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215154-codex-9fbc.md",
+      "title": "Event: ticket.claimed",
+      "content": "# Event: ticket.claimed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215154-codex-9fbc |\n| Time | 2026-05-26T21:51:54+02:00 |\n| Actor | codex |\n| Project | orion |\n| Type | ticket.claimed |\n| Object | T-20260526-215146-5e99 |\n| Expires | 2026-05-26T23:51:54+02:00 |\n\n## Summary\n\nClaimed ticket T-20260526-215146-5e99 until 2026-05-26T23:51:54+02:00.\n"
     },
     {
       "type": "goal",
