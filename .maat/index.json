@@ -501,6 +501,12 @@
       "content": "# Event: ticket.claimed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210833-codex-0893 |\n| Time | 2026-05-26T21:08:33+02:00 |\n| Actor | codex |\n| Project | maat |\n| Type | ticket.claimed |\n| Object | T-20260526-210819-4aa5 |\n| Expires | 2026-05-26T23:08:33+02:00 |\n\n## Summary\n\nClaimed ticket T-20260526-210819-4aa5 until 2026-05-26T23:08:33+02:00.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-211241-casprine-c474.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211241-casprine-c474 |\n| Time | 2026-05-26T21:12:41+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.completed |\n| Object | T-20260526-210819-4aa5 |\n\n## Summary\n\nCompleted ticket T-20260526-210819-4aa5.\n\n## Evidence\n\n- Implemented live TUI refresh in commit 597c217; verified with GOCACHE=/private/tmp/maat-go-cache go test ./... and go vet ./...\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
       "title": "Goal: Improve initialize dogfood experience",
