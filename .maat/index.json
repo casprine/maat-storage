@@ -285,6 +285,16 @@
           "object_id": "T-20260526-215214-418c",
           "summary": "Created ticket T-20260526-215214-418c.",
           "path": "projects/driver/events/2026/05/E-20260526-215214-casprine-6b88.md"
+        },
+        {
+          "id": "E-20260526-215225-casprine-4fe4",
+          "time": "2026-05-26T21:52:25+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "ticket.commented",
+          "object_id": "T-20260526-215214-418c",
+          "summary": "Data/status: worker files under apps/worker/internal/reconcile and apps/worker/internal/orchestrate implement stable-file scanning, registration, deleted-file reporting, duplicate handling, and artifact-boundary checks. Tests include partial writes, duplicates, deleted documents, and keeping artifacts outside documents. make test-fast passed on 2026-05-26.",
+          "path": "projects/driver/events/2026/05/E-20260526-215225-casprine-4fe4.md"
         }
       ]
     },
@@ -394,6 +404,15 @@
           "created": "2026-05-26T21:51:53+02:00",
           "outcome": "A real Core and at least one real Agent are deployed and verified end to end, with failures recorded as follow-up work instead of lingering in planning docs.",
           "path": "projects/orion/goals/G-20260526-215153-31dc.md"
+        },
+        {
+          "id": "G-20260526-215225-0e98",
+          "project_key": "orion",
+          "title": "Add Console browser and visual smoke coverage",
+          "status": "active",
+          "created": "2026-05-26T21:52:25+02:00",
+          "outcome": "Console flows have lightweight automated browser coverage after the manual flows stabilize, reducing reliance on visual-only QA for regressions.",
+          "path": "projects/orion/goals/G-20260526-215225-0e98.md"
         }
       ],
       "tickets": [
@@ -824,6 +843,16 @@
           "object_id": "T-20260526-215204-1d90",
           "summary": "Tags: #deploy #qa #release #smoke #soak #self-hosted. Sources: docs/deployment/first-run-checklist.md, docs/milestones/m3-home-server-monitoring-baseline.md open risks, docs/milestones/m5-first-deploy-candidate.md next section.",
           "path": "projects/orion/events/2026/05/E-20260526-215213-casprine-31fe.md"
+        },
+        {
+          "id": "E-20260526-215225-casprine-77ee",
+          "time": "2026-05-26T21:52:25+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260526-215225-0e98",
+          "summary": "Created goal G-20260526-215225-0e98.",
+          "path": "projects/orion/events/2026/05/E-20260526-215225-casprine-77ee.md"
         }
       ]
     }
@@ -912,6 +941,12 @@
       "path": "projects/driver/events/2026/05/E-20260526-215214-casprine-6b88.md",
       "title": "Event: ticket.created",
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215214-casprine-6b88 |\n| Time | 2026-05-26T21:52:14+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.created |\n| Object | T-20260526-215214-418c |\n\n## Summary\n\nCreated ticket T-20260526-215214-418c.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-215225-casprine-4fe4.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215225-casprine-4fe4 |\n| Time | 2026-05-26T21:52:25+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.commented |\n| Object | T-20260526-215214-418c |\n\n## Summary\n\nData/status: worker files under apps/worker/internal/reconcile and apps/worker/internal/orchestrate implement stable-file scanning, registration, deleted-file reporting, duplicate handling, and artifact-boundary checks. Tests include partial writes, duplicates, deleted documents, and keeping artifacts outside documents. make test-fast passed on 2026-05-26.\n"
     },
     {
       "type": "goal",
@@ -1166,6 +1201,12 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215213-casprine-31fe |\n| Time | 2026-05-26T21:52:13+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-215204-1d90 |\n\n## Summary\n\nTags: #deploy #qa #release #smoke #soak #self-hosted. Sources: docs/deployment/first-run-checklist.md, docs/milestones/m3-home-server-monitoring-baseline.md open risks, docs/milestones/m5-first-deploy-candidate.md next section.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215225-casprine-77ee.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215225-casprine-77ee |\n| Time | 2026-05-26T21:52:25+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-215225-0e98 |\n\n## Summary\n\nCreated goal G-20260526-215225-0e98.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-214751-82ed.md",
       "title": "Goal: Adopt Maat project memory",
@@ -1218,6 +1259,12 @@
       "path": "projects/orion/goals/G-20260526-215153-31dc.md",
       "title": "Goal: Prove the first real self-hosted deployment",
       "content": "# Goal: Prove the first real self-hosted deployment\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215153-31dc |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:51:53+02:00 |\n\n## Outcome\n\nA real Core and at least one real Agent are deployed and verified end to end, with failures recorded as follow-up work instead of lingering in planning docs.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260526-215225-0e98.md",
+      "title": "Goal: Add Console browser and visual smoke coverage",
+      "content": "# Goal: Add Console browser and visual smoke coverage\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215225-0e98 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:52:25+02:00 |\n\n## Outcome\n\nConsole flows have lightweight automated browser coverage after the manual flows stabilize, reducing reliance on visual-only QA for regressions.\n"
     },
     {
       "type": "project",
