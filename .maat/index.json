@@ -225,6 +225,12 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211623-casprine-0048 |\n| Time | 2026-05-26T21:16:23+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.commented |\n| Object | T-20260526-211209-dccd |\n\n## Summary\n\nRead docs/product-plan.md, architecture-plan.md, backend-plan.md, backend-tasks.md, ingestion-pipeline.md, frontend-plan.md, openapi-orval-plan.md, access-control-plan.md, configuration-plan.md, and deployment.md; cross-checked current repo files under apps/api, apps/worker, apps/web, packages/sdk, deploy, and scripts; ran make test-fast successfully after sandbox escalation for localhost httptest.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-211631-casprine-08cd.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211631-casprine-08cd |\n| Time | 2026-05-26T21:16:31+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.completed |\n| Object | T-20260526-211209-dccd |\n\n## Summary\n\nCompleted ticket T-20260526-211209-dccd.\n\n## Evidence\n\n- Created local Maat goals and status tickets for product, backend, worker, frontend, access/config, deployment, and repo process; make test-fast passed on 2026-05-26; Maat auto-push disabled before ticket/status writes.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-205351-2c15.md",
       "title": "Goal: Initialize Maat project memory",
