@@ -1245,6 +1245,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211814-casprine-1461 |\n| Time | 2026-05-26T21:18:14+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-211814-3219 |\n\n## Summary\n\nCreated ticket T-20260526-211814-3219.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-211821-casprine-32f9.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211821-casprine-32f9 |\n| Time | 2026-05-26T21:18:21+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-211814-3219 |\n\n## Summary\n\nTags: #deploy #qa #release #smoke #soak #self-hosted. Sources: docs/deployment/first-run-checklist.md, docs/milestones/m3-home-server-monitoring-baseline.md open risks, docs/milestones/m5-first-deploy-candidate.md next section. Scope: run one real Core and at least one real Agent, verify no duplicate records on restart, logs/state/backups, monitor intervals, and capture follow-up issues.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-204807-419c.md",
       "title": "Goal: Adopt Maat project memory",
