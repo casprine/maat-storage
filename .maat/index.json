@@ -717,6 +717,12 @@
       "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211241-casprine-c474 |\n| Time | 2026-05-26T21:12:41+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.completed |\n| Object | T-20260526-210819-4aa5 |\n\n## Summary\n\nCompleted ticket T-20260526-210819-4aa5.\n\n## Evidence\n\n- Implemented live TUI refresh in commit 597c217; verified with GOCACHE=/private/tmp/maat-go-cache go test ./... and go vet ./...\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-211550-casprine-b3a2.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211550-casprine-b3a2 |\n| Time | 2026-05-26T21:15:50+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-211550-df22 |\n\n## Summary\n\nCreated ticket T-20260526-211550-df22.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
       "title": "Goal: Improve initialize dogfood experience",
@@ -1009,6 +1015,12 @@
       "path": "projects/maat/tickets/T-20260526-210819-4aa5.md",
       "title": "Ticket: Make the TUI refresh when Maat state changes",
       "content": "# Ticket: Make the TUI refresh when Maat state changes\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-210819-4aa5 |\n| Project | maat |\n| Goal | G-20260526-210657-76fe |\n| Status | active |\n| Created | 2026-05-26T21:08:19+02:00 |\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-211550-df22.md",
+      "title": "Ticket: Require actionable details on created goals and tickets",
+      "content": "# Ticket: Require actionable details on created goals and tickets\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-211550-df22 |\n| Project | maat |\n| Goal | G-20260526-205926-f9c1 |\n| Status | active |\n| Created | 2026-05-26T21:15:50+02:00 |\n"
     },
     {
       "type": "event",
