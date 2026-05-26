@@ -141,6 +141,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211416-casprine-137d |\n| Time | 2026-05-26T21:14:16+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.created |\n| Object | T-20260526-211416-4221 |\n\n## Summary\n\nCreated ticket T-20260526-211416-4221.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-211425-casprine-bb08.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211425-casprine-bb08 |\n| Time | 2026-05-26T21:14:25+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.commented |\n| Object | T-20260526-211416-4221 |\n\n## Summary\n\nStatus from docs/ingestion-pipeline.md and apps/worker/internal/processing: pipeline code supports text extraction, PDF handling, OCR fallback with configured languages, chunking, language decisions, translation index, embeddings, and original/translated search records. Provider failures are designed to be partial rather than hiding documents. make test-fast passed with worker processing tests. Remaining proof is heavy/e2e: real OCR fixtures, pgvector semantic ranking, DOCX and scanned PDF smoke, and model/tool version reprocessing behavior.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-205351-2c15.md",
       "title": "Goal: Initialize Maat project memory",
