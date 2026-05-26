@@ -1281,6 +1281,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211923-casprine-8fed |\n| Time | 2026-05-26T21:19:23+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-211923-cb27 |\n\n## Summary\n\nCreated ticket T-20260526-211923-cb27.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-211930-casprine-9a6d.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211930-casprine-9a6d |\n| Time | 2026-05-26T21:19:30+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-211923-cb27 |\n\n## Summary\n\nTags: #logs #agent #core #console #operations #post-deploy. Sources: docs/milestones/m4-console-release-pass.md open risks and deploy/agent-install-upgrade logging notes. Scope: distinguish Orion operational events from service/file logs, collect Agent service logs where safe, and make them viewable for later diagnosis.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-204807-419c.md",
       "title": "Goal: Adopt Maat project memory",
