@@ -40,6 +40,15 @@
           "created": "2026-05-26T21:49:48+02:00",
           "outcome": "The always-on Go worker detects stable files, reports changes to the API, leases jobs, extracts/OCRs/translates/embeds/indexes text, records step outcomes, and writes generated artifacts outside the document directory.",
           "path": "projects/driver/goals/G-20260526-214948-2ed0.md"
+        },
+        {
+          "id": "G-20260526-215000-fdcd",
+          "project_key": "driver",
+          "title": "Build SDK-backed web console",
+          "status": "active",
+          "created": "2026-05-26T21:50:00+02:00",
+          "outcome": "The Vite React TypeScript console uses the generated SDK to support first-run setup, login, document list/detail/preview/text/events, upload, search, settings, tags, collections, retry, and sign out.",
+          "path": "projects/driver/goals/G-20260526-215000-fdcd.md"
         }
       ],
       "events": [
@@ -72,6 +81,16 @@
           "object_id": "G-20260526-214948-2ed0",
           "summary": "Created goal G-20260526-214948-2ed0.",
           "path": "projects/driver/events/2026/05/E-20260526-214948-casprine-d502.md"
+        },
+        {
+          "id": "E-20260526-215000-casprine-76e5",
+          "time": "2026-05-26T21:50:00+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "goal.created",
+          "object_id": "G-20260526-215000-fdcd",
+          "summary": "Created goal G-20260526-215000-fdcd.",
+          "path": "projects/driver/events/2026/05/E-20260526-215000-casprine-76e5.md"
         }
       ]
     },
@@ -342,6 +361,12 @@
       "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214948-casprine-d502 |\n| Time | 2026-05-26T21:49:48+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | goal.created |\n| Object | G-20260526-214948-2ed0 |\n\n## Summary\n\nCreated goal G-20260526-214948-2ed0.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-215000-casprine-76e5.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215000-casprine-76e5 |\n| Time | 2026-05-26T21:50:00+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | goal.created |\n| Object | G-20260526-215000-fdcd |\n\n## Summary\n\nCreated goal G-20260526-215000-fdcd.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-214932-bfdb.md",
       "title": "Goal: Ship v1 private document drive",
@@ -358,6 +383,12 @@
       "path": "projects/driver/goals/G-20260526-214948-2ed0.md",
       "title": "Goal: Run ingestion and indexing worker reliably",
       "content": "# Goal: Run ingestion and indexing worker reliably\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-214948-2ed0 |\n| Project | driver |\n| Status | active |\n| Created | 2026-05-26T21:49:48+02:00 |\n\n## Outcome\n\nThe always-on Go worker detects stable files, reports changes to the API, leases jobs, extracts/OCRs/translates/embeds/indexes text, records step outcomes, and writes generated artifacts outside the document directory.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/driver/goals/G-20260526-215000-fdcd.md",
+      "title": "Goal: Build SDK-backed web console",
+      "content": "# Goal: Build SDK-backed web console\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215000-fdcd |\n| Project | driver |\n| Status | active |\n| Created | 2026-05-26T21:50:00+02:00 |\n\n## Outcome\n\nThe Vite React TypeScript console uses the generated SDK to support first-run setup, login, document list/detail/preview/text/events, upload, search, settings, tags, collections, retry, and sign out.\n"
     },
     {
       "type": "project",
