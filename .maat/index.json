@@ -345,6 +345,12 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210407-casprine-9379 |\n| Time | 2026-05-26T21:04:07+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.commented |\n| Object | T-20260526-210405-c0ab |\n\n## Summary\n\nFrom Orion setup recommendations: add an explicit repair command for storage Git issues, covering missing upstream, ambiguous upstream, and push setup. This can be part of maat doctor storage or a dedicated maat sync --setup-upstream flow.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-210657-casprine-1da2.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210657-casprine-1da2 |\n| Time | 2026-05-26T21:06:57+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | goal.created |\n| Object | G-20260526-210657-76fe |\n\n## Summary\n\nCreated goal G-20260526-210657-76fe.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
       "title": "Goal: Improve initialize dogfood experience",
@@ -385,6 +391,12 @@
       "path": "projects/maat/goals/G-20260526-210331-013f.md",
       "title": "Goal: Resolve Orion first-run setup friction",
       "content": "# Goal: Resolve Orion first-run setup friction\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-210331-013f |\n| Project | maat |\n| Status | active |\n| Created | 2026-05-26T21:03:31+02:00 |\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/maat/goals/G-20260526-210657-76fe.md",
+      "title": "Goal: Build a proper terminal UI for daily project navigation",
+      "content": "# Goal: Build a proper terminal UI for daily project navigation\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-210657-76fe |\n| Project | maat |\n| Status | active |\n| Created | 2026-05-26T21:06:57+02:00 |\n"
     },
     {
       "type": "project",
