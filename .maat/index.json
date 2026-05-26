@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "projects": [],
+  "documents": [
+    {
+      "type": "project",
+      "path": "projects/orion/project.md",
+      "title": "Project: Orion",
+      "content": "# Project: Orion\n\n| Field | Value |\n|---|---|\n| Project Key | orion |\n| Display Name | Orion |\n| Status | active |\n| Created | 2026-05-26T20:46:03+02:00 |\n| Updated | 2026-05-26T20:46:03+02:00 |\n\n## Summary\n\nLinked from `/Users/casprine/Desktop/vendor/sunday-studio/orion`.\n\n## Identity\n\n| Field | Value |\n|---|---|\n| Primary Repo | /Users/casprine/Desktop/vendor/sunday-studio/orion |\n| Remote | git@github.com:sunday-studio/orion.git |\n"
+    }
+  ]
+}
