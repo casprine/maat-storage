@@ -117,6 +117,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-205933-casprine-835c |\n| Time | 2026-05-26T20:59:33+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-205933-f078 |\n\n## Summary\n\nCreated ticket T-20260526-205933-f078.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-205935-casprine-8573.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-205935-casprine-8573 |\n| Time | 2026-05-26T20:59:35+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | goal.created |\n| Object | G-20260526-205935-0b9f |\n\n## Summary\n\nCreated goal G-20260526-205935-0b9f.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
       "title": "Goal: Improve initialize dogfood experience",
@@ -127,6 +133,12 @@
       "path": "projects/maat/goals/G-20260526-205926-f9c1.md",
       "title": "Goal: Enable autonomous agent project management",
       "content": "# Goal: Enable autonomous agent project management\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-205926-f9c1 |\n| Project | maat |\n| Status | active |\n| Created | 2026-05-26T20:59:26+02:00 |\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/maat/goals/G-20260526-205935-0b9f.md",
+      "title": "Goal: Provide terminal and TUI state visibility",
+      "content": "# Goal: Provide terminal and TUI state visibility\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-205935-0b9f |\n| Project | maat |\n| Status | active |\n| Created | 2026-05-26T20:59:35+02:00 |\n"
     },
     {
       "type": "project",
