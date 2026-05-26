@@ -45,6 +45,12 @@
       "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-204931-casprine-37a9 |\n| Time | 2026-05-26T20:49:31+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260526-204816-fffc |\n\n## Summary\n\nCompleted ticket T-20260526-204816-fffc.\n\n## Evidence\n\n- Committed AGENTS.md Maat instructions in product repo commit 1c7dbf5; Maat validation passed.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-205252-casprine-f87b.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-205252-casprine-f87b |\n| Time | 2026-05-26T20:52:52+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-205252-7eb1 |\n\n## Summary\n\nCreated ticket T-20260526-205252-7eb1.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-204807-419c.md",
       "title": "Goal: Adopt Maat project memory",
@@ -61,6 +67,12 @@
       "path": "projects/orion/tickets/T-20260526-204816-fffc.md",
       "title": "Ticket: Add Maat instructions to AGENTS",
       "content": "# Ticket: Add Maat instructions to AGENTS\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-204816-fffc |\n| Project | orion |\n| Goal | G-20260526-204807-419c |\n| Status | active |\n| Created | 2026-05-26T20:48:16+02:00 |\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-205252-7eb1.md",
+      "title": "Ticket: Document Maat setup friction",
+      "content": "# Ticket: Document Maat setup friction\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-205252-7eb1 |\n| Project | orion |\n| Goal | G-20260526-204807-419c |\n| Status | active |\n| Created | 2026-05-26T20:52:52+02:00 |\n"
     }
   ]
 }
