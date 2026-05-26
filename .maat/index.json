@@ -969,6 +969,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211401-casprine-8ed5 |\n| Time | 2026-05-26T21:14:01+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-211401-09a2 |\n\n## Summary\n\nCreated ticket T-20260526-211401-09a2.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-211411-codex-3da6.md",
+      "title": "Event: ticket.claimed",
+      "content": "# Event: ticket.claimed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211411-codex-3da6 |\n| Time | 2026-05-26T21:14:11+02:00 |\n| Actor | codex |\n| Project | orion |\n| Type | ticket.claimed |\n| Object | T-20260526-211401-09a2 |\n| Expires | 2026-05-26T23:14:11+02:00 |\n\n## Summary\n\nClaimed ticket T-20260526-211401-09a2 until 2026-05-26T23:14:11+02:00.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-204807-419c.md",
       "title": "Goal: Adopt Maat project memory",
