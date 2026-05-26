@@ -107,6 +107,19 @@
             "Agent and monitor health are computed and presented so one or a few monitor failures do not incorrectly make a live agent look fully down, and the UI explains why a status is degraded or down."
           ],
           "path": "projects/orion/tickets/T-20260526-214853-0007.md"
+        },
+        {
+          "id": "T-20260526-214924-c161",
+          "project_key": "orion",
+          "goal_id": "G-20260526-214913-1150",
+          "title": "Add report metadata and raw inspection drawers",
+          "status": "active",
+          "created": "2026-05-26T21:49:24+02:00",
+          "description": "Preserve useful success and failure context for monitor and agent reports, then expose it in Console drawers from report and history rows.",
+          "acceptance": [
+            "Clicking relevant agent report or monitor history rows opens an inspection drawer showing summarized status, timestamps, metrics, errors, metadata, and raw JSON payload."
+          ],
+          "path": "projects/orion/tickets/T-20260526-214924-c161.md"
         }
       ],
       "events": [
@@ -205,6 +218,16 @@
           "object_id": "G-20260526-214913-1150",
           "summary": "Created goal G-20260526-214913-1150.",
           "path": "projects/orion/events/2026/05/E-20260526-214913-casprine-efcd.md"
+        },
+        {
+          "id": "E-20260526-214924-casprine-699f",
+          "time": "2026-05-26T21:49:24+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260526-214924-c161",
+          "summary": "Created ticket T-20260526-214924-c161.",
+          "path": "projects/orion/events/2026/05/E-20260526-214924-casprine-699f.md"
         }
       ]
     }
@@ -277,6 +300,12 @@
       "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214913-casprine-efcd |\n| Time | 2026-05-26T21:49:13+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-214913-1150 |\n\n## Summary\n\nCreated goal G-20260526-214913-1150.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-214924-casprine-699f.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214924-casprine-699f |\n| Time | 2026-05-26T21:49:24+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-214924-c161 |\n\n## Summary\n\nCreated ticket T-20260526-214924-c161.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-214751-82ed.md",
       "title": "Goal: Adopt Maat project memory",
@@ -317,6 +346,12 @@
       "path": "projects/orion/tickets/T-20260526-214853-0007.md",
       "title": "Ticket: Split agent availability from monitor health",
       "content": "# Ticket: Split agent availability from monitor health\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-214853-0007 |\n| Project | orion |\n| Goal | G-20260526-214843-eaa4 |\n| Status | active |\n| Created | 2026-05-26T21:48:53+02:00 |\n\n## Description\n\nImplement and document a clearer health model that separates agent process availability, missing agent reports, stale monitor reports, monitor check failures, and threshold-based monitor rollups.\n\n## Acceptance\n\n- Agent and monitor health are computed and presented so one or a few monitor failures do not incorrectly make a live agent look fully down, and the UI explains why a status is degraded or down.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-214924-c161.md",
+      "title": "Ticket: Add report metadata and raw inspection drawers",
+      "content": "# Ticket: Add report metadata and raw inspection drawers\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-214924-c161 |\n| Project | orion |\n| Goal | G-20260526-214913-1150 |\n| Status | active |\n| Created | 2026-05-26T21:49:24+02:00 |\n\n## Description\n\nPreserve useful success and failure context for monitor and agent reports, then expose it in Console drawers from report and history rows.\n\n## Acceptance\n\n- Clicking relevant agent report or monitor history rows opens an inspection drawer showing summarized status, timestamps, metrics, errors, metadata, and raw JSON payload.\n"
     }
   ]
 }
