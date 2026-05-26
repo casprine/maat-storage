@@ -1233,6 +1233,12 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211801-casprine-5ec0 |\n| Time | 2026-05-26T21:18:01+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-211753-9a58 |\n\n## Summary\n\nTags: #alerts #core #console #webhooks #fanout #post-deploy. Sources: docs/milestones/m5-first-deploy-candidate.md deferred list and docs/architecture/performance-observability.md decision section. Scope: user-triggered alert channel test action, clearer delivery diagnostics, and eventually moving notification delivery attempts out of the Agent report request path.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-211807-casprine-4bdc.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211807-casprine-4bdc |\n| Time | 2026-05-26T21:18:07+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-211807-d7ef |\n\n## Summary\n\nCreated goal G-20260526-211807-d7ef.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-204807-419c.md",
       "title": "Goal: Adopt Maat project memory",
@@ -1273,6 +1279,12 @@
       "path": "projects/orion/goals/G-20260526-211747-653d.md",
       "title": "Goal: Improve alert operations",
       "content": "# Goal: Improve alert operations\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-211747-653d |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:17:47+02:00 |\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260526-211807-d7ef.md",
+      "title": "Goal: Prove the first real self-hosted deployment",
+      "content": "# Goal: Prove the first real self-hosted deployment\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-211807-d7ef |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:18:07+02:00 |\n"
     },
     {
       "type": "project",
