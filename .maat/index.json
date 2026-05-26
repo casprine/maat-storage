@@ -99,6 +99,12 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-205349-casprine-4671 |\n| Time | 2026-05-26T20:53:49+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-205252-7eb1 |\n\n## Summary\n\nDrafted docs/development/maat-setup-friction.md with observed initialize/setup issues and suggested fixes.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-205440-casprine-eea2.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-205440-casprine-eea2 |\n| Time | 2026-05-26T20:54:40+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260526-205252-7eb1 |\n\n## Summary\n\nCompleted ticket T-20260526-205252-7eb1.\n\n## Evidence\n\n- Added docs/development/maat-setup-friction.md and committed it as 247244f; Maat validation passed.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-204807-419c.md",
       "title": "Goal: Adopt Maat project memory",
