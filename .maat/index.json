@@ -250,6 +250,15 @@
           "created": "2026-05-26T21:50:27+02:00",
           "outcome": "Core exposes enough runtime diagnostics to tell whether report ingestion, incident reconciliation, database work, and slow requests are healthy without relying on an external monitoring stack.",
           "path": "projects/orion/goals/G-20260526-215027-2cf9.md"
+        },
+        {
+          "id": "G-20260526-215053-8210",
+          "project_key": "orion",
+          "title": "Harden Agent local state durability",
+          "status": "active",
+          "created": "2026-05-26T21:50:53+02:00",
+          "outcome": "The Agent can preserve important local operational state across restarts and outages when real usage shows in-memory retry behavior is not enough.",
+          "path": "projects/orion/goals/G-20260526-215053-8210.md"
         }
       ],
       "tickets": [
@@ -508,6 +517,16 @@
           "object_id": "T-20260526-215035-2f5b",
           "summary": "Tags: #core #observability #diagnostics #metrics #performance #post-deploy. Sources: docs/architecture/performance-observability.md, docs/milestones/m3-home-server-monitoring-baseline.md open risks, docs/milestones/m5-first-deploy-candidate.md deferred list.",
           "path": "projects/orion/events/2026/05/E-20260526-215046-casprine-99ee.md"
+        },
+        {
+          "id": "E-20260526-215053-casprine-7eee",
+          "time": "2026-05-26T21:50:53+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260526-215053-8210",
+          "summary": "Created goal G-20260526-215053-8210.",
+          "path": "projects/orion/events/2026/05/E-20260526-215053-casprine-7eee.md"
         }
       ]
     }
@@ -724,6 +743,12 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215046-casprine-99ee |\n| Time | 2026-05-26T21:50:46+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-215035-2f5b |\n\n## Summary\n\nTags: #core #observability #diagnostics #metrics #performance #post-deploy. Sources: docs/architecture/performance-observability.md, docs/milestones/m3-home-server-monitoring-baseline.md open risks, docs/milestones/m5-first-deploy-candidate.md deferred list.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215053-casprine-7eee.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215053-casprine-7eee |\n| Time | 2026-05-26T21:50:53+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-215053-8210 |\n\n## Summary\n\nCreated goal G-20260526-215053-8210.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-214751-82ed.md",
       "title": "Goal: Adopt Maat project memory",
@@ -752,6 +777,12 @@
       "path": "projects/orion/goals/G-20260526-215027-2cf9.md",
       "title": "Goal: Add Core runtime diagnostics and ingestion metrics",
       "content": "# Goal: Add Core runtime diagnostics and ingestion metrics\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215027-2cf9 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:50:27+02:00 |\n\n## Outcome\n\nCore exposes enough runtime diagnostics to tell whether report ingestion, incident reconciliation, database work, and slow requests are healthy without relying on an external monitoring stack.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260526-215053-8210.md",
+      "title": "Goal: Harden Agent local state durability",
+      "content": "# Goal: Harden Agent local state durability\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215053-8210 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:50:53+02:00 |\n\n## Outcome\n\nThe Agent can preserve important local operational state across restarts and outages when real usage shows in-memory retry behavior is not enough.\n"
     },
     {
       "type": "project",
