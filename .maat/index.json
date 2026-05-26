@@ -219,6 +219,12 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211612-casprine-da23 |\n| Time | 2026-05-26T21:16:12+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.commented |\n| Object | T-20260526-211603-1d22 |\n\n## Summary\n\nProcess from AGENTS.md and docs/backend-tasks.md: create or claim a Maat ticket before material work; record progress and complete only with evidence. Backend work is tested to a T. API route/response changes update backend-owned OpenAPI and regenerate Orval SDK when frontend contract changes. Run make test-fast for fast gate; run make test-heavy for real OCR/pgvector/DOCX/scanned-PDF confidence; run make check-code-lines before committing code. Current evidence for this status pass: make test-fast passed on 2026-05-26.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-211623-casprine-0048.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211623-casprine-0048 |\n| Time | 2026-05-26T21:16:23+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.commented |\n| Object | T-20260526-211209-dccd |\n\n## Summary\n\nRead docs/product-plan.md, architecture-plan.md, backend-plan.md, backend-tasks.md, ingestion-pipeline.md, frontend-plan.md, openapi-orval-plan.md, access-control-plan.md, configuration-plan.md, and deployment.md; cross-checked current repo files under apps/api, apps/worker, apps/web, packages/sdk, deploy, and scripts; ran make test-fast successfully after sandbox escalation for localhost httptest.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-205351-2c15.md",
       "title": "Goal: Initialize Maat project memory",
