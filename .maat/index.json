@@ -225,6 +225,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210010-casprine-79b8 |\n| Time | 2026-05-26T21:00:10+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-210010-e77b |\n\n## Summary\n\nCreated ticket T-20260526-210010-e77b.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-210012-casprine-82d9.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210012-casprine-82d9 |\n| Time | 2026-05-26T21:00:12+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-210012-d036 |\n\n## Summary\n\nCreated ticket T-20260526-210012-d036.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
       "title": "Goal: Improve initialize dogfood experience",
@@ -403,6 +409,12 @@
       "path": "projects/maat/tickets/T-20260526-210010-e77b.md",
       "title": "Ticket: Maintain Markdown search fallback",
       "content": "# Ticket: Maintain Markdown search fallback\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-210010-e77b |\n| Project | maat |\n| Goal | G-20260526-210006-fcd7 |\n| Status | active |\n| Created | 2026-05-26T21:00:10+02:00 |\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-210012-d036.md",
+      "title": "Ticket: Keep search results usable for humans and JSON agents",
+      "content": "# Ticket: Keep search results usable for humans and JSON agents\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-210012-d036 |\n| Project | maat |\n| Goal | G-20260526-210006-fcd7 |\n| Status | active |\n| Created | 2026-05-26T21:00:12+02:00 |\n"
     },
     {
       "type": "event",
