@@ -239,6 +239,22 @@
             "Completion evidence names tests, commits, PRs, or exact manual verification."
           ],
           "path": "projects/driver/tickets/T-20260526-215436-c715.md"
+        },
+        {
+          "id": "T-20260526-215500-697b",
+          "project_key": "driver",
+          "goal_id": "G-20260526-215034-ba07",
+          "title": "Rebuild Driver Maat memory with structured fields",
+          "status": "active",
+          "created": "2026-05-26T21:55:00+02:00",
+          "description": "Recreate the Driver Maat goals, tickets, and status events after old Driver entries were deleted, using the current schema requirements for goal outcomes, ticket descriptions, ticket acceptance criteria, and searchable data comments.",
+          "acceptance": [
+            "Driver has active goals with non-empty Outcome sections for product, backend, worker, frontend, deployment/configuration, access control, and repo process.",
+            "Driver has tickets with non-empty Description sections and acceptance bullets for the major workstreams from the repo docs.",
+            "Each workstream ticket has a comment with source docs, current repo paths, implementation status, and verification data where available.",
+            "maat validate passes after the rebuild."
+          ],
+          "path": "projects/driver/tickets/T-20260526-215500-697b.md"
         }
       ],
       "events": [
@@ -511,6 +527,49 @@
           "object_id": "T-20260526-215436-c715",
           "summary": "Data/status: AGENTS.md now contains the current Maat snippet from maat initialize: before work run maat status and maat project show, create or claim tickets, require goal outcomes and ticket descriptions/acceptance, comment progress, complete with evidence, validate and sync when done. Repo fast gate is make test-fast; heavy evidence is make test-heavy.",
           "path": "projects/driver/events/2026/05/E-20260526-215448-casprine-781f.md"
+        },
+        {
+          "id": "E-20260526-215500-casprine-61c8",
+          "time": "2026-05-26T21:55:00+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215500-697b",
+          "summary": "Created ticket T-20260526-215500-697b.",
+          "path": "projects/driver/events/2026/05/E-20260526-215500-casprine-61c8.md"
+        },
+        {
+          "id": "E-20260526-215507-codex-5d7f",
+          "time": "2026-05-26T21:55:07+02:00",
+          "actor": "codex",
+          "project_key": "driver",
+          "type": "ticket.claimed",
+          "object_id": "T-20260526-215500-697b",
+          "summary": "Claimed ticket T-20260526-215500-697b until 2026-05-26T23:55:07+02:00.",
+          "path": "projects/driver/events/2026/05/E-20260526-215507-codex-5d7f.md"
+        },
+        {
+          "id": "E-20260526-215517-casprine-c79f",
+          "time": "2026-05-26T21:55:17+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "ticket.commented",
+          "object_id": "T-20260526-215500-697b",
+          "summary": "Data/status: rebuilt from docs/product-plan.md, backend-tasks.md, ingestion-pipeline.md, frontend-plan.md, openapi-orval-plan.md, access-control-plan.md, configuration-plan.md, deployment.md, AGENTS.md, current app/package/deploy files, git log, and make test-fast output. Auto-pull, auto-commit, and auto-push were disabled during the later write phase to avoid storage index races; Driver Markdown will be committed explicitly after validation.",
+          "path": "projects/driver/events/2026/05/E-20260526-215517-casprine-c79f.md"
+        },
+        {
+          "id": "E-20260526-215542-casprine-01c4",
+          "time": "2026-05-26T21:55:42+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "ticket.completed",
+          "object_id": "T-20260526-215500-697b",
+          "summary": "Completed ticket T-20260526-215500-697b.",
+          "evidence": [
+            "Rebuilt Driver Maat memory with 7 outcome-backed goals, 11 description/acceptance-backed tickets, data/status comments on each workstream, make test-fast passed on 2026-05-26, and maat validate passed: validated 129 files ok."
+          ],
+          "path": "projects/driver/events/2026/05/E-20260526-215542-casprine-01c4.md"
         }
       ]
     },
@@ -875,6 +934,45 @@
             "Each unfinished docs theme is represented by a Maat goal with an outcome and at least one actionable ticket with description, acceptance criteria, and source/tag context."
           ],
           "path": "projects/orion/tickets/T-20260526-215427-d7bf.md"
+        },
+        {
+          "id": "T-20260526-215548-e89f",
+          "project_key": "orion",
+          "goal_id": "G-20260526-215257-e70b",
+          "title": "Design Core monitor ownership model",
+          "status": "active",
+          "created": "2026-05-26T21:55:48+02:00",
+          "description": "Decide how Orion represents monitors executed by Core while preserving existing Agent monitor, incident, uptime, and Console behavior. Compare the Core owner row option against a broader owner_kind abstraction and document the selected migration path.",
+          "acceptance": [
+            "A design note or implementation ticket update records the chosen ownership model, required migrations, API response fields, backward compatibility impact, and test coverage needed before coding begins."
+          ],
+          "path": "projects/orion/tickets/T-20260526-215548-e89f.md"
+        },
+        {
+          "id": "T-20260526-215555-1883",
+          "project_key": "orion",
+          "goal_id": "G-20260526-215257-e70b",
+          "title": "Implement Core monitor scheduler and HTTP runner",
+          "status": "active",
+          "created": "2026-05-26T21:55:55+02:00",
+          "description": "Add the Core-side runtime needed to execute active Core-managed HTTP monitors on schedule, store monitor reports, update monitor health, and reuse existing incident reconciliation without changing Agent-owned monitor behavior.",
+          "acceptance": [
+            "Core can schedule and run an HTTP status monitor, persist reports with runner metadata, open and resolve incidents from check results, pause and resume checks, and pass focused Core service/API tests."
+          ],
+          "path": "projects/orion/tickets/T-20260526-215555-1883.md"
+        },
+        {
+          "id": "T-20260526-215601-1319",
+          "project_key": "orion",
+          "goal_id": "G-20260526-215257-e70b",
+          "title": "Add Core monitor management API",
+          "status": "active",
+          "created": "2026-05-26T21:56:01+02:00",
+          "description": "Create admin API routes for Core-managed monitor create, edit, delete, pause, resume, test-now, and redacted config retrieval, including route annotations and generated contracts.",
+          "acceptance": [
+            "The Core API supports the Core monitor management lifecycle, OpenAPI is regenerated from annotations, the Console SDK is regenerated when needed, and tests cover validation, owner handling, redaction, and unsupported monitor types."
+          ],
+          "path": "projects/orion/tickets/T-20260526-215601-1319.md"
         }
       ],
       "events": [
@@ -1369,6 +1467,46 @@
             "Recreated the docs backlog as 10 Orion goals with concrete outcomes and seed tickets containing descriptions, acceptance criteria, tags, and source-document comments."
           ],
           "path": "projects/orion/events/2026/05/E-20260526-215436-casprine-e288.md"
+        },
+        {
+          "id": "E-20260526-215540-casprine-1f7e",
+          "time": "2026-05-26T21:55:40+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260526-215303-4c65",
+          "summary": "Drafted docs/plans/core-managed-monitors.md with external product anchors, architecture direction, monitor types, milestones, and review questions.",
+          "path": "projects/orion/events/2026/05/E-20260526-215540-casprine-1f7e.md"
+        },
+        {
+          "id": "E-20260526-215548-casprine-7ff2",
+          "time": "2026-05-26T21:55:48+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215548-e89f",
+          "summary": "Created ticket T-20260526-215548-e89f.",
+          "path": "projects/orion/events/2026/05/E-20260526-215548-casprine-7ff2.md"
+        },
+        {
+          "id": "E-20260526-215555-casprine-2ca3",
+          "time": "2026-05-26T21:55:55+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215555-1883",
+          "summary": "Created ticket T-20260526-215555-1883.",
+          "path": "projects/orion/events/2026/05/E-20260526-215555-casprine-2ca3.md"
+        },
+        {
+          "id": "E-20260526-215601-casprine-4cd4",
+          "time": "2026-05-26T21:56:01+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215601-1319",
+          "summary": "Created ticket T-20260526-215601-1319.",
+          "path": "projects/orion/events/2026/05/E-20260526-215601-casprine-4cd4.md"
         }
       ]
     }
@@ -1537,6 +1675,30 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215448-casprine-781f |\n| Time | 2026-05-26T21:54:48+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.commented |\n| Object | T-20260526-215436-c715 |\n\n## Summary\n\nData/status: AGENTS.md now contains the current Maat snippet from maat initialize: before work run maat status and maat project show, create or claim tickets, require goal outcomes and ticket descriptions/acceptance, comment progress, complete with evidence, validate and sync when done. Repo fast gate is make test-fast; heavy evidence is make test-heavy.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-215500-casprine-61c8.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215500-casprine-61c8 |\n| Time | 2026-05-26T21:55:00+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.created |\n| Object | T-20260526-215500-697b |\n\n## Summary\n\nCreated ticket T-20260526-215500-697b.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-215507-codex-5d7f.md",
+      "title": "Event: ticket.claimed",
+      "content": "# Event: ticket.claimed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215507-codex-5d7f |\n| Time | 2026-05-26T21:55:07+02:00 |\n| Actor | codex |\n| Project | driver |\n| Type | ticket.claimed |\n| Object | T-20260526-215500-697b |\n| Expires | 2026-05-26T23:55:07+02:00 |\n\n## Summary\n\nClaimed ticket T-20260526-215500-697b until 2026-05-26T23:55:07+02:00.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-215517-casprine-c79f.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215517-casprine-c79f |\n| Time | 2026-05-26T21:55:17+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.commented |\n| Object | T-20260526-215500-697b |\n\n## Summary\n\nData/status: rebuilt from docs/product-plan.md, backend-tasks.md, ingestion-pipeline.md, frontend-plan.md, openapi-orval-plan.md, access-control-plan.md, configuration-plan.md, deployment.md, AGENTS.md, current app/package/deploy files, git log, and make test-fast output. Auto-pull, auto-commit, and auto-push were disabled during the later write phase to avoid storage index races; Driver Markdown will be committed explicitly after validation.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-215542-casprine-01c4.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215542-casprine-01c4 |\n| Time | 2026-05-26T21:55:42+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.completed |\n| Object | T-20260526-215500-697b |\n\n## Summary\n\nCompleted ticket T-20260526-215500-697b.\n\n## Evidence\n\n- Rebuilt Driver Maat memory with 7 outcome-backed goals, 11 description/acceptance-backed tickets, data/status comments on each workstream, make test-fast passed on 2026-05-26, and maat validate passed: validated 129 files ok.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-214932-bfdb.md",
       "title": "Goal: Ship v1 private document drive",
@@ -1643,6 +1805,12 @@
       "path": "projects/driver/tickets/T-20260526-215436-c715.md",
       "title": "Ticket: Follow repo gates and Maat operating loop",
       "content": "# Ticket: Follow repo gates and Maat operating loop\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215436-c715 |\n| Project | driver |\n| Goal | G-20260526-215034-ba07 |\n| Status | active |\n| Created | 2026-05-26T21:54:36+02:00 |\n\n## Description\n\nUse the repo and Maat processes consistently so agents can coordinate: claim/create tickets before material work, include descriptions and acceptance criteria, comment meaningful progress, complete only with evidence, and run the right validation before handoff.\n\n## Acceptance\n\n- Before material work, Maat status and project state are inspected and a relevant ticket is claimed or created.\n- New Maat goals include outcomes and new tickets include descriptions plus acceptance criteria.\n- Code changes obey ownership boundaries, update OpenAPI/SDK when contracts change, and run make check-code-lines before commit.\n- Completion evidence names tests, commits, PRs, or exact manual verification.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/driver/tickets/T-20260526-215500-697b.md",
+      "title": "Ticket: Rebuild Driver Maat memory with structured fields",
+      "content": "# Ticket: Rebuild Driver Maat memory with structured fields\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215500-697b |\n| Project | driver |\n| Goal | G-20260526-215034-ba07 |\n| Status | active |\n| Created | 2026-05-26T21:55:00+02:00 |\n\n## Description\n\nRecreate the Driver Maat goals, tickets, and status events after old Driver entries were deleted, using the current schema requirements for goal outcomes, ticket descriptions, ticket acceptance criteria, and searchable data comments.\n\n## Acceptance\n\n- Driver has active goals with non-empty Outcome sections for product, backend, worker, frontend, deployment/configuration, access control, and repo process.\n- Driver has tickets with non-empty Description sections and acceptance bullets for the major workstreams from the repo docs.\n- Each workstream ticket has a comment with source docs, current repo paths, implementation status, and verification data where available.\n- maat validate passes after the rebuild.\n"
     },
     {
       "type": "project",
@@ -1939,6 +2107,30 @@
       "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215436-casprine-e288 |\n| Time | 2026-05-26T21:54:36+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260526-215427-d7bf |\n\n## Summary\n\nCompleted ticket T-20260526-215427-d7bf.\n\n## Evidence\n\n- Recreated the docs backlog as 10 Orion goals with concrete outcomes and seed tickets containing descriptions, acceptance criteria, tags, and source-document comments.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215540-casprine-1f7e.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215540-casprine-1f7e |\n| Time | 2026-05-26T21:55:40+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-215303-4c65 |\n\n## Summary\n\nDrafted docs/plans/core-managed-monitors.md with external product anchors, architecture direction, monitor types, milestones, and review questions.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215548-casprine-7ff2.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215548-casprine-7ff2 |\n| Time | 2026-05-26T21:55:48+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-215548-e89f |\n\n## Summary\n\nCreated ticket T-20260526-215548-e89f.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215555-casprine-2ca3.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215555-casprine-2ca3 |\n| Time | 2026-05-26T21:55:55+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-215555-1883 |\n\n## Summary\n\nCreated ticket T-20260526-215555-1883.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215601-casprine-4cd4.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215601-casprine-4cd4 |\n| Time | 2026-05-26T21:56:01+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-215601-1319 |\n\n## Summary\n\nCreated ticket T-20260526-215601-1319.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-214751-82ed.md",
       "title": "Goal: Adopt Maat project memory",
@@ -2123,6 +2315,24 @@
       "path": "projects/orion/tickets/T-20260526-215427-d7bf.md",
       "title": "Ticket: Convert docs backlog into Maat goals",
       "content": "# Ticket: Convert docs backlog into Maat goals\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215427-d7bf |\n| Project | orion |\n| Goal | G-20260526-214751-82ed |\n| Status | active |\n| Created | 2026-05-26T21:54:27+02:00 |\n\n## Description\n\nSweep the Orion docs for unfinished work and convert the real remaining items into Maat goals and seed tickets with outcomes, descriptions, acceptance criteria, tags, and source references.\n\n## Acceptance\n\n- Each unfinished docs theme is represented by a Maat goal with an outcome and at least one actionable ticket with description, acceptance criteria, and source/tag context.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-215548-e89f.md",
+      "title": "Ticket: Design Core monitor ownership model",
+      "content": "# Ticket: Design Core monitor ownership model\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215548-e89f |\n| Project | orion |\n| Goal | G-20260526-215257-e70b |\n| Status | active |\n| Created | 2026-05-26T21:55:48+02:00 |\n\n## Description\n\nDecide how Orion represents monitors executed by Core while preserving existing Agent monitor, incident, uptime, and Console behavior. Compare the Core owner row option against a broader owner_kind abstraction and document the selected migration path.\n\n## Acceptance\n\n- A design note or implementation ticket update records the chosen ownership model, required migrations, API response fields, backward compatibility impact, and test coverage needed before coding begins.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-215555-1883.md",
+      "title": "Ticket: Implement Core monitor scheduler and HTTP runner",
+      "content": "# Ticket: Implement Core monitor scheduler and HTTP runner\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215555-1883 |\n| Project | orion |\n| Goal | G-20260526-215257-e70b |\n| Status | active |\n| Created | 2026-05-26T21:55:55+02:00 |\n\n## Description\n\nAdd the Core-side runtime needed to execute active Core-managed HTTP monitors on schedule, store monitor reports, update monitor health, and reuse existing incident reconciliation without changing Agent-owned monitor behavior.\n\n## Acceptance\n\n- Core can schedule and run an HTTP status monitor, persist reports with runner metadata, open and resolve incidents from check results, pause and resume checks, and pass focused Core service/API tests.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-215601-1319.md",
+      "title": "Ticket: Add Core monitor management API",
+      "content": "# Ticket: Add Core monitor management API\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215601-1319 |\n| Project | orion |\n| Goal | G-20260526-215257-e70b |\n| Status | active |\n| Created | 2026-05-26T21:56:01+02:00 |\n\n## Description\n\nCreate admin API routes for Core-managed monitor create, edit, delete, pause, resume, test-now, and redacted config retrieval, including route annotations and generated contracts.\n\n## Acceptance\n\n- The Core API supports the Core monitor management lifecycle, OpenAPI is regenerated from annotations, the Console SDK is regenerated when needed, and tests cover validation, owner handling, redaction, and unsupported monitor types.\n"
     }
   ]
 }
