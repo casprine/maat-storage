@@ -333,6 +333,12 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210403-casprine-7a44 |\n| Time | 2026-05-26T21:04:03+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.commented |\n| Object | T-20260526-210401-12c5 |\n\n## Summary\n\nFrom Orion setup: after create, claim, and complete it was hard to trust the current ticket state. Ticket commands should print compact transitions such as created, claimed by agent, completed, evidence recorded, and synced.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-210405-casprine-bb1a.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210405-casprine-bb1a |\n| Time | 2026-05-26T21:04:05+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-210405-c0ab |\n\n## Summary\n\nCreated ticket T-20260526-210405-c0ab.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
       "title": "Goal: Improve initialize dogfood experience",
@@ -571,6 +577,12 @@
       "path": "projects/maat/tickets/T-20260526-210401-12c5.md",
       "title": "Ticket: Print compact ticket state transitions",
       "content": "# Ticket: Print compact ticket state transitions\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-210401-12c5 |\n| Project | maat |\n| Goal | G-20260526-210331-013f |\n| Status | active |\n| Created | 2026-05-26T21:04:01+02:00 |\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-210405-c0ab.md",
+      "title": "Ticket: Add a storage setup repair command",
+      "content": "# Ticket: Add a storage setup repair command\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-210405-c0ab |\n| Project | maat |\n| Goal | G-20260526-210331-013f |\n| Status | active |\n| Created | 2026-05-26T21:04:05+02:00 |\n"
     },
     {
       "type": "event",
