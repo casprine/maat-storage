@@ -1293,6 +1293,12 @@
       "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211937-casprine-f6b1 |\n| Time | 2026-05-26T21:19:37+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-211937-2a7f |\n\n## Summary\n\nCreated goal G-20260526-211937-2a7f.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-211946-casprine-fd93.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211946-casprine-fd93 |\n| Time | 2026-05-26T21:19:46+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-211946-d2a8 |\n\n## Summary\n\nCreated ticket T-20260526-211946-d2a8.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-204807-419c.md",
       "title": "Goal: Adopt Maat project memory",
@@ -1435,6 +1441,12 @@
       "path": "projects/orion/tickets/T-20260526-211923-cb27.md",
       "title": "Ticket: Bring Agent and service logs into the product",
       "content": "# Ticket: Bring Agent and service logs into the product\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-211923-cb27 |\n| Project | orion |\n| Goal | G-20260526-211916-2c73 |\n| Status | active |\n| Created | 2026-05-26T21:19:23+02:00 |\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-211946-d2a8.md",
+      "title": "Ticket: Run archive and rollup jobs automatically",
+      "content": "# Ticket: Run archive and rollup jobs automatically\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-211946-d2a8 |\n| Project | orion |\n| Goal | G-20260526-211937-2a7f |\n| Status | active |\n| Created | 2026-05-26T21:19:46+02:00 |\n"
     }
   ]
 }
