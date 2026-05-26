@@ -2897,6 +2897,29 @@
             "Created docs/plans/core-managed-monitors.md, added Maat review note and implementation tickets, validated Maat store, and committed repo change 34ae394 docs(core): plan Core-managed monitors."
           ],
           "path": "projects/orion/events/2026/05/E-20260526-215726-casprine-7fa8.md"
+        },
+        {
+          "id": "E-20260526-215817-casprine-5a93",
+          "time": "2026-05-26T21:58:17+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260526-215629-53f6",
+          "summary": "Drafted alert routing redesign plan covering services, destinations, routes, groups, SMTP, webhooks, flows, data model, rollout phases, and review questions.",
+          "path": "projects/orion/events/2026/05/E-20260526-215817-casprine-5a93.md"
+        },
+        {
+          "id": "E-20260526-215856-casprine-847b",
+          "time": "2026-05-26T21:58:56+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260526-215629-53f6",
+          "summary": "Completed ticket T-20260526-215629-53f6.",
+          "evidence": [
+            "Committed docs/plans/alert-routing-redesign.md in 358a23f with alert services, destinations, routes, groups, SMTP/webhook flows, data/API/UI direction, rollout phases, and review questions."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260526-215856-casprine-847b.md"
         }
       ]
     }
@@ -4203,6 +4226,18 @@
       "path": "projects/orion/events/2026/05/E-20260526-215726-casprine-7fa8.md",
       "title": "Event: ticket.completed",
       "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215726-casprine-7fa8 |\n| Time | 2026-05-26T21:57:26+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260526-215303-4c65 |\n\n## Summary\n\nCompleted ticket T-20260526-215303-4c65.\n\n## Evidence\n\n- Created docs/plans/core-managed-monitors.md, added Maat review note and implementation tickets, validated Maat store, and committed repo change 34ae394 docs(core): plan Core-managed monitors.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215817-casprine-5a93.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215817-casprine-5a93 |\n| Time | 2026-05-26T21:58:17+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-215629-53f6 |\n\n## Summary\n\nDrafted alert routing redesign plan covering services, destinations, routes, groups, SMTP, webhooks, flows, data model, rollout phases, and review questions.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215856-casprine-847b.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215856-casprine-847b |\n| Time | 2026-05-26T21:58:56+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260526-215629-53f6 |\n\n## Summary\n\nCompleted ticket T-20260526-215629-53f6.\n\n## Evidence\n\n- Committed docs/plans/alert-routing-redesign.md in 358a23f with alert services, destinations, routes, groups, SMTP/webhook flows, data/API/UI direction, rollout phases, and review questions.\n"
     },
     {
       "type": "goal",
