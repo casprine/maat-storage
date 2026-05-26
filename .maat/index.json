@@ -176,6 +176,16 @@
           "object_id": "T-20260526-214853-0007",
           "summary": "Created ticket T-20260526-214853-0007.",
           "path": "projects/orion/events/2026/05/E-20260526-214853-casprine-3193.md"
+        },
+        {
+          "id": "E-20260526-214903-casprine-7c97",
+          "time": "2026-05-26T21:49:03+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260526-214853-0007",
+          "summary": "Tags: #health #core #console #agent-status #monitor-rollup #next-release. Sources: docs/plans/agent-health-debugging-next-release.md phases 1-2, docs/architecture/core-features.md health computation.",
+          "path": "projects/orion/events/2026/05/E-20260526-214903-casprine-7c97.md"
         }
       ]
     }
@@ -234,6 +244,12 @@
       "path": "projects/orion/events/2026/05/E-20260526-214853-casprine-3193.md",
       "title": "Event: ticket.created",
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214853-casprine-3193 |\n| Time | 2026-05-26T21:48:53+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-214853-0007 |\n\n## Summary\n\nCreated ticket T-20260526-214853-0007.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-214903-casprine-7c97.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214903-casprine-7c97 |\n| Time | 2026-05-26T21:49:03+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-214853-0007 |\n\n## Summary\n\nTags: #health #core #console #agent-status #monitor-rollup #next-release. Sources: docs/plans/agent-health-debugging-next-release.md phases 1-2, docs/architecture/core-features.md health computation.\n"
     },
     {
       "type": "goal",
