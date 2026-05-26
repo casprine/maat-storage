@@ -12,7 +12,30 @@
         "Primary Repo": "/Users/casprine/Desktop/vendor/sunday-studio/drive",
         "Remote": "git@github.com:sunday-studio/driver.git"
       },
-      "path": "projects/driver/project.md"
+      "path": "projects/driver/project.md",
+      "goals": [
+        {
+          "id": "G-20260526-214932-bfdb",
+          "project_key": "driver",
+          "title": "Ship v1 private document drive",
+          "status": "active",
+          "created": "2026-05-26T21:49:32+02:00",
+          "outcome": "A household admin can drop or upload supported documents, see processing status, preview or inspect extracted text, search source and main-language text, organize with tags and collections, retry failures, and keep originals immutable in configured document storage.",
+          "path": "projects/driver/goals/G-20260526-214932-bfdb.md"
+        }
+      ],
+      "events": [
+        {
+          "id": "E-20260526-214932-casprine-4d76",
+          "time": "2026-05-26T21:49:32+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "goal.created",
+          "object_id": "G-20260526-214932-bfdb",
+          "summary": "Created goal G-20260526-214932-bfdb.",
+          "path": "projects/driver/events/2026/05/E-20260526-214932-casprine-4d76.md"
+        }
+      ]
     },
     {
       "key": "maat",
@@ -233,6 +256,18 @@
     }
   ],
   "documents": [
+    {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-214932-casprine-4d76.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214932-casprine-4d76 |\n| Time | 2026-05-26T21:49:32+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | goal.created |\n| Object | G-20260526-214932-bfdb |\n\n## Summary\n\nCreated goal G-20260526-214932-bfdb.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/driver/goals/G-20260526-214932-bfdb.md",
+      "title": "Goal: Ship v1 private document drive",
+      "content": "# Goal: Ship v1 private document drive\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-214932-bfdb |\n| Project | driver |\n| Status | active |\n| Created | 2026-05-26T21:49:32+02:00 |\n\n## Outcome\n\nA household admin can drop or upload supported documents, see processing status, preview or inspect extracted text, search source and main-language text, organize with tags and collections, retry failures, and keep originals immutable in configured document storage.\n"
+    },
     {
       "type": "project",
       "path": "projects/driver/project.md",
