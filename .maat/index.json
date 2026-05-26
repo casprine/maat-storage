@@ -339,6 +339,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210405-casprine-bb1a |\n| Time | 2026-05-26T21:04:05+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-210405-c0ab |\n\n## Summary\n\nCreated ticket T-20260526-210405-c0ab.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-210407-casprine-9379.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210407-casprine-9379 |\n| Time | 2026-05-26T21:04:07+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.commented |\n| Object | T-20260526-210405-c0ab |\n\n## Summary\n\nFrom Orion setup recommendations: add an explicit repair command for storage Git issues, covering missing upstream, ambiguous upstream, and push setup. This can be part of maat doctor storage or a dedicated maat sync --setup-upstream flow.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
       "title": "Goal: Improve initialize dogfood experience",
