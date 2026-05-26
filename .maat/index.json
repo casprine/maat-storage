@@ -1275,6 +1275,12 @@
       "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211916-casprine-fb0b |\n| Time | 2026-05-26T21:19:16+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-211916-2c73 |\n\n## Summary\n\nCreated goal G-20260526-211916-2c73.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-211923-casprine-8fed.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211923-casprine-8fed |\n| Time | 2026-05-26T21:19:23+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-211923-cb27 |\n\n## Summary\n\nCreated ticket T-20260526-211923-cb27.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-204807-419c.md",
       "title": "Goal: Adopt Maat project memory",
@@ -1405,6 +1411,12 @@
       "path": "projects/orion/tickets/T-20260526-211834-97eb.md",
       "title": "Ticket: Create browser smoke tests after manual flows stabilize",
       "content": "# Ticket: Create browser smoke tests after manual flows stabilize\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-211834-97eb |\n| Project | orion |\n| Goal | G-20260526-211828-03e1 |\n| Status | active |\n| Created | 2026-05-26T21:18:34+02:00 |\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-211923-cb27.md",
+      "title": "Ticket: Bring Agent and service logs into the product",
+      "content": "# Ticket: Bring Agent and service logs into the product\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-211923-cb27 |\n| Project | orion |\n| Goal | G-20260526-211916-2c73 |\n| Status | active |\n| Created | 2026-05-26T21:19:23+02:00 |\n"
     }
   ]
 }
