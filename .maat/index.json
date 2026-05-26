@@ -67,6 +67,15 @@
           "created": "2026-05-26T21:50:19+02:00",
           "outcome": "The self-hosted instance has first-run admin setup, admin/user roles, API-enforced ACLs, direct document grants for v1, protected downloads/previews, and no filesystem path exposure.",
           "path": "projects/driver/goals/G-20260526-215019-f0f1.md"
+        },
+        {
+          "id": "G-20260526-215034-ba07",
+          "project_key": "driver",
+          "title": "Maintain repo process and agent memory",
+          "status": "active",
+          "created": "2026-05-26T21:50:34+02:00",
+          "outcome": "Agents use Maat tickets before material work, record decisions and evidence, keep generated contracts synchronized, run the right gates, and leave product and memory state understandable for handoff.",
+          "path": "projects/driver/goals/G-20260526-215034-ba07.md"
         }
       ],
       "events": [
@@ -129,6 +138,16 @@
           "object_id": "G-20260526-215019-f0f1",
           "summary": "Created goal G-20260526-215019-f0f1.",
           "path": "projects/driver/events/2026/05/E-20260526-215019-casprine-6b5c.md"
+        },
+        {
+          "id": "E-20260526-215034-casprine-3c64",
+          "time": "2026-05-26T21:50:34+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "goal.created",
+          "object_id": "G-20260526-215034-ba07",
+          "summary": "Created goal G-20260526-215034-ba07.",
+          "path": "projects/driver/events/2026/05/E-20260526-215034-casprine-3c64.md"
         }
       ]
     },
@@ -469,6 +488,12 @@
       "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215019-casprine-6b5c |\n| Time | 2026-05-26T21:50:19+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | goal.created |\n| Object | G-20260526-215019-f0f1 |\n\n## Summary\n\nCreated goal G-20260526-215019-f0f1.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-215034-casprine-3c64.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215034-casprine-3c64 |\n| Time | 2026-05-26T21:50:34+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | goal.created |\n| Object | G-20260526-215034-ba07 |\n\n## Summary\n\nCreated goal G-20260526-215034-ba07.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-214932-bfdb.md",
       "title": "Goal: Ship v1 private document drive",
@@ -503,6 +528,12 @@
       "path": "projects/driver/goals/G-20260526-215019-f0f1.md",
       "title": "Goal: Keep access control local and simple",
       "content": "# Goal: Keep access control local and simple\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215019-f0f1 |\n| Project | driver |\n| Status | active |\n| Created | 2026-05-26T21:50:19+02:00 |\n\n## Outcome\n\nThe self-hosted instance has first-run admin setup, admin/user roles, API-enforced ACLs, direct document grants for v1, protected downloads/previews, and no filesystem path exposure.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/driver/goals/G-20260526-215034-ba07.md",
+      "title": "Goal: Maintain repo process and agent memory",
+      "content": "# Goal: Maintain repo process and agent memory\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215034-ba07 |\n| Project | driver |\n| Status | active |\n| Created | 2026-05-26T21:50:34+02:00 |\n\n## Outcome\n\nAgents use Maat tickets before material work, record decisions and evidence, keep generated contracts synchronized, run the right gates, and leave product and memory state understandable for handoff.\n"
     },
     {
       "type": "project",
