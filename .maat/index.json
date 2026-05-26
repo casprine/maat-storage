@@ -231,6 +231,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210012-casprine-82d9 |\n| Time | 2026-05-26T21:00:12+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-210012-d036 |\n\n## Summary\n\nCreated ticket T-20260526-210012-d036.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-210331-casprine-773b.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210331-casprine-773b |\n| Time | 2026-05-26T21:03:31+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | goal.created |\n| Object | G-20260526-210331-013f |\n\n## Summary\n\nCreated goal G-20260526-210331-013f.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
       "title": "Goal: Improve initialize dogfood experience",
@@ -265,6 +271,12 @@
       "path": "projects/maat/goals/G-20260526-210006-fcd7.md",
       "title": "Goal: Keep search reliable across project state",
       "content": "# Goal: Keep search reliable across project state\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-210006-fcd7 |\n| Project | maat |\n| Status | active |\n| Created | 2026-05-26T21:00:06+02:00 |\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/maat/goals/G-20260526-210331-013f.md",
+      "title": "Goal: Resolve Orion first-run setup friction",
+      "content": "# Goal: Resolve Orion first-run setup friction\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-210331-013f |\n| Project | maat |\n| Status | active |\n| Created | 2026-05-26T21:03:31+02:00 |\n"
     },
     {
       "type": "project",
