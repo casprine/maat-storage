@@ -487,6 +487,19 @@
             "A docs architecture plan exists with flow charts covering creation, publishing, incident display, subscriptions, and admin workflows"
           ],
           "path": "projects/orion/tickets/T-20260526-215146-5e99.md"
+        },
+        {
+          "id": "T-20260526-215204-1d90",
+          "project_key": "orion",
+          "goal_id": "G-20260526-215153-31dc",
+          "title": "Run first real Core and Agent deployment checklist",
+          "status": "active",
+          "created": "2026-05-26T21:52:04+02:00",
+          "description": "Execute the first-run checklist against one real self-hosted Core and one real Agent, including service state, local state, logs, backup, monitor registration, reporting intervals, and restart behavior.",
+          "acceptance": [
+            "The deployment checklist is completed with concrete evidence, the Agent appears once in Console, monitor rows appear after their first interval, restart does not create duplicates, and follow-up failures are captured as Maat tickets."
+          ],
+          "path": "projects/orion/tickets/T-20260526-215204-1d90.md"
         }
       ],
       "events": [
@@ -765,6 +778,16 @@
           "object_id": "T-20260526-215146-5e99",
           "summary": "Claimed ticket T-20260526-215146-5e99 until 2026-05-26T23:51:54+02:00.",
           "path": "projects/orion/events/2026/05/E-20260526-215154-codex-9fbc.md"
+        },
+        {
+          "id": "E-20260526-215204-casprine-230f",
+          "time": "2026-05-26T21:52:04+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215204-1d90",
+          "summary": "Created ticket T-20260526-215204-1d90.",
+          "path": "projects/orion/events/2026/05/E-20260526-215204-casprine-230f.md"
         }
       ]
     }
@@ -1083,6 +1106,12 @@
       "content": "# Event: ticket.claimed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215154-codex-9fbc |\n| Time | 2026-05-26T21:51:54+02:00 |\n| Actor | codex |\n| Project | orion |\n| Type | ticket.claimed |\n| Object | T-20260526-215146-5e99 |\n| Expires | 2026-05-26T23:51:54+02:00 |\n\n## Summary\n\nClaimed ticket T-20260526-215146-5e99 until 2026-05-26T23:51:54+02:00.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215204-casprine-230f.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215204-casprine-230f |\n| Time | 2026-05-26T21:52:04+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-215204-1d90 |\n\n## Summary\n\nCreated ticket T-20260526-215204-1d90.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-214751-82ed.md",
       "title": "Goal: Adopt Maat project memory",
@@ -1195,6 +1224,12 @@
       "path": "projects/orion/tickets/T-20260526-215146-5e99.md",
       "title": "Ticket: Draft status page architecture plan",
       "content": "# Ticket: Draft status page architecture plan\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215146-5e99 |\n| Project | orion |\n| Goal | G-20260526-215139-6a2a |\n| Status | active |\n| Created | 2026-05-26T21:51:46+02:00 |\n\n## Description\n\nCreate an architectural document that defines Orion status page concepts, public/private information boundaries, data model, API and UI surfaces, publishing flow, and implementation phases\n\n## Acceptance\n\n- A docs architecture plan exists with flow charts covering creation, publishing, incident display, subscriptions, and admin workflows\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-215204-1d90.md",
+      "title": "Ticket: Run first real Core and Agent deployment checklist",
+      "content": "# Ticket: Run first real Core and Agent deployment checklist\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215204-1d90 |\n| Project | orion |\n| Goal | G-20260526-215153-31dc |\n| Status | active |\n| Created | 2026-05-26T21:52:04+02:00 |\n\n## Description\n\nExecute the first-run checklist against one real self-hosted Core and one real Agent, including service state, local state, logs, backup, monitor registration, reporting intervals, and restart behavior.\n\n## Acceptance\n\n- The deployment checklist is completed with concrete evidence, the Agent appears once in Console, monitor rows appear after their first interval, restart does not create duplicates, and follow-up failures are captured as Maat tickets.\n"
     }
   ]
 }
