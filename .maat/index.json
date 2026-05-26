@@ -1221,6 +1221,12 @@
       "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211747-casprine-9ef8 |\n| Time | 2026-05-26T21:17:47+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-211747-653d |\n\n## Summary\n\nCreated goal G-20260526-211747-653d.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-211753-casprine-3200.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211753-casprine-3200 |\n| Time | 2026-05-26T21:17:53+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-211753-9a58 |\n\n## Summary\n\nCreated ticket T-20260526-211753-9a58.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-204807-419c.md",
       "title": "Goal: Adopt Maat project memory",
@@ -1315,6 +1321,12 @@
       "path": "projects/orion/tickets/T-20260526-211731-5e33.md",
       "title": "Ticket: Add durable spool and update bookkeeping when needed",
       "content": "# Ticket: Add durable spool and update bookkeeping when needed\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-211731-5e33 |\n| Project | orion |\n| Goal | G-20260526-211724-03ce |\n| Status | active |\n| Created | 2026-05-26T21:17:31+02:00 |\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-211753-9a58.md",
+      "title": "Ticket: Add alert test action and move non-critical fan-out later",
+      "content": "# Ticket: Add alert test action and move non-critical fan-out later\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-211753-9a58 |\n| Project | orion |\n| Goal | G-20260526-211747-653d |\n| Status | active |\n| Created | 2026-05-26T21:17:53+02:00 |\n"
     }
   ]
 }
