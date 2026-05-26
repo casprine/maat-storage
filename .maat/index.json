@@ -303,6 +303,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210353-casprine-9f72 |\n| Time | 2026-05-26T21:03:53+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-210353-c7d4 |\n\n## Summary\n\nCreated ticket T-20260526-210353-c7d4.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-210355-casprine-1c7f.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210355-casprine-1c7f |\n| Time | 2026-05-26T21:03:55+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.commented |\n| Object | T-20260526-210353-c7d4 |\n\n## Summary\n\nFrom Orion setup: it was unclear whether memory was only local, committed, or pushed. Sync status should separately report local memory, storage Git cleanliness, and remote push performed/skipped/failed.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
       "title": "Goal: Improve initialize dogfood experience",
