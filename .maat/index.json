@@ -1185,6 +1185,12 @@
       "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211700-casprine-88f5 |\n| Time | 2026-05-26T21:17:00+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-211700-7055 |\n\n## Summary\n\nCreated goal G-20260526-211700-7055.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-211708-casprine-d35b.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211708-casprine-d35b |\n| Time | 2026-05-26T21:17:08+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-211708-1107 |\n\n## Summary\n\nCreated ticket T-20260526-211708-1107.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-204807-419c.md",
       "title": "Goal: Adopt Maat project memory",
@@ -1255,6 +1261,12 @@
       "path": "projects/orion/tickets/T-20260526-211643-4b0a.md",
       "title": "Ticket: Implement manual incident acknowledge and resolve flows",
       "content": "# Ticket: Implement manual incident acknowledge and resolve flows\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-211643-4b0a |\n| Project | orion |\n| Goal | G-20260526-211633-ecb1 |\n| Status | active |\n| Created | 2026-05-26T21:16:43+02:00 |\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-211708-1107.md",
+      "title": "Ticket: Expose diagnostics endpoint and ingestion latency signals",
+      "content": "# Ticket: Expose diagnostics endpoint and ingestion latency signals\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-211708-1107 |\n| Project | orion |\n| Goal | G-20260526-211700-7055 |\n| Status | active |\n| Created | 2026-05-26T21:17:08+02:00 |\n"
     }
   ]
 }
