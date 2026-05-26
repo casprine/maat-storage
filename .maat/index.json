@@ -455,6 +455,19 @@
             "Console users can test configured alert channels, delivery attempts record useful diagnostics, and any fan-out relocation preserves incident-opened and incident-resolved alert behavior."
           ],
           "path": "projects/orion/tickets/T-20260526-215134-3916.md"
+        },
+        {
+          "id": "T-20260526-215146-5e99",
+          "project_key": "orion",
+          "goal_id": "G-20260526-215139-6a2a",
+          "title": "Draft status page architecture plan",
+          "status": "active",
+          "created": "2026-05-26T21:51:46+02:00",
+          "description": "Create an architectural document that defines Orion status page concepts, public/private information boundaries, data model, API and UI surfaces, publishing flow, and implementation phases",
+          "acceptance": [
+            "A docs architecture plan exists with flow charts covering creation, publishing, incident display, subscriptions, and admin workflows"
+          ],
+          "path": "projects/orion/tickets/T-20260526-215146-5e99.md"
         }
       ],
       "events": [
@@ -703,6 +716,16 @@
           "object_id": "T-20260526-215134-3916",
           "summary": "Tags: #alerts #core #console #webhooks #fanout #post-deploy. Sources: docs/milestones/m5-first-deploy-candidate.md deferred list, docs/architecture/performance-observability.md decision section.",
           "path": "projects/orion/events/2026/05/E-20260526-215141-casprine-81c9.md"
+        },
+        {
+          "id": "E-20260526-215146-casprine-a3bb",
+          "time": "2026-05-26T21:51:46+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215146-5e99",
+          "summary": "Created ticket T-20260526-215146-5e99.",
+          "path": "projects/orion/events/2026/05/E-20260526-215146-casprine-a3bb.md"
         }
       ]
     }
@@ -997,6 +1020,12 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215141-casprine-81c9 |\n| Time | 2026-05-26T21:51:41+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-215134-3916 |\n\n## Summary\n\nTags: #alerts #core #console #webhooks #fanout #post-deploy. Sources: docs/milestones/m5-first-deploy-candidate.md deferred list, docs/architecture/performance-observability.md decision section.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215146-casprine-a3bb.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215146-casprine-a3bb |\n| Time | 2026-05-26T21:51:46+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-215146-5e99 |\n\n## Summary\n\nCreated ticket T-20260526-215146-5e99.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-214751-82ed.md",
       "title": "Goal: Adopt Maat project memory",
@@ -1097,6 +1126,12 @@
       "path": "projects/orion/tickets/T-20260526-215134-3916.md",
       "title": "Ticket: Add alert test action and move non-critical fan-out later",
       "content": "# Ticket: Add alert test action and move non-critical fan-out later\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215134-3916 |\n| Project | orion |\n| Goal | G-20260526-215126-c321 |\n| Status | active |\n| Created | 2026-05-26T21:51:34+02:00 |\n\n## Description\n\nAdd user-triggered alert channel testing, clearer delivery diagnostics, and later move notification delivery attempts out of the Agent report request path where safe.\n\n## Acceptance\n\n- Console users can test configured alert channels, delivery attempts record useful diagnostics, and any fan-out relocation preserves incident-opened and incident-resolved alert behavior.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-215146-5e99.md",
+      "title": "Ticket: Draft status page architecture plan",
+      "content": "# Ticket: Draft status page architecture plan\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215146-5e99 |\n| Project | orion |\n| Goal | G-20260526-215139-6a2a |\n| Status | active |\n| Created | 2026-05-26T21:51:46+02:00 |\n\n## Description\n\nCreate an architectural document that defines Orion status page concepts, public/private information boundaries, data model, API and UI surfaces, publishing flow, and implementation phases\n\n## Acceptance\n\n- A docs architecture plan exists with flow charts covering creation, publishing, incident display, subscriptions, and admin workflows\n"
     }
   ]
 }
