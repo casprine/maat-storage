@@ -165,6 +165,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-205949-casprine-439c |\n| Time | 2026-05-26T20:59:49+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-205949-abac |\n\n## Summary\n\nCreated ticket T-20260526-205949-abac.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-205951-casprine-50cf.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-205951-casprine-50cf |\n| Time | 2026-05-26T20:59:51+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-205951-32e7 |\n\n## Summary\n\nCreated ticket T-20260526-205951-32e7.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
       "title": "Goal: Improve initialize dogfood experience",
@@ -283,6 +289,12 @@
       "path": "projects/maat/tickets/T-20260526-205949-abac.md",
       "title": "Ticket: Maintain install update and uninstall flows",
       "content": "# Ticket: Maintain install update and uninstall flows\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-205949-abac |\n| Project | maat |\n| Goal | G-20260526-205945-61ac |\n| Status | active |\n| Created | 2026-05-26T20:59:49+02:00 |\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-205951-32e7.md",
+      "title": "Ticket: Maintain JSON and SQLite index rebuild commands",
+      "content": "# Ticket: Maintain JSON and SQLite index rebuild commands\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-205951-32e7 |\n| Project | maat |\n| Goal | G-20260526-205945-61ac |\n| Status | active |\n| Created | 2026-05-26T20:59:51+02:00 |\n"
     },
     {
       "type": "event",
