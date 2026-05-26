@@ -1179,6 +1179,12 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211651-casprine-4b38 |\n| Time | 2026-05-26T21:16:51+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-211643-4b0a |\n\n## Summary\n\nTags: #incidents #core #console #manual-controls #post-deploy. Sources: docs/plans/agent-health-debugging-next-release.md phase 5 and docs/milestones/m5-first-deploy-candidate.md deferred list. Scope: add browser actions for acknowledge/resolve and make removed-monitor incidents resolve or reset cleanly.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-211700-casprine-88f5.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211700-casprine-88f5 |\n| Time | 2026-05-26T21:17:00+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-211700-7055 |\n\n## Summary\n\nCreated goal G-20260526-211700-7055.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-204807-419c.md",
       "title": "Goal: Adopt Maat project memory",
@@ -1201,6 +1207,12 @@
       "path": "projects/orion/goals/G-20260526-211633-ecb1.md",
       "title": "Goal: Add incident lifecycle controls",
       "content": "# Goal: Add incident lifecycle controls\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-211633-ecb1 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:16:33+02:00 |\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260526-211700-7055.md",
+      "title": "Goal: Add Core runtime diagnostics and ingestion metrics",
+      "content": "# Goal: Add Core runtime diagnostics and ingestion metrics\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-211700-7055 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:17:00+02:00 |\n"
     },
     {
       "type": "project",
