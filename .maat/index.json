@@ -111,6 +111,22 @@
             "make test-fast or a narrower justified command passes and is recorded as evidence."
           ],
           "path": "projects/driver/tickets/T-20260526-215114-f462.md"
+        },
+        {
+          "id": "T-20260526-215134-e395",
+          "project_key": "driver",
+          "goal_id": "G-20260526-214940-f930",
+          "title": "Resolve processing status vocabulary and job timelines",
+          "status": "active",
+          "created": "2026-05-26T21:51:34+02:00",
+          "description": "Align the documented processing states with API, SDK, worker, and UI behavior so agents and users can rely on one status model and useful processing history.",
+          "acceptance": [
+            "Document status values are intentionally chosen and reflected consistently in OpenAPI, SDK types, API responses, worker updates, and UI labels.",
+            "Job complete/fail updates preserve enough step/event history for document detail and troubleshooting.",
+            "Any migration or compatibility concern is documented before changing persisted values.",
+            "Contract tests cover the chosen status values and event visibility."
+          ],
+          "path": "projects/driver/tickets/T-20260526-215134-e395.md"
         }
       ],
       "events": [
@@ -223,6 +239,16 @@
           "object_id": "T-20260526-215114-f462",
           "summary": "Data/status: apps/api/internal/http/router.go currently exposes health, openapi.json, setup, auth/login, protected documents/text/events/preview/retry/settings/search/tags/collections, admin documents/tags/collections/users/settings/uploads, and worker ingestion/jobs routes. docs/backend-tasks.md says backend work must include tests where relevant. make test-fast passed on 2026-05-26.",
           "path": "projects/driver/events/2026/05/E-20260526-215123-casprine-4196.md"
+        },
+        {
+          "id": "E-20260526-215134-casprine-3874",
+          "time": "2026-05-26T21:51:34+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215134-e395",
+          "summary": "Created ticket T-20260526-215134-e395.",
+          "path": "projects/driver/events/2026/05/E-20260526-215134-casprine-3874.md"
         }
       ]
     },
@@ -407,6 +433,19 @@
             "Agent state design and implementation persist the selected durability data across restarts, avoid corrupting identity/token state, and include tests for outage and restart behavior."
           ],
           "path": "projects/orion/tickets/T-20260526-215106-b99e.md"
+        },
+        {
+          "id": "T-20260526-215134-3916",
+          "project_key": "orion",
+          "goal_id": "G-20260526-215126-c321",
+          "title": "Add alert test action and move non-critical fan-out later",
+          "status": "active",
+          "created": "2026-05-26T21:51:34+02:00",
+          "description": "Add user-triggered alert channel testing, clearer delivery diagnostics, and later move notification delivery attempts out of the Agent report request path where safe.",
+          "acceptance": [
+            "Console users can test configured alert channels, delivery attempts record useful diagnostics, and any fan-out relocation preserves incident-opened and incident-resolved alert behavior."
+          ],
+          "path": "projects/orion/tickets/T-20260526-215134-3916.md"
         }
       ],
       "events": [
@@ -625,6 +664,16 @@
           "object_id": "G-20260526-215126-c321",
           "summary": "Created goal G-20260526-215126-c321.",
           "path": "projects/orion/events/2026/05/E-20260526-215126-casprine-a62f.md"
+        },
+        {
+          "id": "E-20260526-215134-casprine-a27c",
+          "time": "2026-05-26T21:51:34+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215134-3916",
+          "summary": "Created ticket T-20260526-215134-3916.",
+          "path": "projects/orion/events/2026/05/E-20260526-215134-casprine-a27c.md"
         }
       ]
     }
@@ -697,6 +746,12 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215123-casprine-4196 |\n| Time | 2026-05-26T21:51:23+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.commented |\n| Object | T-20260526-215114-f462 |\n\n## Summary\n\nData/status: apps/api/internal/http/router.go currently exposes health, openapi.json, setup, auth/login, protected documents/text/events/preview/retry/settings/search/tags/collections, admin documents/tags/collections/users/settings/uploads, and worker ingestion/jobs routes. docs/backend-tasks.md says backend work must include tests where relevant. make test-fast passed on 2026-05-26.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-215134-casprine-3874.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215134-casprine-3874 |\n| Time | 2026-05-26T21:51:34+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.created |\n| Object | T-20260526-215134-e395 |\n\n## Summary\n\nCreated ticket T-20260526-215134-e395.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-214932-bfdb.md",
       "title": "Goal: Ship v1 private document drive",
@@ -755,6 +810,12 @@
       "path": "projects/driver/tickets/T-20260526-215114-f462.md",
       "title": "Ticket: Maintain API foundation, auth, documents, uploads, jobs, and library",
       "content": "# Ticket: Maintain API foundation, auth, documents, uploads, jobs, and library\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215114-f462 |\n| Project | driver |\n| Goal | G-20260526-214940-f930 |\n| Status | active |\n| Created | 2026-05-26T21:51:14+02:00 |\n\n## Description\n\nKeep apps/api as the backend owner for configuration, routing, OpenAPI, auth, documents, TUS uploads, search, settings, tags, collections, users/direct grants, ingestion file reports, and job lease/complete/fail routes.\n\n## Acceptance\n\n- Route or response changes update apps/api/openapi.json and generated SDK when the frontend contract changes.\n- Protected API responses expose stable IDs and never filesystem paths.\n- Relevant unit, integration, and contract tests are added or updated for behavior changes.\n- make test-fast or a narrower justified command passes and is recorded as evidence.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/driver/tickets/T-20260526-215134-e395.md",
+      "title": "Ticket: Resolve processing status vocabulary and job timelines",
+      "content": "# Ticket: Resolve processing status vocabulary and job timelines\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215134-e395 |\n| Project | driver |\n| Goal | G-20260526-214940-f930 |\n| Status | active |\n| Created | 2026-05-26T21:51:34+02:00 |\n\n## Description\n\nAlign the documented processing states with API, SDK, worker, and UI behavior so agents and users can rely on one status model and useful processing history.\n\n## Acceptance\n\n- Document status values are intentionally chosen and reflected consistently in OpenAPI, SDK types, API responses, worker updates, and UI labels.\n- Job complete/fail updates preserve enough step/event history for document detail and troubleshooting.\n- Any migration or compatibility concern is documented before changing persisted values.\n- Contract tests cover the chosen status values and event visibility.\n"
     },
     {
       "type": "project",
@@ -889,6 +950,12 @@
       "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215126-casprine-a62f |\n| Time | 2026-05-26T21:51:26+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-215126-c321 |\n\n## Summary\n\nCreated goal G-20260526-215126-c321.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215134-casprine-a27c.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215134-casprine-a27c |\n| Time | 2026-05-26T21:51:34+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-215134-3916 |\n\n## Summary\n\nCreated ticket T-20260526-215134-3916.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-214751-82ed.md",
       "title": "Goal: Adopt Maat project memory",
@@ -977,6 +1044,12 @@
       "path": "projects/orion/tickets/T-20260526-215106-b99e.md",
       "title": "Ticket: Add durable spool and update bookkeeping when needed",
       "content": "# Ticket: Add durable spool and update bookkeeping when needed\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215106-b99e |\n| Project | orion |\n| Goal | G-20260526-215053-8210 |\n| Status | active |\n| Created | 2026-05-26T21:51:06+02:00 |\n\n## Description\n\nExtend Agent local SQLite state for durable offline report spooling, retry metadata, local event/check caches, update bookkeeping, and future credential rotation metadata once post-deploy evidence justifies it.\n\n## Acceptance\n\n- Agent state design and implementation persist the selected durability data across restarts, avoid corrupting identity/token state, and include tests for outage and restart behavior.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-215134-3916.md",
+      "title": "Ticket: Add alert test action and move non-critical fan-out later",
+      "content": "# Ticket: Add alert test action and move non-critical fan-out later\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215134-3916 |\n| Project | orion |\n| Goal | G-20260526-215126-c321 |\n| Status | active |\n| Created | 2026-05-26T21:51:34+02:00 |\n\n## Description\n\nAdd user-triggered alert channel testing, clearer delivery diagnostics, and later move notification delivery attempts out of the Agent report request path where safe.\n\n## Acceptance\n\n- Console users can test configured alert channels, delivery attempts record useful diagnostics, and any fan-out relocation preserves incident-opened and incident-resolved alert behavior.\n"
     }
   ]
 }
