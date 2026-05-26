@@ -309,6 +309,12 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210355-casprine-1c7f |\n| Time | 2026-05-26T21:03:55+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.commented |\n| Object | T-20260526-210353-c7d4 |\n\n## Summary\n\nFrom Orion setup: it was unclear whether memory was only local, committed, or pushed. Sync status should separately report local memory, storage Git cleanliness, and remote push performed/skipped/failed.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-210357-casprine-5f80.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210357-casprine-5f80 |\n| Time | 2026-05-26T21:03:57+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-210357-2839 |\n\n## Summary\n\nCreated ticket T-20260526-210357-2839.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
       "title": "Goal: Improve initialize dogfood experience",
@@ -535,6 +541,12 @@
       "path": "projects/maat/tickets/T-20260526-210353-c7d4.md",
       "title": "Ticket: Separate local memory commit status from remote push status",
       "content": "# Ticket: Separate local memory commit status from remote push status\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-210353-c7d4 |\n| Project | maat |\n| Goal | G-20260526-210331-013f |\n| Status | active |\n| Created | 2026-05-26T21:03:53+02:00 |\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-210357-2839.md",
+      "title": "Ticket: Make remote storage pushes explicit and intentional",
+      "content": "# Ticket: Make remote storage pushes explicit and intentional\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-210357-2839 |\n| Project | maat |\n| Goal | G-20260526-210331-013f |\n| Status | active |\n| Created | 2026-05-26T21:03:57+02:00 |\n"
     },
     {
       "type": "event",
