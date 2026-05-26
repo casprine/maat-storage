@@ -57,6 +57,12 @@
       "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-205536-casprine-7cf6 |\n| Time | 2026-05-26T20:55:36+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | goal.created |\n| Object | G-20260526-205536-3ae9 |\n\n## Summary\n\nCreated goal G-20260526-205536-3ae9.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-205549-casprine-0ee2.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-205549-casprine-0ee2 |\n| Time | 2026-05-26T20:55:49+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-205549-6b2b |\n\n## Summary\n\nCreated ticket T-20260526-205549-6b2b.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
       "title": "Goal: Improve initialize dogfood experience",
@@ -67,6 +73,12 @@
       "path": "projects/maat/project.md",
       "title": "Project: Maat",
       "content": "# Project: Maat\n\n| Field | Value |\n|---|---|\n| Project Key | maat |\n| Display Name | Maat |\n| Status | active |\n| Created | 2026-05-26T20:49:25+02:00 |\n| Updated | 2026-05-26T20:49:25+02:00 |\n\n## Summary\n\nLinked from `/Users/casprine/Desktop/vendor/sunday-studio/maat`.\n\n## Identity\n\n| Field | Value |\n|---|---|\n| Primary Repo | /Users/casprine/Desktop/vendor/sunday-studio/maat |\n| Remote | git@github.com:sunday-studio/maat.git |\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-205549-6b2b.md",
+      "title": "Ticket: Show storage access hint on permission failures",
+      "content": "# Ticket: Show storage access hint on permission failures\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-205549-6b2b |\n| Project | maat |\n| Goal | G-20260526-205536-3ae9 |\n| Status | active |\n| Created | 2026-05-26T20:55:49+02:00 |\n"
     },
     {
       "type": "event",
