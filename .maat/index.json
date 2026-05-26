@@ -121,6 +121,19 @@
           "object_id": "T-20260526-214824-a803",
           "summary": "Created ticket T-20260526-214824-a803.",
           "path": "projects/orion/events/2026/05/E-20260526-214824-casprine-2a84.md"
+        },
+        {
+          "id": "E-20260526-214832-casprine-13bf",
+          "time": "2026-05-26T21:48:32+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260526-214824-a803",
+          "summary": "Completed ticket T-20260526-214824-a803.",
+          "evidence": [
+            "Delivered Markdown summary of Maat setup friction in chat and preserved the prior repo record at docs/development/maat-setup-friction.md from commit 247244f."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260526-214832-casprine-13bf.md"
         }
       ]
     }
@@ -161,6 +174,12 @@
       "path": "projects/orion/events/2026/05/E-20260526-214824-casprine-2a84.md",
       "title": "Event: ticket.created",
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214824-casprine-2a84 |\n| Time | 2026-05-26T21:48:24+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-214824-a803 |\n\n## Summary\n\nCreated ticket T-20260526-214824-a803.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-214832-casprine-13bf.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214832-casprine-13bf |\n| Time | 2026-05-26T21:48:32+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260526-214824-a803 |\n\n## Summary\n\nCompleted ticket T-20260526-214824-a803.\n\n## Evidence\n\n- Delivered Markdown summary of Maat setup friction in chat and preserved the prior repo record at docs/development/maat-setup-friction.md from commit 247244f.\n"
     },
     {
       "type": "goal",
