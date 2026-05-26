@@ -127,6 +127,15 @@
           "created": "2026-05-26T21:49:13+02:00",
           "outcome": "Operators can inspect the actual report payload and useful check metadata behind agent reports and monitor history without guessing from summary badges.",
           "path": "projects/orion/goals/G-20260526-214913-1150.md"
+        },
+        {
+          "id": "G-20260526-214956-c916",
+          "project_key": "orion",
+          "title": "Add incident lifecycle controls",
+          "status": "active",
+          "created": "2026-05-26T21:49:56+02:00",
+          "outcome": "Operators can intentionally acknowledge or resolve incidents from the browser, and removed or disabled monitors do not leave confusing stuck incidents behind.",
+          "path": "projects/orion/goals/G-20260526-214956-c916.md"
         }
       ],
       "tickets": [
@@ -299,6 +308,16 @@
           "object_id": "T-20260526-214924-c161",
           "summary": "Tags: #debugging #reports #metadata #console #core #next-release. Sources: docs/plans/agent-health-debugging-next-release.md phases 3-4.",
           "path": "projects/orion/events/2026/05/E-20260526-214941-casprine-6d67.md"
+        },
+        {
+          "id": "E-20260526-214956-casprine-dc0a",
+          "time": "2026-05-26T21:49:56+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260526-214956-c916",
+          "summary": "Created goal G-20260526-214956-c916.",
+          "path": "projects/orion/events/2026/05/E-20260526-214956-casprine-dc0a.md"
         }
       ]
     }
@@ -419,6 +438,12 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214941-casprine-6d67 |\n| Time | 2026-05-26T21:49:41+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-214924-c161 |\n\n## Summary\n\nTags: #debugging #reports #metadata #console #core #next-release. Sources: docs/plans/agent-health-debugging-next-release.md phases 3-4.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-214956-casprine-dc0a.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214956-casprine-dc0a |\n| Time | 2026-05-26T21:49:56+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-214956-c916 |\n\n## Summary\n\nCreated goal G-20260526-214956-c916.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-214751-82ed.md",
       "title": "Goal: Adopt Maat project memory",
@@ -435,6 +460,12 @@
       "path": "projects/orion/goals/G-20260526-214913-1150.md",
       "title": "Goal: Expose raw report context for debugging",
       "content": "# Goal: Expose raw report context for debugging\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-214913-1150 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:49:13+02:00 |\n\n## Outcome\n\nOperators can inspect the actual report payload and useful check metadata behind agent reports and monitor history without guessing from summary badges.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260526-214956-c916.md",
+      "title": "Goal: Add incident lifecycle controls",
+      "content": "# Goal: Add incident lifecycle controls\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-214956-c916 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:49:56+02:00 |\n\n## Outcome\n\nOperators can intentionally acknowledge or resolve incidents from the browser, and removed or disabled monitors do not leave confusing stuck incidents behind.\n"
     },
     {
       "type": "project",
