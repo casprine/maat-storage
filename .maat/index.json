@@ -63,6 +63,19 @@
             "AGENTS.md contains the exact current Maat command forms from initialize, including --outcome, --description, --acceptance, claim, comment, complete, validate, and sync commands."
           ],
           "path": "projects/orion/tickets/T-20260526-214802-29db.md"
+        },
+        {
+          "id": "T-20260526-214824-a803",
+          "project_key": "orion",
+          "goal_id": "G-20260526-214751-82ed",
+          "title": "Document Maat setup friction",
+          "status": "active",
+          "created": "2026-05-26T21:48:24+02:00",
+          "description": "Capture the friction discovered while initializing and using Maat with Orion, including storage access, setup output, upstream tracking, SQLite cache dirtiness, push boundaries, and ticket state clarity.",
+          "acceptance": [
+            "The friction points are captured in Markdown with concrete symptoms and recommended improvements, and the result is available for future Maat product work."
+          ],
+          "path": "projects/orion/tickets/T-20260526-214824-a803.md"
         }
       ],
       "events": [
@@ -98,6 +111,16 @@
             "AGENTS.md was updated with the current Maat initialize command forms and committed in f5efed6 docs(repo): update maat instructions."
           ],
           "path": "projects/orion/events/2026/05/E-20260526-214810-casprine-865e.md"
+        },
+        {
+          "id": "E-20260526-214824-casprine-2a84",
+          "time": "2026-05-26T21:48:24+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260526-214824-a803",
+          "summary": "Created ticket T-20260526-214824-a803.",
+          "path": "projects/orion/events/2026/05/E-20260526-214824-casprine-2a84.md"
         }
       ]
     }
@@ -134,6 +157,12 @@
       "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214810-casprine-865e |\n| Time | 2026-05-26T21:48:10+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260526-214802-29db |\n\n## Summary\n\nCompleted ticket T-20260526-214802-29db.\n\n## Evidence\n\n- AGENTS.md was updated with the current Maat initialize command forms and committed in f5efed6 docs(repo): update maat instructions.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-214824-casprine-2a84.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214824-casprine-2a84 |\n| Time | 2026-05-26T21:48:24+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-214824-a803 |\n\n## Summary\n\nCreated ticket T-20260526-214824-a803.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-214751-82ed.md",
       "title": "Goal: Adopt Maat project memory",
@@ -150,6 +179,12 @@
       "path": "projects/orion/tickets/T-20260526-214802-29db.md",
       "title": "Ticket: Add current Maat instructions to AGENTS",
       "content": "# Ticket: Add current Maat instructions to AGENTS\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-214802-29db |\n| Project | orion |\n| Goal | G-20260526-214751-82ed |\n| Status | active |\n| Created | 2026-05-26T21:48:02+02:00 |\n\n## Description\n\nUpdate AGENTS.md so future agents use the current Maat daily loop, create goals with outcomes, create tickets with descriptions and acceptance criteria, complete work with evidence, and commit finished product changes.\n\n## Acceptance\n\n- AGENTS.md contains the exact current Maat command forms from initialize, including --outcome, --description, --acceptance, claim, comment, complete, validate, and sync commands.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-214824-a803.md",
+      "title": "Ticket: Document Maat setup friction",
+      "content": "# Ticket: Document Maat setup friction\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-214824-a803 |\n| Project | orion |\n| Goal | G-20260526-214751-82ed |\n| Status | active |\n| Created | 2026-05-26T21:48:24+02:00 |\n\n## Description\n\nCapture the friction discovered while initializing and using Maat with Orion, including storage access, setup output, upstream tracking, SQLite cache dirtiness, push boundaries, and ticket state clarity.\n\n## Acceptance\n\n- The friction points are captured in Markdown with concrete symptoms and recommended improvements, and the result is available for future Maat product work.\n"
     }
   ]
 }
