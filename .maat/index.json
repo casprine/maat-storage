@@ -267,6 +267,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210341-casprine-1ad9 |\n| Time | 2026-05-26T21:03:41+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-210341-62a2 |\n\n## Summary\n\nCreated ticket T-20260526-210341-62a2.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-210343-casprine-6593.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210343-casprine-6593 |\n| Time | 2026-05-26T21:03:43+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.commented |\n| Object | T-20260526-210341-62a2 |\n\n## Summary\n\nFrom Orion setup: storage Git had local commits but no upstream tracking branch. Maat should detect this during initialize or sync status and suggest git -C \u003cstorage\u003e push --set-upstream origin main or a Maat repair command.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
       "title": "Goal: Improve initialize dogfood experience",
