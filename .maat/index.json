@@ -469,6 +469,16 @@
           "object_id": "T-20260526-215035-2f5b",
           "summary": "Created ticket T-20260526-215035-2f5b.",
           "path": "projects/orion/events/2026/05/E-20260526-215035-casprine-4483.md"
+        },
+        {
+          "id": "E-20260526-215046-casprine-99ee",
+          "time": "2026-05-26T21:50:46+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260526-215035-2f5b",
+          "summary": "Tags: #core #observability #diagnostics #metrics #performance #post-deploy. Sources: docs/architecture/performance-observability.md, docs/milestones/m3-home-server-monitoring-baseline.md open risks, docs/milestones/m5-first-deploy-candidate.md deferred list.",
+          "path": "projects/orion/events/2026/05/E-20260526-215046-casprine-99ee.md"
         }
       ]
     }
@@ -665,6 +675,12 @@
       "path": "projects/orion/events/2026/05/E-20260526-215035-casprine-4483.md",
       "title": "Event: ticket.created",
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215035-casprine-4483 |\n| Time | 2026-05-26T21:50:35+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-215035-2f5b |\n\n## Summary\n\nCreated ticket T-20260526-215035-2f5b.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215046-casprine-99ee.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215046-casprine-99ee |\n| Time | 2026-05-26T21:50:46+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-215035-2f5b |\n\n## Summary\n\nTags: #core #observability #diagnostics #metrics #performance #post-deploy. Sources: docs/architecture/performance-observability.md, docs/milestones/m3-home-server-monitoring-baseline.md open risks, docs/milestones/m5-first-deploy-candidate.md deferred list.\n"
     },
     {
       "type": "goal",
