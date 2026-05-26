@@ -33,10 +33,22 @@
       "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-205517-casprine-af4a |\n| Time | 2026-05-26T20:55:17+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.completed |\n| Object | T-20260526-205400-d863 |\n\n## Summary\n\nCompleted ticket T-20260526-205400-d863.\n\n## Evidence\n\n- Committed AGENTS.md Maat instructions in product repo commit e2f387e; maat validate passed; make check-markdown-lines exited successfully with existing docs line-budget warning.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-211132-casprine-08c4.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211132-casprine-08c4 |\n| Time | 2026-05-26T21:11:32+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | goal.created |\n| Object | G-20260526-211132-58f7 |\n\n## Summary\n\nCreated goal G-20260526-211132-58f7.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-205351-2c15.md",
       "title": "Goal: Initialize Maat project memory",
       "content": "# Goal: Initialize Maat project memory\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-205351-2c15 |\n| Project | driver |\n| Status | active |\n| Created | 2026-05-26T20:53:51+02:00 |\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/driver/goals/G-20260526-211132-58f7.md",
+      "title": "Goal: Document repo goals and process status",
+      "content": "# Goal: Document repo goals and process status\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-211132-58f7 |\n| Project | driver |\n| Status | active |\n| Created | 2026-05-26T21:11:32+02:00 |\n"
     },
     {
       "type": "project",
