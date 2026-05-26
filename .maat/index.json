@@ -22,6 +22,15 @@
           "created": "2026-05-26T21:49:32+02:00",
           "outcome": "A household admin can drop or upload supported documents, see processing status, preview or inspect extracted text, search source and main-language text, organize with tags and collections, retry failures, and keep originals immutable in configured document storage.",
           "path": "projects/driver/goals/G-20260526-214932-bfdb.md"
+        },
+        {
+          "id": "G-20260526-214940-f930",
+          "project_key": "driver",
+          "title": "Keep backend API contract stable and tested",
+          "status": "active",
+          "created": "2026-05-26T21:49:40+02:00",
+          "outcome": "The Go API owns OpenAPI and exposes authenticated setup, auth, documents, upload, search, settings, tags, collections, user grants, ingestion, and job routes with stable IDs, explicit statuses, and no filesystem path leaks.",
+          "path": "projects/driver/goals/G-20260526-214940-f930.md"
         }
       ],
       "events": [
@@ -34,6 +43,16 @@
           "object_id": "G-20260526-214932-bfdb",
           "summary": "Created goal G-20260526-214932-bfdb.",
           "path": "projects/driver/events/2026/05/E-20260526-214932-casprine-4d76.md"
+        },
+        {
+          "id": "E-20260526-214940-casprine-703f",
+          "time": "2026-05-26T21:49:40+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "goal.created",
+          "object_id": "G-20260526-214940-f930",
+          "summary": "Created goal G-20260526-214940-f930.",
+          "path": "projects/driver/events/2026/05/E-20260526-214940-casprine-703f.md"
         }
       ]
     },
@@ -263,10 +282,22 @@
       "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214932-casprine-4d76 |\n| Time | 2026-05-26T21:49:32+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | goal.created |\n| Object | G-20260526-214932-bfdb |\n\n## Summary\n\nCreated goal G-20260526-214932-bfdb.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-214940-casprine-703f.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214940-casprine-703f |\n| Time | 2026-05-26T21:49:40+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | goal.created |\n| Object | G-20260526-214940-f930 |\n\n## Summary\n\nCreated goal G-20260526-214940-f930.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-214932-bfdb.md",
       "title": "Goal: Ship v1 private document drive",
       "content": "# Goal: Ship v1 private document drive\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-214932-bfdb |\n| Project | driver |\n| Status | active |\n| Created | 2026-05-26T21:49:32+02:00 |\n\n## Outcome\n\nA household admin can drop or upload supported documents, see processing status, preview or inspect extracted text, search source and main-language text, organize with tags and collections, retry failures, and keep originals immutable in configured document storage.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/driver/goals/G-20260526-214940-f930.md",
+      "title": "Goal: Keep backend API contract stable and tested",
+      "content": "# Goal: Keep backend API contract stable and tested\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-214940-f930 |\n| Project | driver |\n| Status | active |\n| Created | 2026-05-26T21:49:40+02:00 |\n\n## Outcome\n\nThe Go API owns OpenAPI and exposes authenticated setup, auth, documents, upload, search, settings, tags, collections, user grants, ingestion, and job routes with stable IDs, explicit statuses, and no filesystem path leaks.\n"
     },
     {
       "type": "project",
