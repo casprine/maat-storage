@@ -195,6 +195,12 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211534-casprine-8457 |\n| Time | 2026-05-26T21:15:34+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.commented |\n| Object | T-20260526-211525-6c68 |\n\n## Summary\n\nProcess from docs/configuration-plan.md and docs/deployment.md: use stable docker-compose.yml plus deploy/.env host values for paths, versions, ports, DB credentials, timezone, main language, OCR languages, and optional provider URLs. Container paths are /documents for originals and /app-data for artifacts/TUS chunks. Backend must not silently fall back to in-memory storage in Docker; Compose sets DATABASE_URL through Postgres. Current repo has deploy/example.env, docker-compose.yml, API/worker Dockerfiles, and config tests.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-211540-casprine-d935.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211540-casprine-d935 |\n| Time | 2026-05-26T21:15:40+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.created |\n| Object | T-20260526-211540-22fd |\n\n## Summary\n\nCreated ticket T-20260526-211540-22fd.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-205351-2c15.md",
       "title": "Goal: Initialize Maat project memory",
@@ -313,6 +319,12 @@
       "path": "projects/driver/tickets/T-20260526-211525-6c68.md",
       "title": "Ticket: Keep Immich-style environment configuration stable",
       "content": "# Ticket: Keep Immich-style environment configuration stable\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-211525-6c68 |\n| Project | driver |\n| Goal | G-20260526-211259-438a |\n| Status | active |\n| Created | 2026-05-26T21:15:25+02:00 |\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/driver/tickets/T-20260526-211540-22fd.md",
+      "title": "Ticket: Smoke the Docker Compose backend stack",
+      "content": "# Ticket: Smoke the Docker Compose backend stack\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-211540-22fd |\n| Project | driver |\n| Goal | G-20260526-211253-0484 |\n| Status | active |\n| Created | 2026-05-26T21:15:40+02:00 |\n"
     },
     {
       "type": "event",
