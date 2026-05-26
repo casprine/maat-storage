@@ -63,6 +63,12 @@
       "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211231-casprine-307d |\n| Time | 2026-05-26T21:12:31+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | goal.created |\n| Object | G-20260526-211231-a8ea |\n\n## Summary\n\nCreated goal G-20260526-211231-a8ea.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-211237-casprine-5330.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211237-casprine-5330 |\n| Time | 2026-05-26T21:12:37+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | goal.created |\n| Object | G-20260526-211237-c244 |\n\n## Summary\n\nCreated goal G-20260526-211237-c244.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-205351-2c15.md",
       "title": "Goal: Initialize Maat project memory",
@@ -85,6 +91,12 @@
       "path": "projects/driver/goals/G-20260526-211231-a8ea.md",
       "title": "Goal: Maintain backend API contract and auth",
       "content": "# Goal: Maintain backend API contract and auth\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-211231-a8ea |\n| Project | driver |\n| Status | active |\n| Created | 2026-05-26T21:12:31+02:00 |\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/driver/goals/G-20260526-211237-c244.md",
+      "title": "Goal: Run always-on ingestion and indexing worker",
+      "content": "# Goal: Run always-on ingestion and indexing worker\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-211237-c244 |\n| Project | driver |\n| Status | active |\n| Created | 2026-05-26T21:12:37+02:00 |\n"
     },
     {
       "type": "project",
