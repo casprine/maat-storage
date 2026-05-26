@@ -379,6 +379,16 @@
           "object_id": "T-20260526-215003-fa9a",
           "summary": "Created ticket T-20260526-215003-fa9a.",
           "path": "projects/orion/events/2026/05/E-20260526-215003-casprine-75ed.md"
+        },
+        {
+          "id": "E-20260526-215018-casprine-8f2b",
+          "time": "2026-05-26T21:50:18+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260526-215003-fa9a",
+          "summary": "Tags: #incidents #core #console #manual-controls #post-deploy. Sources: docs/plans/agent-health-debugging-next-release.md phase 5, docs/milestones/m5-first-deploy-candidate.md deferred list.",
+          "path": "projects/orion/events/2026/05/E-20260526-215018-casprine-8f2b.md"
         }
       ]
     }
@@ -533,6 +543,12 @@
       "path": "projects/orion/events/2026/05/E-20260526-215003-casprine-75ed.md",
       "title": "Event: ticket.created",
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215003-casprine-75ed |\n| Time | 2026-05-26T21:50:03+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-215003-fa9a |\n\n## Summary\n\nCreated ticket T-20260526-215003-fa9a.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215018-casprine-8f2b.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215018-casprine-8f2b |\n| Time | 2026-05-26T21:50:18+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-215003-fa9a |\n\n## Summary\n\nTags: #incidents #core #console #manual-controls #post-deploy. Sources: docs/plans/agent-health-debugging-next-release.md phase 5, docs/milestones/m5-first-deploy-candidate.md deferred list.\n"
     },
     {
       "type": "goal",
