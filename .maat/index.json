@@ -3,6 +3,18 @@
   "projects": [],
   "documents": [
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-205351-casprine-1ca8.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-205351-casprine-1ca8 |\n| Time | 2026-05-26T20:53:51+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | goal.created |\n| Object | G-20260526-205351-2c15 |\n\n## Summary\n\nCreated goal G-20260526-205351-2c15.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/driver/goals/G-20260526-205351-2c15.md",
+      "title": "Goal: Initialize Maat project memory",
+      "content": "# Goal: Initialize Maat project memory\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-205351-2c15 |\n| Project | driver |\n| Status | active |\n| Created | 2026-05-26T20:53:51+02:00 |\n"
+    },
+    {
       "type": "project",
       "path": "projects/driver/project.md",
       "title": "Project: Driver",
