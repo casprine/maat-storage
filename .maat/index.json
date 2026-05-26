@@ -143,6 +143,102 @@
             "Worker-to-API registration routes remain protected by worker/admin auth."
           ],
           "path": "projects/driver/tickets/T-20260526-215214-418c.md"
+        },
+        {
+          "id": "T-20260526-215259-801c",
+          "project_key": "driver",
+          "goal_id": "G-20260526-214948-2ed0",
+          "title": "Complete extraction OCR translation embedding pipeline",
+          "status": "active",
+          "created": "2026-05-26T21:52:59+02:00",
+          "description": "Keep the worker processing pipeline able to extract text from supported formats, OCR scanned/text-poor PDFs with configured languages, chunk by page then length, detect language, translate chunks outside DRIVE_MAIN_LANGUAGE, embed original and translated chunks, and return records for full-text and vector indexing.",
+          "acceptance": [
+            "TXT, RTF, DOCX, ODT, native PDF, and scanned/text-poor PDF behavior is covered by focused or heavy tests as appropriate.",
+            "Translation or embedding provider failure records partial step status and does not hide the document or block original-language search.",
+            "Artifacts include enough tool/version data to support future reprocessing decisions.",
+            "Heavy proof covers real OCR fixtures, pgvector ranking, DOCX, and scanned PDF smoke before this is marked complete."
+          ],
+          "path": "projects/driver/tickets/T-20260526-215259-801c.md"
+        },
+        {
+          "id": "T-20260526-215317-481b",
+          "project_key": "driver",
+          "goal_id": "G-20260526-215000-fdcd",
+          "title": "Operate the Vite React document console",
+          "status": "active",
+          "created": "2026-05-26T21:53:17+02:00",
+          "description": "Maintain the web console in apps/web as a quiet operational UI for household document management, using Vite, React, TypeScript, Tailwind, OXC, lucide icons, shadcn-style components, and generated SDK-backed API helpers.",
+          "acceptance": [
+            "The UI supports setup/login, document list, upload, search, detail with preview/text/events, settings, tags, collections, retry, and sign out.",
+            "Frontend API calls use packages/sdk generated functions or a thin local wrapper over them, not independent endpoint contracts.",
+            "Typecheck and OXC lint pass for frontend changes.",
+            "Responsive layout avoids overlapping text and keeps document workflows efficient."
+          ],
+          "path": "projects/driver/tickets/T-20260526-215317-481b.md"
+        },
+        {
+          "id": "T-20260526-215336-11ae",
+          "project_key": "driver",
+          "goal_id": "G-20260526-215000-fdcd",
+          "title": "Keep OpenAPI and Orval SDK synchronized",
+          "status": "active",
+          "created": "2026-05-26T21:53:36+02:00",
+          "description": "Preserve the backend-owned contract flow from apps/api/openapi.json through Orval-generated packages/sdk to apps/web, and keep route parameter and response conventions stable for agents and frontend code.",
+          "acceptance": [
+            "Backend route or response changes update OpenAPI in apps/api.",
+            "Generated SDK in packages/sdk is regenerated when OpenAPI changes affect frontend consumers.",
+            "OpenAPI smoke verifies required public, protected, admin, upload, ingestion, and job routes.",
+            "Route params remain kebab-case and downloads/previews stay behind API authorization."
+          ],
+          "path": "projects/driver/tickets/T-20260526-215336-11ae.md"
+        },
+        {
+          "id": "T-20260526-215356-8508",
+          "project_key": "driver",
+          "goal_id": "G-20260526-215019-f0f1",
+          "title": "Maintain first-run admin and direct document grants",
+          "status": "active",
+          "created": "2026-05-26T21:53:56+02:00",
+          "description": "Keep access control aligned with docs/access-control-plan.md: first-run setup creates the initial admin, admins manage users and direct document grants, users see only granted documents, and ACLs are enforced at the API layer without filesystem permission tricks.",
+          "acceptance": [
+            "No-user startup requires setup before normal login.",
+            "Protected routes reject unauthenticated requests and non-admins cannot manage users/settings/grants.",
+            "Direct document grants allow and revoke user access as expected.",
+            "Path traversal and direct-path guessing are rejected without leaking filesystem paths."
+          ],
+          "path": "projects/driver/tickets/T-20260526-215356-8508.md"
+        },
+        {
+          "id": "T-20260526-215416-2aa6",
+          "project_key": "driver",
+          "goal_id": "G-20260526-215009-bfda",
+          "title": "Smoke Docker Compose backend deployment",
+          "status": "active",
+          "created": "2026-05-26T21:54:16+02:00",
+          "description": "Keep deploy/docker-compose.yml, deploy/example.env, Dockerfiles, and Make targets aligned with the self-hosted backend stack: Postgres pgvector, one-shot migrate, API, and always-on worker with document/app-data mounts.",
+          "acceptance": [
+            "make docker-smoke succeeds or any failure is captured with exact logs and follow-up work.",
+            "Compose startup order remains postgres healthy -\u003e migrate complete -\u003e api healthy -\u003e worker.",
+            "Required env covers documents, app data, DB data, worker token, main language, OCR languages, and Postgres credentials.",
+            "Worker image includes Poppler and Tesseract language packages required by default OCR settings."
+          ],
+          "path": "projects/driver/tickets/T-20260526-215416-2aa6.md"
+        },
+        {
+          "id": "T-20260526-215436-c715",
+          "project_key": "driver",
+          "goal_id": "G-20260526-215034-ba07",
+          "title": "Follow repo gates and Maat operating loop",
+          "status": "active",
+          "created": "2026-05-26T21:54:36+02:00",
+          "description": "Use the repo and Maat processes consistently so agents can coordinate: claim/create tickets before material work, include descriptions and acceptance criteria, comment meaningful progress, complete only with evidence, and run the right validation before handoff.",
+          "acceptance": [
+            "Before material work, Maat status and project state are inspected and a relevant ticket is claimed or created.",
+            "New Maat goals include outcomes and new tickets include descriptions plus acceptance criteria.",
+            "Code changes obey ownership boundaries, update OpenAPI/SDK when contracts change, and run make check-code-lines before commit.",
+            "Completion evidence names tests, commits, PRs, or exact manual verification."
+          ],
+          "path": "projects/driver/tickets/T-20260526-215436-c715.md"
         }
       ],
       "events": [
@@ -295,6 +391,126 @@
           "object_id": "T-20260526-215214-418c",
           "summary": "Data/status: worker files under apps/worker/internal/reconcile and apps/worker/internal/orchestrate implement stable-file scanning, registration, deleted-file reporting, duplicate handling, and artifact-boundary checks. Tests include partial writes, duplicates, deleted documents, and keeping artifacts outside documents. make test-fast passed on 2026-05-26.",
           "path": "projects/driver/events/2026/05/E-20260526-215225-casprine-4fe4.md"
+        },
+        {
+          "id": "E-20260526-215259-casprine-f141",
+          "time": "2026-05-26T21:52:59+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215259-801c",
+          "summary": "Created ticket T-20260526-215259-801c.",
+          "path": "projects/driver/events/2026/05/E-20260526-215259-casprine-f141.md"
+        },
+        {
+          "id": "E-20260526-215307-casprine-cb3d",
+          "time": "2026-05-26T21:53:07+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "ticket.commented",
+          "object_id": "T-20260526-215259-801c",
+          "summary": "Data/status: apps/worker/internal/processing contains extraction, PDF, OCR fallback, chunking, language, translation, embedding, and pipeline modules. docs/ingestion-pipeline.md defines steps from stable-file discovery through ready. make test-fast passed processing tests on 2026-05-26; make test-heavy was not run in this rebuild pass.",
+          "path": "projects/driver/events/2026/05/E-20260526-215307-casprine-cb3d.md"
+        },
+        {
+          "id": "E-20260526-215317-casprine-e7cf",
+          "time": "2026-05-26T21:53:17+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215317-481b",
+          "summary": "Created ticket T-20260526-215317-481b.",
+          "path": "projects/driver/events/2026/05/E-20260526-215317-casprine-e7cf.md"
+        },
+        {
+          "id": "E-20260526-215325-casprine-c0aa",
+          "time": "2026-05-26T21:53:25+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "ticket.commented",
+          "object_id": "T-20260526-215317-481b",
+          "summary": "Data/status: docs/frontend-plan.md defines Vite React TypeScript Tailwind OXC and v1 screens. apps/web/src/app/App.tsx and components.tsx currently cover setup/login, document list, upload, search, detail preview, settings, tags, collections, retry, and sign out. make test-fast passed package SDK and web typecheck plus oxlint on 2026-05-26.",
+          "path": "projects/driver/events/2026/05/E-20260526-215325-casprine-c0aa.md"
+        },
+        {
+          "id": "E-20260526-215336-casprine-4537",
+          "time": "2026-05-26T21:53:36+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215336-11ae",
+          "summary": "Created ticket T-20260526-215336-11ae.",
+          "path": "projects/driver/events/2026/05/E-20260526-215336-casprine-4537.md"
+        },
+        {
+          "id": "E-20260526-215345-casprine-21e1",
+          "time": "2026-05-26T21:53:45+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "ticket.commented",
+          "object_id": "T-20260526-215336-11ae",
+          "summary": "Data/status: docs/openapi-orval-plan.md defines api source -\u003e openapi.json -\u003e orval -\u003e packages/sdk -\u003e apps/web. Current files include apps/api/openapi.json, apps/api/openapi.go, packages/sdk/src/generated/drive.ts, and scripts/openapi-smoke.sh. make test-fast reported OpenAPI smoke ok on 2026-05-26.",
+          "path": "projects/driver/events/2026/05/E-20260526-215345-casprine-21e1.md"
+        },
+        {
+          "id": "E-20260526-215356-casprine-801c",
+          "time": "2026-05-26T21:53:56+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215356-8508",
+          "summary": "Created ticket T-20260526-215356-8508.",
+          "path": "projects/driver/events/2026/05/E-20260526-215356-casprine-801c.md"
+        },
+        {
+          "id": "E-20260526-215405-casprine-f840",
+          "time": "2026-05-26T21:54:05+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "ticket.commented",
+          "object_id": "T-20260526-215356-8508",
+          "summary": "Data/status: API files include setup.go, auth.go, users.go, acl.go, memory_acl.go, pg_acl.go, and tests for setup, auth, ACL, users, and path safety. docs/access-control-plan.md marks directory grants and collection grants as later work; v1 uses direct document grants. make test-fast passed API tests on 2026-05-26.",
+          "path": "projects/driver/events/2026/05/E-20260526-215405-casprine-f840.md"
+        },
+        {
+          "id": "E-20260526-215416-casprine-ad1b",
+          "time": "2026-05-26T21:54:16+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215416-2aa6",
+          "summary": "Created ticket T-20260526-215416-2aa6.",
+          "path": "projects/driver/events/2026/05/E-20260526-215416-casprine-ad1b.md"
+        },
+        {
+          "id": "E-20260526-215426-casprine-56fd",
+          "time": "2026-05-26T21:54:26+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "ticket.commented",
+          "object_id": "T-20260526-215416-2aa6",
+          "summary": "Data/status: docs/deployment.md and docs/configuration-plan.md define Immich-style env configuration and backend deployment. Current files include deploy/docker-compose.yml, deploy/example.env, deploy/api.dockerfile, deploy/worker.dockerfile, and scripts/docker-smoke.sh. make test-fast passed, but make docker-smoke was not run during this rebuild pass.",
+          "path": "projects/driver/events/2026/05/E-20260526-215426-casprine-56fd.md"
+        },
+        {
+          "id": "E-20260526-215436-casprine-4a51",
+          "time": "2026-05-26T21:54:36+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215436-c715",
+          "summary": "Created ticket T-20260526-215436-c715.",
+          "path": "projects/driver/events/2026/05/E-20260526-215436-casprine-4a51.md"
+        },
+        {
+          "id": "E-20260526-215448-casprine-781f",
+          "time": "2026-05-26T21:54:48+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "ticket.commented",
+          "object_id": "T-20260526-215436-c715",
+          "summary": "Data/status: AGENTS.md now contains the current Maat snippet from maat initialize: before work run maat status and maat project show, create or claim tickets, require goal outcomes and ticket descriptions/acceptance, comment progress, complete with evidence, validate and sync when done. Repo fast gate is make test-fast; heavy evidence is make test-heavy.",
+          "path": "projects/driver/events/2026/05/E-20260526-215448-casprine-781f.md"
         }
       ]
     },
@@ -413,6 +629,42 @@
           "created": "2026-05-26T21:52:25+02:00",
           "outcome": "Console flows have lightweight automated browser coverage after the manual flows stabilize, reducing reliance on visual-only QA for regressions.",
           "path": "projects/orion/goals/G-20260526-215225-0e98.md"
+        },
+        {
+          "id": "G-20260526-215254-e0bb",
+          "project_key": "orion",
+          "title": "Collect and expose service logs",
+          "status": "active",
+          "created": "2026-05-26T21:52:54+02:00",
+          "outcome": "Operators can distinguish Orion operational events from service and file logs, then retrieve useful Agent/Core log context for later diagnosis.",
+          "path": "projects/orion/goals/G-20260526-215254-e0bb.md"
+        },
+        {
+          "id": "G-20260526-215257-e70b",
+          "project_key": "orion",
+          "title": "Design Core-managed monitors",
+          "status": "active",
+          "created": "2026-05-26T21:52:57+02:00",
+          "outcome": "Orion has a reviewed product and implementation plan for monitors registered in Console and executed by Core instead of an Agent",
+          "path": "projects/orion/goals/G-20260526-215257-e70b.md"
+        },
+        {
+          "id": "G-20260526-215321-fbed",
+          "project_key": "orion",
+          "title": "Automate data lifecycle scheduling",
+          "status": "active",
+          "created": "2026-05-26T21:53:21+02:00",
+          "outcome": "Core automatically runs configured archive and rollup lifecycle work on schedule while preserving manual controls and observable last-run metadata.",
+          "path": "projects/orion/goals/G-20260526-215321-fbed.md"
+        },
+        {
+          "id": "G-20260526-215353-2af7",
+          "project_key": "orion",
+          "title": "Establish continuous verification coverage",
+          "status": "active",
+          "created": "2026-05-26T21:53:53+02:00",
+          "outcome": "The repository has a normal CI baseline for Core, Agent, Console, and generated contract checks so regressions are caught continuously instead of only during manual release passes.",
+          "path": "projects/orion/goals/G-20260526-215353-2af7.md"
         }
       ],
       "tickets": [
@@ -558,6 +810,71 @@
             "Browser smoke tests cover core navigation and representative incidents, agents, monitors, alerts, logs, and settings flows without making unstable manual flows harder to iterate."
           ],
           "path": "projects/orion/tickets/T-20260526-215235-502e.md"
+        },
+        {
+          "id": "T-20260526-215303-4c65",
+          "project_key": "orion",
+          "goal_id": "G-20260526-215257-e70b",
+          "title": "Draft Core-managed monitor plan",
+          "status": "active",
+          "created": "2026-05-26T21:53:03+02:00",
+          "description": "Research Better Stack and incident.io style monitoring concepts, compare them to Orion's current Agent/Core/Console model, and write a planning document for Core-managed monitors registered from Console.",
+          "acceptance": [
+            "A docs planning file exists with product scope, monitor types, architecture, UI/API/data model implications, milestones, risks, and review notes; Maat has a review note pointing to the document."
+          ],
+          "path": "projects/orion/tickets/T-20260526-215303-4c65.md"
+        },
+        {
+          "id": "T-20260526-215305-7d12",
+          "project_key": "orion",
+          "goal_id": "G-20260526-215254-e0bb",
+          "title": "Bring Agent and service logs into the product",
+          "status": "active",
+          "created": "2026-05-26T21:53:05+02:00",
+          "description": "Design and implement service/file log collection or retrieval so the product can show useful Agent/Core logs separately from Orion event records.",
+          "acceptance": [
+            "Console or CLI users can access recent relevant service logs for diagnosis, permission boundaries are documented, and the existing operational event log remains distinct from service log output."
+          ],
+          "path": "projects/orion/tickets/T-20260526-215305-7d12.md"
+        },
+        {
+          "id": "T-20260526-215333-1025",
+          "project_key": "orion",
+          "goal_id": "G-20260526-215321-fbed",
+          "title": "Run archive and rollup jobs automatically",
+          "status": "active",
+          "created": "2026-05-26T21:53:33+02:00",
+          "description": "Implement automated execution for data lifecycle archive and rollup jobs according to the persisted daily/manual schedule settings.",
+          "acceptance": [
+            "Daily schedule settings trigger archive and rollup work without manual API calls, manual mode remains manual, last-run metadata updates, and failures are visible through logs or diagnostics."
+          ],
+          "path": "projects/orion/tickets/T-20260526-215333-1025.md"
+        },
+        {
+          "id": "T-20260526-215402-3135",
+          "project_key": "orion",
+          "goal_id": "G-20260526-215353-2af7",
+          "title": "Add CI test and build baseline",
+          "status": "active",
+          "created": "2026-05-26T21:54:02+02:00",
+          "description": "Add or refine CI jobs for Agent tests, Core tests, Console install/build, generated OpenAPI/SDK checks, and path-aware validation for the split repository layout.",
+          "acceptance": [
+            "CI runs the expected Agent, Core, Console, and generated-contract checks on relevant changes and documents any intentionally skipped expensive release-only jobs."
+          ],
+          "path": "projects/orion/tickets/T-20260526-215402-3135.md"
+        },
+        {
+          "id": "T-20260526-215427-d7bf",
+          "project_key": "orion",
+          "goal_id": "G-20260526-214751-82ed",
+          "title": "Convert docs backlog into Maat goals",
+          "status": "active",
+          "created": "2026-05-26T21:54:27+02:00",
+          "description": "Sweep the Orion docs for unfinished work and convert the real remaining items into Maat goals and seed tickets with outcomes, descriptions, acceptance criteria, tags, and source references.",
+          "acceptance": [
+            "Each unfinished docs theme is represented by a Maat goal with an outcome and at least one actionable ticket with description, acceptance criteria, and source/tag context."
+          ],
+          "path": "projects/orion/tickets/T-20260526-215427-d7bf.md"
         }
       ],
       "events": [
@@ -876,6 +1193,182 @@
           "object_id": "T-20260526-215235-502e",
           "summary": "Created ticket T-20260526-215235-502e.",
           "path": "projects/orion/events/2026/05/E-20260526-215235-casprine-d045.md"
+        },
+        {
+          "id": "E-20260526-215245-casprine-fafa",
+          "time": "2026-05-26T21:52:45+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260526-215235-502e",
+          "summary": "Tags: #console #qa #browser-smoke #visual-qa #e2e #post-manual-pass. Sources: docs/milestones/m4-console-release-pass.md open risks and next section, docs/milestones/m1-documentation-roadmap-reset.md next section.",
+          "path": "projects/orion/events/2026/05/E-20260526-215245-casprine-fafa.md"
+        },
+        {
+          "id": "E-20260526-215254-casprine-970e",
+          "time": "2026-05-26T21:52:54+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260526-215254-e0bb",
+          "summary": "Created goal G-20260526-215254-e0bb.",
+          "path": "projects/orion/events/2026/05/E-20260526-215254-casprine-970e.md"
+        },
+        {
+          "id": "E-20260526-215257-casprine-da12",
+          "time": "2026-05-26T21:52:57+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260526-215257-e70b",
+          "summary": "Created goal G-20260526-215257-e70b.",
+          "path": "projects/orion/events/2026/05/E-20260526-215257-casprine-da12.md"
+        },
+        {
+          "id": "E-20260526-215303-casprine-27a9",
+          "time": "2026-05-26T21:53:03+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215303-4c65",
+          "summary": "Created ticket T-20260526-215303-4c65.",
+          "path": "projects/orion/events/2026/05/E-20260526-215303-casprine-27a9.md"
+        },
+        {
+          "id": "E-20260526-215305-casprine-9998",
+          "time": "2026-05-26T21:53:05+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215305-7d12",
+          "summary": "Created ticket T-20260526-215305-7d12.",
+          "path": "projects/orion/events/2026/05/E-20260526-215305-casprine-9998.md"
+        },
+        {
+          "id": "E-20260526-215308-codex-9633",
+          "time": "2026-05-26T21:53:08+02:00",
+          "actor": "codex",
+          "project_key": "orion",
+          "type": "ticket.claimed",
+          "object_id": "T-20260526-215303-4c65",
+          "summary": "Claimed ticket T-20260526-215303-4c65 until 2026-05-26T23:53:08+02:00.",
+          "path": "projects/orion/events/2026/05/E-20260526-215308-codex-9633.md"
+        },
+        {
+          "id": "E-20260526-215314-casprine-21b9",
+          "time": "2026-05-26T21:53:14+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260526-215305-7d12",
+          "summary": "Tags: #logs #agent #core #console #operations #post-deploy. Sources: docs/milestones/m4-console-release-pass.md open risks, docs/deployment/agent-install-upgrade.md logging notes.",
+          "path": "projects/orion/events/2026/05/E-20260526-215314-casprine-21b9.md"
+        },
+        {
+          "id": "E-20260526-215321-casprine-d3e5",
+          "time": "2026-05-26T21:53:21+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260526-215321-fbed",
+          "summary": "Created goal G-20260526-215321-fbed.",
+          "path": "projects/orion/events/2026/05/E-20260526-215321-casprine-d3e5.md"
+        },
+        {
+          "id": "E-20260526-215333-casprine-c465",
+          "time": "2026-05-26T21:53:33+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215333-1025",
+          "summary": "Created ticket T-20260526-215333-1025.",
+          "path": "projects/orion/events/2026/05/E-20260526-215333-casprine-c465.md"
+        },
+        {
+          "id": "E-20260526-215342-casprine-5599",
+          "time": "2026-05-26T21:53:42+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260526-215333-1025",
+          "summary": "Tags: #core #data-lifecycle #archive #rollup #scheduler #retention #post-deploy. Sources: docs/milestones/m5-first-deploy-candidate.md deferred list, docs/architecture/core-features.md settings, docs/architecture/persistence-and-lifecycle.md rollups and archives.",
+          "path": "projects/orion/events/2026/05/E-20260526-215342-casprine-5599.md"
+        },
+        {
+          "id": "E-20260526-215353-casprine-5b2f",
+          "time": "2026-05-26T21:53:53+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260526-215353-2af7",
+          "summary": "Created goal G-20260526-215353-2af7.",
+          "path": "projects/orion/events/2026/05/E-20260526-215353-casprine-5b2f.md"
+        },
+        {
+          "id": "E-20260526-215402-casprine-3ed9",
+          "time": "2026-05-26T21:54:02+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215402-3135",
+          "summary": "Created ticket T-20260526-215402-3135.",
+          "path": "projects/orion/events/2026/05/E-20260526-215402-casprine-3ed9.md"
+        },
+        {
+          "id": "E-20260526-215402-casprine-5b57",
+          "time": "2026-05-26T21:54:02+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260526-215146-5e99",
+          "summary": "Drafted status page architecture document and linked it from architecture README",
+          "path": "projects/orion/events/2026/05/E-20260526-215402-casprine-5b57.md"
+        },
+        {
+          "id": "E-20260526-215413-casprine-1632",
+          "time": "2026-05-26T21:54:13+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260526-215402-3135",
+          "summary": "Tags: #ci #qa #tests #core #agent #console #builds. Sources: docs/milestones/m1-documentation-roadmap-reset.md next section, docs/milestones/m2-directory-regrouping.md next/open risks.",
+          "path": "projects/orion/events/2026/05/E-20260526-215413-casprine-1632.md"
+        },
+        {
+          "id": "E-20260526-215427-casprine-f089",
+          "time": "2026-05-26T21:54:27+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215427-d7bf",
+          "summary": "Created ticket T-20260526-215427-d7bf.",
+          "path": "projects/orion/events/2026/05/E-20260526-215427-casprine-f089.md"
+        },
+        {
+          "id": "E-20260526-215428-casprine-f681",
+          "time": "2026-05-26T21:54:28+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260526-215146-5e99",
+          "summary": "Completed ticket T-20260526-215146-5e99.",
+          "evidence": [
+            "Committed fef1a7d after git diff --check passed; added docs/architecture/status-pages.md and linked it from docs/architecture/README.md"
+          ],
+          "path": "projects/orion/events/2026/05/E-20260526-215428-casprine-f681.md"
+        },
+        {
+          "id": "E-20260526-215436-casprine-e288",
+          "time": "2026-05-26T21:54:36+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260526-215427-d7bf",
+          "summary": "Completed ticket T-20260526-215427-d7bf.",
+          "evidence": [
+            "Recreated the docs backlog as 10 Orion goals with concrete outcomes and seed tickets containing descriptions, acceptance criteria, tags, and source-document comments."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260526-215436-casprine-e288.md"
         }
       ]
     }
@@ -972,6 +1465,78 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215225-casprine-4fe4 |\n| Time | 2026-05-26T21:52:25+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.commented |\n| Object | T-20260526-215214-418c |\n\n## Summary\n\nData/status: worker files under apps/worker/internal/reconcile and apps/worker/internal/orchestrate implement stable-file scanning, registration, deleted-file reporting, duplicate handling, and artifact-boundary checks. Tests include partial writes, duplicates, deleted documents, and keeping artifacts outside documents. make test-fast passed on 2026-05-26.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-215259-casprine-f141.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215259-casprine-f141 |\n| Time | 2026-05-26T21:52:59+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.created |\n| Object | T-20260526-215259-801c |\n\n## Summary\n\nCreated ticket T-20260526-215259-801c.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-215307-casprine-cb3d.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215307-casprine-cb3d |\n| Time | 2026-05-26T21:53:07+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.commented |\n| Object | T-20260526-215259-801c |\n\n## Summary\n\nData/status: apps/worker/internal/processing contains extraction, PDF, OCR fallback, chunking, language, translation, embedding, and pipeline modules. docs/ingestion-pipeline.md defines steps from stable-file discovery through ready. make test-fast passed processing tests on 2026-05-26; make test-heavy was not run in this rebuild pass.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-215317-casprine-e7cf.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215317-casprine-e7cf |\n| Time | 2026-05-26T21:53:17+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.created |\n| Object | T-20260526-215317-481b |\n\n## Summary\n\nCreated ticket T-20260526-215317-481b.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-215325-casprine-c0aa.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215325-casprine-c0aa |\n| Time | 2026-05-26T21:53:25+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.commented |\n| Object | T-20260526-215317-481b |\n\n## Summary\n\nData/status: docs/frontend-plan.md defines Vite React TypeScript Tailwind OXC and v1 screens. apps/web/src/app/App.tsx and components.tsx currently cover setup/login, document list, upload, search, detail preview, settings, tags, collections, retry, and sign out. make test-fast passed package SDK and web typecheck plus oxlint on 2026-05-26.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-215336-casprine-4537.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215336-casprine-4537 |\n| Time | 2026-05-26T21:53:36+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.created |\n| Object | T-20260526-215336-11ae |\n\n## Summary\n\nCreated ticket T-20260526-215336-11ae.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-215345-casprine-21e1.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215345-casprine-21e1 |\n| Time | 2026-05-26T21:53:45+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.commented |\n| Object | T-20260526-215336-11ae |\n\n## Summary\n\nData/status: docs/openapi-orval-plan.md defines api source -\u003e openapi.json -\u003e orval -\u003e packages/sdk -\u003e apps/web. Current files include apps/api/openapi.json, apps/api/openapi.go, packages/sdk/src/generated/drive.ts, and scripts/openapi-smoke.sh. make test-fast reported OpenAPI smoke ok on 2026-05-26.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-215356-casprine-801c.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215356-casprine-801c |\n| Time | 2026-05-26T21:53:56+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.created |\n| Object | T-20260526-215356-8508 |\n\n## Summary\n\nCreated ticket T-20260526-215356-8508.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-215405-casprine-f840.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215405-casprine-f840 |\n| Time | 2026-05-26T21:54:05+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.commented |\n| Object | T-20260526-215356-8508 |\n\n## Summary\n\nData/status: API files include setup.go, auth.go, users.go, acl.go, memory_acl.go, pg_acl.go, and tests for setup, auth, ACL, users, and path safety. docs/access-control-plan.md marks directory grants and collection grants as later work; v1 uses direct document grants. make test-fast passed API tests on 2026-05-26.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-215416-casprine-ad1b.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215416-casprine-ad1b |\n| Time | 2026-05-26T21:54:16+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.created |\n| Object | T-20260526-215416-2aa6 |\n\n## Summary\n\nCreated ticket T-20260526-215416-2aa6.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-215426-casprine-56fd.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215426-casprine-56fd |\n| Time | 2026-05-26T21:54:26+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.commented |\n| Object | T-20260526-215416-2aa6 |\n\n## Summary\n\nData/status: docs/deployment.md and docs/configuration-plan.md define Immich-style env configuration and backend deployment. Current files include deploy/docker-compose.yml, deploy/example.env, deploy/api.dockerfile, deploy/worker.dockerfile, and scripts/docker-smoke.sh. make test-fast passed, but make docker-smoke was not run during this rebuild pass.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-215436-casprine-4a51.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215436-casprine-4a51 |\n| Time | 2026-05-26T21:54:36+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.created |\n| Object | T-20260526-215436-c715 |\n\n## Summary\n\nCreated ticket T-20260526-215436-c715.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-215448-casprine-781f.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215448-casprine-781f |\n| Time | 2026-05-26T21:54:48+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.commented |\n| Object | T-20260526-215436-c715 |\n\n## Summary\n\nData/status: AGENTS.md now contains the current Maat snippet from maat initialize: before work run maat status and maat project show, create or claim tickets, require goal outcomes and ticket descriptions/acceptance, comment progress, complete with evidence, validate and sync when done. Repo fast gate is make test-fast; heavy evidence is make test-heavy.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-214932-bfdb.md",
       "title": "Goal: Ship v1 private document drive",
@@ -1042,6 +1607,42 @@
       "path": "projects/driver/tickets/T-20260526-215214-418c.md",
       "title": "Ticket: Maintain watcher registration and document lifecycle",
       "content": "# Ticket: Maintain watcher registration and document lifecycle\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215214-418c |\n| Project | driver |\n| Goal | G-20260526-214948-2ed0 |\n| Status | active |\n| Created | 2026-05-26T21:52:14+02:00 |\n\n## Description\n\nKeep the worker reconciler and orchestrator responsible for scanning the configured document directory, waiting for stable writes, hashing files, registering stable files with the API, handling duplicates/changed paths/deletes, and enqueueing index jobs while TUS remains only an upload path.\n\n## Acceptance\n\n- Partial writes do not enqueue jobs until size and mtime are stable.\n- Duplicate checksums, same-path changes, deleted files, unreadable files, and symlink/path safety are tested or intentionally documented.\n- Generated artifacts are written under app data and never inside the document directory.\n- Worker-to-API registration routes remain protected by worker/admin auth.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/driver/tickets/T-20260526-215259-801c.md",
+      "title": "Ticket: Complete extraction OCR translation embedding pipeline",
+      "content": "# Ticket: Complete extraction OCR translation embedding pipeline\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215259-801c |\n| Project | driver |\n| Goal | G-20260526-214948-2ed0 |\n| Status | active |\n| Created | 2026-05-26T21:52:59+02:00 |\n\n## Description\n\nKeep the worker processing pipeline able to extract text from supported formats, OCR scanned/text-poor PDFs with configured languages, chunk by page then length, detect language, translate chunks outside DRIVE_MAIN_LANGUAGE, embed original and translated chunks, and return records for full-text and vector indexing.\n\n## Acceptance\n\n- TXT, RTF, DOCX, ODT, native PDF, and scanned/text-poor PDF behavior is covered by focused or heavy tests as appropriate.\n- Translation or embedding provider failure records partial step status and does not hide the document or block original-language search.\n- Artifacts include enough tool/version data to support future reprocessing decisions.\n- Heavy proof covers real OCR fixtures, pgvector ranking, DOCX, and scanned PDF smoke before this is marked complete.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/driver/tickets/T-20260526-215317-481b.md",
+      "title": "Ticket: Operate the Vite React document console",
+      "content": "# Ticket: Operate the Vite React document console\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215317-481b |\n| Project | driver |\n| Goal | G-20260526-215000-fdcd |\n| Status | active |\n| Created | 2026-05-26T21:53:17+02:00 |\n\n## Description\n\nMaintain the web console in apps/web as a quiet operational UI for household document management, using Vite, React, TypeScript, Tailwind, OXC, lucide icons, shadcn-style components, and generated SDK-backed API helpers.\n\n## Acceptance\n\n- The UI supports setup/login, document list, upload, search, detail with preview/text/events, settings, tags, collections, retry, and sign out.\n- Frontend API calls use packages/sdk generated functions or a thin local wrapper over them, not independent endpoint contracts.\n- Typecheck and OXC lint pass for frontend changes.\n- Responsive layout avoids overlapping text and keeps document workflows efficient.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/driver/tickets/T-20260526-215336-11ae.md",
+      "title": "Ticket: Keep OpenAPI and Orval SDK synchronized",
+      "content": "# Ticket: Keep OpenAPI and Orval SDK synchronized\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215336-11ae |\n| Project | driver |\n| Goal | G-20260526-215000-fdcd |\n| Status | active |\n| Created | 2026-05-26T21:53:36+02:00 |\n\n## Description\n\nPreserve the backend-owned contract flow from apps/api/openapi.json through Orval-generated packages/sdk to apps/web, and keep route parameter and response conventions stable for agents and frontend code.\n\n## Acceptance\n\n- Backend route or response changes update OpenAPI in apps/api.\n- Generated SDK in packages/sdk is regenerated when OpenAPI changes affect frontend consumers.\n- OpenAPI smoke verifies required public, protected, admin, upload, ingestion, and job routes.\n- Route params remain kebab-case and downloads/previews stay behind API authorization.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/driver/tickets/T-20260526-215356-8508.md",
+      "title": "Ticket: Maintain first-run admin and direct document grants",
+      "content": "# Ticket: Maintain first-run admin and direct document grants\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215356-8508 |\n| Project | driver |\n| Goal | G-20260526-215019-f0f1 |\n| Status | active |\n| Created | 2026-05-26T21:53:56+02:00 |\n\n## Description\n\nKeep access control aligned with docs/access-control-plan.md: first-run setup creates the initial admin, admins manage users and direct document grants, users see only granted documents, and ACLs are enforced at the API layer without filesystem permission tricks.\n\n## Acceptance\n\n- No-user startup requires setup before normal login.\n- Protected routes reject unauthenticated requests and non-admins cannot manage users/settings/grants.\n- Direct document grants allow and revoke user access as expected.\n- Path traversal and direct-path guessing are rejected without leaking filesystem paths.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/driver/tickets/T-20260526-215416-2aa6.md",
+      "title": "Ticket: Smoke Docker Compose backend deployment",
+      "content": "# Ticket: Smoke Docker Compose backend deployment\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215416-2aa6 |\n| Project | driver |\n| Goal | G-20260526-215009-bfda |\n| Status | active |\n| Created | 2026-05-26T21:54:16+02:00 |\n\n## Description\n\nKeep deploy/docker-compose.yml, deploy/example.env, Dockerfiles, and Make targets aligned with the self-hosted backend stack: Postgres pgvector, one-shot migrate, API, and always-on worker with document/app-data mounts.\n\n## Acceptance\n\n- make docker-smoke succeeds or any failure is captured with exact logs and follow-up work.\n- Compose startup order remains postgres healthy -\u003e migrate complete -\u003e api healthy -\u003e worker.\n- Required env covers documents, app data, DB data, worker token, main language, OCR languages, and Postgres credentials.\n- Worker image includes Poppler and Tesseract language packages required by default OCR settings.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/driver/tickets/T-20260526-215436-c715.md",
+      "title": "Ticket: Follow repo gates and Maat operating loop",
+      "content": "# Ticket: Follow repo gates and Maat operating loop\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215436-c715 |\n| Project | driver |\n| Goal | G-20260526-215034-ba07 |\n| Status | active |\n| Created | 2026-05-26T21:54:36+02:00 |\n\n## Description\n\nUse the repo and Maat processes consistently so agents can coordinate: claim/create tickets before material work, include descriptions and acceptance criteria, comment meaningful progress, complete only with evidence, and run the right validation before handoff.\n\n## Acceptance\n\n- Before material work, Maat status and project state are inspected and a relevant ticket is claimed or created.\n- New Maat goals include outcomes and new tickets include descriptions plus acceptance criteria.\n- Code changes obey ownership boundaries, update OpenAPI/SDK when contracts change, and run make check-code-lines before commit.\n- Completion evidence names tests, commits, PRs, or exact manual verification.\n"
     },
     {
       "type": "project",
@@ -1236,6 +1837,108 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215235-casprine-d045 |\n| Time | 2026-05-26T21:52:35+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-215235-502e |\n\n## Summary\n\nCreated ticket T-20260526-215235-502e.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215245-casprine-fafa.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215245-casprine-fafa |\n| Time | 2026-05-26T21:52:45+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-215235-502e |\n\n## Summary\n\nTags: #console #qa #browser-smoke #visual-qa #e2e #post-manual-pass. Sources: docs/milestones/m4-console-release-pass.md open risks and next section, docs/milestones/m1-documentation-roadmap-reset.md next section.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215254-casprine-970e.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215254-casprine-970e |\n| Time | 2026-05-26T21:52:54+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-215254-e0bb |\n\n## Summary\n\nCreated goal G-20260526-215254-e0bb.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215257-casprine-da12.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215257-casprine-da12 |\n| Time | 2026-05-26T21:52:57+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-215257-e70b |\n\n## Summary\n\nCreated goal G-20260526-215257-e70b.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215303-casprine-27a9.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215303-casprine-27a9 |\n| Time | 2026-05-26T21:53:03+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-215303-4c65 |\n\n## Summary\n\nCreated ticket T-20260526-215303-4c65.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215305-casprine-9998.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215305-casprine-9998 |\n| Time | 2026-05-26T21:53:05+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-215305-7d12 |\n\n## Summary\n\nCreated ticket T-20260526-215305-7d12.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215308-codex-9633.md",
+      "title": "Event: ticket.claimed",
+      "content": "# Event: ticket.claimed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215308-codex-9633 |\n| Time | 2026-05-26T21:53:08+02:00 |\n| Actor | codex |\n| Project | orion |\n| Type | ticket.claimed |\n| Object | T-20260526-215303-4c65 |\n| Expires | 2026-05-26T23:53:08+02:00 |\n\n## Summary\n\nClaimed ticket T-20260526-215303-4c65 until 2026-05-26T23:53:08+02:00.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215314-casprine-21b9.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215314-casprine-21b9 |\n| Time | 2026-05-26T21:53:14+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-215305-7d12 |\n\n## Summary\n\nTags: #logs #agent #core #console #operations #post-deploy. Sources: docs/milestones/m4-console-release-pass.md open risks, docs/deployment/agent-install-upgrade.md logging notes.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215321-casprine-d3e5.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215321-casprine-d3e5 |\n| Time | 2026-05-26T21:53:21+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-215321-fbed |\n\n## Summary\n\nCreated goal G-20260526-215321-fbed.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215333-casprine-c465.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215333-casprine-c465 |\n| Time | 2026-05-26T21:53:33+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-215333-1025 |\n\n## Summary\n\nCreated ticket T-20260526-215333-1025.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215342-casprine-5599.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215342-casprine-5599 |\n| Time | 2026-05-26T21:53:42+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-215333-1025 |\n\n## Summary\n\nTags: #core #data-lifecycle #archive #rollup #scheduler #retention #post-deploy. Sources: docs/milestones/m5-first-deploy-candidate.md deferred list, docs/architecture/core-features.md settings, docs/architecture/persistence-and-lifecycle.md rollups and archives.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215353-casprine-5b2f.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215353-casprine-5b2f |\n| Time | 2026-05-26T21:53:53+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-215353-2af7 |\n\n## Summary\n\nCreated goal G-20260526-215353-2af7.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215402-casprine-3ed9.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215402-casprine-3ed9 |\n| Time | 2026-05-26T21:54:02+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-215402-3135 |\n\n## Summary\n\nCreated ticket T-20260526-215402-3135.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215402-casprine-5b57.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215402-casprine-5b57 |\n| Time | 2026-05-26T21:54:02+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-215146-5e99 |\n\n## Summary\n\nDrafted status page architecture document and linked it from architecture README\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215413-casprine-1632.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215413-casprine-1632 |\n| Time | 2026-05-26T21:54:13+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-215402-3135 |\n\n## Summary\n\nTags: #ci #qa #tests #core #agent #console #builds. Sources: docs/milestones/m1-documentation-roadmap-reset.md next section, docs/milestones/m2-directory-regrouping.md next/open risks.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215427-casprine-f089.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215427-casprine-f089 |\n| Time | 2026-05-26T21:54:27+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-215427-d7bf |\n\n## Summary\n\nCreated ticket T-20260526-215427-d7bf.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215428-casprine-f681.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215428-casprine-f681 |\n| Time | 2026-05-26T21:54:28+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260526-215146-5e99 |\n\n## Summary\n\nCompleted ticket T-20260526-215146-5e99.\n\n## Evidence\n\n- Committed fef1a7d after git diff --check passed; added docs/architecture/status-pages.md and linked it from docs/architecture/README.md\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215436-casprine-e288.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215436-casprine-e288 |\n| Time | 2026-05-26T21:54:36+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260526-215427-d7bf |\n\n## Summary\n\nCompleted ticket T-20260526-215427-d7bf.\n\n## Evidence\n\n- Recreated the docs backlog as 10 Orion goals with concrete outcomes and seed tickets containing descriptions, acceptance criteria, tags, and source-document comments.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-214751-82ed.md",
       "title": "Goal: Adopt Maat project memory",
@@ -1294,6 +1997,30 @@
       "path": "projects/orion/goals/G-20260526-215225-0e98.md",
       "title": "Goal: Add Console browser and visual smoke coverage",
       "content": "# Goal: Add Console browser and visual smoke coverage\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215225-0e98 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:52:25+02:00 |\n\n## Outcome\n\nConsole flows have lightweight automated browser coverage after the manual flows stabilize, reducing reliance on visual-only QA for regressions.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260526-215254-e0bb.md",
+      "title": "Goal: Collect and expose service logs",
+      "content": "# Goal: Collect and expose service logs\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215254-e0bb |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:52:54+02:00 |\n\n## Outcome\n\nOperators can distinguish Orion operational events from service and file logs, then retrieve useful Agent/Core log context for later diagnosis.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260526-215257-e70b.md",
+      "title": "Goal: Design Core-managed monitors",
+      "content": "# Goal: Design Core-managed monitors\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215257-e70b |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:52:57+02:00 |\n\n## Outcome\n\nOrion has a reviewed product and implementation plan for monitors registered in Console and executed by Core instead of an Agent\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260526-215321-fbed.md",
+      "title": "Goal: Automate data lifecycle scheduling",
+      "content": "# Goal: Automate data lifecycle scheduling\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215321-fbed |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:53:21+02:00 |\n\n## Outcome\n\nCore automatically runs configured archive and rollup lifecycle work on schedule while preserving manual controls and observable last-run metadata.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260526-215353-2af7.md",
+      "title": "Goal: Establish continuous verification coverage",
+      "content": "# Goal: Establish continuous verification coverage\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215353-2af7 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:53:53+02:00 |\n\n## Outcome\n\nThe repository has a normal CI baseline for Core, Agent, Console, and generated contract checks so regressions are caught continuously instead of only during manual release passes.\n"
     },
     {
       "type": "project",
@@ -1366,6 +2093,36 @@
       "path": "projects/orion/tickets/T-20260526-215235-502e.md",
       "title": "Ticket: Create browser smoke tests after manual flows stabilize",
       "content": "# Ticket: Create browser smoke tests after manual flows stabilize\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215235-502e |\n| Project | orion |\n| Goal | G-20260526-215225-0e98 |\n| Status | active |\n| Created | 2026-05-26T21:52:35+02:00 |\n\n## Description\n\nAdd a small browser smoke suite for the primary Console flows once seeded-data and real-Agent manual test paths are stable.\n\n## Acceptance\n\n- Browser smoke tests cover core navigation and representative incidents, agents, monitors, alerts, logs, and settings flows without making unstable manual flows harder to iterate.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-215303-4c65.md",
+      "title": "Ticket: Draft Core-managed monitor plan",
+      "content": "# Ticket: Draft Core-managed monitor plan\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215303-4c65 |\n| Project | orion |\n| Goal | G-20260526-215257-e70b |\n| Status | active |\n| Created | 2026-05-26T21:53:03+02:00 |\n\n## Description\n\nResearch Better Stack and incident.io style monitoring concepts, compare them to Orion's current Agent/Core/Console model, and write a planning document for Core-managed monitors registered from Console.\n\n## Acceptance\n\n- A docs planning file exists with product scope, monitor types, architecture, UI/API/data model implications, milestones, risks, and review notes; Maat has a review note pointing to the document.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-215305-7d12.md",
+      "title": "Ticket: Bring Agent and service logs into the product",
+      "content": "# Ticket: Bring Agent and service logs into the product\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215305-7d12 |\n| Project | orion |\n| Goal | G-20260526-215254-e0bb |\n| Status | active |\n| Created | 2026-05-26T21:53:05+02:00 |\n\n## Description\n\nDesign and implement service/file log collection or retrieval so the product can show useful Agent/Core logs separately from Orion event records.\n\n## Acceptance\n\n- Console or CLI users can access recent relevant service logs for diagnosis, permission boundaries are documented, and the existing operational event log remains distinct from service log output.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-215333-1025.md",
+      "title": "Ticket: Run archive and rollup jobs automatically",
+      "content": "# Ticket: Run archive and rollup jobs automatically\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215333-1025 |\n| Project | orion |\n| Goal | G-20260526-215321-fbed |\n| Status | active |\n| Created | 2026-05-26T21:53:33+02:00 |\n\n## Description\n\nImplement automated execution for data lifecycle archive and rollup jobs according to the persisted daily/manual schedule settings.\n\n## Acceptance\n\n- Daily schedule settings trigger archive and rollup work without manual API calls, manual mode remains manual, last-run metadata updates, and failures are visible through logs or diagnostics.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-215402-3135.md",
+      "title": "Ticket: Add CI test and build baseline",
+      "content": "# Ticket: Add CI test and build baseline\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215402-3135 |\n| Project | orion |\n| Goal | G-20260526-215353-2af7 |\n| Status | active |\n| Created | 2026-05-26T21:54:02+02:00 |\n\n## Description\n\nAdd or refine CI jobs for Agent tests, Core tests, Console install/build, generated OpenAPI/SDK checks, and path-aware validation for the split repository layout.\n\n## Acceptance\n\n- CI runs the expected Agent, Core, Console, and generated-contract checks on relevant changes and documents any intentionally skipped expensive release-only jobs.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-215427-d7bf.md",
+      "title": "Ticket: Convert docs backlog into Maat goals",
+      "content": "# Ticket: Convert docs backlog into Maat goals\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215427-d7bf |\n| Project | orion |\n| Goal | G-20260526-214751-82ed |\n| Status | active |\n| Created | 2026-05-26T21:54:27+02:00 |\n\n## Description\n\nSweep the Orion docs for unfinished work and convert the real remaining items into Maat goals and seed tickets with outcomes, descriptions, acceptance criteria, tags, and source references.\n\n## Acceptance\n\n- Each unfinished docs theme is represented by a Maat goal with an outcome and at least one actionable ticket with description, acceptance criteria, and source/tag context.\n"
     }
   ]
 }
