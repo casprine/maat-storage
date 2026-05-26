@@ -3,6 +3,18 @@
   "projects": [],
   "documents": [
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-204807-casprine-7127.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-204807-casprine-7127 |\n| Time | 2026-05-26T20:48:07+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-204807-419c |\n\n## Summary\n\nCreated goal G-20260526-204807-419c.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260526-204807-419c.md",
+      "title": "Goal: Adopt Maat project memory",
+      "content": "# Goal: Adopt Maat project memory\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-204807-419c |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T20:48:07+02:00 |\n"
+    },
+    {
       "type": "project",
       "path": "projects/orion/project.md",
       "title": "Project: Orion",
