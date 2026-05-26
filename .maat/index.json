@@ -69,6 +69,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-205602-casprine-6b87 |\n| Time | 2026-05-26T20:56:02+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-205602-8901 |\n\n## Summary\n\nCreated ticket T-20260526-205602-8901.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-205614-casprine-7def.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-205614-casprine-7def |\n| Time | 2026-05-26T20:56:14+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-205614-c875 |\n\n## Summary\n\nCreated ticket T-20260526-205614-c875.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
       "title": "Goal: Improve initialize dogfood experience",
@@ -91,6 +97,12 @@
       "path": "projects/maat/tickets/T-20260526-205602-8901.md",
       "title": "Ticket: Add setup doctor command for storage and Git checks",
       "content": "# Ticket: Add setup doctor command for storage and Git checks\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-205602-8901 |\n| Project | maat |\n| Goal | G-20260526-205536-3ae9 |\n| Status | active |\n| Created | 2026-05-26T20:56:02+02:00 |\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-205614-c875.md",
+      "title": "Ticket: Expose binary version context during initialize",
+      "content": "# Ticket: Expose binary version context during initialize\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-205614-c875 |\n| Project | maat |\n| Goal | G-20260526-205536-3ae9 |\n| Status | active |\n| Created | 2026-05-26T20:56:14+02:00 |\n"
     },
     {
       "type": "event",
