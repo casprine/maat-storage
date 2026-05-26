@@ -1149,6 +1149,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211618-casprine-eac6 |\n| Time | 2026-05-26T21:16:18+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-211618-51e0 |\n\n## Summary\n\nCreated ticket T-20260526-211618-51e0.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-211625-casprine-4a33.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211625-casprine-4a33 |\n| Time | 2026-05-26T21:16:25+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-211618-51e0 |\n\n## Summary\n\nTags: #debugging #reports #metadata #console #core #next-release. Sources: docs/plans/agent-health-debugging-next-release.md phases 3-4. Scope: preserve useful success/failure context, expose raw JSON payloads, and add drawers from agent report and monitor history rows.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-204807-419c.md",
       "title": "Goal: Adopt Maat project memory",
