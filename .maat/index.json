@@ -357,6 +357,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210659-casprine-d345 |\n| Time | 2026-05-26T21:06:59+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-210659-4ef8 |\n\n## Summary\n\nCreated ticket T-20260526-210659-4ef8.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-210701-casprine-6b23.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210701-casprine-6b23 |\n| Time | 2026-05-26T21:07:01+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.commented |\n| Object | T-20260526-210659-4ef8 |\n\n## Summary\n\nGoal from user: the current terminal UI feels terrible. Explore a proper column view for tickets, such as open, claimed, waiting, done, and recently moved, optimized for quick scanning.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
       "title": "Goal: Improve initialize dogfood experience",
