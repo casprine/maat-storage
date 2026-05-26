@@ -209,6 +209,19 @@
             "Clicking relevant agent report or monitor history rows opens an inspection drawer showing summarized status, timestamps, metrics, errors, metadata, and raw JSON payload."
           ],
           "path": "projects/orion/tickets/T-20260526-214924-c161.md"
+        },
+        {
+          "id": "T-20260526-215003-fa9a",
+          "project_key": "orion",
+          "goal_id": "G-20260526-214956-c916",
+          "title": "Implement manual incident acknowledge and resolve flows",
+          "status": "active",
+          "created": "2026-05-26T21:50:03+02:00",
+          "description": "Add backend and Console flows for manually acknowledging and resolving incidents, and handle incidents tied to monitors that are removed from config.",
+          "acceptance": [
+            "Users can acknowledge and resolve incidents from Console, incident events record the manual action, and deleting or unregistering a monitor resolves or resets its active incident path cleanly."
+          ],
+          "path": "projects/orion/tickets/T-20260526-215003-fa9a.md"
         }
       ],
       "events": [
@@ -337,6 +350,16 @@
           "object_id": "G-20260526-214956-c916",
           "summary": "Created goal G-20260526-214956-c916.",
           "path": "projects/orion/events/2026/05/E-20260526-214956-casprine-dc0a.md"
+        },
+        {
+          "id": "E-20260526-215003-casprine-75ed",
+          "time": "2026-05-26T21:50:03+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215003-fa9a",
+          "summary": "Created ticket T-20260526-215003-fa9a.",
+          "path": "projects/orion/events/2026/05/E-20260526-215003-casprine-75ed.md"
         }
       ]
     }
@@ -475,6 +498,12 @@
       "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214956-casprine-dc0a |\n| Time | 2026-05-26T21:49:56+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-214956-c916 |\n\n## Summary\n\nCreated goal G-20260526-214956-c916.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215003-casprine-75ed.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215003-casprine-75ed |\n| Time | 2026-05-26T21:50:03+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-215003-fa9a |\n\n## Summary\n\nCreated ticket T-20260526-215003-fa9a.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-214751-82ed.md",
       "title": "Goal: Adopt Maat project memory",
@@ -527,6 +556,12 @@
       "path": "projects/orion/tickets/T-20260526-214924-c161.md",
       "title": "Ticket: Add report metadata and raw inspection drawers",
       "content": "# Ticket: Add report metadata and raw inspection drawers\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-214924-c161 |\n| Project | orion |\n| Goal | G-20260526-214913-1150 |\n| Status | active |\n| Created | 2026-05-26T21:49:24+02:00 |\n\n## Description\n\nPreserve useful success and failure context for monitor and agent reports, then expose it in Console drawers from report and history rows.\n\n## Acceptance\n\n- Clicking relevant agent report or monitor history rows opens an inspection drawer showing summarized status, timestamps, metrics, errors, metadata, and raw JSON payload.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-215003-fa9a.md",
+      "title": "Ticket: Implement manual incident acknowledge and resolve flows",
+      "content": "# Ticket: Implement manual incident acknowledge and resolve flows\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215003-fa9a |\n| Project | orion |\n| Goal | G-20260526-214956-c916 |\n| Status | active |\n| Created | 2026-05-26T21:50:03+02:00 |\n\n## Description\n\nAdd backend and Console flows for manually acknowledging and resolving incidents, and handle incidents tied to monitors that are removed from config.\n\n## Acceptance\n\n- Users can acknowledge and resolve incidents from Console, incident events record the manual action, and deleting or unregistering a monitor resolves or resets its active incident path cleanly.\n"
     }
   ]
 }
