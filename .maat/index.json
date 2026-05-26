@@ -1269,6 +1269,12 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211843-casprine-1c78 |\n| Time | 2026-05-26T21:18:43+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-211834-97eb |\n\n## Summary\n\nTags: #console #qa #browser-smoke #visual-qa #e2e #post-manual-pass. Sources: docs/milestones/m4-console-release-pass.md open risks and next section, docs/milestones/m1-documentation-roadmap-reset.md next section. Scope: add small browser smoke tests once seeded-data and real-Agent manual flows stabilize, and reduce dependence on manual visual QA.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-211916-casprine-fb0b.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211916-casprine-fb0b |\n| Time | 2026-05-26T21:19:16+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-211916-2c73 |\n\n## Summary\n\nCreated goal G-20260526-211916-2c73.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-204807-419c.md",
       "title": "Goal: Adopt Maat project memory",
@@ -1321,6 +1327,12 @@
       "path": "projects/orion/goals/G-20260526-211828-03e1.md",
       "title": "Goal: Add Console browser and visual smoke coverage",
       "content": "# Goal: Add Console browser and visual smoke coverage\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-211828-03e1 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:18:28+02:00 |\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260526-211916-2c73.md",
+      "title": "Goal: Collect and expose service logs",
+      "content": "# Goal: Collect and expose service logs\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-211916-2c73 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:19:16+02:00 |\n"
     },
     {
       "type": "project",
