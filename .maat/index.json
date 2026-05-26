@@ -39,6 +39,12 @@
       "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211132-casprine-08c4 |\n| Time | 2026-05-26T21:11:32+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | goal.created |\n| Object | G-20260526-211132-58f7 |\n\n## Summary\n\nCreated goal G-20260526-211132-58f7.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-211209-casprine-eab3.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211209-casprine-eab3 |\n| Time | 2026-05-26T21:12:09+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.created |\n| Object | T-20260526-211209-dccd |\n\n## Summary\n\nCreated ticket T-20260526-211209-dccd.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-205351-2c15.md",
       "title": "Goal: Initialize Maat project memory",
@@ -61,6 +67,12 @@
       "path": "projects/driver/tickets/T-20260526-205400-d863.md",
       "title": "Ticket: Wire Maat instructions into repo",
       "content": "# Ticket: Wire Maat instructions into repo\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-205400-d863 |\n| Project | driver |\n| Goal | G-20260526-205351-2c15 |\n| Status | active |\n| Created | 2026-05-26T20:54:00+02:00 |\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/driver/tickets/T-20260526-211209-dccd.md",
+      "title": "Ticket: Capture current repo docs in Maat",
+      "content": "# Ticket: Capture current repo docs in Maat\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-211209-dccd |\n| Project | driver |\n| Goal | G-20260526-211132-58f7 |\n| Status | active |\n| Created | 2026-05-26T21:12:09+02:00 |\n"
     },
     {
       "type": "event",
