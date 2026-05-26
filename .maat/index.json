@@ -405,6 +405,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210716-casprine-cda2 |\n| Time | 2026-05-26T21:07:16+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-210716-b936 |\n\n## Summary\n\nCreated ticket T-20260526-210716-b936.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-210717-casprine-444a.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210717-casprine-444a |\n| Time | 2026-05-26T21:07:17+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.commented |\n| Object | T-20260526-210716-b936 |\n\n## Summary\n\nGoal from user: the terminal UI should feel proper and pleasant. Tighten spacing, color, labels, selected states, empty states, and help text so the interface feels intentional.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
       "title": "Goal: Improve initialize dogfood experience",
