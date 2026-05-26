@@ -153,6 +153,12 @@
       "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-205945-casprine-6669 |\n| Time | 2026-05-26T20:59:45+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | goal.created |\n| Object | G-20260526-205945-61ac |\n\n## Summary\n\nCreated goal G-20260526-205945-61ac.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-205947-casprine-7477.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-205947-casprine-7477 |\n| Time | 2026-05-26T20:59:47+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-205947-47a2 |\n\n## Summary\n\nCreated ticket T-20260526-205947-47a2.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
       "title": "Goal: Improve initialize dogfood experience",
@@ -259,6 +265,12 @@
       "path": "projects/maat/tickets/T-20260526-205943-6859.md",
       "title": "Ticket: Keep human output colored concise and informative",
       "content": "# Ticket: Keep human output colored concise and informative\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-205943-6859 |\n| Project | maat |\n| Goal | G-20260526-205935-0b9f |\n| Status | active |\n| Created | 2026-05-26T20:59:43+02:00 |\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-205947-47a2.md",
+      "title": "Ticket: Maintain setup config for storage path and auto-sync defaults",
+      "content": "# Ticket: Maintain setup config for storage path and auto-sync defaults\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-205947-47a2 |\n| Project | maat |\n| Goal | G-20260526-205945-61ac |\n| Status | active |\n| Created | 2026-05-26T20:59:47+02:00 |\n"
     },
     {
       "type": "event",
