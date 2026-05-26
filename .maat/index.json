@@ -159,6 +159,12 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211440-casprine-394e |\n| Time | 2026-05-26T21:14:40+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.commented |\n| Object | T-20260526-211432-3001 |\n\n## Summary\n\nStatus from docs/frontend-plan.md and apps/web/src/app/App.tsx: web console uses Vite, React, TypeScript, Tailwind, OXC, shadcn-style components, lucide icons, and SDK-backed API helpers. Current app covers first-run/admin login flow, document list, upload, search, detail/preview/text/events, settings for main/OCR languages, tags, collections, retry, and sign out. make test-fast passed TypeScript typecheck and oxlint. Continue keeping operational UI dense and SDK-backed.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-211450-casprine-3936.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211450-casprine-3936 |\n| Time | 2026-05-26T21:14:50+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.created |\n| Object | T-20260526-211450-60a3 |\n\n## Summary\n\nCreated ticket T-20260526-211450-60a3.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-205351-2c15.md",
       "title": "Goal: Initialize Maat project memory",
@@ -259,6 +265,12 @@
       "path": "projects/driver/tickets/T-20260526-211432-3001.md",
       "title": "Ticket: Operate the Vite React document console",
       "content": "# Ticket: Operate the Vite React document console\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-211432-3001 |\n| Project | driver |\n| Goal | G-20260526-211244-0ad0 |\n| Status | active |\n| Created | 2026-05-26T21:14:32+02:00 |\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/driver/tickets/T-20260526-211450-60a3.md",
+      "title": "Ticket: Keep frontend bound to backend-owned OpenAPI and Orval SDK",
+      "content": "# Ticket: Keep frontend bound to backend-owned OpenAPI and Orval SDK\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-211450-60a3 |\n| Project | driver |\n| Goal | G-20260526-211244-0ad0 |\n| Status | active |\n| Created | 2026-05-26T21:14:50+02:00 |\n"
     },
     {
       "type": "event",
