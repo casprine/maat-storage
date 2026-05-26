@@ -49,6 +49,15 @@
           "created": "2026-05-26T21:50:00+02:00",
           "outcome": "The Vite React TypeScript console uses the generated SDK to support first-run setup, login, document list/detail/preview/text/events, upload, search, settings, tags, collections, retry, and sign out.",
           "path": "projects/driver/goals/G-20260526-215000-fdcd.md"
+        },
+        {
+          "id": "G-20260526-215009-bfda",
+          "project_key": "driver",
+          "title": "Package self-hosted deployment and configuration",
+          "status": "active",
+          "created": "2026-05-26T21:50:09+02:00",
+          "outcome": "Docker Compose runs the API, worker, one-shot migrations, and Postgres pgvector with Immich-style env configuration, stable host mounts for documents/app data/DB data, and smoke-testable images.",
+          "path": "projects/driver/goals/G-20260526-215009-bfda.md"
         }
       ],
       "events": [
@@ -91,6 +100,16 @@
           "object_id": "G-20260526-215000-fdcd",
           "summary": "Created goal G-20260526-215000-fdcd.",
           "path": "projects/driver/events/2026/05/E-20260526-215000-casprine-76e5.md"
+        },
+        {
+          "id": "E-20260526-215009-casprine-780a",
+          "time": "2026-05-26T21:50:09+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "goal.created",
+          "object_id": "G-20260526-215009-bfda",
+          "summary": "Created goal G-20260526-215009-bfda.",
+          "path": "projects/driver/events/2026/05/E-20260526-215009-casprine-780a.md"
         }
       ]
     },
@@ -390,6 +409,12 @@
       "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215000-casprine-76e5 |\n| Time | 2026-05-26T21:50:00+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | goal.created |\n| Object | G-20260526-215000-fdcd |\n\n## Summary\n\nCreated goal G-20260526-215000-fdcd.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-215009-casprine-780a.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215009-casprine-780a |\n| Time | 2026-05-26T21:50:09+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | goal.created |\n| Object | G-20260526-215009-bfda |\n\n## Summary\n\nCreated goal G-20260526-215009-bfda.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-214932-bfdb.md",
       "title": "Goal: Ship v1 private document drive",
@@ -412,6 +437,12 @@
       "path": "projects/driver/goals/G-20260526-215000-fdcd.md",
       "title": "Goal: Build SDK-backed web console",
       "content": "# Goal: Build SDK-backed web console\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215000-fdcd |\n| Project | driver |\n| Status | active |\n| Created | 2026-05-26T21:50:00+02:00 |\n\n## Outcome\n\nThe Vite React TypeScript console uses the generated SDK to support first-run setup, login, document list/detail/preview/text/events, upload, search, settings, tags, collections, retry, and sign out.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/driver/goals/G-20260526-215009-bfda.md",
+      "title": "Goal: Package self-hosted deployment and configuration",
+      "content": "# Goal: Package self-hosted deployment and configuration\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215009-bfda |\n| Project | driver |\n| Status | active |\n| Created | 2026-05-26T21:50:09+02:00 |\n\n## Outcome\n\nDocker Compose runs the API, worker, one-shot migrations, and Postgres pgvector with Immich-style env configuration, stable host mounts for documents/app data/DB data, and smoke-testable images.\n"
     },
     {
       "type": "project",
