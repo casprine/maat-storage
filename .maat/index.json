@@ -135,6 +135,12 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211405-casprine-1a10 |\n| Time | 2026-05-26T21:14:05+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.commented |\n| Object | T-20260526-211357-ce4b |\n\n## Summary\n\nStatus from docs/architecture-plan.md, docs/ingestion-pipeline.md, docs/backend-tasks.md, and worker tests: watcher/reconciler detects stable files by unchanged size and mtime, keeps TUS independent, reports stable files to API, handles duplicates/changed checksums, reports deleted files, and keeps artifacts outside the document directory. Current tests cover partial writes, duplicates, changed scans, deleted-file reporting, and artifact boundaries. Process rule: originals stay in place and app artifacts live under app data.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-211416-casprine-137d.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211416-casprine-137d |\n| Time | 2026-05-26T21:14:16+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.created |\n| Object | T-20260526-211416-4221 |\n\n## Summary\n\nCreated ticket T-20260526-211416-4221.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-205351-2c15.md",
       "title": "Goal: Initialize Maat project memory",
@@ -223,6 +229,12 @@
       "path": "projects/driver/tickets/T-20260526-211357-ce4b.md",
       "title": "Ticket: Maintain watcher registration and document lifecycle",
       "content": "# Ticket: Maintain watcher registration and document lifecycle\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-211357-ce4b |\n| Project | driver |\n| Goal | G-20260526-211237-c244 |\n| Status | active |\n| Created | 2026-05-26T21:13:57+02:00 |\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/driver/tickets/T-20260526-211416-4221.md",
+      "title": "Ticket: Complete extraction OCR translation embedding pipeline",
+      "content": "# Ticket: Complete extraction OCR translation embedding pipeline\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-211416-4221 |\n| Project | driver |\n| Goal | G-20260526-211237-c244 |\n| Status | active |\n| Created | 2026-05-26T21:14:16+02:00 |\n"
     },
     {
       "type": "event",
