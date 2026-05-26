@@ -3,6 +3,12 @@
   "projects": [],
   "documents": [
     {
+      "type": "project",
+      "path": "projects/maat/project.md",
+      "title": "Project: Maat",
+      "content": "# Project: Maat\n\n| Field | Value |\n|---|---|\n| Project Key | maat |\n| Display Name | Maat |\n| Status | active |\n| Created | 2026-05-26T20:49:25+02:00 |\n| Updated | 2026-05-26T20:49:25+02:00 |\n\n## Summary\n\nLinked from `/Users/casprine/Desktop/vendor/sunday-studio/maat`.\n\n## Identity\n\n| Field | Value |\n|---|---|\n| Primary Repo | /Users/casprine/Desktop/vendor/sunday-studio/maat |\n| Remote | git@github.com:sunday-studio/maat.git |\n"
+    },
+    {
       "type": "event",
       "path": "projects/orion/events/2026/05/E-20260526-204807-casprine-7127.md",
       "title": "Event: goal.created",
