@@ -87,6 +87,12 @@
       "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211259-casprine-88e1 |\n| Time | 2026-05-26T21:12:59+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | goal.created |\n| Object | G-20260526-211259-438a |\n\n## Summary\n\nCreated goal G-20260526-211259-438a.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-211308-casprine-e076.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211308-casprine-e076 |\n| Time | 2026-05-26T21:13:08+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.created |\n| Object | T-20260526-211308-bed7 |\n\n## Summary\n\nCreated ticket T-20260526-211308-bed7.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-205351-2c15.md",
       "title": "Goal: Initialize Maat project memory",
@@ -151,6 +157,12 @@
       "path": "projects/driver/tickets/T-20260526-211209-dccd.md",
       "title": "Ticket: Capture current repo docs in Maat",
       "content": "# Ticket: Capture current repo docs in Maat\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-211209-dccd |\n| Project | driver |\n| Goal | G-20260526-211132-58f7 |\n| Status | active |\n| Created | 2026-05-26T21:12:09+02:00 |\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/driver/tickets/T-20260526-211308-bed7.md",
+      "title": "Ticket: Verify v1 acceptance workflow end to end",
+      "content": "# Ticket: Verify v1 acceptance workflow end to end\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-211308-bed7 |\n| Project | driver |\n| Goal | G-20260526-211225-94d1 |\n| Status | active |\n| Created | 2026-05-26T21:13:08+02:00 |\n"
     },
     {
       "type": "event",
