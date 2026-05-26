@@ -243,6 +243,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210333-casprine-3fa3 |\n| Time | 2026-05-26T21:03:33+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-210333-6817 |\n\n## Summary\n\nCreated ticket T-20260526-210333-6817.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-210335-casprine-0ad2.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210335-casprine-0ad2 |\n| Time | 2026-05-26T21:03:35+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.commented |\n| Object | T-20260526-210333-6817 |\n\n## Summary\n\nFrom Orion setup: storage lived at /Users/casprine/Desktop/vendor/personal/maat-storage outside the sandboxed repo. Maat should preflight this and explain that setup and sync may require broader filesystem access.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
       "title": "Goal: Improve initialize dogfood experience",
