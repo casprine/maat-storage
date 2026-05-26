@@ -153,6 +153,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211432-casprine-8c05 |\n| Time | 2026-05-26T21:14:32+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.created |\n| Object | T-20260526-211432-3001 |\n\n## Summary\n\nCreated ticket T-20260526-211432-3001.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-211440-casprine-394e.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211440-casprine-394e |\n| Time | 2026-05-26T21:14:40+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.commented |\n| Object | T-20260526-211432-3001 |\n\n## Summary\n\nStatus from docs/frontend-plan.md and apps/web/src/app/App.tsx: web console uses Vite, React, TypeScript, Tailwind, OXC, shadcn-style components, lucide icons, and SDK-backed API helpers. Current app covers first-run/admin login flow, document list, upload, search, detail/preview/text/events, settings for main/OCR languages, tags, collections, retry, and sign out. make test-fast passed TypeScript typecheck and oxlint. Continue keeping operational UI dense and SDK-backed.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-205351-2c15.md",
       "title": "Goal: Initialize Maat project memory",
