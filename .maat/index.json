@@ -393,6 +393,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210712-casprine-f918 |\n| Time | 2026-05-26T21:07:12+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-210712-52d1 |\n\n## Summary\n\nCreated ticket T-20260526-210712-52d1.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-210714-casprine-a53e.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210714-casprine-a53e |\n| Time | 2026-05-26T21:07:14+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.commented |\n| Object | T-20260526-210712-52d1 |\n\n## Summary\n\nGoal from user: the TUI should be a proper working surface, not just a status display. Add an ergonomic detail view for ticket summary, comments/events, evidence, and available next actions.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
       "title": "Goal: Improve initialize dogfood experience",
