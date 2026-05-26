@@ -50,6 +50,21 @@
           "path": "projects/orion/goals/G-20260526-214751-82ed.md"
         }
       ],
+      "tickets": [
+        {
+          "id": "T-20260526-214802-29db",
+          "project_key": "orion",
+          "goal_id": "G-20260526-214751-82ed",
+          "title": "Add current Maat instructions to AGENTS",
+          "status": "active",
+          "created": "2026-05-26T21:48:02+02:00",
+          "description": "Update AGENTS.md so future agents use the current Maat daily loop, create goals with outcomes, create tickets with descriptions and acceptance criteria, complete work with evidence, and commit finished product changes.",
+          "acceptance": [
+            "AGENTS.md contains the exact current Maat command forms from initialize, including --outcome, --description, --acceptance, claim, comment, complete, validate, and sync commands."
+          ],
+          "path": "projects/orion/tickets/T-20260526-214802-29db.md"
+        }
+      ],
       "events": [
         {
           "id": "E-20260526-214751-casprine-f5fa",
@@ -60,6 +75,16 @@
           "object_id": "G-20260526-214751-82ed",
           "summary": "Created goal G-20260526-214751-82ed.",
           "path": "projects/orion/events/2026/05/E-20260526-214751-casprine-f5fa.md"
+        },
+        {
+          "id": "E-20260526-214802-casprine-2db9",
+          "time": "2026-05-26T21:48:02+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260526-214802-29db",
+          "summary": "Created ticket T-20260526-214802-29db.",
+          "path": "projects/orion/events/2026/05/E-20260526-214802-casprine-2db9.md"
         }
       ]
     }
@@ -84,6 +109,12 @@
       "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214751-casprine-f5fa |\n| Time | 2026-05-26T21:47:51+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-214751-82ed |\n\n## Summary\n\nCreated goal G-20260526-214751-82ed.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-214802-casprine-2db9.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214802-casprine-2db9 |\n| Time | 2026-05-26T21:48:02+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-214802-29db |\n\n## Summary\n\nCreated ticket T-20260526-214802-29db.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-214751-82ed.md",
       "title": "Goal: Adopt Maat project memory",
@@ -94,6 +125,12 @@
       "path": "projects/orion/project.md",
       "title": "Project: Orion",
       "content": "# Project: Orion\n\n| Field | Value |\n|---|---|\n| Project Key | orion |\n| Display Name | Orion |\n| Status | active |\n| Created | 2026-05-26T21:47:29+02:00 |\n| Updated | 2026-05-26T21:47:29+02:00 |\n\n## Summary\n\nLinked from `/Users/casprine/Desktop/vendor/sunday-studio/orion`.\n\n## Identity\n\n| Field | Value |\n|---|---|\n| Primary Repo | /Users/casprine/Desktop/vendor/sunday-studio/orion |\n| Remote | git@github.com:sunday-studio/orion.git |\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-214802-29db.md",
+      "title": "Ticket: Add current Maat instructions to AGENTS",
+      "content": "# Ticket: Add current Maat instructions to AGENTS\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-214802-29db |\n| Project | orion |\n| Goal | G-20260526-214751-82ed |\n| Status | active |\n| Created | 2026-05-26T21:48:02+02:00 |\n\n## Description\n\nUpdate AGENTS.md so future agents use the current Maat daily loop, create goals with outcomes, create tickets with descriptions and acceptance criteria, complete work with evidence, and commit finished product changes.\n\n## Acceptance\n\n- AGENTS.md contains the exact current Maat command forms from initialize, including --outcome, --description, --acceptance, claim, comment, complete, validate, and sync commands.\n"
     }
   ]
 }
