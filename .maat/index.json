@@ -1173,6 +1173,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211643-casprine-df3b |\n| Time | 2026-05-26T21:16:43+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-211643-4b0a |\n\n## Summary\n\nCreated ticket T-20260526-211643-4b0a.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-211651-casprine-4b38.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211651-casprine-4b38 |\n| Time | 2026-05-26T21:16:51+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-211643-4b0a |\n\n## Summary\n\nTags: #incidents #core #console #manual-controls #post-deploy. Sources: docs/plans/agent-health-debugging-next-release.md phase 5 and docs/milestones/m5-first-deploy-candidate.md deferred list. Scope: add browser actions for acknowledge/resolve and make removed-monitor incidents resolve or reset cleanly.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-204807-419c.md",
       "title": "Goal: Adopt Maat project memory",
