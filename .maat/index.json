@@ -657,6 +657,15 @@
           "created": "2026-05-26T21:56:24+02:00",
           "outcome": "The TUI becomes a fast daily workspace for scanning projects, navigating tickets, seeing ownership/state, filtering work, and refreshing when Markdown state changes.",
           "path": "projects/maat/goals/G-20260526-215624-e456.md"
+        },
+        {
+          "id": "G-20260526-220308-c0d2",
+          "project_key": "maat",
+          "title": "Rebuild TUI refresh experience",
+          "status": "active",
+          "created": "2026-05-26T22:03:08+02:00",
+          "outcome": "The Maat TUI refreshes project memory predictably, shows users when data is loading or stale, supports an explicit manual refresh, and preserves navigation context while recovering cleanly from storage or Git refresh failures.",
+          "path": "projects/maat/goals/G-20260526-220308-c0d2.md"
         }
       ],
       "tickets": [
@@ -1825,6 +1834,16 @@
           "object_id": "T-20260526-215624-3f16",
           "summary": "Created ticket T-20260526-215624-3f16.",
           "path": "projects/maat/events/2026/05/E-20260526-215624-casprine-d7d5.md"
+        },
+        {
+          "id": "E-20260526-220308-casprine-43cf",
+          "time": "2026-05-26T22:03:08+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "goal.created",
+          "object_id": "G-20260526-220308-c0d2",
+          "summary": "Created goal G-20260526-220308-c0d2.",
+          "path": "projects/maat/events/2026/05/E-20260526-220308-casprine-43cf.md"
         }
       ]
     },
@@ -2953,6 +2972,29 @@
           "object_id": "T-20260526-215934-55bb",
           "summary": "Claimed ticket T-20260526-215934-55bb until 2026-05-26T23:59:40+02:00.",
           "path": "projects/orion/events/2026/05/E-20260526-215940-codex-9477.md"
+        },
+        {
+          "id": "E-20260526-220212-casprine-9d15",
+          "time": "2026-05-26T22:02:12+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260526-215934-55bb",
+          "summary": "Drafted incident/detail IA plan with current implementation notes, lifecycle model, architecture flow, data/API improvements, and MVP phases.",
+          "path": "projects/orion/events/2026/05/E-20260526-220212-casprine-9d15.md"
+        },
+        {
+          "id": "E-20260526-220249-casprine-3283",
+          "time": "2026-05-26T22:02:49+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260526-215934-55bb",
+          "summary": "Completed ticket T-20260526-215934-55bb.",
+          "evidence": [
+            "Committed docs plan becc89d covering incident/detail IA, lifecycle actions, architecture flow, data/API improvements, and MVP phases."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260526-220249-casprine-3283.md"
         }
       ]
     }
@@ -3589,6 +3631,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215624-casprine-d7d5 |\n| Time | 2026-05-26T21:56:24+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-215624-3f16 |\n\n## Summary\n\nCreated ticket T-20260526-215624-3f16.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-220308-casprine-43cf.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-220308-casprine-43cf |\n| Time | 2026-05-26T22:03:08+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | goal.created |\n| Object | G-20260526-220308-c0d2 |\n\n## Summary\n\nCreated goal G-20260526-220308-c0d2.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-215622-b461.md",
       "title": "Goal: Enable autonomous agent project management",
@@ -3635,6 +3683,12 @@
       "path": "projects/maat/goals/G-20260526-215624-e456.md",
       "title": "Goal: Build a proper terminal UI for daily project navigation",
       "content": "# Goal: Build a proper terminal UI for daily project navigation\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215624-e456 |\n| Project | maat |\n| Status | active |\n| Created | 2026-05-26T21:56:24+02:00 |\n\n## Outcome\n\nThe TUI becomes a fast daily workspace for scanning projects, navigating tickets, seeing ownership/state, filtering work, and refreshing when Markdown state changes.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/maat/goals/G-20260526-220308-c0d2.md",
+      "title": "Goal: Rebuild TUI refresh experience",
+      "content": "# Goal: Rebuild TUI refresh experience\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-220308-c0d2 |\n| Project | maat |\n| Status | active |\n| Created | 2026-05-26T22:03:08+02:00 |\n\n## Outcome\n\nThe Maat TUI refreshes project memory predictably, shows users when data is loading or stale, supports an explicit manual refresh, and preserves navigation context while recovering cleanly from storage or Git refresh failures.\n"
     },
     {
       "type": "project",
@@ -4283,6 +4337,18 @@
       "path": "projects/orion/events/2026/05/E-20260526-215940-codex-9477.md",
       "title": "Event: ticket.claimed",
       "content": "# Event: ticket.claimed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215940-codex-9477 |\n| Time | 2026-05-26T21:59:40+02:00 |\n| Actor | codex |\n| Project | orion |\n| Type | ticket.claimed |\n| Object | T-20260526-215934-55bb |\n| Expires | 2026-05-26T23:59:40+02:00 |\n\n## Summary\n\nClaimed ticket T-20260526-215934-55bb until 2026-05-26T23:59:40+02:00.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-220212-casprine-9d15.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-220212-casprine-9d15 |\n| Time | 2026-05-26T22:02:12+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-215934-55bb |\n\n## Summary\n\nDrafted incident/detail IA plan with current implementation notes, lifecycle model, architecture flow, data/API improvements, and MVP phases.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-220249-casprine-3283.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-220249-casprine-3283 |\n| Time | 2026-05-26T22:02:49+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260526-215934-55bb |\n\n## Summary\n\nCompleted ticket T-20260526-215934-55bb.\n\n## Evidence\n\n- Committed docs plan becc89d covering incident/detail IA, lifecycle actions, architecture flow, data/API improvements, and MVP phases.\n"
     },
     {
       "type": "goal",
