@@ -85,6 +85,19 @@
           "object_id": "T-20260526-214802-29db",
           "summary": "Created ticket T-20260526-214802-29db.",
           "path": "projects/orion/events/2026/05/E-20260526-214802-casprine-2db9.md"
+        },
+        {
+          "id": "E-20260526-214810-casprine-865e",
+          "time": "2026-05-26T21:48:10+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260526-214802-29db",
+          "summary": "Completed ticket T-20260526-214802-29db.",
+          "evidence": [
+            "AGENTS.md was updated with the current Maat initialize command forms and committed in f5efed6 docs(repo): update maat instructions."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260526-214810-casprine-865e.md"
         }
       ]
     }
@@ -113,6 +126,12 @@
       "path": "projects/orion/events/2026/05/E-20260526-214802-casprine-2db9.md",
       "title": "Event: ticket.created",
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214802-casprine-2db9 |\n| Time | 2026-05-26T21:48:02+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-214802-29db |\n\n## Summary\n\nCreated ticket T-20260526-214802-29db.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-214810-casprine-865e.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214810-casprine-865e |\n| Time | 2026-05-26T21:48:10+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260526-214802-29db |\n\n## Summary\n\nCompleted ticket T-20260526-214802-29db.\n\n## Evidence\n\n- AGENTS.md was updated with the current Maat initialize command forms and committed in f5efed6 docs(repo): update maat instructions.\n"
     },
     {
       "type": "goal",
