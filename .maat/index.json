@@ -291,6 +291,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210349-casprine-c49a |\n| Time | 2026-05-26T21:03:49+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-210349-3330 |\n\n## Summary\n\nCreated ticket T-20260526-210349-3330.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-210351-casprine-e49c.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-210351-casprine-e49c |\n| Time | 2026-05-26T21:03:51+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.commented |\n| Object | T-20260526-210349-3330 |\n\n## Summary\n\nFrom Orion setup: sync later failed with Cannot rebase onto multiple branches. Maat should detect ambiguous upstream refs and suggest git -C \u003cstorage\u003e branch --set-upstream-to origin/main main or equivalent repair.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
       "title": "Goal: Improve initialize dogfood experience",
