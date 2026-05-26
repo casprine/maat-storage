@@ -99,6 +99,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-205927-casprine-d512 |\n| Time | 2026-05-26T20:59:27+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-205927-be7b |\n\n## Summary\n\nCreated ticket T-20260526-205927-be7b.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-205929-casprine-f10e.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-205929-casprine-f10e |\n| Time | 2026-05-26T20:59:29+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-205929-bc40 |\n\n## Summary\n\nCreated ticket T-20260526-205929-bc40.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
       "title": "Goal: Improve initialize dogfood experience",
@@ -151,6 +157,12 @@
       "path": "projects/maat/tickets/T-20260526-205927-be7b.md",
       "title": "Ticket: Maintain project registration with initialize and project link",
       "content": "# Ticket: Maintain project registration with initialize and project link\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-205927-be7b |\n| Project | maat |\n| Goal | G-20260526-205926-f9c1 |\n| Status | active |\n| Created | 2026-05-26T20:59:27+02:00 |\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/maat/tickets/T-20260526-205929-bc40.md",
+      "title": "Ticket: Maintain goal and ticket creation commands",
+      "content": "# Ticket: Maintain goal and ticket creation commands\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-205929-bc40 |\n| Project | maat |\n| Goal | G-20260526-205926-f9c1 |\n| Status | active |\n| Created | 2026-05-26T20:59:29+02:00 |\n"
     },
     {
       "type": "event",
