@@ -51,6 +51,12 @@
       "content": "# Event: ticket.claimed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211216-codex-f1b7 |\n| Time | 2026-05-26T21:12:16+02:00 |\n| Actor | codex |\n| Project | driver |\n| Type | ticket.claimed |\n| Object | T-20260526-211209-dccd |\n| Expires | 2026-05-26T23:12:16+02:00 |\n\n## Summary\n\nClaimed ticket T-20260526-211209-dccd until 2026-05-26T23:12:16+02:00.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-211225-casprine-c908.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211225-casprine-c908 |\n| Time | 2026-05-26T21:12:25+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | goal.created |\n| Object | G-20260526-211225-94d1 |\n\n## Summary\n\nCreated goal G-20260526-211225-94d1.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-205351-2c15.md",
       "title": "Goal: Initialize Maat project memory",
@@ -61,6 +67,12 @@
       "path": "projects/driver/goals/G-20260526-211132-58f7.md",
       "title": "Goal: Document repo goals and process status",
       "content": "# Goal: Document repo goals and process status\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-211132-58f7 |\n| Project | driver |\n| Status | active |\n| Created | 2026-05-26T21:11:32+02:00 |\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/driver/goals/G-20260526-211225-94d1.md",
+      "title": "Goal: Ship v1 private document drive",
+      "content": "# Goal: Ship v1 private document drive\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-211225-94d1 |\n| Project | driver |\n| Status | active |\n| Created | 2026-05-26T21:12:25+02:00 |\n"
     },
     {
       "type": "project",
