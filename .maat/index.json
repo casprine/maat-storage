@@ -288,6 +288,19 @@
             "Users can acknowledge and resolve incidents from Console, incident events record the manual action, and deleting or unregistering a monitor resolves or resets its active incident path cleanly."
           ],
           "path": "projects/orion/tickets/T-20260526-215003-fa9a.md"
+        },
+        {
+          "id": "T-20260526-215035-2f5b",
+          "project_key": "orion",
+          "goal_id": "G-20260526-215027-2cf9",
+          "title": "Expose diagnostics endpoint and ingestion latency signals",
+          "status": "active",
+          "created": "2026-05-26T21:50:35+02:00",
+          "description": "Add read-only Core diagnostics that track request counts, ingestion latency, report writes, incident reconciliation timing, SQLite busy events, database size, and slow operations.",
+          "acceptance": [
+            "A protected diagnostics surface returns current Core metrics, slow ingestion is logged or surfaced, and implementation follows the performance-observability plan without moving required incident reconciliation out of the request path."
+          ],
+          "path": "projects/orion/tickets/T-20260526-215035-2f5b.md"
         }
       ],
       "events": [
@@ -446,6 +459,16 @@
           "object_id": "G-20260526-215027-2cf9",
           "summary": "Created goal G-20260526-215027-2cf9.",
           "path": "projects/orion/events/2026/05/E-20260526-215027-casprine-9062.md"
+        },
+        {
+          "id": "E-20260526-215035-casprine-4483",
+          "time": "2026-05-26T21:50:35+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215035-2f5b",
+          "summary": "Created ticket T-20260526-215035-2f5b.",
+          "path": "projects/orion/events/2026/05/E-20260526-215035-casprine-4483.md"
         }
       ]
     }
@@ -638,6 +661,12 @@
       "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215027-casprine-9062 |\n| Time | 2026-05-26T21:50:27+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-215027-2cf9 |\n\n## Summary\n\nCreated goal G-20260526-215027-2cf9.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215035-casprine-4483.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215035-casprine-4483 |\n| Time | 2026-05-26T21:50:35+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-215035-2f5b |\n\n## Summary\n\nCreated ticket T-20260526-215035-2f5b.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-214751-82ed.md",
       "title": "Goal: Adopt Maat project memory",
@@ -702,6 +731,12 @@
       "path": "projects/orion/tickets/T-20260526-215003-fa9a.md",
       "title": "Ticket: Implement manual incident acknowledge and resolve flows",
       "content": "# Ticket: Implement manual incident acknowledge and resolve flows\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215003-fa9a |\n| Project | orion |\n| Goal | G-20260526-214956-c916 |\n| Status | active |\n| Created | 2026-05-26T21:50:03+02:00 |\n\n## Description\n\nAdd backend and Console flows for manually acknowledging and resolving incidents, and handle incidents tied to monitors that are removed from config.\n\n## Acceptance\n\n- Users can acknowledge and resolve incidents from Console, incident events record the manual action, and deleting or unregistering a monitor resolves or resets its active incident path cleanly.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-215035-2f5b.md",
+      "title": "Ticket: Expose diagnostics endpoint and ingestion latency signals",
+      "content": "# Ticket: Expose diagnostics endpoint and ingestion latency signals\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215035-2f5b |\n| Project | orion |\n| Goal | G-20260526-215027-2cf9 |\n| Status | active |\n| Created | 2026-05-26T21:50:35+02:00 |\n\n## Description\n\nAdd read-only Core diagnostics that track request counts, ingestion latency, report writes, incident reconciliation timing, SQLite busy events, database size, and slow operations.\n\n## Acceptance\n\n- A protected diagnostics surface returns current Core metrics, slow ingestion is logged or surfaced, and implementation follows the performance-observability plan without moving required incident reconciliation out of the request path.\n"
     }
   ]
 }
