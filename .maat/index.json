@@ -111,6 +111,12 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211335-casprine-b165 |\n| Time | 2026-05-26T21:13:35+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.commented |\n| Object | T-20260526-211326-32f1 |\n\n## Summary\n\nStatus from docs/backend-plan.md, docs/backend-tasks.md, docs/openapi-orval-plan.md, and apps/api/internal/http/router.go: backend stack is Go with OpenAPI owned by apps/api. Implemented routes include setup, auth login, documents list/detail/text/events/preview/retry, settings, search, tags, collections, admin document creation, TUS uploads, users/direct grants, worker ingestion, job lease/complete/fail, health, and openapi.json. OpenAPI and generated SDK exist. make test-fast passed including API Go tests, typecheck/lint, and OpenAPI smoke.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-211343-casprine-e93e.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211343-casprine-e93e |\n| Time | 2026-05-26T21:13:43+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.created |\n| Object | T-20260526-211343-4263 |\n\n## Summary\n\nCreated ticket T-20260526-211343-4263.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-205351-2c15.md",
       "title": "Goal: Initialize Maat project memory",
@@ -187,6 +193,12 @@
       "path": "projects/driver/tickets/T-20260526-211326-32f1.md",
       "title": "Ticket: Maintain API foundation, auth, documents, uploads, jobs, and library",
       "content": "# Ticket: Maintain API foundation, auth, documents, uploads, jobs, and library\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-211326-32f1 |\n| Project | driver |\n| Goal | G-20260526-211231-a8ea |\n| Status | active |\n| Created | 2026-05-26T21:13:26+02:00 |\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/driver/tickets/T-20260526-211343-4263.md",
+      "title": "Ticket: Align processing statuses, job transactions, and timelines",
+      "content": "# Ticket: Align processing statuses, job transactions, and timelines\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-211343-4263 |\n| Project | driver |\n| Goal | G-20260526-211231-a8ea |\n| Status | active |\n| Created | 2026-05-26T21:13:43+02:00 |\n"
     },
     {
       "type": "event",
