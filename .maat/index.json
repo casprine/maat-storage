@@ -1077,10 +1077,22 @@
       "content": "# Event: ticket.claimed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211411-codex-3da6 |\n| Time | 2026-05-26T21:14:11+02:00 |\n| Actor | codex |\n| Project | orion |\n| Type | ticket.claimed |\n| Object | T-20260526-211401-09a2 |\n| Expires | 2026-05-26T23:14:11+02:00 |\n\n## Summary\n\nClaimed ticket T-20260526-211401-09a2 until 2026-05-26T23:14:11+02:00.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-211549-casprine-8e55.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211549-casprine-8e55 |\n| Time | 2026-05-26T21:15:49+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-211549-0c3a |\n\n## Summary\n\nCreated goal G-20260526-211549-0c3a.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-204807-419c.md",
       "title": "Goal: Adopt Maat project memory",
       "content": "# Goal: Adopt Maat project memory\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-204807-419c |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T20:48:07+02:00 |\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260526-211549-0c3a.md",
+      "title": "Goal: Make health status explainable and trustworthy",
+      "content": "# Goal: Make health status explainable and trustworthy\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-211549-0c3a |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:15:49+02:00 |\n"
     },
     {
       "type": "project",
