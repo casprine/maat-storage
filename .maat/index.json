@@ -57,6 +57,15 @@
           "created": "2026-05-26T21:48:43+02:00",
           "outcome": "Users can tell whether an Orion status is caused by agent availability, monitor rollup behavior, stale data, missing reports, or monitor check failures.",
           "path": "projects/orion/goals/G-20260526-214843-eaa4.md"
+        },
+        {
+          "id": "G-20260526-214913-1150",
+          "project_key": "orion",
+          "title": "Expose raw report context for debugging",
+          "status": "active",
+          "created": "2026-05-26T21:49:13+02:00",
+          "outcome": "Operators can inspect the actual report payload and useful check metadata behind agent reports and monitor history without guessing from summary badges.",
+          "path": "projects/orion/goals/G-20260526-214913-1150.md"
         }
       ],
       "tickets": [
@@ -186,6 +195,16 @@
           "object_id": "T-20260526-214853-0007",
           "summary": "Tags: #health #core #console #agent-status #monitor-rollup #next-release. Sources: docs/plans/agent-health-debugging-next-release.md phases 1-2, docs/architecture/core-features.md health computation.",
           "path": "projects/orion/events/2026/05/E-20260526-214903-casprine-7c97.md"
+        },
+        {
+          "id": "E-20260526-214913-casprine-efcd",
+          "time": "2026-05-26T21:49:13+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260526-214913-1150",
+          "summary": "Created goal G-20260526-214913-1150.",
+          "path": "projects/orion/events/2026/05/E-20260526-214913-casprine-efcd.md"
         }
       ]
     }
@@ -252,6 +271,12 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214903-casprine-7c97 |\n| Time | 2026-05-26T21:49:03+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-214853-0007 |\n\n## Summary\n\nTags: #health #core #console #agent-status #monitor-rollup #next-release. Sources: docs/plans/agent-health-debugging-next-release.md phases 1-2, docs/architecture/core-features.md health computation.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-214913-casprine-efcd.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214913-casprine-efcd |\n| Time | 2026-05-26T21:49:13+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-214913-1150 |\n\n## Summary\n\nCreated goal G-20260526-214913-1150.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-214751-82ed.md",
       "title": "Goal: Adopt Maat project memory",
@@ -262,6 +287,12 @@
       "path": "projects/orion/goals/G-20260526-214843-eaa4.md",
       "title": "Goal: Make health status explainable and trustworthy",
       "content": "# Goal: Make health status explainable and trustworthy\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-214843-eaa4 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:48:43+02:00 |\n\n## Outcome\n\nUsers can tell whether an Orion status is caused by agent availability, monitor rollup behavior, stale data, missing reports, or monitor check failures.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260526-214913-1150.md",
+      "title": "Goal: Expose raw report context for debugging",
+      "content": "# Goal: Expose raw report context for debugging\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-214913-1150 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:49:13+02:00 |\n\n## Outcome\n\nOperators can inspect the actual report payload and useful check metadata behind agent reports and monitor history without guessing from summary badges.\n"
     },
     {
       "type": "project",
