@@ -189,6 +189,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211525-casprine-6851 |\n| Time | 2026-05-26T21:15:25+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.created |\n| Object | T-20260526-211525-6c68 |\n\n## Summary\n\nCreated ticket T-20260526-211525-6c68.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-211534-casprine-8457.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211534-casprine-8457 |\n| Time | 2026-05-26T21:15:34+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.commented |\n| Object | T-20260526-211525-6c68 |\n\n## Summary\n\nProcess from docs/configuration-plan.md and docs/deployment.md: use stable docker-compose.yml plus deploy/.env host values for paths, versions, ports, DB credentials, timezone, main language, OCR languages, and optional provider URLs. Container paths are /documents for originals and /app-data for artifacts/TUS chunks. Backend must not silently fall back to in-memory storage in Docker; Compose sets DATABASE_URL through Postgres. Current repo has deploy/example.env, docker-compose.yml, API/worker Dockerfiles, and config tests.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-205351-2c15.md",
       "title": "Goal: Initialize Maat project memory",
