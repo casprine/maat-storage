@@ -127,6 +127,22 @@
             "Contract tests cover the chosen status values and event visibility."
           ],
           "path": "projects/driver/tickets/T-20260526-215134-e395.md"
+        },
+        {
+          "id": "T-20260526-215214-418c",
+          "project_key": "driver",
+          "goal_id": "G-20260526-214948-2ed0",
+          "title": "Maintain watcher registration and document lifecycle",
+          "status": "active",
+          "created": "2026-05-26T21:52:14+02:00",
+          "description": "Keep the worker reconciler and orchestrator responsible for scanning the configured document directory, waiting for stable writes, hashing files, registering stable files with the API, handling duplicates/changed paths/deletes, and enqueueing index jobs while TUS remains only an upload path.",
+          "acceptance": [
+            "Partial writes do not enqueue jobs until size and mtime are stable.",
+            "Duplicate checksums, same-path changes, deleted files, unreadable files, and symlink/path safety are tested or intentionally documented.",
+            "Generated artifacts are written under app data and never inside the document directory.",
+            "Worker-to-API registration routes remain protected by worker/admin auth."
+          ],
+          "path": "projects/driver/tickets/T-20260526-215214-418c.md"
         }
       ],
       "events": [
@@ -259,6 +275,16 @@
           "object_id": "T-20260526-215134-e395",
           "summary": "Data/status: docs/backend-tasks.md calls for queued, processing, partial-ready, ready, failed, while current generated SDK exposes queued, indexed, failed and code uses indexed/deleted in several places. This ticket is intentionally open until the product/API vocabulary is reconciled or explicitly documented as different from the early docs.",
           "path": "projects/driver/events/2026/05/E-20260526-215203-casprine-b9a4.md"
+        },
+        {
+          "id": "E-20260526-215214-casprine-6b88",
+          "time": "2026-05-26T21:52:14+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215214-418c",
+          "summary": "Created ticket T-20260526-215214-418c.",
+          "path": "projects/driver/events/2026/05/E-20260526-215214-casprine-6b88.md"
         }
       ]
     },
@@ -882,6 +908,12 @@
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215203-casprine-b9a4 |\n| Time | 2026-05-26T21:52:03+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.commented |\n| Object | T-20260526-215134-e395 |\n\n## Summary\n\nData/status: docs/backend-tasks.md calls for queued, processing, partial-ready, ready, failed, while current generated SDK exposes queued, indexed, failed and code uses indexed/deleted in several places. This ticket is intentionally open until the product/API vocabulary is reconciled or explicitly documented as different from the early docs.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-215214-casprine-6b88.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215214-casprine-6b88 |\n| Time | 2026-05-26T21:52:14+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.created |\n| Object | T-20260526-215214-418c |\n\n## Summary\n\nCreated ticket T-20260526-215214-418c.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-214932-bfdb.md",
       "title": "Goal: Ship v1 private document drive",
@@ -946,6 +978,12 @@
       "path": "projects/driver/tickets/T-20260526-215134-e395.md",
       "title": "Ticket: Resolve processing status vocabulary and job timelines",
       "content": "# Ticket: Resolve processing status vocabulary and job timelines\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215134-e395 |\n| Project | driver |\n| Goal | G-20260526-214940-f930 |\n| Status | active |\n| Created | 2026-05-26T21:51:34+02:00 |\n\n## Description\n\nAlign the documented processing states with API, SDK, worker, and UI behavior so agents and users can rely on one status model and useful processing history.\n\n## Acceptance\n\n- Document status values are intentionally chosen and reflected consistently in OpenAPI, SDK types, API responses, worker updates, and UI labels.\n- Job complete/fail updates preserve enough step/event history for document detail and troubleshooting.\n- Any migration or compatibility concern is documented before changing persisted values.\n- Contract tests cover the chosen status values and event visibility.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/driver/tickets/T-20260526-215214-418c.md",
+      "title": "Ticket: Maintain watcher registration and document lifecycle",
+      "content": "# Ticket: Maintain watcher registration and document lifecycle\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215214-418c |\n| Project | driver |\n| Goal | G-20260526-214948-2ed0 |\n| Status | active |\n| Created | 2026-05-26T21:52:14+02:00 |\n\n## Description\n\nKeep the worker reconciler and orchestrator responsible for scanning the configured document directory, waiting for stable writes, hashing files, registering stable files with the API, handling duplicates/changed paths/deletes, and enqueueing index jobs while TUS remains only an upload path.\n\n## Acceptance\n\n- Partial writes do not enqueue jobs until size and mtime are stable.\n- Duplicate checksums, same-path changes, deleted files, unreadable files, and symlink/path safety are tested or intentionally documented.\n- Generated artifacts are written under app data and never inside the document directory.\n- Worker-to-API registration routes remain protected by worker/admin auth.\n"
     },
     {
       "type": "project",
