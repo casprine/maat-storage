@@ -177,6 +177,12 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-205953-casprine-60ee |\n| Time | 2026-05-26T20:59:53+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.created |\n| Object | T-20260526-205953-7eca |\n\n## Summary\n\nCreated ticket T-20260526-205953-7eca.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-205955-casprine-dea7.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-205955-casprine-dea7 |\n| Time | 2026-05-26T20:59:55+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | goal.created |\n| Object | G-20260526-205955-c869 |\n\n## Summary\n\nCreated goal G-20260526-205955-c869.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
       "title": "Goal: Improve initialize dogfood experience",
@@ -199,6 +205,12 @@
       "path": "projects/maat/goals/G-20260526-205945-61ac.md",
       "title": "Goal: Keep state rebuildable on every machine",
       "content": "# Goal: Keep state rebuildable on every machine\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-205945-61ac |\n| Project | maat |\n| Status | active |\n| Created | 2026-05-26T20:59:45+02:00 |\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/maat/goals/G-20260526-205955-c869.md",
+      "title": "Goal: Reduce conflicts for many concurrent agents",
+      "content": "# Goal: Reduce conflicts for many concurrent agents\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-205955-c869 |\n| Project | maat |\n| Status | active |\n| Created | 2026-05-26T20:59:55+02:00 |\n"
     },
     {
       "type": "project",
