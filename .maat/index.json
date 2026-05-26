@@ -48,6 +48,15 @@
           "created": "2026-05-26T21:47:51+02:00",
           "outcome": "Orion agents consistently use Maat as canonical project memory, with AGENTS.md containing the current Maat daily loop and required goal, ticket, validation, and sync commands.",
           "path": "projects/orion/goals/G-20260526-214751-82ed.md"
+        },
+        {
+          "id": "G-20260526-214843-eaa4",
+          "project_key": "orion",
+          "title": "Make health status explainable and trustworthy",
+          "status": "active",
+          "created": "2026-05-26T21:48:43+02:00",
+          "outcome": "Users can tell whether an Orion status is caused by agent availability, monitor rollup behavior, stale data, missing reports, or monitor check failures.",
+          "path": "projects/orion/goals/G-20260526-214843-eaa4.md"
         }
       ],
       "tickets": [
@@ -134,6 +143,16 @@
             "Delivered Markdown summary of Maat setup friction in chat and preserved the prior repo record at docs/development/maat-setup-friction.md from commit 247244f."
           ],
           "path": "projects/orion/events/2026/05/E-20260526-214832-casprine-13bf.md"
+        },
+        {
+          "id": "E-20260526-214843-casprine-9ace",
+          "time": "2026-05-26T21:48:43+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260526-214843-eaa4",
+          "summary": "Created goal G-20260526-214843-eaa4.",
+          "path": "projects/orion/events/2026/05/E-20260526-214843-casprine-9ace.md"
         }
       ]
     }
@@ -182,10 +201,22 @@
       "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214832-casprine-13bf |\n| Time | 2026-05-26T21:48:32+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260526-214824-a803 |\n\n## Summary\n\nCompleted ticket T-20260526-214824-a803.\n\n## Evidence\n\n- Delivered Markdown summary of Maat setup friction in chat and preserved the prior repo record at docs/development/maat-setup-friction.md from commit 247244f.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-214843-casprine-9ace.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-214843-casprine-9ace |\n| Time | 2026-05-26T21:48:43+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260526-214843-eaa4 |\n\n## Summary\n\nCreated goal G-20260526-214843-eaa4.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-214751-82ed.md",
       "title": "Goal: Adopt Maat project memory",
       "content": "# Goal: Adopt Maat project memory\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-214751-82ed |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:47:51+02:00 |\n\n## Outcome\n\nOrion agents consistently use Maat as canonical project memory, with AGENTS.md containing the current Maat daily loop and required goal, ticket, validation, and sync commands.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260526-214843-eaa4.md",
+      "title": "Goal: Make health status explainable and trustworthy",
+      "content": "# Goal: Make health status explainable and trustworthy\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-214843-eaa4 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:48:43+02:00 |\n\n## Outcome\n\nUsers can tell whether an Orion status is caused by agent availability, monitor rollup behavior, stale data, missing reports, or monitor check failures.\n"
     },
     {
       "type": "project",
