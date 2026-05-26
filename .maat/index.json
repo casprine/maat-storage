@@ -2280,6 +2280,19 @@
             "A design note identifies the component data model, monitor mapping UX, incident fields, status page consumption path, and migration steps without requiring status page implementation in the same ticket."
           ],
           "path": "projects/orion/tickets/T-20260526-215635-f363.md"
+        },
+        {
+          "id": "T-20260526-215934-55bb",
+          "project_key": "orion",
+          "goal_id": "G-20260526-214956-c916",
+          "title": "Design incident and detail view IA plan",
+          "status": "active",
+          "created": "2026-05-26T21:59:34+02:00",
+          "description": "Document the incident and endpoint detail information architecture, current implementation gaps, lifecycle actions including covered or manually resolved incidents, and the architecture flow needed to make incident data operationally useful.",
+          "acceptance": [
+            "A repository document exists with current-state notes, target information architecture, lifecycle and data flow diagrams, and concrete implementation phases for improving incidents and detail views."
+          ],
+          "path": "projects/orion/tickets/T-20260526-215934-55bb.md"
         }
       ],
       "events": [
@@ -2920,6 +2933,26 @@
             "Committed docs/plans/alert-routing-redesign.md in 358a23f with alert services, destinations, routes, groups, SMTP/webhook flows, data/API/UI direction, rollout phases, and review questions."
           ],
           "path": "projects/orion/events/2026/05/E-20260526-215856-casprine-847b.md"
+        },
+        {
+          "id": "E-20260526-215934-casprine-9c59",
+          "time": "2026-05-26T21:59:34+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260526-215934-55bb",
+          "summary": "Created ticket T-20260526-215934-55bb.",
+          "path": "projects/orion/events/2026/05/E-20260526-215934-casprine-9c59.md"
+        },
+        {
+          "id": "E-20260526-215940-codex-9477",
+          "time": "2026-05-26T21:59:40+02:00",
+          "actor": "codex",
+          "project_key": "orion",
+          "type": "ticket.claimed",
+          "object_id": "T-20260526-215934-55bb",
+          "summary": "Claimed ticket T-20260526-215934-55bb until 2026-05-26T23:59:40+02:00.",
+          "path": "projects/orion/events/2026/05/E-20260526-215940-codex-9477.md"
         }
       ]
     }
@@ -4240,6 +4273,18 @@
       "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215856-casprine-847b |\n| Time | 2026-05-26T21:58:56+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260526-215629-53f6 |\n\n## Summary\n\nCompleted ticket T-20260526-215629-53f6.\n\n## Evidence\n\n- Committed docs/plans/alert-routing-redesign.md in 358a23f with alert services, destinations, routes, groups, SMTP/webhook flows, data/API/UI direction, rollout phases, and review questions.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215934-casprine-9c59.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215934-casprine-9c59 |\n| Time | 2026-05-26T21:59:34+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260526-215934-55bb |\n\n## Summary\n\nCreated ticket T-20260526-215934-55bb.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260526-215940-codex-9477.md",
+      "title": "Event: ticket.claimed",
+      "content": "# Event: ticket.claimed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215940-codex-9477 |\n| Time | 2026-05-26T21:59:40+02:00 |\n| Actor | codex |\n| Project | orion |\n| Type | ticket.claimed |\n| Object | T-20260526-215934-55bb |\n| Expires | 2026-05-26T23:59:40+02:00 |\n\n## Summary\n\nClaimed ticket T-20260526-215934-55bb until 2026-05-26T23:59:40+02:00.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-214751-82ed.md",
       "title": "Goal: Adopt Maat project memory",
@@ -4472,6 +4517,12 @@
       "path": "projects/orion/tickets/T-20260526-215635-f363.md",
       "title": "Ticket: Design monitor component mapping for status pages",
       "content": "# Ticket: Design monitor component mapping for status pages\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215635-f363 |\n| Project | orion |\n| Goal | G-20260526-215257-e70b |\n| Status | active |\n| Created | 2026-05-26T21:56:35+02:00 |\n\n## Description\n\nDesign how Core and Agent monitors map to service or status-page components so incidents can identify impacted components and future status pages can publish relevant updates.\n\n## Acceptance\n\n- A design note identifies the component data model, monitor mapping UX, incident fields, status page consumption path, and migration steps without requiring status page implementation in the same ticket.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260526-215934-55bb.md",
+      "title": "Ticket: Design incident and detail view IA plan",
+      "content": "# Ticket: Design incident and detail view IA plan\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-215934-55bb |\n| Project | orion |\n| Goal | G-20260526-214956-c916 |\n| Status | active |\n| Created | 2026-05-26T21:59:34+02:00 |\n\n## Description\n\nDocument the incident and endpoint detail information architecture, current implementation gaps, lifecycle actions including covered or manually resolved incidents, and the architecture flow needed to make incident data operationally useful.\n\n## Acceptance\n\n- A repository document exists with current-state notes, target information architecture, lifecycle and data flow diagrams, and concrete implementation phases for improving incidents and detail views.\n"
     }
   ]
 }
