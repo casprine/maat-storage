@@ -249,6 +249,16 @@
           "object_id": "T-20260526-215134-e395",
           "summary": "Created ticket T-20260526-215134-e395.",
           "path": "projects/driver/events/2026/05/E-20260526-215134-casprine-3874.md"
+        },
+        {
+          "id": "E-20260526-215203-casprine-b9a4",
+          "time": "2026-05-26T21:52:03+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "ticket.commented",
+          "object_id": "T-20260526-215134-e395",
+          "summary": "Data/status: docs/backend-tasks.md calls for queued, processing, partial-ready, ready, failed, while current generated SDK exposes queued, indexed, failed and code uses indexed/deleted in several places. This ticket is intentionally open until the product/API vocabulary is reconciled or explicitly documented as different from the early docs.",
+          "path": "projects/driver/events/2026/05/E-20260526-215203-casprine-b9a4.md"
         }
       ]
     },
@@ -831,6 +841,12 @@
       "path": "projects/driver/events/2026/05/E-20260526-215134-casprine-3874.md",
       "title": "Event: ticket.created",
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215134-casprine-3874 |\n| Time | 2026-05-26T21:51:34+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.created |\n| Object | T-20260526-215134-e395 |\n\n## Summary\n\nCreated ticket T-20260526-215134-e395.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-215203-casprine-b9a4.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215203-casprine-b9a4 |\n| Time | 2026-05-26T21:52:03+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.commented |\n| Object | T-20260526-215134-e395 |\n\n## Summary\n\nData/status: docs/backend-tasks.md calls for queued, processing, partial-ready, ready, failed, while current generated SDK exposes queued, indexed, failed and code uses indexed/deleted in several places. This ticket is intentionally open until the product/API vocabulary is reconciled or explicitly documented as different from the early docs.\n"
     },
     {
       "type": "goal",
