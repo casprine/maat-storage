@@ -213,6 +213,16 @@
           "object_id": "T-20260526-215114-f462",
           "summary": "Created ticket T-20260526-215114-f462.",
           "path": "projects/driver/events/2026/05/E-20260526-215114-casprine-4371.md"
+        },
+        {
+          "id": "E-20260526-215123-casprine-4196",
+          "time": "2026-05-26T21:51:23+02:00",
+          "actor": "casprine",
+          "project_key": "driver",
+          "type": "ticket.commented",
+          "object_id": "T-20260526-215114-f462",
+          "summary": "Data/status: apps/api/internal/http/router.go currently exposes health, openapi.json, setup, auth/login, protected documents/text/events/preview/retry/settings/search/tags/collections, admin documents/tags/collections/users/settings/uploads, and worker ingestion/jobs routes. docs/backend-tasks.md says backend work must include tests where relevant. make test-fast passed on 2026-05-26.",
+          "path": "projects/driver/events/2026/05/E-20260526-215123-casprine-4196.md"
         }
       ]
     },
@@ -660,6 +670,12 @@
       "path": "projects/driver/events/2026/05/E-20260526-215114-casprine-4371.md",
       "title": "Event: ticket.created",
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215114-casprine-4371 |\n| Time | 2026-05-26T21:51:14+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.created |\n| Object | T-20260526-215114-f462 |\n\n## Summary\n\nCreated ticket T-20260526-215114-f462.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-215123-casprine-4196.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-215123-casprine-4196 |\n| Time | 2026-05-26T21:51:23+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | ticket.commented |\n| Object | T-20260526-215114-f462 |\n\n## Summary\n\nData/status: apps/api/internal/http/router.go currently exposes health, openapi.json, setup, auth/login, protected documents/text/events/preview/retry/settings/search/tags/collections, admin documents/tags/collections/users/settings/uploads, and worker ingestion/jobs routes. docs/backend-tasks.md says backend work must include tests where relevant. make test-fast passed on 2026-05-26.\n"
     },
     {
       "type": "goal",
