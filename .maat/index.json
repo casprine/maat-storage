@@ -51,6 +51,18 @@
       "content": "# Ticket: Wire Maat instructions into repo\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260526-205400-d863 |\n| Project | driver |\n| Goal | G-20260526-205351-2c15 |\n| Status | active |\n| Created | 2026-05-26T20:54:00+02:00 |\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260526-205536-casprine-7cf6.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-205536-casprine-7cf6 |\n| Time | 2026-05-26T20:55:36+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | goal.created |\n| Object | G-20260526-205536-3ae9 |\n\n## Summary\n\nCreated goal G-20260526-205536-3ae9.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/maat/goals/G-20260526-205536-3ae9.md",
+      "title": "Goal: Improve initialize dogfood experience",
+      "content": "# Goal: Improve initialize dogfood experience\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-205536-3ae9 |\n| Project | maat |\n| Status | active |\n| Created | 2026-05-26T20:55:36+02:00 |\n"
+    },
+    {
       "type": "project",
       "path": "projects/maat/project.md",
       "title": "Project: Maat",
