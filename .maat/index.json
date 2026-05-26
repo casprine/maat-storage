@@ -75,6 +75,12 @@
       "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211244-casprine-0f51 |\n| Time | 2026-05-26T21:12:44+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | goal.created |\n| Object | G-20260526-211244-0ad0 |\n\n## Summary\n\nCreated goal G-20260526-211244-0ad0.\n"
     },
     {
+      "type": "event",
+      "path": "projects/driver/events/2026/05/E-20260526-211253-casprine-d7f4.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260526-211253-casprine-d7f4 |\n| Time | 2026-05-26T21:12:53+02:00 |\n| Actor | casprine |\n| Project | driver |\n| Type | goal.created |\n| Object | G-20260526-211253-0484 |\n\n## Summary\n\nCreated goal G-20260526-211253-0484.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/driver/goals/G-20260526-205351-2c15.md",
       "title": "Goal: Initialize Maat project memory",
@@ -109,6 +115,12 @@
       "path": "projects/driver/goals/G-20260526-211244-0ad0.md",
       "title": "Goal: Build web console around generated SDK",
       "content": "# Goal: Build web console around generated SDK\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-211244-0ad0 |\n| Project | driver |\n| Status | active |\n| Created | 2026-05-26T21:12:44+02:00 |\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/driver/goals/G-20260526-211253-0484.md",
+      "title": "Goal: Package self-hosted deployment",
+      "content": "# Goal: Package self-hosted deployment\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-211253-0484 |\n| Project | driver |\n| Status | active |\n| Created | 2026-05-26T21:12:53+02:00 |\n"
     },
     {
       "type": "project",
