@@ -5277,6 +5277,69 @@
           "created": "2026-05-27T11:19:16+02:00",
           "outcome": "Published status pages show component uptime, incident history, and cached public history views derived from existing monitor uptime and public incident data",
           "path": "projects/orion/goals/G-20260527-111916-0d5c.md"
+        },
+        {
+          "id": "G-20260527-112015-773b",
+          "project_key": "orion",
+          "title": "Add status page subscriptions",
+          "status": "active",
+          "created": "2026-05-27T11:20:15+02:00",
+          "outcome": "Visitors can subscribe to public status page updates through confirmed, rate-limited destinations and receive only public incident communications",
+          "path": "projects/orion/goals/G-20260527-112015-773b.md"
+        },
+        {
+          "id": "G-20260527-112117-9e83",
+          "project_key": "orion",
+          "title": "Customize public status pages",
+          "status": "active",
+          "created": "2026-05-27T11:21:17+02:00",
+          "outcome": "Status pages can be branded and distributed through custom presentation options without weakening public/private data boundaries",
+          "path": "projects/orion/goals/G-20260527-112117-9e83.md"
+        },
+        {
+          "id": "G-20260527-112208-4a24",
+          "project_key": "orion",
+          "title": "Resolve status page architecture decisions",
+          "status": "active",
+          "created": "2026-05-27T11:22:08+02:00",
+          "outcome": "Open status page architecture decisions are documented before implementation choices become expensive to change",
+          "path": "projects/orion/goals/G-20260527-112208-4a24.md"
+        },
+        {
+          "id": "G-20260527-112330-77a5",
+          "project_key": "orion",
+          "title": "Incident detail phase 1: lifecycle actions",
+          "status": "active",
+          "created": "2026-05-27T11:23:30+02:00",
+          "outcome": "operators can acknowledge, manually resolve, mark covered, and reopen incidents from Console with Core-backed audit events and generated API contracts",
+          "path": "projects/orion/goals/G-20260527-112330-77a5.md"
+        },
+        {
+          "id": "G-20260527-112352-1456",
+          "project_key": "orion",
+          "title": "Incident detail phase 2: coverage semantics",
+          "status": "active",
+          "created": "2026-05-27T11:23:52+02:00",
+          "outcome": "covered incidents prevent duplicate reopen noise for still-failing monitors while preserving a clear audit trail and recovery behavior",
+          "path": "projects/orion/goals/G-20260527-112352-1456.md"
+        },
+        {
+          "id": "G-20260527-112410-6db8",
+          "project_key": "orion",
+          "title": "Incident detail phase 3: evidence and debugging",
+          "status": "active",
+          "created": "2026-05-27T11:24:10+02:00",
+          "outcome": "incident detail explains the failure with normalized trigger and latest-report evidence plus raw inspection paths across incident, monitor, and agent views",
+          "path": "projects/orion/goals/G-20260527-112410-6db8.md"
+        },
+        {
+          "id": "G-20260527-112426-5108",
+          "project_key": "orion",
+          "title": "Incident detail phase 4: operational analytics",
+          "status": "active",
+          "created": "2026-05-27T11:24:26+02:00",
+          "outcome": "incident history becomes searchable and measurable for recurring failures, manual handling patterns, notification reliability, and time-to-acknowledge or resolve",
+          "path": "projects/orion/goals/G-20260527-112426-5108.md"
         }
       ],
       "tickets": [
@@ -6072,6 +6135,513 @@
             "GET /status/:slug/history, GET /status/:slug/incidents, and GET /status/:slug/incidents/:incident_id return only published public data with bounded date ranges and tests for hidden draft incidents"
           ],
           "path": "projects/orion/tickets/T-20260527-111933-f32c.md"
+        },
+        {
+          "id": "T-20260527-111943-73e5",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111602-3269",
+          "title": "Add monitor confirmation periods",
+          "status": "active",
+          "created": "2026-05-27T11:19:43+02:00",
+          "description": "Add per-monitor confirmation periods so a Core monitor must fail for enough time or enough checks before opening an incident.",
+          "acceptance": [
+            "Transient failures within the confirmation window do not open incidents, sustained failures do open incidents, and reconciliation tests cover time-based and count-based behavior."
+          ],
+          "path": "projects/orion/tickets/T-20260527-111943-73e5.md"
+        },
+        {
+          "id": "T-20260527-111945-2b55",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111916-0d5c",
+          "title": "Cache public status page read models",
+          "status": "active",
+          "created": "2026-05-27T11:19:45+02:00",
+          "description": "Add short-lived caching, invalidation, and optional ETag support for public status page payloads so read-heavy public pages stay cheap while health and published updates remain fresh",
+          "acceptance": [
+            "Public page responses use safe cache headers, invalidate after publish or health-relevant changes, and tests cover stale cache prevention for newly published incident updates"
+          ],
+          "path": "projects/orion/tickets/T-20260527-111945-2b55.md"
+        },
+        {
+          "id": "T-20260527-111953-42db",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111916-0d5c",
+          "title": "Decide public uptime formatting",
+          "status": "active",
+          "created": "2026-05-27T11:19:53+02:00",
+          "description": "Choose how public uptime percentages and unknown states should be represented, including decimal precision, unknown handling, and whether timestamps are exact or rounded",
+          "acceptance": [
+            "A documented decision defines uptime percentage formatting, unknown state display behavior, timestamp rounding rules, and the UI/API implications"
+          ],
+          "path": "projects/orion/tickets/T-20260527-111953-42db.md"
+        },
+        {
+          "id": "T-20260527-111956-14f8",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111602-3269",
+          "title": "Add monitor recovery periods",
+          "status": "active",
+          "created": "2026-05-27T11:19:56+02:00",
+          "description": "Add per-monitor recovery periods so incidents resolve only after a monitor has remained healthy long enough to avoid recovery flapping.",
+          "acceptance": [
+            "Short healthy blips do not resolve incidents, sustained healthy checks resolve incidents, and tests cover open, recovering, resolved, and relapse paths."
+          ],
+          "path": "projects/orion/tickets/T-20260527-111956-14f8.md"
+        },
+        {
+          "id": "T-20260527-112007-e8ac",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111602-3269",
+          "title": "Add Core monitor flapping handling",
+          "status": "active",
+          "created": "2026-05-27T11:20:07+02:00",
+          "description": "Detect and represent flapping Core monitor behavior so repeated up/down transitions become visible as degraded or flapping context instead of noisy incident churn.",
+          "acceptance": [
+            "Flapping is detected from recent report history, reflected in computed health or incident context, and covered by tests for repeated transitions."
+          ],
+          "path": "projects/orion/tickets/T-20260527-112007-e8ac.md"
+        },
+        {
+          "id": "T-20260527-112022-51a5",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111602-3269",
+          "title": "Add Core monitor severity defaults",
+          "status": "active",
+          "created": "2026-05-27T11:20:22+02:00",
+          "description": "Define and implement default incident severity behavior for Core monitor types, with room for per-monitor overrides where useful.",
+          "acceptance": [
+            "Core monitor incidents receive predictable severity defaults by type or config, overrides are validated, and incident list/detail views show the selected severity."
+          ],
+          "path": "projects/orion/tickets/T-20260527-112022-51a5.md"
+        },
+        {
+          "id": "T-20260527-112030-ec3c",
+          "project_key": "orion",
+          "goal_id": "G-20260527-112015-773b",
+          "title": "Design public subscriber model",
+          "status": "active",
+          "created": "2026-05-27T11:20:30+02:00",
+          "description": "Define the status_page_subscriptions data model, confirmation state, destination types, component-scoped subscriptions, unsubscribe behavior, and privacy boundaries",
+          "acceptance": [
+            "A design or schema change defines subscriber fields, confirmation lifecycle, component scoping, unsubscribe flow, and how public subscribers stay separate from internal alert channels"
+          ],
+          "path": "projects/orion/tickets/T-20260527-112030-ec3c.md"
+        },
+        {
+          "id": "T-20260527-112035-ca71",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111602-3269",
+          "title": "Add Core monitor maintenance windows",
+          "status": "active",
+          "created": "2026-05-27T11:20:35+02:00",
+          "description": "Add maintenance-window behavior for Core-managed monitors so scheduled work or intentional outages suppress incidents and alert delivery while preserving history.",
+          "acceptance": [
+            "Core monitor maintenance windows suppress incident creation and alert delivery, are visible in Console, and tests cover entering, active, and exiting maintenance windows."
+          ],
+          "path": "projects/orion/tickets/T-20260527-112035-ca71.md"
+        },
+        {
+          "id": "T-20260527-112042-e81a",
+          "project_key": "orion",
+          "goal_id": "G-20260527-112015-773b",
+          "title": "Implement subscription confirmation flow",
+          "status": "active",
+          "created": "2026-05-27T11:20:42+02:00",
+          "description": "Add public subscription creation, confirmation, and unsubscribe endpoints with rate limiting and safe token handling",
+          "acceptance": [
+            "Visitors can request, confirm, and cancel subscriptions; endpoints are rate limited; tokens are not logged or exposed; tests cover invalid and expired confirmation attempts"
+          ],
+          "path": "projects/orion/tickets/T-20260527-112042-e81a.md"
+        },
+        {
+          "id": "T-20260527-112050-0cfb",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111616-a92c",
+          "title": "Design component data model",
+          "status": "active",
+          "created": "2026-05-27T11:20:50+02:00",
+          "description": "Design the service/status-page component model that can group Agent and Core monitors and support incident impact and status page publishing.",
+          "acceptance": [
+            "Design records component fields, relationships, migration path, API shape, Console needs, and how Agent/Core monitor ownership maps to components."
+          ],
+          "path": "projects/orion/tickets/T-20260527-112050-0cfb.md"
+        },
+        {
+          "id": "T-20260527-112053-2865",
+          "project_key": "orion",
+          "goal_id": "G-20260527-112015-773b",
+          "title": "Fan out public incident notifications",
+          "status": "active",
+          "created": "2026-05-27T11:20:53+02:00",
+          "description": "Deliver published public incident updates to confirmed status page subscribers without sending internal incident details or alert delivery metadata",
+          "acceptance": [
+            "Confirmed subscribers receive public incident updates for subscribed pages or components, delivery failures are tracked safely, and internal alert channel secrets are never exposed"
+          ],
+          "path": "projects/orion/tickets/T-20260527-112053-2865.md"
+        },
+        {
+          "id": "T-20260527-112101-9b65",
+          "project_key": "orion",
+          "goal_id": "G-20260527-112015-773b",
+          "title": "Add public status feed",
+          "status": "active",
+          "created": "2026-05-27T11:21:01+02:00",
+          "description": "Add an Atom or RSS feed for published status page incidents and updates so visitors can follow status changes without an account",
+          "acceptance": [
+            "GET /status/:slug/feed.atom or the chosen feed route returns valid feed output for published public incidents only, with tests for draft and private incidents being omitted"
+          ],
+          "path": "projects/orion/tickets/T-20260527-112101-9b65.md"
+        },
+        {
+          "id": "T-20260527-112103-2087",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111616-a92c",
+          "title": "Add monitor-to-component mapping",
+          "status": "active",
+          "created": "2026-05-27T11:21:03+02:00",
+          "description": "Implement mapping between monitors and service/status-page components so Core and Agent monitor health can roll up into component health.",
+          "acceptance": [
+            "Monitors can be assigned to components, component health can be derived from mapped monitors, and Console/API paths expose the mapping safely."
+          ],
+          "path": "projects/orion/tickets/T-20260527-112103-2087.md"
+        },
+        {
+          "id": "T-20260527-112118-7764",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111616-a92c",
+          "title": "Add incident component fields",
+          "status": "active",
+          "created": "2026-05-27T11:21:18+02:00",
+          "description": "Extend incidents and incident timeline/context so monitor-caused incidents can identify impacted service/status-page components.",
+          "acceptance": [
+            "Incident records or responses include impacted component context, existing incidents remain compatible, and incident list/detail views can display component impact."
+          ],
+          "path": "projects/orion/tickets/T-20260527-112118-7764.md"
+        },
+        {
+          "id": "T-20260527-112126-30e2",
+          "project_key": "orion",
+          "goal_id": "G-20260527-112117-9e83",
+          "title": "Add status page theme settings",
+          "status": "active",
+          "created": "2026-05-27T11:21:26+02:00",
+          "description": "Add configurable public status page theme settings such as logo, accent color, page description, and basic metadata while preserving accessible default styling",
+          "acceptance": [
+            "Admins can configure supported theme fields, public pages render those fields accessibly, and invalid or unsafe theme values are rejected"
+          ],
+          "path": "projects/orion/tickets/T-20260527-112126-30e2.md"
+        },
+        {
+          "id": "T-20260527-112139-910e",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111616-a92c",
+          "title": "Update status page architecture for monitor components",
+          "status": "active",
+          "created": "2026-05-27T11:21:39+02:00",
+          "description": "Update status page planning so public or private status pages consume component health derived from Core and Agent monitors.",
+          "acceptance": [
+            "Status page architecture documents monitor-component health flow, component display rules, maintenance interaction, and implementation dependencies."
+          ],
+          "path": "projects/orion/tickets/T-20260527-112139-910e.md"
+        },
+        {
+          "id": "T-20260527-112143-0a3a",
+          "project_key": "orion",
+          "goal_id": "G-20260527-112117-9e83",
+          "title": "Support status page custom domains",
+          "status": "active",
+          "created": "2026-05-27T11:21:43+02:00",
+          "description": "Design and implement custom domain configuration for public status pages, including validation, ownership guidance, routing, and safe host matching",
+          "acceptance": [
+            "Admins can configure a custom domain for a status page, Core routes requests to the correct published page, and invalid or conflicting domains are rejected with clear errors"
+          ],
+          "path": "projects/orion/tickets/T-20260527-112143-0a3a.md"
+        },
+        {
+          "id": "T-20260527-112152-4d04",
+          "project_key": "orion",
+          "goal_id": "G-20260527-112117-9e83",
+          "title": "Add public embeddable status badges",
+          "status": "active",
+          "created": "2026-05-27T11:21:52+02:00",
+          "description": "Add public embeddable badge endpoints or snippets that expose a status page or component's current public state without leaking internal resource details",
+          "acceptance": [
+            "Badge output renders the selected public page or component status, includes cache headers, and omits internal ids, monitor names, and private incident data"
+          ],
+          "path": "projects/orion/tickets/T-20260527-112152-4d04.md"
+        },
+        {
+          "id": "T-20260527-112154-d351",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111626-e3b0",
+          "title": "Add HTTP keyword monitor",
+          "status": "active",
+          "created": "2026-05-27T11:21:54+02:00",
+          "description": "Implement Core worker HTTP keyword checks for required and forbidden response body content, building on the HTTP status runner.",
+          "acceptance": [
+            "Keyword monitors can assert required and forbidden content, report match failure context with bounded body capture, and pass runner tests."
+          ],
+          "path": "projects/orion/tickets/T-20260527-112154-d351.md"
+        },
+        {
+          "id": "T-20260527-112200-1b85",
+          "project_key": "orion",
+          "goal_id": "G-20260527-112117-9e83",
+          "title": "Add public status page metadata",
+          "status": "active",
+          "created": "2026-05-27T11:22:00+02:00",
+          "description": "Add optional SEO and Open Graph metadata for published status pages so shared links describe the public page and current status clearly",
+          "acceptance": [
+            "Published status pages expose safe title, description, canonical URL, and Open Graph metadata with no internal resource names unless explicitly configured"
+          ],
+          "path": "projects/orion/tickets/T-20260527-112200-1b85.md"
+        },
+        {
+          "id": "T-20260527-112209-1875",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111626-e3b0",
+          "title": "Add expected status code monitor",
+          "status": "active",
+          "created": "2026-05-27T11:22:09+02:00",
+          "description": "Implement a Core worker HTTP expected-status monitor path for APIs and endpoints that should return specific status codes or code sets.",
+          "acceptance": [
+            "Expected-status monitors validate configured status codes, store status and latency metrics, show clear failure messages, and reuse safe HTTP runner behavior."
+          ],
+          "path": "projects/orion/tickets/T-20260527-112209-1875.md"
+        },
+        {
+          "id": "T-20260527-112218-7a97",
+          "project_key": "orion",
+          "goal_id": "G-20260527-112208-4a24",
+          "title": "Choose public status page serving model",
+          "status": "active",
+          "created": "2026-05-27T11:22:18+02:00",
+          "description": "Decide whether public status pages are served from Core's main binary, a separate public frontend bundle, or another deployment shape",
+          "acceptance": [
+            "A documented decision records the chosen serving model, routing implications, asset build path, authentication boundary, and deployment impact"
+          ],
+          "path": "projects/orion/tickets/T-20260527-112218-7a97.md"
+        },
+        {
+          "id": "T-20260527-112220-3115",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111626-e3b0",
+          "title": "Add TCP port monitor",
+          "status": "active",
+          "created": "2026-05-27T11:22:20+02:00",
+          "description": "Implement Core worker TCP port checks that attempt a bounded connection to a host and port and record connection timing and failure details.",
+          "acceptance": [
+            "TCP monitors handle success, refused connections, DNS failures, and timeouts with structured report payloads and runner tests."
+          ],
+          "path": "projects/orion/tickets/T-20260527-112220-3115.md"
+        },
+        {
+          "id": "T-20260527-112229-6a4d",
+          "project_key": "orion",
+          "goal_id": "G-20260527-112208-4a24",
+          "title": "Decide single versus multiple status pages",
+          "status": "active",
+          "created": "2026-05-27T11:22:29+02:00",
+          "description": "Decide whether the first status page release supports multiple pages or starts with one default page and later expands",
+          "acceptance": [
+            "A documented decision defines first-release page cardinality, slug behavior, Console navigation, API shape, and migration path if multiple pages are deferred"
+          ],
+          "path": "projects/orion/tickets/T-20260527-112229-6a4d.md"
+        },
+        {
+          "id": "T-20260527-112232-63ef",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111626-e3b0",
+          "title": "Add TLS certificate monitor",
+          "status": "active",
+          "created": "2026-05-27T11:22:32+02:00",
+          "description": "Implement Core worker TLS certificate checks that validate certificate chain behavior and expiration thresholds for HTTPS hosts.",
+          "acceptance": [
+            "TLS monitors report days remaining, issuer/subject summary, threshold failures, connection errors, and tests for healthy, expiring, and invalid certificates."
+          ],
+          "path": "projects/orion/tickets/T-20260527-112232-63ef.md"
+        },
+        {
+          "id": "T-20260527-112239-ec89",
+          "project_key": "orion",
+          "goal_id": "G-20260527-112208-4a24",
+          "title": "Decide public incident automation policy",
+          "status": "active",
+          "created": "2026-05-27T11:22:39+02:00",
+          "description": "Decide when internal incident changes should automatically create draft public incidents, suggest resolution updates, or require manual administrator action",
+          "acceptance": [
+            "A documented decision defines default incident publication policy, auto-draft behavior, auto-resolution suggestions, and any trusted-component automation rules"
+          ],
+          "path": "projects/orion/tickets/T-20260527-112239-ec89.md"
+        },
+        {
+          "id": "T-20260527-112242-b01d",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111626-e3b0",
+          "title": "Add DNS monitor",
+          "status": "active",
+          "created": "2026-05-27T11:22:42+02:00",
+          "description": "Implement Core worker DNS record checks for configured hostnames, record types, and expected values.",
+          "acceptance": [
+            "DNS monitors support A, AAAA, CNAME, TXT, MX, and NS checks, report resolver and answer context, handle lookup failures, and pass runner tests."
+          ],
+          "path": "projects/orion/tickets/T-20260527-112242-b01d.md"
+        },
+        {
+          "id": "T-20260527-112249-c572",
+          "project_key": "orion",
+          "goal_id": "G-20260527-112208-4a24",
+          "title": "Decide subscription infrastructure reuse",
+          "status": "active",
+          "created": "2026-05-27T11:22:49+02:00",
+          "description": "Decide whether public status page subscriptions reuse internal alert channel infrastructure or use a separate subscriber and delivery system",
+          "acceptance": [
+            "A documented decision compares reuse versus separation for privacy, delivery reliability, unsubscribe handling, rate limits, and future channel support"
+          ],
+          "path": "projects/orion/tickets/T-20260527-112249-c572.md"
+        },
+        {
+          "id": "T-20260527-112250-8206",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111626-e3b0",
+          "title": "Add ping monitor",
+          "status": "active",
+          "created": "2026-05-27T11:22:50+02:00",
+          "description": "Implement Core worker ping-style reachability checks with clear behavior for environments where ICMP is unavailable or not permitted.",
+          "acceptance": [
+            "Ping monitors record reachability and latency when supported, expose fallback or unsupported-state behavior when ICMP is unavailable, and tests cover success, timeout, and permission cases."
+          ],
+          "path": "projects/orion/tickets/T-20260527-112250-8206.md"
+        },
+        {
+          "id": "T-20260527-112259-4dfc",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111626-e3b0",
+          "title": "Add domain expiration monitor",
+          "status": "active",
+          "created": "2026-05-27T11:22:59+02:00",
+          "description": "Implement Core worker domain expiration checks using RDAP first and a documented fallback strategy for registries that do not expose usable data.",
+          "acceptance": [
+            "Domain monitors report expiration date and days remaining when available, fail clearly when data cannot be determined, and tests cover threshold and unavailable-data behavior."
+          ],
+          "path": "projects/orion/tickets/T-20260527-112259-4dfc.md"
+        },
+        {
+          "id": "T-20260527-112313-2c00",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111626-e3b0",
+          "title": "Add API request monitor",
+          "status": "active",
+          "created": "2026-05-27T11:23:13+02:00",
+          "description": "Implement Core worker API request checks with method, headers, body, auth secret references, expected status, and JSON response assertions.",
+          "acceptance": [
+            "API monitors can run configured requests, redact secrets, evaluate status and JSON assertions, store bounded response context, and pass tests for success, assertion failure, and transport failure."
+          ],
+          "path": "projects/orion/tickets/T-20260527-112313-2c00.md"
+        },
+        {
+          "id": "T-20260527-112337-7951",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111626-e3b0",
+          "title": "Add UDP monitor",
+          "status": "active",
+          "created": "2026-05-27T11:23:37+02:00",
+          "description": "Implement Core worker UDP checks with explicit payload and expected response semantics so UDP success is service-specific and not ambiguous.",
+          "acceptance": [
+            "UDP monitors send configured payloads, validate expected responses, report timeout or mismatch details, and document unsupported no-response semantics."
+          ],
+          "path": "projects/orion/tickets/T-20260527-112337-7951.md"
+        },
+        {
+          "id": "T-20260527-112340-65ca",
+          "project_key": "orion",
+          "goal_id": "G-20260527-112330-77a5",
+          "title": "Implement incident lifecycle action workflow",
+          "status": "active",
+          "created": "2026-05-27T11:23:40+02:00",
+          "description": "Add Core and Console support for incident acknowledge, manual resolve, mark covered, and reopen actions, including service methods, API routes, OpenAPI annotations, generated SDK updates, action dialogs, and query invalidation.",
+          "acceptance": [
+            "Incident detail exposes working lifecycle actions; Core persists lifecycle fields and incident events; OpenAPI and Console SDK are regenerated; tests cover allowed transitions, monitor active incident updates, and notification behavior."
+          ],
+          "path": "projects/orion/tickets/T-20260527-112340-65ca.md"
+        },
+        {
+          "id": "T-20260527-112346-811e",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111626-e3b0",
+          "title": "Add SMTP IMAP and POP monitors",
+          "status": "active",
+          "created": "2026-05-27T11:23:46+02:00",
+          "description": "Implement Core worker mail protocol availability checks for SMTP, IMAP, and POP with TLS mode, banner or capability checks, and optional credential support later.",
+          "acceptance": [
+            "Mail monitors can check configured protocol endpoints, report banner/capability and TLS context, handle auth-disabled mode safely, and pass protocol runner tests."
+          ],
+          "path": "projects/orion/tickets/T-20260527-112346-811e.md"
+        },
+        {
+          "id": "T-20260527-112401-3ba3",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111626-e3b0",
+          "title": "Add Playwright transaction monitor",
+          "status": "active",
+          "created": "2026-05-27T11:24:01+02:00",
+          "description": "Implement Core worker browser transaction checks using Playwright with sandboxing, timeout budgets, secret handling, screenshots on failure, and artifact retention limits.",
+          "acceptance": [
+            "Playwright monitors can run bounded transactions, capture failure artifacts, redact secrets, avoid overloading the worker, and pass tests or smoke checks for success and failure flows."
+          ],
+          "path": "projects/orion/tickets/T-20260527-112401-3ba3.md"
+        },
+        {
+          "id": "T-20260527-112402-35db",
+          "project_key": "orion",
+          "goal_id": "G-20260527-112352-1456",
+          "title": "Add covered incident suppression semantics",
+          "status": "active",
+          "created": "2026-05-27T11:24:02+02:00",
+          "description": "Teach incident reconciliation to honor active coverage after a user marks an incident covered, suppress duplicate incident creation until recovery or expiry, and record coverage-related audit events.",
+          "acceptance": [
+            "A covered still-failing monitor does not immediately open a duplicate incident; coverage ends on recovery or expiry; incident events record suppressed-by-coverage behavior; Console shows coverage state and offers an end coverage or reopen path."
+          ],
+          "path": "projects/orion/tickets/T-20260527-112402-35db.md"
+        },
+        {
+          "id": "T-20260527-112412-1f05",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111626-e3b0",
+          "title": "Add synthetic multi-step monitor",
+          "status": "active",
+          "created": "2026-05-27T11:24:12+02:00",
+          "description": "Implement Core worker synthetic multi-step checks for ordered API or browser steps with shared variables, assertions, stop-on-failure behavior, and bounded artifacts.",
+          "acceptance": [
+            "Synthetic monitors run ordered steps, preserve step-level results, fail with actionable context, respect timeout and artifact limits, and pass tests for success and step failure."
+          ],
+          "path": "projects/orion/tickets/T-20260527-112412-1f05.md"
+        },
+        {
+          "id": "T-20260527-112420-91df",
+          "project_key": "orion",
+          "goal_id": "G-20260527-112410-6db8",
+          "title": "Expose incident evidence and raw report inspection",
+          "status": "active",
+          "created": "2026-05-27T11:24:20+02:00",
+          "description": "Extend incident detail responses and Console views with normalized triggering report, latest report, related incidents, safe raw payload inspection, and timeline links back to reports or deliveries.",
+          "acceptance": [
+            "Incident detail shows trigger versus latest evidence; raw monitor report payloads are inspectable from incident and monitor history; timeline rows link to the relevant report or alert delivery; tests cover response shape and safe payload exposure."
+          ],
+          "path": "projects/orion/tickets/T-20260527-112420-91df.md"
+        },
+        {
+          "id": "T-20260527-112437-37f1",
+          "project_key": "orion",
+          "goal_id": "G-20260527-112426-5108",
+          "title": "Add incident analytics and lifecycle filters",
+          "status": "active",
+          "created": "2026-05-27T11:24:37+02:00",
+          "description": "Add Core filters and aggregate data for incident resolution kind, actor, covered state, recurring monitor failures, notification reliability, and mean time to acknowledge or resolve; surface the most useful insights in Console.",
+          "acceptance": [
+            "Incidents can be filtered by resolution kind, actor, and covered state; Core exposes aggregate metrics for recurring failures and lifecycle timing; Console summary or detail views show actionable incident insights without replacing the operational tables."
+          ],
+          "path": "projects/orion/tickets/T-20260527-112437-37f1.md"
         }
       ],
       "events": [
@@ -7359,6 +7929,898 @@
           "object_id": "T-20260527-111933-f32c",
           "summary": "Created ticket T-20260527-111933-f32c.",
           "path": "projects/orion/events/2026/05/E-20260527-111933-casprine-ec4d.md"
+        },
+        {
+          "id": "E-20260527-111943-casprine-9de8",
+          "time": "2026-05-27T11:19:43+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111943-73e5",
+          "summary": "Created ticket T-20260527-111943-73e5.",
+          "path": "projects/orion/events/2026/05/E-20260527-111943-casprine-9de8.md"
+        },
+        {
+          "id": "E-20260527-111945-casprine-62b6",
+          "time": "2026-05-27T11:19:45+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111945-2b55",
+          "summary": "Created ticket T-20260527-111945-2b55.",
+          "path": "projects/orion/events/2026/05/E-20260527-111945-casprine-62b6.md"
+        },
+        {
+          "id": "E-20260527-111953-casprine-960d",
+          "time": "2026-05-27T11:19:53+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111953-42db",
+          "summary": "Created ticket T-20260527-111953-42db.",
+          "path": "projects/orion/events/2026/05/E-20260527-111953-casprine-960d.md"
+        },
+        {
+          "id": "E-20260527-111956-casprine-83d5",
+          "time": "2026-05-27T11:19:56+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111956-14f8",
+          "summary": "Created ticket T-20260527-111956-14f8.",
+          "path": "projects/orion/events/2026/05/E-20260527-111956-casprine-83d5.md"
+        },
+        {
+          "id": "E-20260527-112007-casprine-561e",
+          "time": "2026-05-27T11:20:07+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112007-e8ac",
+          "summary": "Created ticket T-20260527-112007-e8ac.",
+          "path": "projects/orion/events/2026/05/E-20260527-112007-casprine-561e.md"
+        },
+        {
+          "id": "E-20260527-112015-casprine-cedd",
+          "time": "2026-05-27T11:20:15+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260527-112015-773b",
+          "summary": "Created goal G-20260527-112015-773b.",
+          "path": "projects/orion/events/2026/05/E-20260527-112015-casprine-cedd.md"
+        },
+        {
+          "id": "E-20260527-112022-casprine-1553",
+          "time": "2026-05-27T11:20:22+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112022-51a5",
+          "summary": "Created ticket T-20260527-112022-51a5.",
+          "path": "projects/orion/events/2026/05/E-20260527-112022-casprine-1553.md"
+        },
+        {
+          "id": "E-20260527-112030-casprine-d777",
+          "time": "2026-05-27T11:20:30+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112030-ec3c",
+          "summary": "Created ticket T-20260527-112030-ec3c.",
+          "path": "projects/orion/events/2026/05/E-20260527-112030-casprine-d777.md"
+        },
+        {
+          "id": "E-20260527-112035-casprine-10dc",
+          "time": "2026-05-27T11:20:35+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112035-ca71",
+          "summary": "Created ticket T-20260527-112035-ca71.",
+          "path": "projects/orion/events/2026/05/E-20260527-112035-casprine-10dc.md"
+        },
+        {
+          "id": "E-20260527-112042-casprine-cb7b",
+          "time": "2026-05-27T11:20:42+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112042-e81a",
+          "summary": "Created ticket T-20260527-112042-e81a.",
+          "path": "projects/orion/events/2026/05/E-20260527-112042-casprine-cb7b.md"
+        },
+        {
+          "id": "E-20260527-112050-casprine-2e6a",
+          "time": "2026-05-27T11:20:50+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112050-0cfb",
+          "summary": "Created ticket T-20260527-112050-0cfb.",
+          "path": "projects/orion/events/2026/05/E-20260527-112050-casprine-2e6a.md"
+        },
+        {
+          "id": "E-20260527-112053-casprine-136c",
+          "time": "2026-05-27T11:20:53+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112053-2865",
+          "summary": "Created ticket T-20260527-112053-2865.",
+          "path": "projects/orion/events/2026/05/E-20260527-112053-casprine-136c.md"
+        },
+        {
+          "id": "E-20260527-112101-casprine-35ea",
+          "time": "2026-05-27T11:21:01+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112101-9b65",
+          "summary": "Created ticket T-20260527-112101-9b65.",
+          "path": "projects/orion/events/2026/05/E-20260527-112101-casprine-35ea.md"
+        },
+        {
+          "id": "E-20260527-112103-casprine-a1ff",
+          "time": "2026-05-27T11:21:03+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112103-2087",
+          "summary": "Created ticket T-20260527-112103-2087.",
+          "path": "projects/orion/events/2026/05/E-20260527-112103-casprine-a1ff.md"
+        },
+        {
+          "id": "E-20260527-112117-casprine-2930",
+          "time": "2026-05-27T11:21:17+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260527-112117-9e83",
+          "summary": "Created goal G-20260527-112117-9e83.",
+          "path": "projects/orion/events/2026/05/E-20260527-112117-casprine-2930.md"
+        },
+        {
+          "id": "E-20260527-112118-casprine-f9a8",
+          "time": "2026-05-27T11:21:18+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112118-7764",
+          "summary": "Created ticket T-20260527-112118-7764.",
+          "path": "projects/orion/events/2026/05/E-20260527-112118-casprine-f9a8.md"
+        },
+        {
+          "id": "E-20260527-112126-casprine-a72b",
+          "time": "2026-05-27T11:21:26+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112126-30e2",
+          "summary": "Created ticket T-20260527-112126-30e2.",
+          "path": "projects/orion/events/2026/05/E-20260527-112126-casprine-a72b.md"
+        },
+        {
+          "id": "E-20260527-112139-casprine-86c0",
+          "time": "2026-05-27T11:21:39+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112139-910e",
+          "summary": "Created ticket T-20260527-112139-910e.",
+          "path": "projects/orion/events/2026/05/E-20260527-112139-casprine-86c0.md"
+        },
+        {
+          "id": "E-20260527-112143-casprine-f8a1",
+          "time": "2026-05-27T11:21:43+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112143-0a3a",
+          "summary": "Created ticket T-20260527-112143-0a3a.",
+          "path": "projects/orion/events/2026/05/E-20260527-112143-casprine-f8a1.md"
+        },
+        {
+          "id": "E-20260527-112152-casprine-78a6",
+          "time": "2026-05-27T11:21:52+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112152-4d04",
+          "summary": "Created ticket T-20260527-112152-4d04.",
+          "path": "projects/orion/events/2026/05/E-20260527-112152-casprine-78a6.md"
+        },
+        {
+          "id": "E-20260527-112154-casprine-cb72",
+          "time": "2026-05-27T11:21:54+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112154-d351",
+          "summary": "Created ticket T-20260527-112154-d351.",
+          "path": "projects/orion/events/2026/05/E-20260527-112154-casprine-cb72.md"
+        },
+        {
+          "id": "E-20260527-112200-casprine-5ee1",
+          "time": "2026-05-27T11:22:00+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112200-1b85",
+          "summary": "Created ticket T-20260527-112200-1b85.",
+          "path": "projects/orion/events/2026/05/E-20260527-112200-casprine-5ee1.md"
+        },
+        {
+          "id": "E-20260527-112208-casprine-6982",
+          "time": "2026-05-27T11:22:08+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260527-112208-4a24",
+          "summary": "Created goal G-20260527-112208-4a24.",
+          "path": "projects/orion/events/2026/05/E-20260527-112208-casprine-6982.md"
+        },
+        {
+          "id": "E-20260527-112209-casprine-97d6",
+          "time": "2026-05-27T11:22:09+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112209-1875",
+          "summary": "Created ticket T-20260527-112209-1875.",
+          "path": "projects/orion/events/2026/05/E-20260527-112209-casprine-97d6.md"
+        },
+        {
+          "id": "E-20260527-112218-casprine-5f67",
+          "time": "2026-05-27T11:22:18+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112218-7a97",
+          "summary": "Created ticket T-20260527-112218-7a97.",
+          "path": "projects/orion/events/2026/05/E-20260527-112218-casprine-5f67.md"
+        },
+        {
+          "id": "E-20260527-112220-casprine-62d9",
+          "time": "2026-05-27T11:22:20+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112220-3115",
+          "summary": "Created ticket T-20260527-112220-3115.",
+          "path": "projects/orion/events/2026/05/E-20260527-112220-casprine-62d9.md"
+        },
+        {
+          "id": "E-20260527-112229-casprine-c3c5",
+          "time": "2026-05-27T11:22:29+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112229-6a4d",
+          "summary": "Created ticket T-20260527-112229-6a4d.",
+          "path": "projects/orion/events/2026/05/E-20260527-112229-casprine-c3c5.md"
+        },
+        {
+          "id": "E-20260527-112232-casprine-e0b5",
+          "time": "2026-05-27T11:22:32+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112232-63ef",
+          "summary": "Created ticket T-20260527-112232-63ef.",
+          "path": "projects/orion/events/2026/05/E-20260527-112232-casprine-e0b5.md"
+        },
+        {
+          "id": "E-20260527-112239-casprine-a301",
+          "time": "2026-05-27T11:22:39+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112239-ec89",
+          "summary": "Created ticket T-20260527-112239-ec89.",
+          "path": "projects/orion/events/2026/05/E-20260527-112239-casprine-a301.md"
+        },
+        {
+          "id": "E-20260527-112242-casprine-ae2d",
+          "time": "2026-05-27T11:22:42+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112242-b01d",
+          "summary": "Created ticket T-20260527-112242-b01d.",
+          "path": "projects/orion/events/2026/05/E-20260527-112242-casprine-ae2d.md"
+        },
+        {
+          "id": "E-20260527-112249-casprine-41f5",
+          "time": "2026-05-27T11:22:49+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112249-c572",
+          "summary": "Created ticket T-20260527-112249-c572.",
+          "path": "projects/orion/events/2026/05/E-20260527-112249-casprine-41f5.md"
+        },
+        {
+          "id": "E-20260527-112250-casprine-7694",
+          "time": "2026-05-27T11:22:50+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112250-8206",
+          "summary": "Created ticket T-20260527-112250-8206.",
+          "path": "projects/orion/events/2026/05/E-20260527-112250-casprine-7694.md"
+        },
+        {
+          "id": "E-20260527-112259-casprine-29db",
+          "time": "2026-05-27T11:22:59+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112259-4dfc",
+          "summary": "Created ticket T-20260527-112259-4dfc.",
+          "path": "projects/orion/events/2026/05/E-20260527-112259-casprine-29db.md"
+        },
+        {
+          "id": "E-20260527-112307-casprine-37d0",
+          "time": "2026-05-27T11:23:07+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260527-111650-bbfc",
+          "summary": "Created phased Maat backlog from docs/architecture/status-pages.md covering manual pages, incident integration, uptime/history, subscriptions, customization, and open decisions",
+          "path": "projects/orion/events/2026/05/E-20260527-112307-casprine-37d0.md"
+        },
+        {
+          "id": "E-20260527-112313-casprine-2e9a",
+          "time": "2026-05-27T11:23:13+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112313-2c00",
+          "summary": "Created ticket T-20260527-112313-2c00.",
+          "path": "projects/orion/events/2026/05/E-20260527-112313-casprine-2e9a.md"
+        },
+        {
+          "id": "E-20260527-112319-casprine-a8a4",
+          "time": "2026-05-27T11:23:19+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260527-111650-bbfc",
+          "summary": "Completed ticket T-20260527-111650-bbfc.",
+          "evidence": [
+            "Created status-page rollout goals G-20260527-111722-d43b, G-20260527-111831-92fb, G-20260527-111916-0d5c, G-20260527-112015-773b, G-20260527-112117-9e83, and G-20260527-112208-4a24 with implementation and decision tickets"
+          ],
+          "path": "projects/orion/events/2026/05/E-20260527-112319-casprine-a8a4.md"
+        },
+        {
+          "id": "E-20260527-112330-casprine-8dbb",
+          "time": "2026-05-27T11:23:30+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260527-112330-77a5",
+          "summary": "Created goal G-20260527-112330-77a5.",
+          "path": "projects/orion/events/2026/05/E-20260527-112330-casprine-8dbb.md"
+        },
+        {
+          "id": "E-20260527-112336-codex-alert-core-worker-3022",
+          "time": "2026-05-27T11:23:36+02:00",
+          "actor": "codex-alert-core-worker",
+          "project_key": "orion",
+          "type": "ticket.claimed",
+          "object_id": "T-20260527-111635-c668",
+          "expires": "2026-05-27T13:23:36+02:00",
+          "summary": "Claimed ticket T-20260527-111635-c668 until 2026-05-27T13:23:36+02:00.",
+          "path": "projects/orion/events/2026/05/E-20260527-112336-codex-alert-core-worker-3022.md"
+        },
+        {
+          "id": "E-20260527-112337-casprine-94ca",
+          "time": "2026-05-27T11:23:37+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112337-7951",
+          "summary": "Created ticket T-20260527-112337-7951.",
+          "path": "projects/orion/events/2026/05/E-20260527-112337-casprine-94ca.md"
+        },
+        {
+          "id": "E-20260527-112340-casprine-bda1",
+          "time": "2026-05-27T11:23:40+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112340-65ca",
+          "summary": "Created ticket T-20260527-112340-65ca.",
+          "path": "projects/orion/events/2026/05/E-20260527-112340-casprine-bda1.md"
+        },
+        {
+          "id": "E-20260527-112346-casprine-3a67",
+          "time": "2026-05-27T11:23:46+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112346-811e",
+          "summary": "Created ticket T-20260527-112346-811e.",
+          "path": "projects/orion/events/2026/05/E-20260527-112346-casprine-3a67.md"
+        },
+        {
+          "id": "E-20260527-112347-codex-alert-console-worker-48ed",
+          "time": "2026-05-27T11:23:47+02:00",
+          "actor": "codex-alert-console-worker",
+          "project_key": "orion",
+          "type": "ticket.claimed",
+          "object_id": "T-20260527-111635-c668",
+          "expires": "2026-05-27T13:23:47+02:00",
+          "summary": "Claimed ticket T-20260527-111635-c668 until 2026-05-27T13:23:47+02:00.",
+          "path": "projects/orion/events/2026/05/E-20260527-112347-codex-alert-console-worker-48ed.md"
+        },
+        {
+          "id": "E-20260527-112352-casprine-1279",
+          "time": "2026-05-27T11:23:52+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260527-112352-1456",
+          "summary": "Created goal G-20260527-112352-1456.",
+          "path": "projects/orion/events/2026/05/E-20260527-112352-casprine-1279.md"
+        },
+        {
+          "id": "E-20260527-112401-casprine-0099",
+          "time": "2026-05-27T11:24:01+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112401-3ba3",
+          "summary": "Created ticket T-20260527-112401-3ba3.",
+          "path": "projects/orion/events/2026/05/E-20260527-112401-casprine-0099.md"
+        },
+        {
+          "id": "E-20260527-112402-casprine-77d1",
+          "time": "2026-05-27T11:24:02+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112402-35db",
+          "summary": "Created ticket T-20260527-112402-35db.",
+          "path": "projects/orion/events/2026/05/E-20260527-112402-casprine-77d1.md"
+        },
+        {
+          "id": "E-20260527-112407-codex-alert-smtp-worker-40fe",
+          "time": "2026-05-27T11:24:07+02:00",
+          "actor": "codex-alert-smtp-worker",
+          "project_key": "orion",
+          "type": "ticket.claimed",
+          "object_id": "T-20260527-111643-1e77",
+          "expires": "2026-05-27T13:24:07+02:00",
+          "summary": "Claimed ticket T-20260527-111643-1e77 until 2026-05-27T13:24:07+02:00.",
+          "path": "projects/orion/events/2026/05/E-20260527-112407-codex-alert-smtp-worker-40fe.md"
+        },
+        {
+          "id": "E-20260527-112410-casprine-74b2",
+          "time": "2026-05-27T11:24:10+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260527-112410-6db8",
+          "summary": "Created goal G-20260527-112410-6db8.",
+          "path": "projects/orion/events/2026/05/E-20260527-112410-casprine-74b2.md"
+        },
+        {
+          "id": "E-20260527-112412-casprine-2dba",
+          "time": "2026-05-27T11:24:12+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112412-1f05",
+          "summary": "Created ticket T-20260527-112412-1f05.",
+          "path": "projects/orion/events/2026/05/E-20260527-112412-casprine-2dba.md"
+        },
+        {
+          "id": "E-20260527-112420-casprine-772e",
+          "time": "2026-05-27T11:24:20+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112420-91df",
+          "summary": "Created ticket T-20260527-112420-91df.",
+          "path": "projects/orion/events/2026/05/E-20260527-112420-casprine-772e.md"
+        },
+        {
+          "id": "E-20260527-112425-codex-alert-group-worker-45b9",
+          "time": "2026-05-27T11:24:25+02:00",
+          "actor": "codex-alert-group-worker",
+          "project_key": "orion",
+          "type": "ticket.claimed",
+          "object_id": "T-20260527-111704-c955",
+          "expires": "2026-05-27T13:24:25+02:00",
+          "summary": "Claimed ticket T-20260527-111704-c955 until 2026-05-27T13:24:25+02:00.",
+          "path": "projects/orion/events/2026/05/E-20260527-112425-codex-alert-group-worker-45b9.md"
+        },
+        {
+          "id": "E-20260527-112425-codex-alert-route-worker-1f21",
+          "time": "2026-05-27T11:24:25+02:00",
+          "actor": "codex-alert-route-worker",
+          "project_key": "orion",
+          "type": "ticket.claimed",
+          "object_id": "T-20260527-111652-b01f",
+          "expires": "2026-05-27T13:24:25+02:00",
+          "summary": "Claimed ticket T-20260527-111652-b01f until 2026-05-27T13:24:25+02:00.",
+          "path": "projects/orion/events/2026/05/E-20260527-112425-codex-alert-route-worker-1f21.md"
+        },
+        {
+          "id": "E-20260527-112426-casprine-6329",
+          "time": "2026-05-27T11:24:26+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260527-112426-5108",
+          "summary": "Created goal G-20260527-112426-5108.",
+          "path": "projects/orion/events/2026/05/E-20260527-112426-casprine-6329.md"
+        },
+        {
+          "id": "E-20260527-112437-casprine-cae2",
+          "time": "2026-05-27T11:24:37+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-112437-37f1",
+          "summary": "Created ticket T-20260527-112437-37f1.",
+          "path": "projects/orion/events/2026/05/E-20260527-112437-casprine-cae2.md"
+        },
+        {
+          "id": "E-20260527-112444-casprine-febc",
+          "time": "2026-05-27T11:24:44+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260527-111635-c668",
+          "summary": "Claimed Console alert destination UI work; found webhook-only filtering in alerts view and no generated alert test hook in Console SDK.",
+          "path": "projects/orion/events/2026/05/E-20260527-112444-casprine-febc.md"
+        },
+        {
+          "id": "E-20260527-112446-codex-alert-queue-worker-0cbb",
+          "time": "2026-05-27T11:24:46+02:00",
+          "actor": "codex-alert-queue-worker",
+          "project_key": "orion",
+          "type": "ticket.claimed",
+          "object_id": "T-20260527-111712-cd6c",
+          "expires": "2026-05-27T13:24:46+02:00",
+          "summary": "Claimed ticket T-20260527-111712-cd6c until 2026-05-27T13:24:46+02:00.",
+          "path": "projects/orion/events/2026/05/E-20260527-112446-codex-alert-queue-worker-0cbb.md"
+        },
+        {
+          "id": "E-20260527-112452-casprine-7d85",
+          "time": "2026-05-27T11:24:52+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260527-111652-b01f",
+          "summary": "Sponsored agent Dirac (019e68bf-3e0d-7f73-bc15-9b2339deadc7) for Phase 3 alert route and dry-run work.",
+          "path": "projects/orion/events/2026/05/E-20260527-112452-casprine-7d85.md"
+        },
+        {
+          "id": "E-20260527-112452-casprine-d64b",
+          "time": "2026-05-27T11:24:52+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260527-111643-1e77",
+          "summary": "Sponsored agent Singer (019e68bf-1200-73e2-933f-d8f52d24092b) for Phase 2 SMTP service and email destination work.",
+          "path": "projects/orion/events/2026/05/E-20260527-112452-casprine-d64b.md"
+        },
+        {
+          "id": "E-20260527-112457-casprine-b598",
+          "time": "2026-05-27T11:24:57+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260527-111635-c668",
+          "summary": "Sponsored agents for Phase 1: Laplace (019e68be-94c2-7333-b190-7338e4da9952) on Core alert test/filter support and Tesla (019e68be-ba83-7ef2-bb3d-9629949aa5e5) on Console destination UI.",
+          "path": "projects/orion/events/2026/05/E-20260527-112457-casprine-b598.md"
+        },
+        {
+          "id": "E-20260527-112516-casprine-1147",
+          "time": "2026-05-27T11:25:16+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260527-111712-cd6c",
+          "summary": "Sponsored agent Gauss (019e68bf-99fd-75f1-b743-2b0338862c1c) for Phase 5 alert delivery queue and retry attempt work.",
+          "path": "projects/orion/events/2026/05/E-20260527-112516-casprine-1147.md"
+        },
+        {
+          "id": "E-20260527-112516-casprine-f8ef",
+          "time": "2026-05-27T11:25:16+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260527-111722-5dc7",
+          "summary": "Phase 6 rich payload/template agent not yet sponsored because the active sub-agent thread limit was reached. Sponsor this ticket as soon as an earlier alert worker finishes or is closed.",
+          "path": "projects/orion/events/2026/05/E-20260527-112516-casprine-f8ef.md"
+        },
+        {
+          "id": "E-20260527-112517-casprine-38df",
+          "time": "2026-05-27T11:25:17+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260527-111704-c955",
+          "summary": "Sponsored agent Faraday (019e68bf-6972-70d0-b4f6-e43d52c0341f) for Phase 4 alert grouping policy and summary work.",
+          "path": "projects/orion/events/2026/05/E-20260527-112517-casprine-38df.md"
+        },
+        {
+          "id": "E-20260527-112520-casprine-36c7",
+          "time": "2026-05-27T11:25:20+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260527-111643-1e77",
+          "summary": "Inspected Core alert channel model; implementing additive SMTP service and email destination tables/APIs while preserving existing alert_channels delivery compatibility.",
+          "path": "projects/orion/events/2026/05/E-20260527-112520-casprine-36c7.md"
+        },
+        {
+          "id": "E-20260527-112532-casprine-1603",
+          "time": "2026-05-27T11:25:32+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260527-111350-220a",
+          "summary": "Converted docs/plans/core-managed-monitors.md milestones into row tables and loaded six milestone goals plus ticket rows into Maat. Repo commit: 1114ced docs(core): load monitor milestones.",
+          "path": "projects/orion/events/2026/05/E-20260527-112532-casprine-1603.md"
+        },
+        {
+          "id": "E-20260527-112546-casprine-14d5",
+          "time": "2026-05-27T11:25:46+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260527-111350-220a",
+          "summary": "Completed ticket T-20260527-111350-220a.",
+          "evidence": [
+            "Converted docs/plans/core-managed-monitors.md milestones into row tables, loaded six milestone goals and 36 ticket rows into Maat, validated Maat, and committed 1114ced docs(core): load monitor milestones."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260527-112546-casprine-14d5.md"
+        },
+        {
+          "id": "E-20260527-112653-casprine-fd41",
+          "time": "2026-05-27T11:26:53+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260527-111635-c668",
+          "summary": "Completed ticket T-20260527-111635-c668.",
+          "evidence": [
+            "Committed a08c9fe; npm run build and npm run lint passed in apps/console."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260527-112653-casprine-fd41.md"
+        },
+        {
+          "id": "E-20260527-112807-casprine-c8c7",
+          "time": "2026-05-27T11:28:07+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260527-111635-c668",
+          "summary": "Added Core alert delivery filters and manual alert channel test path; adding focused service and integration coverage now.",
+          "path": "projects/orion/events/2026/05/E-20260527-112807-casprine-c8c7.md"
+        },
+        {
+          "id": "E-20260527-112855-codex-alert-template-worker-a1fb",
+          "time": "2026-05-27T11:28:55+02:00",
+          "actor": "codex-alert-template-worker",
+          "project_key": "orion",
+          "type": "ticket.claimed",
+          "object_id": "T-20260527-111722-5dc7",
+          "expires": "2026-05-27T13:28:55+02:00",
+          "summary": "Claimed ticket T-20260527-111722-5dc7 until 2026-05-27T13:28:55+02:00.",
+          "path": "projects/orion/events/2026/05/E-20260527-112855-codex-alert-template-worker-a1fb.md"
+        },
+        {
+          "id": "E-20260527-113020-casprine-7e85",
+          "time": "2026-05-27T11:30:20+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260527-111722-5dc7",
+          "summary": "Claimed alert template slice; found concurrent Core alert route/SMTP/retry edits, proceeding with backwards-compatible payload v1 builder and webhook signing helper without Console changes.",
+          "path": "projects/orion/events/2026/05/E-20260527-113020-casprine-7e85.md"
+        },
+        {
+          "id": "E-20260527-113607-casprine-eca2",
+          "time": "2026-05-27T11:36:07+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260527-111635-c668",
+          "summary": "Completed ticket T-20260527-111635-c668.",
+          "evidence": [
+            "Implemented Core alert channel test endpoint and delivery filters; verified with GOCACHE=/private/tmp/orion-go-cache go test ./internal/service ./internal/api (passed). Not committed because workspace contains overlapping alert changes from other agents."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260527-113607-casprine-eca2.md"
+        },
+        {
+          "id": "E-20260527-113614-casprine-49c5",
+          "time": "2026-05-27T11:36:14+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260527-111712-cd6c",
+          "summary": "Implemented Core alert delivery attempt history with retry metadata and ProcessDueDeliveries hook; focused Core service/db/api tests pass.",
+          "path": "projects/orion/events/2026/05/E-20260527-113614-casprine-49c5.md"
+        },
+        {
+          "id": "E-20260527-113617-casprine-6ac5",
+          "time": "2026-05-27T11:36:17+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260527-111704-c955",
+          "summary": "Implemented Core alert grouping model and service decisions; tests passing in apps/core.",
+          "path": "projects/orion/events/2026/05/E-20260527-113617-casprine-6ac5.md"
+        },
+        {
+          "id": "E-20260527-113641-casprine-7f99",
+          "time": "2026-05-27T11:36:41+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260527-111704-c955",
+          "summary": "Completed ticket T-20260527-111704-c955.",
+          "evidence": [
+            "Implemented Core alert_groups/alert_group_members persistence and grouping decisions; verified with GOCACHE=/private/tmp/orion-go-cache go test ./... in apps/core."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260527-113641-casprine-7f99.md"
+        },
+        {
+          "id": "E-20260527-113706-casprine-1dfd",
+          "time": "2026-05-27T11:37:06+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260527-111722-5dc7",
+          "summary": "Completed ticket T-20260527-111722-5dc7.",
+          "evidence": [
+            "Implemented alert payload v1 builder/template and webhook signature helper; verified with GOCACHE=/private/tmp/orion-go-cache go test ./... from apps/core (passed)."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260527-113706-casprine-1dfd.md"
+        },
+        {
+          "id": "E-20260527-113715-casprine-0c95",
+          "time": "2026-05-27T11:37:15+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260527-111712-cd6c",
+          "summary": "Completed ticket T-20260527-111712-cd6c.",
+          "evidence": [
+            "Implemented delivery attempts, retry metadata, ProcessDueDeliveries integration hook, attempt history API responses; verified with GOCACHE=/private/tmp/orion-go-cache GOMODCACHE=/private/tmp/orion-go-mod go test ./... in apps/core."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260527-113715-casprine-0c95.md"
+        },
+        {
+          "id": "E-20260527-113722-casprine-be65",
+          "time": "2026-05-27T11:37:22+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260527-111643-1e77",
+          "summary": "Implemented additive Core SMTP service and email destination schema/API/service support; verified db/service/api packages with GOCACHE=/private/tmp/orion-go-cache go test ./internal/db ./internal/service ./internal/api.",
+          "path": "projects/orion/events/2026/05/E-20260527-113722-casprine-be65.md"
+        },
+        {
+          "id": "E-20260527-113732-casprine-6c3b",
+          "time": "2026-05-27T11:37:32+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260527-111643-1e77",
+          "summary": "Completed ticket T-20260527-111643-1e77.",
+          "evidence": [
+            "Core SMTP service/email destination migration, models, APIs, delivery projection, OpenAPI regeneration, and tests: GOCACHE=/private/tmp/orion-go-cache go test ./internal/db ./internal/service ./internal/api"
+          ],
+          "path": "projects/orion/events/2026/05/E-20260527-113732-casprine-6c3b.md"
+        },
+        {
+          "id": "E-20260527-113750-casprine-782f",
+          "time": "2026-05-27T11:37:50+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260527-111652-b01f",
+          "summary": "Implemented Core alert_routes model/API plus dry-run evaluator; full Core tests pass with loopback allowed; commit deferred because worktree contains co-located uncommitted SMTP/delivery/grouping changes from other workers.",
+          "path": "projects/orion/events/2026/05/E-20260527-113750-casprine-782f.md"
+        },
+        {
+          "id": "E-20260527-113804-casprine-7b67",
+          "time": "2026-05-27T11:38:04+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260527-111652-b01f",
+          "summary": "Completed ticket T-20260527-111652-b01f.",
+          "evidence": [
+            "Implemented Core alert_routes model/API/service dry-run evaluator; verified with GOCACHE=/private/tmp/orion-go-cache go test ./... in apps/core (loopback escalation for httptest); commit deferred due mixed uncommitted alert changes from other workers."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260527-113804-casprine-7b67.md"
+        },
+        {
+          "id": "E-20260527-114159-casprine-ded5",
+          "time": "2026-05-27T11:41:59+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260527-111635-c668",
+          "summary": "Completed ticket T-20260527-111635-c668.",
+          "evidence": [
+            "Implemented by Console commit a08c9fe and integrated Core commit e146c38; verified go test ./... in apps/core, pnpm run build, and pnpm run lint in apps/console."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260527-114159-casprine-ded5.md"
+        },
+        {
+          "id": "E-20260527-114217-casprine-4b79",
+          "time": "2026-05-27T11:42:17+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260527-111643-1e77",
+          "summary": "Completed ticket T-20260527-111643-1e77.",
+          "evidence": [
+            "Implemented reusable SMTP services and email destinations in Core commit e146c38; verified go test ./... in apps/core and regenerated OpenAPI/SDK."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260527-114217-casprine-4b79.md"
+        },
+        {
+          "id": "E-20260527-114230-casprine-a105",
+          "time": "2026-05-27T11:42:30+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260527-111652-b01f",
+          "summary": "Completed ticket T-20260527-111652-b01f.",
+          "evidence": [
+            "Implemented alert route CRUD and dry-run route evaluation in Core commit e146c38; verified go test ./... in apps/core and regenerated OpenAPI/SDK."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260527-114230-casprine-a105.md"
+        },
+        {
+          "id": "E-20260527-114240-casprine-78cd",
+          "time": "2026-05-27T11:42:40+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260527-111704-c955",
+          "summary": "Completed ticket T-20260527-111704-c955.",
+          "evidence": [
+            "Implemented alert grouping models and grouped delivery behavior in Core commit e146c38; verified go test ./... in apps/core."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260527-114240-casprine-78cd.md"
+        },
+        {
+          "id": "E-20260527-114252-casprine-7ebf",
+          "time": "2026-05-27T11:42:52+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260527-111712-cd6c",
+          "summary": "Completed ticket T-20260527-111712-cd6c.",
+          "evidence": [
+            "Implemented delivery attempts, retry metadata, and ProcessDueDeliveries hook in Core commit e146c38; verified go test ./... in apps/core."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260527-114252-casprine-7ebf.md"
+        },
+        {
+          "id": "E-20260527-114306-casprine-4c07",
+          "time": "2026-05-27T11:43:06+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260527-111722-5dc7",
+          "summary": "Completed ticket T-20260527-111722-5dc7.",
+          "evidence": [
+            "Implemented alert payload v1, shared email rendering, and webhook signing helper in Core commit e146c38; verified go test ./... in apps/core."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260527-114306-casprine-4c07.md"
         }
       ]
     }
@@ -10713,6 +12175,510 @@
       "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111933-casprine-ec4d |\n| Time | 2026-05-27T11:19:33+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111933-f32c |\n\n## Summary\n\nCreated ticket T-20260527-111933-f32c.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111943-casprine-9de8.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111943-casprine-9de8 |\n| Time | 2026-05-27T11:19:43+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111943-73e5 |\n\n## Summary\n\nCreated ticket T-20260527-111943-73e5.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111945-casprine-62b6.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111945-casprine-62b6 |\n| Time | 2026-05-27T11:19:45+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111945-2b55 |\n\n## Summary\n\nCreated ticket T-20260527-111945-2b55.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111953-casprine-960d.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111953-casprine-960d |\n| Time | 2026-05-27T11:19:53+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111953-42db |\n\n## Summary\n\nCreated ticket T-20260527-111953-42db.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111956-casprine-83d5.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111956-casprine-83d5 |\n| Time | 2026-05-27T11:19:56+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111956-14f8 |\n\n## Summary\n\nCreated ticket T-20260527-111956-14f8.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112007-casprine-561e.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112007-casprine-561e |\n| Time | 2026-05-27T11:20:07+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112007-e8ac |\n\n## Summary\n\nCreated ticket T-20260527-112007-e8ac.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112015-casprine-cedd.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112015-casprine-cedd |\n| Time | 2026-05-27T11:20:15+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260527-112015-773b |\n\n## Summary\n\nCreated goal G-20260527-112015-773b.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112022-casprine-1553.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112022-casprine-1553 |\n| Time | 2026-05-27T11:20:22+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112022-51a5 |\n\n## Summary\n\nCreated ticket T-20260527-112022-51a5.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112030-casprine-d777.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112030-casprine-d777 |\n| Time | 2026-05-27T11:20:30+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112030-ec3c |\n\n## Summary\n\nCreated ticket T-20260527-112030-ec3c.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112035-casprine-10dc.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112035-casprine-10dc |\n| Time | 2026-05-27T11:20:35+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112035-ca71 |\n\n## Summary\n\nCreated ticket T-20260527-112035-ca71.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112042-casprine-cb7b.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112042-casprine-cb7b |\n| Time | 2026-05-27T11:20:42+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112042-e81a |\n\n## Summary\n\nCreated ticket T-20260527-112042-e81a.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112050-casprine-2e6a.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112050-casprine-2e6a |\n| Time | 2026-05-27T11:20:50+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112050-0cfb |\n\n## Summary\n\nCreated ticket T-20260527-112050-0cfb.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112053-casprine-136c.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112053-casprine-136c |\n| Time | 2026-05-27T11:20:53+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112053-2865 |\n\n## Summary\n\nCreated ticket T-20260527-112053-2865.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112101-casprine-35ea.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112101-casprine-35ea |\n| Time | 2026-05-27T11:21:01+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112101-9b65 |\n\n## Summary\n\nCreated ticket T-20260527-112101-9b65.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112103-casprine-a1ff.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112103-casprine-a1ff |\n| Time | 2026-05-27T11:21:03+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112103-2087 |\n\n## Summary\n\nCreated ticket T-20260527-112103-2087.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112117-casprine-2930.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112117-casprine-2930 |\n| Time | 2026-05-27T11:21:17+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260527-112117-9e83 |\n\n## Summary\n\nCreated goal G-20260527-112117-9e83.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112118-casprine-f9a8.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112118-casprine-f9a8 |\n| Time | 2026-05-27T11:21:18+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112118-7764 |\n\n## Summary\n\nCreated ticket T-20260527-112118-7764.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112126-casprine-a72b.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112126-casprine-a72b |\n| Time | 2026-05-27T11:21:26+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112126-30e2 |\n\n## Summary\n\nCreated ticket T-20260527-112126-30e2.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112139-casprine-86c0.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112139-casprine-86c0 |\n| Time | 2026-05-27T11:21:39+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112139-910e |\n\n## Summary\n\nCreated ticket T-20260527-112139-910e.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112143-casprine-f8a1.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112143-casprine-f8a1 |\n| Time | 2026-05-27T11:21:43+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112143-0a3a |\n\n## Summary\n\nCreated ticket T-20260527-112143-0a3a.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112152-casprine-78a6.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112152-casprine-78a6 |\n| Time | 2026-05-27T11:21:52+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112152-4d04 |\n\n## Summary\n\nCreated ticket T-20260527-112152-4d04.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112154-casprine-cb72.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112154-casprine-cb72 |\n| Time | 2026-05-27T11:21:54+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112154-d351 |\n\n## Summary\n\nCreated ticket T-20260527-112154-d351.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112200-casprine-5ee1.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112200-casprine-5ee1 |\n| Time | 2026-05-27T11:22:00+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112200-1b85 |\n\n## Summary\n\nCreated ticket T-20260527-112200-1b85.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112208-casprine-6982.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112208-casprine-6982 |\n| Time | 2026-05-27T11:22:08+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260527-112208-4a24 |\n\n## Summary\n\nCreated goal G-20260527-112208-4a24.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112209-casprine-97d6.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112209-casprine-97d6 |\n| Time | 2026-05-27T11:22:09+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112209-1875 |\n\n## Summary\n\nCreated ticket T-20260527-112209-1875.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112218-casprine-5f67.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112218-casprine-5f67 |\n| Time | 2026-05-27T11:22:18+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112218-7a97 |\n\n## Summary\n\nCreated ticket T-20260527-112218-7a97.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112220-casprine-62d9.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112220-casprine-62d9 |\n| Time | 2026-05-27T11:22:20+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112220-3115 |\n\n## Summary\n\nCreated ticket T-20260527-112220-3115.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112229-casprine-c3c5.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112229-casprine-c3c5 |\n| Time | 2026-05-27T11:22:29+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112229-6a4d |\n\n## Summary\n\nCreated ticket T-20260527-112229-6a4d.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112232-casprine-e0b5.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112232-casprine-e0b5 |\n| Time | 2026-05-27T11:22:32+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112232-63ef |\n\n## Summary\n\nCreated ticket T-20260527-112232-63ef.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112239-casprine-a301.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112239-casprine-a301 |\n| Time | 2026-05-27T11:22:39+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112239-ec89 |\n\n## Summary\n\nCreated ticket T-20260527-112239-ec89.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112242-casprine-ae2d.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112242-casprine-ae2d |\n| Time | 2026-05-27T11:22:42+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112242-b01d |\n\n## Summary\n\nCreated ticket T-20260527-112242-b01d.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112249-casprine-41f5.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112249-casprine-41f5 |\n| Time | 2026-05-27T11:22:49+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112249-c572 |\n\n## Summary\n\nCreated ticket T-20260527-112249-c572.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112250-casprine-7694.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112250-casprine-7694 |\n| Time | 2026-05-27T11:22:50+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112250-8206 |\n\n## Summary\n\nCreated ticket T-20260527-112250-8206.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112259-casprine-29db.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112259-casprine-29db |\n| Time | 2026-05-27T11:22:59+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112259-4dfc |\n\n## Summary\n\nCreated ticket T-20260527-112259-4dfc.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112307-casprine-37d0.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112307-casprine-37d0 |\n| Time | 2026-05-27T11:23:07+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260527-111650-bbfc |\n\n## Summary\n\nCreated phased Maat backlog from docs/architecture/status-pages.md covering manual pages, incident integration, uptime/history, subscriptions, customization, and open decisions\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112313-casprine-2e9a.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112313-casprine-2e9a |\n| Time | 2026-05-27T11:23:13+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112313-2c00 |\n\n## Summary\n\nCreated ticket T-20260527-112313-2c00.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112319-casprine-a8a4.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112319-casprine-a8a4 |\n| Time | 2026-05-27T11:23:19+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260527-111650-bbfc |\n\n## Summary\n\nCompleted ticket T-20260527-111650-bbfc.\n\n## Evidence\n\n- Created status-page rollout goals G-20260527-111722-d43b, G-20260527-111831-92fb, G-20260527-111916-0d5c, G-20260527-112015-773b, G-20260527-112117-9e83, and G-20260527-112208-4a24 with implementation and decision tickets\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112330-casprine-8dbb.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112330-casprine-8dbb |\n| Time | 2026-05-27T11:23:30+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260527-112330-77a5 |\n\n## Summary\n\nCreated goal G-20260527-112330-77a5.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112336-codex-alert-core-worker-3022.md",
+      "title": "Event: ticket.claimed",
+      "content": "# Event: ticket.claimed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112336-codex-alert-core-worker-3022 |\n| Time | 2026-05-27T11:23:36+02:00 |\n| Actor | codex-alert-core-worker |\n| Project | orion |\n| Type | ticket.claimed |\n| Object | T-20260527-111635-c668 |\n| Expires | 2026-05-27T13:23:36+02:00 |\n\n## Summary\n\nClaimed ticket T-20260527-111635-c668 until 2026-05-27T13:23:36+02:00.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112337-casprine-94ca.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112337-casprine-94ca |\n| Time | 2026-05-27T11:23:37+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112337-7951 |\n\n## Summary\n\nCreated ticket T-20260527-112337-7951.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112340-casprine-bda1.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112340-casprine-bda1 |\n| Time | 2026-05-27T11:23:40+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112340-65ca |\n\n## Summary\n\nCreated ticket T-20260527-112340-65ca.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112346-casprine-3a67.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112346-casprine-3a67 |\n| Time | 2026-05-27T11:23:46+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112346-811e |\n\n## Summary\n\nCreated ticket T-20260527-112346-811e.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112347-codex-alert-console-worker-48ed.md",
+      "title": "Event: ticket.claimed",
+      "content": "# Event: ticket.claimed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112347-codex-alert-console-worker-48ed |\n| Time | 2026-05-27T11:23:47+02:00 |\n| Actor | codex-alert-console-worker |\n| Project | orion |\n| Type | ticket.claimed |\n| Object | T-20260527-111635-c668 |\n| Expires | 2026-05-27T13:23:47+02:00 |\n\n## Summary\n\nClaimed ticket T-20260527-111635-c668 until 2026-05-27T13:23:47+02:00.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112352-casprine-1279.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112352-casprine-1279 |\n| Time | 2026-05-27T11:23:52+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260527-112352-1456 |\n\n## Summary\n\nCreated goal G-20260527-112352-1456.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112401-casprine-0099.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112401-casprine-0099 |\n| Time | 2026-05-27T11:24:01+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112401-3ba3 |\n\n## Summary\n\nCreated ticket T-20260527-112401-3ba3.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112402-casprine-77d1.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112402-casprine-77d1 |\n| Time | 2026-05-27T11:24:02+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112402-35db |\n\n## Summary\n\nCreated ticket T-20260527-112402-35db.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112407-codex-alert-smtp-worker-40fe.md",
+      "title": "Event: ticket.claimed",
+      "content": "# Event: ticket.claimed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112407-codex-alert-smtp-worker-40fe |\n| Time | 2026-05-27T11:24:07+02:00 |\n| Actor | codex-alert-smtp-worker |\n| Project | orion |\n| Type | ticket.claimed |\n| Object | T-20260527-111643-1e77 |\n| Expires | 2026-05-27T13:24:07+02:00 |\n\n## Summary\n\nClaimed ticket T-20260527-111643-1e77 until 2026-05-27T13:24:07+02:00.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112410-casprine-74b2.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112410-casprine-74b2 |\n| Time | 2026-05-27T11:24:10+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260527-112410-6db8 |\n\n## Summary\n\nCreated goal G-20260527-112410-6db8.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112412-casprine-2dba.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112412-casprine-2dba |\n| Time | 2026-05-27T11:24:12+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112412-1f05 |\n\n## Summary\n\nCreated ticket T-20260527-112412-1f05.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112420-casprine-772e.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112420-casprine-772e |\n| Time | 2026-05-27T11:24:20+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112420-91df |\n\n## Summary\n\nCreated ticket T-20260527-112420-91df.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112425-codex-alert-group-worker-45b9.md",
+      "title": "Event: ticket.claimed",
+      "content": "# Event: ticket.claimed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112425-codex-alert-group-worker-45b9 |\n| Time | 2026-05-27T11:24:25+02:00 |\n| Actor | codex-alert-group-worker |\n| Project | orion |\n| Type | ticket.claimed |\n| Object | T-20260527-111704-c955 |\n| Expires | 2026-05-27T13:24:25+02:00 |\n\n## Summary\n\nClaimed ticket T-20260527-111704-c955 until 2026-05-27T13:24:25+02:00.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112425-codex-alert-route-worker-1f21.md",
+      "title": "Event: ticket.claimed",
+      "content": "# Event: ticket.claimed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112425-codex-alert-route-worker-1f21 |\n| Time | 2026-05-27T11:24:25+02:00 |\n| Actor | codex-alert-route-worker |\n| Project | orion |\n| Type | ticket.claimed |\n| Object | T-20260527-111652-b01f |\n| Expires | 2026-05-27T13:24:25+02:00 |\n\n## Summary\n\nClaimed ticket T-20260527-111652-b01f until 2026-05-27T13:24:25+02:00.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112426-casprine-6329.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112426-casprine-6329 |\n| Time | 2026-05-27T11:24:26+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260527-112426-5108 |\n\n## Summary\n\nCreated goal G-20260527-112426-5108.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112437-casprine-cae2.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112437-casprine-cae2 |\n| Time | 2026-05-27T11:24:37+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-112437-37f1 |\n\n## Summary\n\nCreated ticket T-20260527-112437-37f1.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112444-casprine-febc.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112444-casprine-febc |\n| Time | 2026-05-27T11:24:44+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260527-111635-c668 |\n\n## Summary\n\nClaimed Console alert destination UI work; found webhook-only filtering in alerts view and no generated alert test hook in Console SDK.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112446-codex-alert-queue-worker-0cbb.md",
+      "title": "Event: ticket.claimed",
+      "content": "# Event: ticket.claimed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112446-codex-alert-queue-worker-0cbb |\n| Time | 2026-05-27T11:24:46+02:00 |\n| Actor | codex-alert-queue-worker |\n| Project | orion |\n| Type | ticket.claimed |\n| Object | T-20260527-111712-cd6c |\n| Expires | 2026-05-27T13:24:46+02:00 |\n\n## Summary\n\nClaimed ticket T-20260527-111712-cd6c until 2026-05-27T13:24:46+02:00.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112452-casprine-7d85.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112452-casprine-7d85 |\n| Time | 2026-05-27T11:24:52+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260527-111652-b01f |\n\n## Summary\n\nSponsored agent Dirac (019e68bf-3e0d-7f73-bc15-9b2339deadc7) for Phase 3 alert route and dry-run work.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112452-casprine-d64b.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112452-casprine-d64b |\n| Time | 2026-05-27T11:24:52+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260527-111643-1e77 |\n\n## Summary\n\nSponsored agent Singer (019e68bf-1200-73e2-933f-d8f52d24092b) for Phase 2 SMTP service and email destination work.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112457-casprine-b598.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112457-casprine-b598 |\n| Time | 2026-05-27T11:24:57+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260527-111635-c668 |\n\n## Summary\n\nSponsored agents for Phase 1: Laplace (019e68be-94c2-7333-b190-7338e4da9952) on Core alert test/filter support and Tesla (019e68be-ba83-7ef2-bb3d-9629949aa5e5) on Console destination UI.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112516-casprine-1147.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112516-casprine-1147 |\n| Time | 2026-05-27T11:25:16+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260527-111712-cd6c |\n\n## Summary\n\nSponsored agent Gauss (019e68bf-99fd-75f1-b743-2b0338862c1c) for Phase 5 alert delivery queue and retry attempt work.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112516-casprine-f8ef.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112516-casprine-f8ef |\n| Time | 2026-05-27T11:25:16+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260527-111722-5dc7 |\n\n## Summary\n\nPhase 6 rich payload/template agent not yet sponsored because the active sub-agent thread limit was reached. Sponsor this ticket as soon as an earlier alert worker finishes or is closed.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112517-casprine-38df.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112517-casprine-38df |\n| Time | 2026-05-27T11:25:17+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260527-111704-c955 |\n\n## Summary\n\nSponsored agent Faraday (019e68bf-6972-70d0-b4f6-e43d52c0341f) for Phase 4 alert grouping policy and summary work.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112520-casprine-36c7.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112520-casprine-36c7 |\n| Time | 2026-05-27T11:25:20+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260527-111643-1e77 |\n\n## Summary\n\nInspected Core alert channel model; implementing additive SMTP service and email destination tables/APIs while preserving existing alert_channels delivery compatibility.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112532-casprine-1603.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112532-casprine-1603 |\n| Time | 2026-05-27T11:25:32+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260527-111350-220a |\n\n## Summary\n\nConverted docs/plans/core-managed-monitors.md milestones into row tables and loaded six milestone goals plus ticket rows into Maat. Repo commit: 1114ced docs(core): load monitor milestones.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112546-casprine-14d5.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112546-casprine-14d5 |\n| Time | 2026-05-27T11:25:46+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260527-111350-220a |\n\n## Summary\n\nCompleted ticket T-20260527-111350-220a.\n\n## Evidence\n\n- Converted docs/plans/core-managed-monitors.md milestones into row tables, loaded six milestone goals and 36 ticket rows into Maat, validated Maat, and committed 1114ced docs(core): load monitor milestones.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112653-casprine-fd41.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112653-casprine-fd41 |\n| Time | 2026-05-27T11:26:53+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260527-111635-c668 |\n\n## Summary\n\nCompleted ticket T-20260527-111635-c668.\n\n## Evidence\n\n- Committed a08c9fe; npm run build and npm run lint passed in apps/console.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112807-casprine-c8c7.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112807-casprine-c8c7 |\n| Time | 2026-05-27T11:28:07+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260527-111635-c668 |\n\n## Summary\n\nAdded Core alert delivery filters and manual alert channel test path; adding focused service and integration coverage now.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-112855-codex-alert-template-worker-a1fb.md",
+      "title": "Event: ticket.claimed",
+      "content": "# Event: ticket.claimed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-112855-codex-alert-template-worker-a1fb |\n| Time | 2026-05-27T11:28:55+02:00 |\n| Actor | codex-alert-template-worker |\n| Project | orion |\n| Type | ticket.claimed |\n| Object | T-20260527-111722-5dc7 |\n| Expires | 2026-05-27T13:28:55+02:00 |\n\n## Summary\n\nClaimed ticket T-20260527-111722-5dc7 until 2026-05-27T13:28:55+02:00.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-113020-casprine-7e85.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-113020-casprine-7e85 |\n| Time | 2026-05-27T11:30:20+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260527-111722-5dc7 |\n\n## Summary\n\nClaimed alert template slice; found concurrent Core alert route/SMTP/retry edits, proceeding with backwards-compatible payload v1 builder and webhook signing helper without Console changes.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-113607-casprine-eca2.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-113607-casprine-eca2 |\n| Time | 2026-05-27T11:36:07+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260527-111635-c668 |\n\n## Summary\n\nCompleted ticket T-20260527-111635-c668.\n\n## Evidence\n\n- Implemented Core alert channel test endpoint and delivery filters; verified with GOCACHE=/private/tmp/orion-go-cache go test ./internal/service ./internal/api (passed). Not committed because workspace contains overlapping alert changes from other agents.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-113614-casprine-49c5.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-113614-casprine-49c5 |\n| Time | 2026-05-27T11:36:14+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260527-111712-cd6c |\n\n## Summary\n\nImplemented Core alert delivery attempt history with retry metadata and ProcessDueDeliveries hook; focused Core service/db/api tests pass.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-113617-casprine-6ac5.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-113617-casprine-6ac5 |\n| Time | 2026-05-27T11:36:17+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260527-111704-c955 |\n\n## Summary\n\nImplemented Core alert grouping model and service decisions; tests passing in apps/core.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-113641-casprine-7f99.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-113641-casprine-7f99 |\n| Time | 2026-05-27T11:36:41+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260527-111704-c955 |\n\n## Summary\n\nCompleted ticket T-20260527-111704-c955.\n\n## Evidence\n\n- Implemented Core alert_groups/alert_group_members persistence and grouping decisions; verified with GOCACHE=/private/tmp/orion-go-cache go test ./... in apps/core.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-113706-casprine-1dfd.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-113706-casprine-1dfd |\n| Time | 2026-05-27T11:37:06+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260527-111722-5dc7 |\n\n## Summary\n\nCompleted ticket T-20260527-111722-5dc7.\n\n## Evidence\n\n- Implemented alert payload v1 builder/template and webhook signature helper; verified with GOCACHE=/private/tmp/orion-go-cache go test ./... from apps/core (passed).\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-113715-casprine-0c95.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-113715-casprine-0c95 |\n| Time | 2026-05-27T11:37:15+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260527-111712-cd6c |\n\n## Summary\n\nCompleted ticket T-20260527-111712-cd6c.\n\n## Evidence\n\n- Implemented delivery attempts, retry metadata, ProcessDueDeliveries integration hook, attempt history API responses; verified with GOCACHE=/private/tmp/orion-go-cache GOMODCACHE=/private/tmp/orion-go-mod go test ./... in apps/core.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-113722-casprine-be65.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-113722-casprine-be65 |\n| Time | 2026-05-27T11:37:22+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260527-111643-1e77 |\n\n## Summary\n\nImplemented additive Core SMTP service and email destination schema/API/service support; verified db/service/api packages with GOCACHE=/private/tmp/orion-go-cache go test ./internal/db ./internal/service ./internal/api.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-113732-casprine-6c3b.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-113732-casprine-6c3b |\n| Time | 2026-05-27T11:37:32+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260527-111643-1e77 |\n\n## Summary\n\nCompleted ticket T-20260527-111643-1e77.\n\n## Evidence\n\n- Core SMTP service/email destination migration, models, APIs, delivery projection, OpenAPI regeneration, and tests: GOCACHE=/private/tmp/orion-go-cache go test ./internal/db ./internal/service ./internal/api\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-113750-casprine-782f.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-113750-casprine-782f |\n| Time | 2026-05-27T11:37:50+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260527-111652-b01f |\n\n## Summary\n\nImplemented Core alert_routes model/API plus dry-run evaluator; full Core tests pass with loopback allowed; commit deferred because worktree contains co-located uncommitted SMTP/delivery/grouping changes from other workers.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-113804-casprine-7b67.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-113804-casprine-7b67 |\n| Time | 2026-05-27T11:38:04+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260527-111652-b01f |\n\n## Summary\n\nCompleted ticket T-20260527-111652-b01f.\n\n## Evidence\n\n- Implemented Core alert_routes model/API/service dry-run evaluator; verified with GOCACHE=/private/tmp/orion-go-cache go test ./... in apps/core (loopback escalation for httptest); commit deferred due mixed uncommitted alert changes from other workers.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-114159-casprine-ded5.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-114159-casprine-ded5 |\n| Time | 2026-05-27T11:41:59+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260527-111635-c668 |\n\n## Summary\n\nCompleted ticket T-20260527-111635-c668.\n\n## Evidence\n\n- Implemented by Console commit a08c9fe and integrated Core commit e146c38; verified go test ./... in apps/core, pnpm run build, and pnpm run lint in apps/console.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-114217-casprine-4b79.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-114217-casprine-4b79 |\n| Time | 2026-05-27T11:42:17+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260527-111643-1e77 |\n\n## Summary\n\nCompleted ticket T-20260527-111643-1e77.\n\n## Evidence\n\n- Implemented reusable SMTP services and email destinations in Core commit e146c38; verified go test ./... in apps/core and regenerated OpenAPI/SDK.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-114230-casprine-a105.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-114230-casprine-a105 |\n| Time | 2026-05-27T11:42:30+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260527-111652-b01f |\n\n## Summary\n\nCompleted ticket T-20260527-111652-b01f.\n\n## Evidence\n\n- Implemented alert route CRUD and dry-run route evaluation in Core commit e146c38; verified go test ./... in apps/core and regenerated OpenAPI/SDK.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-114240-casprine-78cd.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-114240-casprine-78cd |\n| Time | 2026-05-27T11:42:40+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260527-111704-c955 |\n\n## Summary\n\nCompleted ticket T-20260527-111704-c955.\n\n## Evidence\n\n- Implemented alert grouping models and grouped delivery behavior in Core commit e146c38; verified go test ./... in apps/core.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-114252-casprine-7ebf.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-114252-casprine-7ebf |\n| Time | 2026-05-27T11:42:52+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260527-111712-cd6c |\n\n## Summary\n\nCompleted ticket T-20260527-111712-cd6c.\n\n## Evidence\n\n- Implemented delivery attempts, retry metadata, and ProcessDueDeliveries hook in Core commit e146c38; verified go test ./... in apps/core.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-114306-casprine-4c07.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-114306-casprine-4c07 |\n| Time | 2026-05-27T11:43:06+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260527-111722-5dc7 |\n\n## Summary\n\nCompleted ticket T-20260527-111722-5dc7.\n\n## Evidence\n\n- Implemented alert payload v1, shared email rendering, and webhook signing helper in Core commit e146c38; verified go test ./... in apps/core.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-214751-82ed.md",
       "title": "Goal: Adopt Maat project memory",
@@ -10885,6 +12851,48 @@
       "path": "projects/orion/goals/G-20260527-111916-0d5c.md",
       "title": "Goal: Add status page uptime and history",
       "content": "# Goal: Add status page uptime and history\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-111916-0d5c |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-27T11:19:16+02:00 |\n\n## Outcome\n\nPublished status pages show component uptime, incident history, and cached public history views derived from existing monitor uptime and public incident data\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260527-112015-773b.md",
+      "title": "Goal: Add status page subscriptions",
+      "content": "# Goal: Add status page subscriptions\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-112015-773b |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-27T11:20:15+02:00 |\n\n## Outcome\n\nVisitors can subscribe to public status page updates through confirmed, rate-limited destinations and receive only public incident communications\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260527-112117-9e83.md",
+      "title": "Goal: Customize public status pages",
+      "content": "# Goal: Customize public status pages\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-112117-9e83 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-27T11:21:17+02:00 |\n\n## Outcome\n\nStatus pages can be branded and distributed through custom presentation options without weakening public/private data boundaries\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260527-112208-4a24.md",
+      "title": "Goal: Resolve status page architecture decisions",
+      "content": "# Goal: Resolve status page architecture decisions\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-112208-4a24 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-27T11:22:08+02:00 |\n\n## Outcome\n\nOpen status page architecture decisions are documented before implementation choices become expensive to change\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260527-112330-77a5.md",
+      "title": "Goal: Incident detail phase 1: lifecycle actions",
+      "content": "# Goal: Incident detail phase 1: lifecycle actions\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-112330-77a5 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-27T11:23:30+02:00 |\n\n## Outcome\n\noperators can acknowledge, manually resolve, mark covered, and reopen incidents from Console with Core-backed audit events and generated API contracts\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260527-112352-1456.md",
+      "title": "Goal: Incident detail phase 2: coverage semantics",
+      "content": "# Goal: Incident detail phase 2: coverage semantics\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-112352-1456 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-27T11:23:52+02:00 |\n\n## Outcome\n\ncovered incidents prevent duplicate reopen noise for still-failing monitors while preserving a clear audit trail and recovery behavior\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260527-112410-6db8.md",
+      "title": "Goal: Incident detail phase 3: evidence and debugging",
+      "content": "# Goal: Incident detail phase 3: evidence and debugging\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-112410-6db8 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-27T11:24:10+02:00 |\n\n## Outcome\n\nincident detail explains the failure with normalized trigger and latest-report evidence plus raw inspection paths across incident, monitor, and agent views\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260527-112426-5108.md",
+      "title": "Goal: Incident detail phase 4: operational analytics",
+      "content": "# Goal: Incident detail phase 4: operational analytics\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-112426-5108 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-27T11:24:26+02:00 |\n\n## Outcome\n\nincident history becomes searchable and measurable for recurring failures, manual handling patterns, notification reliability, and time-to-acknowledge or resolve\n"
     },
     {
       "type": "project",
@@ -11257,6 +13265,240 @@
       "path": "projects/orion/tickets/T-20260527-111933-f32c.md",
       "title": "Ticket: Add public status history routes",
       "content": "# Ticket: Add public status history routes\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111933-f32c |\n| Project | orion |\n| Goal | G-20260527-111916-0d5c |\n| Status | active |\n| Created | 2026-05-27T11:19:33+02:00 |\n\n## Description\n\nAdd public read routes for status page history, public incident history, and individual public incident detail using sanitized status page DTOs\n\n## Acceptance\n\n- GET /status/:slug/history, GET /status/:slug/incidents, and GET /status/:slug/incidents/:incident_id return only published public data with bounded date ranges and tests for hidden draft incidents\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111943-73e5.md",
+      "title": "Ticket: Add monitor confirmation periods",
+      "content": "# Ticket: Add monitor confirmation periods\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111943-73e5 |\n| Project | orion |\n| Goal | G-20260527-111602-3269 |\n| Status | active |\n| Created | 2026-05-27T11:19:43+02:00 |\n\n## Description\n\nAdd per-monitor confirmation periods so a Core monitor must fail for enough time or enough checks before opening an incident.\n\n## Acceptance\n\n- Transient failures within the confirmation window do not open incidents, sustained failures do open incidents, and reconciliation tests cover time-based and count-based behavior.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111945-2b55.md",
+      "title": "Ticket: Cache public status page read models",
+      "content": "# Ticket: Cache public status page read models\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111945-2b55 |\n| Project | orion |\n| Goal | G-20260527-111916-0d5c |\n| Status | active |\n| Created | 2026-05-27T11:19:45+02:00 |\n\n## Description\n\nAdd short-lived caching, invalidation, and optional ETag support for public status page payloads so read-heavy public pages stay cheap while health and published updates remain fresh\n\n## Acceptance\n\n- Public page responses use safe cache headers, invalidate after publish or health-relevant changes, and tests cover stale cache prevention for newly published incident updates\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111953-42db.md",
+      "title": "Ticket: Decide public uptime formatting",
+      "content": "# Ticket: Decide public uptime formatting\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111953-42db |\n| Project | orion |\n| Goal | G-20260527-111916-0d5c |\n| Status | active |\n| Created | 2026-05-27T11:19:53+02:00 |\n\n## Description\n\nChoose how public uptime percentages and unknown states should be represented, including decimal precision, unknown handling, and whether timestamps are exact or rounded\n\n## Acceptance\n\n- A documented decision defines uptime percentage formatting, unknown state display behavior, timestamp rounding rules, and the UI/API implications\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111956-14f8.md",
+      "title": "Ticket: Add monitor recovery periods",
+      "content": "# Ticket: Add monitor recovery periods\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111956-14f8 |\n| Project | orion |\n| Goal | G-20260527-111602-3269 |\n| Status | active |\n| Created | 2026-05-27T11:19:56+02:00 |\n\n## Description\n\nAdd per-monitor recovery periods so incidents resolve only after a monitor has remained healthy long enough to avoid recovery flapping.\n\n## Acceptance\n\n- Short healthy blips do not resolve incidents, sustained healthy checks resolve incidents, and tests cover open, recovering, resolved, and relapse paths.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112007-e8ac.md",
+      "title": "Ticket: Add Core monitor flapping handling",
+      "content": "# Ticket: Add Core monitor flapping handling\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112007-e8ac |\n| Project | orion |\n| Goal | G-20260527-111602-3269 |\n| Status | active |\n| Created | 2026-05-27T11:20:07+02:00 |\n\n## Description\n\nDetect and represent flapping Core monitor behavior so repeated up/down transitions become visible as degraded or flapping context instead of noisy incident churn.\n\n## Acceptance\n\n- Flapping is detected from recent report history, reflected in computed health or incident context, and covered by tests for repeated transitions.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112022-51a5.md",
+      "title": "Ticket: Add Core monitor severity defaults",
+      "content": "# Ticket: Add Core monitor severity defaults\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112022-51a5 |\n| Project | orion |\n| Goal | G-20260527-111602-3269 |\n| Status | active |\n| Created | 2026-05-27T11:20:22+02:00 |\n\n## Description\n\nDefine and implement default incident severity behavior for Core monitor types, with room for per-monitor overrides where useful.\n\n## Acceptance\n\n- Core monitor incidents receive predictable severity defaults by type or config, overrides are validated, and incident list/detail views show the selected severity.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112030-ec3c.md",
+      "title": "Ticket: Design public subscriber model",
+      "content": "# Ticket: Design public subscriber model\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112030-ec3c |\n| Project | orion |\n| Goal | G-20260527-112015-773b |\n| Status | active |\n| Created | 2026-05-27T11:20:30+02:00 |\n\n## Description\n\nDefine the status_page_subscriptions data model, confirmation state, destination types, component-scoped subscriptions, unsubscribe behavior, and privacy boundaries\n\n## Acceptance\n\n- A design or schema change defines subscriber fields, confirmation lifecycle, component scoping, unsubscribe flow, and how public subscribers stay separate from internal alert channels\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112035-ca71.md",
+      "title": "Ticket: Add Core monitor maintenance windows",
+      "content": "# Ticket: Add Core monitor maintenance windows\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112035-ca71 |\n| Project | orion |\n| Goal | G-20260527-111602-3269 |\n| Status | active |\n| Created | 2026-05-27T11:20:35+02:00 |\n\n## Description\n\nAdd maintenance-window behavior for Core-managed monitors so scheduled work or intentional outages suppress incidents and alert delivery while preserving history.\n\n## Acceptance\n\n- Core monitor maintenance windows suppress incident creation and alert delivery, are visible in Console, and tests cover entering, active, and exiting maintenance windows.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112042-e81a.md",
+      "title": "Ticket: Implement subscription confirmation flow",
+      "content": "# Ticket: Implement subscription confirmation flow\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112042-e81a |\n| Project | orion |\n| Goal | G-20260527-112015-773b |\n| Status | active |\n| Created | 2026-05-27T11:20:42+02:00 |\n\n## Description\n\nAdd public subscription creation, confirmation, and unsubscribe endpoints with rate limiting and safe token handling\n\n## Acceptance\n\n- Visitors can request, confirm, and cancel subscriptions; endpoints are rate limited; tokens are not logged or exposed; tests cover invalid and expired confirmation attempts\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112050-0cfb.md",
+      "title": "Ticket: Design component data model",
+      "content": "# Ticket: Design component data model\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112050-0cfb |\n| Project | orion |\n| Goal | G-20260527-111616-a92c |\n| Status | active |\n| Created | 2026-05-27T11:20:50+02:00 |\n\n## Description\n\nDesign the service/status-page component model that can group Agent and Core monitors and support incident impact and status page publishing.\n\n## Acceptance\n\n- Design records component fields, relationships, migration path, API shape, Console needs, and how Agent/Core monitor ownership maps to components.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112053-2865.md",
+      "title": "Ticket: Fan out public incident notifications",
+      "content": "# Ticket: Fan out public incident notifications\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112053-2865 |\n| Project | orion |\n| Goal | G-20260527-112015-773b |\n| Status | active |\n| Created | 2026-05-27T11:20:53+02:00 |\n\n## Description\n\nDeliver published public incident updates to confirmed status page subscribers without sending internal incident details or alert delivery metadata\n\n## Acceptance\n\n- Confirmed subscribers receive public incident updates for subscribed pages or components, delivery failures are tracked safely, and internal alert channel secrets are never exposed\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112101-9b65.md",
+      "title": "Ticket: Add public status feed",
+      "content": "# Ticket: Add public status feed\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112101-9b65 |\n| Project | orion |\n| Goal | G-20260527-112015-773b |\n| Status | active |\n| Created | 2026-05-27T11:21:01+02:00 |\n\n## Description\n\nAdd an Atom or RSS feed for published status page incidents and updates so visitors can follow status changes without an account\n\n## Acceptance\n\n- GET /status/:slug/feed.atom or the chosen feed route returns valid feed output for published public incidents only, with tests for draft and private incidents being omitted\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112103-2087.md",
+      "title": "Ticket: Add monitor-to-component mapping",
+      "content": "# Ticket: Add monitor-to-component mapping\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112103-2087 |\n| Project | orion |\n| Goal | G-20260527-111616-a92c |\n| Status | active |\n| Created | 2026-05-27T11:21:03+02:00 |\n\n## Description\n\nImplement mapping between monitors and service/status-page components so Core and Agent monitor health can roll up into component health.\n\n## Acceptance\n\n- Monitors can be assigned to components, component health can be derived from mapped monitors, and Console/API paths expose the mapping safely.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112118-7764.md",
+      "title": "Ticket: Add incident component fields",
+      "content": "# Ticket: Add incident component fields\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112118-7764 |\n| Project | orion |\n| Goal | G-20260527-111616-a92c |\n| Status | active |\n| Created | 2026-05-27T11:21:18+02:00 |\n\n## Description\n\nExtend incidents and incident timeline/context so monitor-caused incidents can identify impacted service/status-page components.\n\n## Acceptance\n\n- Incident records or responses include impacted component context, existing incidents remain compatible, and incident list/detail views can display component impact.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112126-30e2.md",
+      "title": "Ticket: Add status page theme settings",
+      "content": "# Ticket: Add status page theme settings\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112126-30e2 |\n| Project | orion |\n| Goal | G-20260527-112117-9e83 |\n| Status | active |\n| Created | 2026-05-27T11:21:26+02:00 |\n\n## Description\n\nAdd configurable public status page theme settings such as logo, accent color, page description, and basic metadata while preserving accessible default styling\n\n## Acceptance\n\n- Admins can configure supported theme fields, public pages render those fields accessibly, and invalid or unsafe theme values are rejected\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112139-910e.md",
+      "title": "Ticket: Update status page architecture for monitor components",
+      "content": "# Ticket: Update status page architecture for monitor components\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112139-910e |\n| Project | orion |\n| Goal | G-20260527-111616-a92c |\n| Status | active |\n| Created | 2026-05-27T11:21:39+02:00 |\n\n## Description\n\nUpdate status page planning so public or private status pages consume component health derived from Core and Agent monitors.\n\n## Acceptance\n\n- Status page architecture documents monitor-component health flow, component display rules, maintenance interaction, and implementation dependencies.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112143-0a3a.md",
+      "title": "Ticket: Support status page custom domains",
+      "content": "# Ticket: Support status page custom domains\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112143-0a3a |\n| Project | orion |\n| Goal | G-20260527-112117-9e83 |\n| Status | active |\n| Created | 2026-05-27T11:21:43+02:00 |\n\n## Description\n\nDesign and implement custom domain configuration for public status pages, including validation, ownership guidance, routing, and safe host matching\n\n## Acceptance\n\n- Admins can configure a custom domain for a status page, Core routes requests to the correct published page, and invalid or conflicting domains are rejected with clear errors\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112152-4d04.md",
+      "title": "Ticket: Add public embeddable status badges",
+      "content": "# Ticket: Add public embeddable status badges\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112152-4d04 |\n| Project | orion |\n| Goal | G-20260527-112117-9e83 |\n| Status | active |\n| Created | 2026-05-27T11:21:52+02:00 |\n\n## Description\n\nAdd public embeddable badge endpoints or snippets that expose a status page or component's current public state without leaking internal resource details\n\n## Acceptance\n\n- Badge output renders the selected public page or component status, includes cache headers, and omits internal ids, monitor names, and private incident data\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112154-d351.md",
+      "title": "Ticket: Add HTTP keyword monitor",
+      "content": "# Ticket: Add HTTP keyword monitor\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112154-d351 |\n| Project | orion |\n| Goal | G-20260527-111626-e3b0 |\n| Status | active |\n| Created | 2026-05-27T11:21:54+02:00 |\n\n## Description\n\nImplement Core worker HTTP keyword checks for required and forbidden response body content, building on the HTTP status runner.\n\n## Acceptance\n\n- Keyword monitors can assert required and forbidden content, report match failure context with bounded body capture, and pass runner tests.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112200-1b85.md",
+      "title": "Ticket: Add public status page metadata",
+      "content": "# Ticket: Add public status page metadata\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112200-1b85 |\n| Project | orion |\n| Goal | G-20260527-112117-9e83 |\n| Status | active |\n| Created | 2026-05-27T11:22:00+02:00 |\n\n## Description\n\nAdd optional SEO and Open Graph metadata for published status pages so shared links describe the public page and current status clearly\n\n## Acceptance\n\n- Published status pages expose safe title, description, canonical URL, and Open Graph metadata with no internal resource names unless explicitly configured\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112209-1875.md",
+      "title": "Ticket: Add expected status code monitor",
+      "content": "# Ticket: Add expected status code monitor\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112209-1875 |\n| Project | orion |\n| Goal | G-20260527-111626-e3b0 |\n| Status | active |\n| Created | 2026-05-27T11:22:09+02:00 |\n\n## Description\n\nImplement a Core worker HTTP expected-status monitor path for APIs and endpoints that should return specific status codes or code sets.\n\n## Acceptance\n\n- Expected-status monitors validate configured status codes, store status and latency metrics, show clear failure messages, and reuse safe HTTP runner behavior.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112218-7a97.md",
+      "title": "Ticket: Choose public status page serving model",
+      "content": "# Ticket: Choose public status page serving model\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112218-7a97 |\n| Project | orion |\n| Goal | G-20260527-112208-4a24 |\n| Status | active |\n| Created | 2026-05-27T11:22:18+02:00 |\n\n## Description\n\nDecide whether public status pages are served from Core's main binary, a separate public frontend bundle, or another deployment shape\n\n## Acceptance\n\n- A documented decision records the chosen serving model, routing implications, asset build path, authentication boundary, and deployment impact\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112220-3115.md",
+      "title": "Ticket: Add TCP port monitor",
+      "content": "# Ticket: Add TCP port monitor\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112220-3115 |\n| Project | orion |\n| Goal | G-20260527-111626-e3b0 |\n| Status | active |\n| Created | 2026-05-27T11:22:20+02:00 |\n\n## Description\n\nImplement Core worker TCP port checks that attempt a bounded connection to a host and port and record connection timing and failure details.\n\n## Acceptance\n\n- TCP monitors handle success, refused connections, DNS failures, and timeouts with structured report payloads and runner tests.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112229-6a4d.md",
+      "title": "Ticket: Decide single versus multiple status pages",
+      "content": "# Ticket: Decide single versus multiple status pages\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112229-6a4d |\n| Project | orion |\n| Goal | G-20260527-112208-4a24 |\n| Status | active |\n| Created | 2026-05-27T11:22:29+02:00 |\n\n## Description\n\nDecide whether the first status page release supports multiple pages or starts with one default page and later expands\n\n## Acceptance\n\n- A documented decision defines first-release page cardinality, slug behavior, Console navigation, API shape, and migration path if multiple pages are deferred\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112232-63ef.md",
+      "title": "Ticket: Add TLS certificate monitor",
+      "content": "# Ticket: Add TLS certificate monitor\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112232-63ef |\n| Project | orion |\n| Goal | G-20260527-111626-e3b0 |\n| Status | active |\n| Created | 2026-05-27T11:22:32+02:00 |\n\n## Description\n\nImplement Core worker TLS certificate checks that validate certificate chain behavior and expiration thresholds for HTTPS hosts.\n\n## Acceptance\n\n- TLS monitors report days remaining, issuer/subject summary, threshold failures, connection errors, and tests for healthy, expiring, and invalid certificates.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112239-ec89.md",
+      "title": "Ticket: Decide public incident automation policy",
+      "content": "# Ticket: Decide public incident automation policy\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112239-ec89 |\n| Project | orion |\n| Goal | G-20260527-112208-4a24 |\n| Status | active |\n| Created | 2026-05-27T11:22:39+02:00 |\n\n## Description\n\nDecide when internal incident changes should automatically create draft public incidents, suggest resolution updates, or require manual administrator action\n\n## Acceptance\n\n- A documented decision defines default incident publication policy, auto-draft behavior, auto-resolution suggestions, and any trusted-component automation rules\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112242-b01d.md",
+      "title": "Ticket: Add DNS monitor",
+      "content": "# Ticket: Add DNS monitor\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112242-b01d |\n| Project | orion |\n| Goal | G-20260527-111626-e3b0 |\n| Status | active |\n| Created | 2026-05-27T11:22:42+02:00 |\n\n## Description\n\nImplement Core worker DNS record checks for configured hostnames, record types, and expected values.\n\n## Acceptance\n\n- DNS monitors support A, AAAA, CNAME, TXT, MX, and NS checks, report resolver and answer context, handle lookup failures, and pass runner tests.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112249-c572.md",
+      "title": "Ticket: Decide subscription infrastructure reuse",
+      "content": "# Ticket: Decide subscription infrastructure reuse\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112249-c572 |\n| Project | orion |\n| Goal | G-20260527-112208-4a24 |\n| Status | active |\n| Created | 2026-05-27T11:22:49+02:00 |\n\n## Description\n\nDecide whether public status page subscriptions reuse internal alert channel infrastructure or use a separate subscriber and delivery system\n\n## Acceptance\n\n- A documented decision compares reuse versus separation for privacy, delivery reliability, unsubscribe handling, rate limits, and future channel support\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112250-8206.md",
+      "title": "Ticket: Add ping monitor",
+      "content": "# Ticket: Add ping monitor\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112250-8206 |\n| Project | orion |\n| Goal | G-20260527-111626-e3b0 |\n| Status | active |\n| Created | 2026-05-27T11:22:50+02:00 |\n\n## Description\n\nImplement Core worker ping-style reachability checks with clear behavior for environments where ICMP is unavailable or not permitted.\n\n## Acceptance\n\n- Ping monitors record reachability and latency when supported, expose fallback or unsupported-state behavior when ICMP is unavailable, and tests cover success, timeout, and permission cases.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112259-4dfc.md",
+      "title": "Ticket: Add domain expiration monitor",
+      "content": "# Ticket: Add domain expiration monitor\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112259-4dfc |\n| Project | orion |\n| Goal | G-20260527-111626-e3b0 |\n| Status | active |\n| Created | 2026-05-27T11:22:59+02:00 |\n\n## Description\n\nImplement Core worker domain expiration checks using RDAP first and a documented fallback strategy for registries that do not expose usable data.\n\n## Acceptance\n\n- Domain monitors report expiration date and days remaining when available, fail clearly when data cannot be determined, and tests cover threshold and unavailable-data behavior.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112313-2c00.md",
+      "title": "Ticket: Add API request monitor",
+      "content": "# Ticket: Add API request monitor\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112313-2c00 |\n| Project | orion |\n| Goal | G-20260527-111626-e3b0 |\n| Status | active |\n| Created | 2026-05-27T11:23:13+02:00 |\n\n## Description\n\nImplement Core worker API request checks with method, headers, body, auth secret references, expected status, and JSON response assertions.\n\n## Acceptance\n\n- API monitors can run configured requests, redact secrets, evaluate status and JSON assertions, store bounded response context, and pass tests for success, assertion failure, and transport failure.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112337-7951.md",
+      "title": "Ticket: Add UDP monitor",
+      "content": "# Ticket: Add UDP monitor\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112337-7951 |\n| Project | orion |\n| Goal | G-20260527-111626-e3b0 |\n| Status | active |\n| Created | 2026-05-27T11:23:37+02:00 |\n\n## Description\n\nImplement Core worker UDP checks with explicit payload and expected response semantics so UDP success is service-specific and not ambiguous.\n\n## Acceptance\n\n- UDP monitors send configured payloads, validate expected responses, report timeout or mismatch details, and document unsupported no-response semantics.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112340-65ca.md",
+      "title": "Ticket: Implement incident lifecycle action workflow",
+      "content": "# Ticket: Implement incident lifecycle action workflow\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112340-65ca |\n| Project | orion |\n| Goal | G-20260527-112330-77a5 |\n| Status | active |\n| Created | 2026-05-27T11:23:40+02:00 |\n\n## Description\n\nAdd Core and Console support for incident acknowledge, manual resolve, mark covered, and reopen actions, including service methods, API routes, OpenAPI annotations, generated SDK updates, action dialogs, and query invalidation.\n\n## Acceptance\n\n- Incident detail exposes working lifecycle actions; Core persists lifecycle fields and incident events; OpenAPI and Console SDK are regenerated; tests cover allowed transitions, monitor active incident updates, and notification behavior.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112346-811e.md",
+      "title": "Ticket: Add SMTP IMAP and POP monitors",
+      "content": "# Ticket: Add SMTP IMAP and POP monitors\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112346-811e |\n| Project | orion |\n| Goal | G-20260527-111626-e3b0 |\n| Status | active |\n| Created | 2026-05-27T11:23:46+02:00 |\n\n## Description\n\nImplement Core worker mail protocol availability checks for SMTP, IMAP, and POP with TLS mode, banner or capability checks, and optional credential support later.\n\n## Acceptance\n\n- Mail monitors can check configured protocol endpoints, report banner/capability and TLS context, handle auth-disabled mode safely, and pass protocol runner tests.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112401-3ba3.md",
+      "title": "Ticket: Add Playwright transaction monitor",
+      "content": "# Ticket: Add Playwright transaction monitor\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112401-3ba3 |\n| Project | orion |\n| Goal | G-20260527-111626-e3b0 |\n| Status | active |\n| Created | 2026-05-27T11:24:01+02:00 |\n\n## Description\n\nImplement Core worker browser transaction checks using Playwright with sandboxing, timeout budgets, secret handling, screenshots on failure, and artifact retention limits.\n\n## Acceptance\n\n- Playwright monitors can run bounded transactions, capture failure artifacts, redact secrets, avoid overloading the worker, and pass tests or smoke checks for success and failure flows.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112402-35db.md",
+      "title": "Ticket: Add covered incident suppression semantics",
+      "content": "# Ticket: Add covered incident suppression semantics\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112402-35db |\n| Project | orion |\n| Goal | G-20260527-112352-1456 |\n| Status | active |\n| Created | 2026-05-27T11:24:02+02:00 |\n\n## Description\n\nTeach incident reconciliation to honor active coverage after a user marks an incident covered, suppress duplicate incident creation until recovery or expiry, and record coverage-related audit events.\n\n## Acceptance\n\n- A covered still-failing monitor does not immediately open a duplicate incident; coverage ends on recovery or expiry; incident events record suppressed-by-coverage behavior; Console shows coverage state and offers an end coverage or reopen path.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112412-1f05.md",
+      "title": "Ticket: Add synthetic multi-step monitor",
+      "content": "# Ticket: Add synthetic multi-step monitor\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112412-1f05 |\n| Project | orion |\n| Goal | G-20260527-111626-e3b0 |\n| Status | active |\n| Created | 2026-05-27T11:24:12+02:00 |\n\n## Description\n\nImplement Core worker synthetic multi-step checks for ordered API or browser steps with shared variables, assertions, stop-on-failure behavior, and bounded artifacts.\n\n## Acceptance\n\n- Synthetic monitors run ordered steps, preserve step-level results, fail with actionable context, respect timeout and artifact limits, and pass tests for success and step failure.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112420-91df.md",
+      "title": "Ticket: Expose incident evidence and raw report inspection",
+      "content": "# Ticket: Expose incident evidence and raw report inspection\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112420-91df |\n| Project | orion |\n| Goal | G-20260527-112410-6db8 |\n| Status | active |\n| Created | 2026-05-27T11:24:20+02:00 |\n\n## Description\n\nExtend incident detail responses and Console views with normalized triggering report, latest report, related incidents, safe raw payload inspection, and timeline links back to reports or deliveries.\n\n## Acceptance\n\n- Incident detail shows trigger versus latest evidence; raw monitor report payloads are inspectable from incident and monitor history; timeline rows link to the relevant report or alert delivery; tests cover response shape and safe payload exposure.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-112437-37f1.md",
+      "title": "Ticket: Add incident analytics and lifecycle filters",
+      "content": "# Ticket: Add incident analytics and lifecycle filters\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-112437-37f1 |\n| Project | orion |\n| Goal | G-20260527-112426-5108 |\n| Status | active |\n| Created | 2026-05-27T11:24:37+02:00 |\n\n## Description\n\nAdd Core filters and aggregate data for incident resolution kind, actor, covered state, recurring monitor failures, notification reliability, and mean time to acknowledge or resolve; surface the most useful insights in Console.\n\n## Acceptance\n\n- Incidents can be filtered by resolution kind, actor, and covered state; Core exposes aggregate metrics for recurring failures and lifecycle timing; Console summary or detail views show actionable incident insights without replacing the operational tables.\n"
     }
   ]
 }
