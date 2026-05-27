@@ -742,7 +742,7 @@
           "id": "G-20260527-104558-c842",
           "project_key": "maat",
           "title": "Build terminal app catalog storage",
-          "status": "active",
+          "status": "done",
           "created": "2026-05-27T10:45:58+02:00",
           "outcome": "Maat stores terminal app catalog apps, patterns, decisions, and review events as Markdown objects that validate cleanly and remain readable without generated indexes.",
           "path": "projects/maat/goals/G-20260527-104558-c842.md"
@@ -751,7 +751,7 @@
           "id": "G-20260527-104606-2bfb",
           "project_key": "maat",
           "title": "Ship catalog CLI and search",
-          "status": "active",
+          "status": "done",
           "created": "2026-05-27T10:46:06+02:00",
           "outcome": "Humans and agents can list, inspect, validate, and search terminal app catalog entries from the Maat CLI with stable JSON output and Markdown-backed search.",
           "path": "projects/maat/goals/G-20260527-104606-2bfb.md"
@@ -760,7 +760,7 @@
           "id": "G-20260527-104618-2535",
           "project_key": "maat",
           "title": "Refresh TUI around catalog discovery",
-          "status": "active",
+          "status": "done",
           "created": "2026-05-27T10:46:18+02:00",
           "outcome": "The TUI presents a keyboard-first project and catalog experience with scannable lists, Kanban/project boards, detail panes, no-color readability, and clear routes from observations to Maat tickets.",
           "path": "projects/maat/goals/G-20260527-104618-2535.md"
@@ -1419,7 +1419,7 @@
           "project_key": "maat",
           "goal_id": "G-20260527-104558-c842",
           "title": "Define catalog Markdown schema",
-          "status": "active",
+          "status": "done",
           "created": "2026-05-27T10:46:40+02:00",
           "description": "Document the Markdown object shapes for catalog apps, reusable patterns, decisions, opportunities, and catalog review events under projects/maat/catalog. Include required fields, stable IDs, links between patterns and Maat work, and plain-Markdown examples.",
           "acceptance": [
@@ -1434,7 +1434,7 @@
           "project_key": "maat",
           "goal_id": "G-20260527-104558-c842",
           "title": "Implement catalog loader and validation",
-          "status": "active",
+          "status": "done",
           "created": "2026-05-27T10:46:50+02:00",
           "description": "Add Go types and loading/validation logic for catalog app, pattern, decision, and opportunity Markdown files. Validation should catch missing IDs, malformed links, duplicate slugs, invalid decision states, and broken references to goals or tickets when those links are present.",
           "acceptance": [
@@ -1449,7 +1449,7 @@
           "project_key": "maat",
           "goal_id": "G-20260527-104558-c842",
           "title": "Seed first catalog observations",
-          "status": "active",
+          "status": "done",
           "created": "2026-05-27T10:46:59+02:00",
           "description": "Create initial catalog fixtures or sample objects from the IA: lazygit, btop, gh-dash, and superfile as apps; focused detail pane, keyboard model, background refresh, and empty states as patterns. Keep metadata honest when unknown by marking it unknown instead of inventing values.",
           "acceptance": [
@@ -1464,7 +1464,7 @@
           "project_key": "maat",
           "goal_id": "G-20260527-104606-2bfb",
           "title": "Add catalog list and show commands",
-          "status": "active",
+          "status": "done",
           "created": "2026-05-27T10:47:09+02:00",
           "description": "Add maat catalog list and maat catalog show commands for humans. List should support apps, patterns, decisions, and opportunities with compact scannable columns. Show should render a structured detail view for one object.",
           "acceptance": [
@@ -1479,7 +1479,7 @@
           "project_key": "maat",
           "goal_id": "G-20260527-104606-2bfb",
           "title": "Expose catalog JSON for agents",
-          "status": "active",
+          "status": "done",
           "created": "2026-05-27T10:47:19+02:00",
           "description": "Add --json output for catalog list and show so agents can consume stable catalog object IDs, linked source apps, linked patterns, related goals, related tickets, and decision states without scraping human text.",
           "acceptance": [
@@ -1494,7 +1494,7 @@
           "project_key": "maat",
           "goal_id": "G-20260527-104606-2bfb",
           "title": "Index catalog objects for search",
-          "status": "active",
+          "status": "done",
           "created": "2026-05-27T10:47:30+02:00",
           "description": "Extend the existing Markdown and SQLite search paths so catalog apps, patterns, decisions, opportunities, and review events are searchable alongside projects, goals, tickets, and events.",
           "acceptance": [
@@ -1510,7 +1510,7 @@
           "project_key": "maat",
           "goal_id": "G-20260527-104618-2535",
           "title": "Add catalog mode to the TUI",
-          "status": "active",
+          "status": "done",
           "created": "2026-05-27T10:47:41+02:00",
           "description": "Add a TUI mode based on docs/terminal-apps-ia.md with apps, patterns, and detail panes. It should support apps, patterns, decisions, and opportunities modes while keeping keyboard navigation fast and predictable.",
           "acceptance": [
@@ -1525,7 +1525,7 @@
           "project_key": "maat",
           "goal_id": "G-20260527-104618-2535",
           "title": "Polish project board detail flow",
-          "status": "active",
+          "status": "done",
           "created": "2026-05-27T10:47:52+02:00",
           "description": "Refine the primary TUI path so a human can see all projects, open one into a Kanban-style board, move through board items, and read a focused detail view with title, description, acceptance criteria, status, ownership, related goal, and recent events.",
           "acceptance": [
@@ -1541,7 +1541,7 @@
           "project_key": "maat",
           "goal_id": "G-20260527-104618-2535",
           "title": "Verify keyboard and no-color readability",
-          "status": "active",
+          "status": "done",
           "created": "2026-05-27T10:48:02+02:00",
           "description": "Add focused verification for the refreshed TUI at realistic terminal widths and no-color output. The checks should cover project list, project board, ticket detail, catalog apps, catalog patterns, empty states, and filtered states.",
           "acceptance": [
@@ -4804,6 +4804,203 @@
             "External storage now contains seeded catalog Markdown for 4 apps and 4 patterns; maat catalog list apps returned the seeded objects and maat validate passed with zero issues."
           ],
           "path": "projects/maat/events/2026/05/E-20260527-110431-codex-goal-owner-catalog-storage-c7b6.md"
+        },
+        {
+          "id": "E-20260527-110715-codex-catalog-cli-owner-ef0c",
+          "time": "2026-05-27T11:07:15+02:00",
+          "actor": "codex-catalog-cli-owner",
+          "project_key": "maat",
+          "type": "ticket.completed",
+          "object_id": "T-20260527-104709-0092",
+          "summary": "Completed ticket T-20260527-104709-0092.",
+          "evidence": [
+            "Materialized completion after fix 0f6a508; original implementation commit f925017 and go test ./... passed."
+          ],
+          "path": "projects/maat/events/2026/05/E-20260527-110715-codex-catalog-cli-owner-ef0c.md"
+        },
+        {
+          "id": "E-20260527-110729-codex-catalog-json-worker-018b",
+          "time": "2026-05-27T11:07:29+02:00",
+          "actor": "codex-catalog-json-worker",
+          "project_key": "maat",
+          "type": "ticket.completed",
+          "object_id": "T-20260527-104719-ccfc",
+          "summary": "Completed ticket T-20260527-104719-ccfc.",
+          "evidence": [
+            "Materialized completion after fix 0f6a508; JSON behavior implemented in f925017 and go test ./... passed."
+          ],
+          "path": "projects/maat/events/2026/05/E-20260527-110729-codex-catalog-json-worker-018b.md"
+        },
+        {
+          "id": "E-20260527-110751-codex-catalog-search-worker-4359",
+          "time": "2026-05-27T11:07:51+02:00",
+          "actor": "codex-catalog-search-worker",
+          "project_key": "maat",
+          "type": "ticket.completed",
+          "object_id": "T-20260527-104730-5c29",
+          "summary": "Completed ticket T-20260527-104730-5c29.",
+          "evidence": [
+            "Materialized completion after fix 0f6a508; catalog search behavior implemented in f925017 and go test ./... passed."
+          ],
+          "path": "projects/maat/events/2026/05/E-20260527-110751-codex-catalog-search-worker-4359.md"
+        },
+        {
+          "id": "E-20260527-110800-codex-goal-owner-catalog-storage-0f3e",
+          "time": "2026-05-27T11:08:00+02:00",
+          "actor": "codex-goal-owner-catalog-storage",
+          "project_key": "maat",
+          "type": "ticket.status.materialized",
+          "object_id": "T-20260527-104650-0f3e",
+          "summary": "Materialized T-20260527-104650-0f3e status as done.",
+          "evidence": [
+            "Ticket has completion event E-20260527-110418-codex-goal-owner-catalog-storage-601c with loader and validation evidence.",
+            "go test ./internal/maat and go test ./... passed."
+          ],
+          "path": "projects/maat/events/2026/05/E-20260527-110800-codex-goal-owner-catalog-storage-0f3e.md"
+        },
+        {
+          "id": "E-20260527-110800-codex-goal-owner-catalog-storage-64e4",
+          "time": "2026-05-27T11:08:00+02:00",
+          "actor": "codex-goal-owner-catalog-storage",
+          "project_key": "maat",
+          "type": "ticket.status.materialized",
+          "object_id": "T-20260527-104640-64e4",
+          "summary": "Materialized T-20260527-104640-64e4 status as done.",
+          "evidence": [
+            "Ticket has completion event E-20260527-110402-codex-goal-owner-catalog-storage-e42c with schema evidence.",
+            "External storage validation passed after catalog schema and seed work."
+          ],
+          "path": "projects/maat/events/2026/05/E-20260527-110800-codex-goal-owner-catalog-storage-64e4.md"
+        },
+        {
+          "id": "E-20260527-110800-codex-goal-owner-catalog-storage-e047",
+          "time": "2026-05-27T11:08:00+02:00",
+          "actor": "codex-goal-owner-catalog-storage",
+          "project_key": "maat",
+          "type": "ticket.status.materialized",
+          "object_id": "T-20260527-104659-e047",
+          "summary": "Materialized T-20260527-104659-e047 status as done.",
+          "evidence": [
+            "Ticket has completion event E-20260527-110431-codex-goal-owner-catalog-storage-c7b6 with seed catalog evidence.",
+            "Seeded app and pattern catalog objects validate from Markdown."
+          ],
+          "path": "projects/maat/events/2026/05/E-20260527-110800-codex-goal-owner-catalog-storage-e047.md"
+        },
+        {
+          "id": "E-20260527-110801-codex-goal-owner-catalog-storage-c842",
+          "time": "2026-05-27T11:08:01+02:00",
+          "actor": "codex-goal-owner-catalog-storage",
+          "project_key": "maat",
+          "type": "goal.completed",
+          "object_id": "G-20260527-104558-c842",
+          "summary": "Completed goal G-20260527-104558-c842 after verifying all catalog storage tickets.",
+          "evidence": [
+            "T-20260527-104640-64e4, T-20260527-104650-0f3e, and T-20260527-104659-e047 are materialized as done.",
+            "Product commit f925017 contains catalog schema, loader, validation, tests, and indexing support.",
+            "External storage validation passed with no issues."
+          ],
+          "path": "projects/maat/events/2026/05/E-20260527-110801-codex-goal-owner-catalog-storage-c842.md"
+        },
+        {
+          "id": "E-20260527-111059-casprine-770e",
+          "time": "2026-05-27T11:10:59+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.commented",
+          "object_id": "T-20260527-104741-731b",
+          "summary": "Mother-agent review: product commit 3610f24 adds catalog discovery mode, and final verification passed with go test ./... plus storage validation.",
+          "path": "projects/maat/events/2026/05/E-20260527-111059-casprine-770e.md"
+        },
+        {
+          "id": "E-20260527-111138-casprine-cb71",
+          "time": "2026-05-27T11:11:38+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.completed",
+          "object_id": "T-20260527-104741-731b",
+          "summary": "Completed ticket T-20260527-104741-731b.",
+          "evidence": [
+            "Verified by mother agent: product commit 3610f24 includes catalog discovery TUI mode; GOCACHE=/private/tmp/maat-go-cache go test ./... passed; maat validate --storage /Users/casprine/Desktop/vendor/personal/maat-storage passed."
+          ],
+          "path": "projects/maat/events/2026/05/E-20260527-111138-casprine-cb71.md"
+        },
+        {
+          "id": "E-20260527-111147-casprine-8b28",
+          "time": "2026-05-27T11:11:47+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.commented",
+          "object_id": "T-20260527-104752-bb33",
+          "summary": "Mother-agent review: project list to board to detail flow is present, commit c50e18d made it primary, commit 3610f24 kept it integrated with the catalog refresh, and final tests passed.",
+          "path": "projects/maat/events/2026/05/E-20260527-111147-casprine-8b28.md"
+        },
+        {
+          "id": "E-20260527-111159-casprine-7c2f",
+          "time": "2026-05-27T11:11:59+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.completed",
+          "object_id": "T-20260527-104752-bb33",
+          "summary": "Completed ticket T-20260527-104752-bb33.",
+          "evidence": [
+            "Verified by mother agent: project list -\u003e board -\u003e ticket detail flow is implemented in commits c50e18d and 3610f24; GOCACHE=/private/tmp/maat-go-cache go test ./... passed; maat validate --storage /Users/casprine/Desktop/vendor/personal/maat-storage passed."
+          ],
+          "path": "projects/maat/events/2026/05/E-20260527-111159-casprine-7c2f.md"
+        },
+        {
+          "id": "E-20260527-111209-casprine-a834",
+          "time": "2026-05-27T11:12:09+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.commented",
+          "object_id": "T-20260527-104802-f29d",
+          "summary": "Mother-agent review: final verification covered go test ./..., storage validation, and TUI lane evidence from Beauvoir for keyboard and no-color checks.",
+          "path": "projects/maat/events/2026/05/E-20260527-111209-casprine-a834.md"
+        },
+        {
+          "id": "E-20260527-111219-casprine-f43b",
+          "time": "2026-05-27T11:12:19+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "ticket.completed",
+          "object_id": "T-20260527-104802-f29d",
+          "summary": "Completed ticket T-20260527-104802-f29d.",
+          "evidence": [
+            "Verified by mother agent: TUI tests passed via GOCACHE=/private/tmp/maat-go-cache go test ./...; storage validation passed; Beauvoir reported keyboard and no-color verification for the TUI lane."
+          ],
+          "path": "projects/maat/events/2026/05/E-20260527-111219-casprine-f43b.md"
+        },
+        {
+          "id": "E-20260527-111320-casprine-2bfb",
+          "time": "2026-05-27T11:13:20+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "goal.completed",
+          "object_id": "G-20260527-104606-2bfb",
+          "summary": "Completed goal G-20260527-104606-2bfb after mother-agent verification of the catalog CLI and search tickets.",
+          "evidence": [
+            "T-20260527-104709-0092, T-20260527-104719-ccfc, and T-20260527-104730-5c29 are materialized as done.",
+            "Product commits f925017 and 0f6a508 include catalog CLI, JSON output, search indexing, and status materialization.",
+            "GOCACHE=/private/tmp/maat-go-cache go test ./... passed.",
+            "maat validate --storage /Users/casprine/Desktop/vendor/personal/maat-storage passed."
+          ],
+          "path": "projects/maat/events/2026/05/E-20260527-111320-casprine-2bfb.md"
+        },
+        {
+          "id": "E-20260527-111321-casprine-2535",
+          "time": "2026-05-27T11:13:21+02:00",
+          "actor": "casprine",
+          "project_key": "maat",
+          "type": "goal.completed",
+          "object_id": "G-20260527-104618-2535",
+          "summary": "Completed goal G-20260527-104618-2535 after mother-agent verification of the refreshed TUI catalog discovery tickets.",
+          "evidence": [
+            "T-20260527-104741-731b, T-20260527-104752-bb33, and T-20260527-104802-f29d are materialized as done.",
+            "Product commits c50e18d and 3610f24 include the project list to board to detail flow and catalog discovery mode.",
+            "GOCACHE=/private/tmp/maat-go-cache go test ./... passed.",
+            "maat validate --storage /Users/casprine/Desktop/vendor/personal/maat-storage passed."
+          ],
+          "path": "projects/maat/events/2026/05/E-20260527-111321-casprine-2535.md"
         }
       ]
     },
@@ -4945,6 +5142,141 @@
           "created": "2026-05-26T21:53:53+02:00",
           "outcome": "The repository has a normal CI baseline for Core, Agent, Console, and generated contract checks so regressions are caught continuously instead of only during manual release passes.",
           "path": "projects/orion/goals/G-20260526-215353-2af7.md"
+        },
+        {
+          "id": "G-20260527-111522-f2ee",
+          "project_key": "orion",
+          "title": "M1: Core owner, worker app, and HTTP MVP",
+          "status": "active",
+          "created": "2026-05-27T11:15:22+02:00",
+          "outcome": "A Core-owned HTTP monitor can be created by API, claimed and executed by the Core monitor worker, reported into monitor_reports, and shown in the existing monitor list.",
+          "path": "projects/orion/goals/G-20260527-111522-f2ee.md"
+        },
+        {
+          "id": "G-20260527-111543-5f4e",
+          "project_key": "orion",
+          "title": "M2: Console creation workflow",
+          "status": "active",
+          "created": "2026-05-27T11:15:43+02:00",
+          "outcome": "A user can create, test, pause, resume, edit, delete, filter, and inspect Core monitors from Console without editing Agent YAML.",
+          "path": "projects/orion/goals/G-20260527-111543-5f4e.md"
+        },
+        {
+          "id": "G-20260527-111545-bf8a",
+          "project_key": "orion",
+          "title": "Make current alerts honest",
+          "status": "active",
+          "created": "2026-05-27T11:15:45+02:00",
+          "outcome": "Console and Core present the existing alert system accurately, including webhook and email destinations, test actions, expanded delivery logs, and visible global alert rules.",
+          "path": "projects/orion/goals/G-20260527-111545-bf8a.md"
+        },
+        {
+          "id": "G-20260527-111552-9b04",
+          "project_key": "orion",
+          "title": "Add reusable SMTP alert services",
+          "status": "active",
+          "created": "2026-05-27T11:15:52+02:00",
+          "outcome": "Orion supports reusable SMTP service configuration and email destinations with secret-safe API responses, connection testing, and legacy email-channel compatibility.",
+          "path": "projects/orion/goals/G-20260527-111552-9b04.md"
+        },
+        {
+          "id": "G-20260527-111553-dcc5",
+          "project_key": "orion",
+          "title": "M3: Heartbeats",
+          "status": "active",
+          "created": "2026-05-27T11:15:53+02:00",
+          "outcome": "Core supports cron, backup, script, and scheduled-job monitoring through generated heartbeat endpoints and worker-side missed-heartbeat reconciliation.",
+          "path": "projects/orion/goals/G-20260527-111553-dcc5.md"
+        },
+        {
+          "id": "G-20260527-111600-870c",
+          "project_key": "orion",
+          "title": "Add explicit alert routes",
+          "status": "active",
+          "created": "2026-05-27T11:16:00+02:00",
+          "outcome": "Alert delivery decisions are controlled by explicit routes with event, severity, owner, maintenance, destination, and dry-run behavior instead of implicit channel subscriptions.",
+          "path": "projects/orion/goals/G-20260527-111600-870c.md"
+        },
+        {
+          "id": "G-20260527-111602-3269",
+          "project_key": "orion",
+          "title": "M4: Better incident controls",
+          "status": "active",
+          "created": "2026-05-27T11:16:02+02:00",
+          "outcome": "Core monitors have enough noise controls to be useful in production without opening incidents for short transient failures.",
+          "path": "projects/orion/goals/G-20260527-111602-3269.md"
+        },
+        {
+          "id": "G-20260527-111606-93ee",
+          "project_key": "orion",
+          "title": "Add alert grouping policies",
+          "status": "active",
+          "created": "2026-05-27T11:16:06+02:00",
+          "outcome": "Orion can group related alert events by incident, monitor, service label, owner, or severity, including delayed summaries and visible grouped or suppressed delivery history.",
+          "path": "projects/orion/goals/G-20260527-111606-93ee.md"
+        },
+        {
+          "id": "G-20260527-111615-4778",
+          "project_key": "orion",
+          "title": "Queue and retry alert delivery",
+          "status": "active",
+          "created": "2026-05-27T11:16:15+02:00",
+          "outcome": "Alert delivery runs through durable delivery and attempt records with retry scheduling, backoff, worker execution, and transport-specific failure stages for SMTP and webhooks.",
+          "path": "projects/orion/goals/G-20260527-111615-4778.md"
+        },
+        {
+          "id": "G-20260527-111616-a92c",
+          "project_key": "orion",
+          "title": "M5: Components and status page groundwork",
+          "status": "active",
+          "created": "2026-05-27T11:16:16+02:00",
+          "outcome": "Core and Agent monitors can be mapped to service and status-page components so incidents identify impacted components and future status pages can consume monitor health.",
+          "path": "projects/orion/goals/G-20260527-111616-a92c.md"
+        },
+        {
+          "id": "G-20260527-111622-2004",
+          "project_key": "orion",
+          "title": "Add rich alert templates and integrations",
+          "status": "active",
+          "created": "2026-05-27T11:16:22+02:00",
+          "outcome": "Orion supports versioned alert payloads, richer email templates, signing helpers, and additional notification integrations once core routing and grouping are stable.",
+          "path": "projects/orion/goals/G-20260527-111622-2004.md"
+        },
+        {
+          "id": "G-20260527-111626-e3b0",
+          "project_key": "orion",
+          "title": "M6: Full monitor catalog expansion",
+          "status": "active",
+          "created": "2026-05-27T11:16:26+02:00",
+          "outcome": "Orion implements the full now-scope monitor catalog through the Core monitor worker with clear safety limits, report shapes, and incident behavior.",
+          "path": "projects/orion/goals/G-20260527-111626-e3b0.md"
+        },
+        {
+          "id": "G-20260527-111722-d43b",
+          "project_key": "orion",
+          "title": "Ship manual public status pages",
+          "status": "active",
+          "created": "2026-05-27T11:17:22+02:00",
+          "outcome": "Administrators can create, preview, and publish a public status page with safe component health, manual incidents, and scheduled maintenance",
+          "path": "projects/orion/goals/G-20260527-111722-d43b.md"
+        },
+        {
+          "id": "G-20260527-111831-92fb",
+          "project_key": "orion",
+          "title": "Integrate status pages with incidents",
+          "status": "active",
+          "created": "2026-05-27T11:18:31+02:00",
+          "outcome": "Internal incidents can be safely translated into public status page incidents with suggested affected components, public updates, resolution flow, and auditability",
+          "path": "projects/orion/goals/G-20260527-111831-92fb.md"
+        },
+        {
+          "id": "G-20260527-111916-0d5c",
+          "project_key": "orion",
+          "title": "Add status page uptime and history",
+          "status": "active",
+          "created": "2026-05-27T11:19:16+02:00",
+          "outcome": "Published status pages show component uptime, incident history, and cached public history views derived from existing monitor uptime and public incident data",
+          "path": "projects/orion/goals/G-20260527-111916-0d5c.md"
         }
       ],
       "tickets": [
@@ -5285,6 +5617,461 @@
             "The plan document recommends a separate Core monitor worker, explains API versus worker responsibilities, includes deployment and concurrency implications, and Maat has a review note for the decision."
           ],
           "path": "projects/orion/tickets/T-20260527-105659-e52b.md"
+        },
+        {
+          "id": "T-20260527-111350-220a",
+          "project_key": "orion",
+          "goal_id": "G-20260526-215257-e70b",
+          "title": "Convert Core monitor milestones into Maat rows",
+          "status": "active",
+          "created": "2026-05-27T11:13:50+02:00",
+          "description": "Convert the Core-managed monitor plan milestones into row-based milestone and ticket tables, then load the approved milestone structure into Maat as milestone goals with implementation tickets under each goal.",
+          "acceptance": [
+            "The plan document shows milestone rows with ticket rows under each milestone; matching Maat goals and tickets are created with outcomes, descriptions, and acceptance criteria; the conversion ticket is completed with doc commit and Maat evidence."
+          ],
+          "path": "projects/orion/tickets/T-20260527-111350-220a.md"
+        },
+        {
+          "id": "T-20260527-111527-9607",
+          "project_key": "orion",
+          "goal_id": "G-20260526-215126-c321",
+          "title": "Convert alert rollout phases into Maat goals",
+          "status": "active",
+          "created": "2026-05-27T11:15:27+02:00",
+          "description": "Convert the alert routing redesign rollout phases into concrete Maat goals and implementation tickets, then remove the temporary planning document from the repository.",
+          "acceptance": [
+            "Maat contains one alert rollout goal per phase with at least one acceptance-backed ticket under each, the conversion ticket records evidence, and docs/plans/alert-routing-redesign.md is removed from the repo in a commit."
+          ],
+          "path": "projects/orion/tickets/T-20260527-111527-9607.md"
+        },
+        {
+          "id": "T-20260527-111635-c668",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111545-bf8a",
+          "title": "Expose current alert destinations and tests",
+          "status": "active",
+          "created": "2026-05-27T11:16:35+02:00",
+          "description": "Update the existing alert product surface so Console no longer behaves as webhook-only: show email channels if present, use destination language where possible, add webhook/email test notification actions, expand delivery log filters, and make current global alert rules understandable.",
+          "acceptance": [
+            "Console and Core expose existing webhook and email alert behavior honestly, test notification actions work for supported channel types, delivery logs can be filtered by type/channel/event/incident, and the rules view explains global cooldown and recovery behavior."
+          ],
+          "path": "projects/orion/tickets/T-20260527-111635-c668.md"
+        },
+        {
+          "id": "T-20260527-111641-85ec",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111522-f2ee",
+          "title": "Design Core monitor ownership and migration",
+          "status": "active",
+          "created": "2026-05-27T11:16:41+02:00",
+          "description": "Choose and document the database ownership model for Core-managed monitors, including Core owner rows or owner_kind fields, incident compatibility, monitor response fields, and migration order.",
+          "acceptance": [
+            "Ownership design is recorded, migration steps are clear, existing Agent monitors keep working, and required Core/API/Console response changes are identified."
+          ],
+          "path": "projects/orion/tickets/T-20260527-111641-85ec.md"
+        },
+        {
+          "id": "T-20260527-111643-1e77",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111552-9b04",
+          "title": "Model SMTP services and email destinations",
+          "status": "active",
+          "created": "2026-05-27T11:16:43+02:00",
+          "description": "Add reusable SMTP service records and email destinations that reference them, migrate secret storage away from duplicated per-channel fields, provide connection and send-test flows, and keep legacy email channels readable during migration.",
+          "acceptance": [
+            "Core persists SMTP services and email destinations with redacted API responses, Console can create/test them, existing email channels remain readable, and alert delivery can send through the new SMTP service model."
+          ],
+          "path": "projects/orion/tickets/T-20260527-111643-1e77.md"
+        },
+        {
+          "id": "T-20260527-111650-bbfc",
+          "project_key": "orion",
+          "goal_id": "G-20260526-215139-6a2a",
+          "title": "Convert status page plan into Maat rollout",
+          "status": "active",
+          "created": "2026-05-27T11:16:50+02:00",
+          "description": "Translate docs/architecture/status-pages.md implementation phases and open decisions into concrete Maat goals and tickets without duplicating existing component mapping work",
+          "acceptance": [
+            "Maat contains actionable status-page goals and tickets for manual pages, incident integration, uptime/history, subscriptions, customization, and architectural decisions"
+          ],
+          "path": "projects/orion/tickets/T-20260527-111650-bbfc.md"
+        },
+        {
+          "id": "T-20260527-111652-b01f",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111600-870c",
+          "title": "Implement explicit alert routes and dry runs",
+          "status": "active",
+          "created": "2026-05-27T11:16:52+02:00",
+          "description": "Create alert routes that replace implicit channel event subscriptions over time, with filters for event type, severity, monitor owner, and maintenance behavior, target destinations, and a dry-run endpoint for explaining route decisions.",
+          "acceptance": [
+            "Alert routes can be created, read, updated, and evaluated; route dry-run returns match, suppression, grouping, and destination decisions; existing channel subscriptions are represented by a generated default route during migration."
+          ],
+          "path": "projects/orion/tickets/T-20260527-111652-b01f.md"
+        },
+        {
+          "id": "T-20260527-111653-3a22",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111522-f2ee",
+          "title": "Build Core monitor worker app foundation",
+          "status": "active",
+          "created": "2026-05-27T11:16:53+02:00",
+          "description": "Add the initial Core monitor worker binary under the agreed app path, sharing Core config, logging, database setup, migrations, and service construction without running API routes.",
+          "acceptance": [
+            "The worker can start, connect to the Core database or internal API path, expose basic health logging, shut down gracefully, and run without blocking or embedding the Core API server."
+          ],
+          "path": "projects/orion/tickets/T-20260527-111653-3a22.md"
+        },
+        {
+          "id": "T-20260527-111704-c955",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111606-93ee",
+          "title": "Implement alert grouping policies and summaries",
+          "status": "active",
+          "created": "2026-05-27T11:17:04+02:00",
+          "description": "Add grouping policies for related alert events by incident, monitor, service label, owner, or severity, including delayed summary notifications and visible grouped or suppressed delivery decisions.",
+          "acceptance": [
+            "Routes can use grouping policies, Core stores alert groups and grouped decisions, delayed summaries are delivered, and the delivery log shows grouped or suppressed events with reasons."
+          ],
+          "path": "projects/orion/tickets/T-20260527-111704-c955.md"
+        },
+        {
+          "id": "T-20260527-111705-6c56",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111522-f2ee",
+          "title": "Add due-check leasing and scheduling",
+          "status": "active",
+          "created": "2026-05-27T11:17:05+02:00",
+          "description": "Implement the worker scheduling loop and due-check claim mechanism for Core monitor configs using leases or an equivalent durable coordination model.",
+          "acceptance": [
+            "Due Core monitor configs can be claimed once, overdue checks recover after restart, leases expire safely, paused monitors are skipped, and tests cover duplicate-claim prevention."
+          ],
+          "path": "projects/orion/tickets/T-20260527-111705-6c56.md"
+        },
+        {
+          "id": "T-20260527-111712-cd6c",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111615-4778",
+          "title": "Add alert delivery queue and retry attempts",
+          "status": "active",
+          "created": "2026-05-27T11:17:12+02:00",
+          "description": "Split alert deliveries from transport attempts, add retry scheduling with backoff, run delivery through a worker, and record SMTP/webhook failure stages for operational debugging.",
+          "acceptance": [
+            "Core stores delivery attempts separately from deliveries, retries transient failures with bounded backoff, exposes attempt history in the API, and delivery logs show transport-specific failure stage and retry status."
+          ],
+          "path": "projects/orion/tickets/T-20260527-111712-cd6c.md"
+        },
+        {
+          "id": "T-20260527-111715-8985",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111522-f2ee",
+          "title": "Add HTTP status monitor runner",
+          "status": "active",
+          "created": "2026-05-27T11:17:15+02:00",
+          "description": "Implement the first Core worker check runner for HTTP and HTTPS status checks, including timeout handling, redirect policy, status matching, latency metrics, and structured report payloads.",
+          "acceptance": [
+            "A Core-owned HTTP status monitor can be executed by the worker, report up/down results with latency and error context, and pass focused runner tests."
+          ],
+          "path": "projects/orion/tickets/T-20260527-111715-8985.md"
+        },
+        {
+          "id": "T-20260527-111722-5dc7",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111622-2004",
+          "title": "Add rich alert payloads and integrations",
+          "status": "active",
+          "created": "2026-05-27T11:17:22+02:00",
+          "description": "Add versioned webhook payloads, richer email templates, signing helpers, and additional destination integrations such as Slack or Discord after the routing and grouping foundation is stable.",
+          "acceptance": [
+            "Alert destinations can choose a stable payload/template version, webhook signing can be configured and verified, HTML email templates are available, and at least one additional integration is planned or implemented behind the destination model."
+          ],
+          "path": "projects/orion/tickets/T-20260527-111722-5dc7.md"
+        },
+        {
+          "id": "T-20260527-111724-8c57",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111522-f2ee",
+          "title": "Wire Core monitor reports into incident reconciliation",
+          "status": "active",
+          "created": "2026-05-27T11:17:24+02:00",
+          "description": "Route worker-produced Core monitor reports through the existing monitor health and incident reconciliation path without regressing Agent monitor report behavior.",
+          "acceptance": [
+            "Worker reports update monitor health, create and resolve incidents, preserve Agent report behavior, and are covered by integration tests for failing and recovering Core monitors."
+          ],
+          "path": "projects/orion/tickets/T-20260527-111724-8c57.md"
+        },
+        {
+          "id": "T-20260527-111737-edb2",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111522-f2ee",
+          "title": "Add Core worker diagnostics and deployment wiring",
+          "status": "active",
+          "created": "2026-05-27T11:17:37+02:00",
+          "description": "Add deployment and diagnostics support for running the Core API and Core monitor worker as separate processes in local development and Docker Compose.",
+          "acceptance": [
+            "Deployment docs/config start the API and worker separately, diagnostics expose worker state, and Core API health remains distinct from worker monitor execution health."
+          ],
+          "path": "projects/orion/tickets/T-20260527-111737-edb2.md"
+        },
+        {
+          "id": "T-20260527-111744-5e0f",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111722-d43b",
+          "title": "Add status page publication schema",
+          "status": "active",
+          "created": "2026-05-27T11:17:44+02:00",
+          "description": "Add Core migrations and models for status_pages, status_page_sections, status_page_components, component mappings, public incidents, and public incident updates as a publication layer over existing Core data",
+          "acceptance": [
+            "Core has migrated tables and model/service tests proving pages, sections, components, mappings, incidents, and updates can be created without changing Agent reporting behavior"
+          ],
+          "path": "projects/orion/tickets/T-20260527-111744-5e0f.md"
+        },
+        {
+          "id": "T-20260527-111749-59d7",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111543-5f4e",
+          "title": "Add Core monitor create/edit/test API",
+          "status": "active",
+          "created": "2026-05-27T11:17:49+02:00",
+          "description": "Add admin API routes for creating, editing, pausing, resuming, deleting, testing, and retrieving redacted configs for Core-managed monitors.",
+          "acceptance": [
+            "Routes validate monitor config, return redacted data, support test-now behavior, regenerate OpenAPI and SDK when needed, and include API tests for validation and lifecycle actions."
+          ],
+          "path": "projects/orion/tickets/T-20260527-111749-59d7.md"
+        },
+        {
+          "id": "T-20260527-111756-99a1",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111722-d43b",
+          "title": "Build status page admin API",
+          "status": "active",
+          "created": "2026-05-27T11:17:56+02:00",
+          "description": "Add JWT-protected Core routes for listing, creating, editing, previewing, publishing, and unpublishing status pages, sections, components, mappings, and manual public incidents",
+          "acceptance": [
+            "Admin routes are documented in OpenAPI, covered by Core tests, and regenerate the Console SDK without hand-editing generated files"
+          ],
+          "path": "projects/orion/tickets/T-20260527-111756-99a1.md"
+        },
+        {
+          "id": "T-20260527-111759-a920",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111543-5f4e",
+          "title": "Build Console Core monitor create workflow",
+          "status": "active",
+          "created": "2026-05-27T11:17:59+02:00",
+          "description": "Build the Console workflow for choosing a Core monitor type, entering target settings, configuring success criteria, testing the monitor, and saving it.",
+          "acceptance": [
+            "A user can create a Core monitor from Console, test failures show actionable errors, saved monitors appear immediately, and the Console build passes."
+          ],
+          "path": "projects/orion/tickets/T-20260527-111759-a920.md"
+        },
+        {
+          "id": "T-20260527-111805-ddfe",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111722-d43b",
+          "title": "Build Console status page editor",
+          "status": "active",
+          "created": "2026-05-27T11:18:05+02:00",
+          "description": "Add Console screens for status page list, draft editor, sections, public components, internal resource mapping, preview, and publish controls",
+          "acceptance": [
+            "An admin can create a draft page, configure sections and components, map monitors or agents, preview the public DTO, and publish from the Console with URL-backed state where appropriate"
+          ],
+          "path": "projects/orion/tickets/T-20260527-111805-ddfe.md"
+        },
+        {
+          "id": "T-20260527-111815-c7af",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111722-d43b",
+          "title": "Serve public status page payloads",
+          "status": "active",
+          "created": "2026-05-27T11:18:15+02:00",
+          "description": "Add unauthenticated public read routes for published status pages that return a dedicated sanitized public DTO instead of internal Console API structs",
+          "acceptance": [
+            "GET /status/:slug returns only published page, component, public incident, and maintenance fields with no internal ids, raw payloads, secrets, or private incident notes"
+          ],
+          "path": "projects/orion/tickets/T-20260527-111815-c7af.md"
+        },
+        {
+          "id": "T-20260527-111824-5de4",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111722-d43b",
+          "title": "Add status page publish validation",
+          "status": "active",
+          "created": "2026-05-27T11:18:24+02:00",
+          "description": "Block or warn before publishing unsafe or incomplete status pages, including empty pages, unmapped components without manual status, conflicting slugs, and private-looking labels",
+          "acceptance": [
+            "Publish attempts return actionable validation results and tests cover missing mappings, duplicate slugs, no visible components, and labels that look like internal hosts or IPs"
+          ],
+          "path": "projects/orion/tickets/T-20260527-111824-5de4.md"
+        },
+        {
+          "id": "T-20260527-111824-6353",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111543-5f4e",
+          "title": "Add Console owner and monitor type filters",
+          "status": "active",
+          "created": "2026-05-27T11:18:24+02:00",
+          "description": "Update Console monitor list filtering so users can filter by owner kind, owner name, monitor type, and Core versus Agent monitor source.",
+          "acceptance": [
+            "Monitor lists expose stable owner/type filters, URL state stays consistent with existing table patterns, and Core/Agent ownership is visually clear in rows."
+          ],
+          "path": "projects/orion/tickets/T-20260527-111824-6353.md"
+        },
+        {
+          "id": "T-20260527-111835-b813",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111543-5f4e",
+          "title": "Add Core monitor detail config summary",
+          "status": "active",
+          "created": "2026-05-27T11:18:35+02:00",
+          "description": "Update monitor detail views to show Core monitor ownership, schedule, next run, last run, target summary, redacted config, latest report, and worker execution context.",
+          "acceptance": [
+            "Core monitor detail pages explain what is checked, who checks it, when it runs next, what the latest result was, and never expose secret values."
+          ],
+          "path": "projects/orion/tickets/T-20260527-111835-b813.md"
+        },
+        {
+          "id": "T-20260527-111841-7b56",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111831-92fb",
+          "title": "Link internal incidents to public incidents",
+          "status": "active",
+          "created": "2026-05-27T11:18:41+02:00",
+          "description": "Allow an admin to create a draft public status page incident linked to an existing internal Orion incident while keeping public title, status, severity, impact, and updates separate from internal incident events",
+          "acceptance": [
+            "A linked public incident can be drafted, published, and resolved without exposing internal incident notes, ids, alert delivery state, or raw monitor details"
+          ],
+          "path": "projects/orion/tickets/T-20260527-111841-7b56.md"
+        },
+        {
+          "id": "T-20260527-111846-2d78",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111543-5f4e",
+          "title": "Redact Core monitor secrets in Console and API responses",
+          "status": "active",
+          "created": "2026-05-27T11:18:46+02:00",
+          "description": "Ensure Core monitor secrets such as headers, tokens, credentials, and browser-flow secret values are write-only or redacted in API responses, logs, reports, and Console views.",
+          "acceptance": [
+            "Secret-bearing fields are redacted on read, raw reports and logs do not leak secrets, update flows preserve or replace secrets intentionally, and tests cover redaction."
+          ],
+          "path": "projects/orion/tickets/T-20260527-111846-2d78.md"
+        },
+        {
+          "id": "T-20260527-111850-3136",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111831-92fb",
+          "title": "Suggest affected status page components",
+          "status": "active",
+          "created": "2026-05-27T11:18:50+02:00",
+          "description": "Use status page component mappings to suggest which public components are affected when an internal incident is opened or updated",
+          "acceptance": [
+            "Console can show suggested affected public components for an internal incident, and Core tests cover monitor-to-component and agent-to-component mapping suggestions"
+          ],
+          "path": "projects/orion/tickets/T-20260527-111850-3136.md"
+        },
+        {
+          "id": "T-20260527-111856-87f6",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111553-dcc5",
+          "title": "Add heartbeat token and ingest routes",
+          "status": "active",
+          "created": "2026-05-27T11:18:56+02:00",
+          "description": "Add generated heartbeat monitor tokens and public ingest routes for success and failure signals from cron jobs, backups, scripts, and scheduled tasks.",
+          "acceptance": [
+            "Heartbeat success and failure routes validate tokens, store report payloads with truncation, update last signal timestamps, and reject invalid or deleted monitor tokens."
+          ],
+          "path": "projects/orion/tickets/T-20260527-111856-87f6.md"
+        },
+        {
+          "id": "T-20260527-111858-0c88",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111831-92fb",
+          "title": "Implement public incident update workflow",
+          "status": "active",
+          "created": "2026-05-27T11:18:58+02:00",
+          "description": "Add API and Console flows for drafting, publishing, editing, and resolving public status page incident updates with public statuses investigating, identified, monitoring, resolved, and scheduled",
+          "acceptance": [
+            "Admins can publish public incident timeline updates and resolution messages, while public pages show only published updates in chronological order"
+          ],
+          "path": "projects/orion/tickets/T-20260527-111858-0c88.md"
+        },
+        {
+          "id": "T-20260527-111907-0678",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111831-92fb",
+          "title": "Record status page publish audit events",
+          "status": "active",
+          "created": "2026-05-27T11:19:07+02:00",
+          "description": "Record auditable events for status page publish, unpublish, public incident publish, public incident update, resolution, and component mapping changes",
+          "acceptance": [
+            "Audit records identify the action, status page, affected object, timestamp, and actor without storing secrets or raw incident payloads"
+          ],
+          "path": "projects/orion/tickets/T-20260527-111907-0678.md"
+        },
+        {
+          "id": "T-20260527-111907-416e",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111553-dcc5",
+          "title": "Add heartbeat missed-check reconciliation worker",
+          "status": "active",
+          "created": "2026-05-27T11:19:07+02:00",
+          "description": "Add worker-side reconciliation that marks heartbeat monitors down or stale when expected signals are missed beyond their configured interval and grace period.",
+          "acceptance": [
+            "Missed heartbeat checks open incidents after the grace period, recovery signals resolve incidents through the shared reconciliation path, and tests cover pending, missed, failed, and recovered states."
+          ],
+          "path": "projects/orion/tickets/T-20260527-111907-416e.md"
+        },
+        {
+          "id": "T-20260527-111918-7ad7",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111553-dcc5",
+          "title": "Add heartbeat Console copy and setup affordances",
+          "status": "active",
+          "created": "2026-05-27T11:19:18+02:00",
+          "description": "Add Console UI for heartbeat setup, including copyable success and failure endpoints, example curl snippets, last signal state, and setup guidance without turning the page into marketing copy.",
+          "acceptance": [
+            "Users can copy heartbeat endpoints, see pending and last-signal state, inspect setup examples, and complete the workflow without editing backend files."
+          ],
+          "path": "projects/orion/tickets/T-20260527-111918-7ad7.md"
+        },
+        {
+          "id": "T-20260527-111924-f068",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111916-0d5c",
+          "title": "Aggregate public component uptime",
+          "status": "active",
+          "created": "2026-05-27T11:19:24+02:00",
+          "description": "Compute public component uptime from mapped monitor uptime rollups and recent raw monitor report data using each component's configured uptime rollup strategy",
+          "acceptance": [
+            "Public component uptime returns daily buckets and overall uptime for mapped monitors, handles multiple mappings deterministically, and hides raw report counts by default"
+          ],
+          "path": "projects/orion/tickets/T-20260527-111924-f068.md"
+        },
+        {
+          "id": "T-20260527-111931-a4dc",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111553-dcc5",
+          "title": "Add heartbeat failure payload inspection",
+          "status": "active",
+          "created": "2026-05-27T11:19:31+02:00",
+          "description": "Expose heartbeat failure payloads and recent heartbeat events in monitor detail views and incident timelines while enforcing truncation and redaction limits.",
+          "acceptance": [
+            "Heartbeat details show recent success/failure payload context, incident timelines include heartbeat evidence, payloads are bounded, and secrets remain redacted."
+          ],
+          "path": "projects/orion/tickets/T-20260527-111931-a4dc.md"
+        },
+        {
+          "id": "T-20260527-111933-f32c",
+          "project_key": "orion",
+          "goal_id": "G-20260527-111916-0d5c",
+          "title": "Add public status history routes",
+          "status": "active",
+          "created": "2026-05-27T11:19:33+02:00",
+          "description": "Add public read routes for status page history, public incident history, and individual public incident detail using sanitized status page DTOs",
+          "acceptance": [
+            "GET /status/:slug/history, GET /status/:slug/incidents, and GET /status/:slug/incidents/:incident_id return only published public data with bounded date ranges and tests for hidden draft incidents"
+          ],
+          "path": "projects/orion/tickets/T-20260527-111933-f32c.md"
         }
       ],
       "events": [
@@ -6016,6 +6803,562 @@
             "Updated docs/plans/core-managed-monitors.md and committed 5be99d1 docs(core): split monitor worker plan; no additional Maat goals or implementation tickets were created after the owner requested review before loading."
           ],
           "path": "projects/orion/events/2026/05/E-20260527-110307-casprine-12f0.md"
+        },
+        {
+          "id": "E-20260527-111350-casprine-837a",
+          "time": "2026-05-27T11:13:50+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111350-220a",
+          "summary": "Created ticket T-20260527-111350-220a.",
+          "path": "projects/orion/events/2026/05/E-20260527-111350-casprine-837a.md"
+        },
+        {
+          "id": "E-20260527-111358-codex-6bc9",
+          "time": "2026-05-27T11:13:58+02:00",
+          "actor": "codex",
+          "project_key": "orion",
+          "type": "ticket.claimed",
+          "object_id": "T-20260527-111350-220a",
+          "expires": "2026-05-27T13:13:58+02:00",
+          "summary": "Claimed ticket T-20260527-111350-220a until 2026-05-27T13:13:58+02:00.",
+          "path": "projects/orion/events/2026/05/E-20260527-111358-codex-6bc9.md"
+        },
+        {
+          "id": "E-20260527-111522-casprine-c300",
+          "time": "2026-05-27T11:15:22+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260527-111522-f2ee",
+          "summary": "Created goal G-20260527-111522-f2ee.",
+          "path": "projects/orion/events/2026/05/E-20260527-111522-casprine-c300.md"
+        },
+        {
+          "id": "E-20260527-111527-casprine-5796",
+          "time": "2026-05-27T11:15:27+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111527-9607",
+          "summary": "Created ticket T-20260527-111527-9607.",
+          "path": "projects/orion/events/2026/05/E-20260527-111527-casprine-5796.md"
+        },
+        {
+          "id": "E-20260527-111535-codex-e9ac",
+          "time": "2026-05-27T11:15:35+02:00",
+          "actor": "codex",
+          "project_key": "orion",
+          "type": "ticket.claimed",
+          "object_id": "T-20260527-111527-9607",
+          "expires": "2026-05-27T13:15:35+02:00",
+          "summary": "Claimed ticket T-20260527-111527-9607 until 2026-05-27T13:15:35+02:00.",
+          "path": "projects/orion/events/2026/05/E-20260527-111535-codex-e9ac.md"
+        },
+        {
+          "id": "E-20260527-111543-casprine-95c1",
+          "time": "2026-05-27T11:15:43+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260527-111543-5f4e",
+          "summary": "Created goal G-20260527-111543-5f4e.",
+          "path": "projects/orion/events/2026/05/E-20260527-111543-casprine-95c1.md"
+        },
+        {
+          "id": "E-20260527-111545-casprine-fca3",
+          "time": "2026-05-27T11:15:45+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260527-111545-bf8a",
+          "summary": "Created goal G-20260527-111545-bf8a.",
+          "path": "projects/orion/events/2026/05/E-20260527-111545-casprine-fca3.md"
+        },
+        {
+          "id": "E-20260527-111552-casprine-d901",
+          "time": "2026-05-27T11:15:52+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260527-111552-9b04",
+          "summary": "Created goal G-20260527-111552-9b04.",
+          "path": "projects/orion/events/2026/05/E-20260527-111552-casprine-d901.md"
+        },
+        {
+          "id": "E-20260527-111553-casprine-8c78",
+          "time": "2026-05-27T11:15:53+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260527-111553-dcc5",
+          "summary": "Created goal G-20260527-111553-dcc5.",
+          "path": "projects/orion/events/2026/05/E-20260527-111553-casprine-8c78.md"
+        },
+        {
+          "id": "E-20260527-111600-casprine-865c",
+          "time": "2026-05-27T11:16:00+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260527-111600-870c",
+          "summary": "Created goal G-20260527-111600-870c.",
+          "path": "projects/orion/events/2026/05/E-20260527-111600-casprine-865c.md"
+        },
+        {
+          "id": "E-20260527-111602-casprine-3a95",
+          "time": "2026-05-27T11:16:02+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260527-111602-3269",
+          "summary": "Created goal G-20260527-111602-3269.",
+          "path": "projects/orion/events/2026/05/E-20260527-111602-casprine-3a95.md"
+        },
+        {
+          "id": "E-20260527-111606-casprine-2ea7",
+          "time": "2026-05-27T11:16:06+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260527-111606-93ee",
+          "summary": "Created goal G-20260527-111606-93ee.",
+          "path": "projects/orion/events/2026/05/E-20260527-111606-casprine-2ea7.md"
+        },
+        {
+          "id": "E-20260527-111615-casprine-aac5",
+          "time": "2026-05-27T11:16:15+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260527-111615-4778",
+          "summary": "Created goal G-20260527-111615-4778.",
+          "path": "projects/orion/events/2026/05/E-20260527-111615-casprine-aac5.md"
+        },
+        {
+          "id": "E-20260527-111616-casprine-af4e",
+          "time": "2026-05-27T11:16:16+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260527-111616-a92c",
+          "summary": "Created goal G-20260527-111616-a92c.",
+          "path": "projects/orion/events/2026/05/E-20260527-111616-casprine-af4e.md"
+        },
+        {
+          "id": "E-20260527-111622-casprine-b5b4",
+          "time": "2026-05-27T11:16:22+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260527-111622-2004",
+          "summary": "Created goal G-20260527-111622-2004.",
+          "path": "projects/orion/events/2026/05/E-20260527-111622-casprine-b5b4.md"
+        },
+        {
+          "id": "E-20260527-111626-casprine-22c2",
+          "time": "2026-05-27T11:16:26+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260527-111626-e3b0",
+          "summary": "Created goal G-20260527-111626-e3b0.",
+          "path": "projects/orion/events/2026/05/E-20260527-111626-casprine-22c2.md"
+        },
+        {
+          "id": "E-20260527-111635-casprine-1bfe",
+          "time": "2026-05-27T11:16:35+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111635-c668",
+          "summary": "Created ticket T-20260527-111635-c668.",
+          "path": "projects/orion/events/2026/05/E-20260527-111635-casprine-1bfe.md"
+        },
+        {
+          "id": "E-20260527-111641-casprine-bf76",
+          "time": "2026-05-27T11:16:41+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111641-85ec",
+          "summary": "Created ticket T-20260527-111641-85ec.",
+          "path": "projects/orion/events/2026/05/E-20260527-111641-casprine-bf76.md"
+        },
+        {
+          "id": "E-20260527-111643-casprine-a732",
+          "time": "2026-05-27T11:16:43+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111643-1e77",
+          "summary": "Created ticket T-20260527-111643-1e77.",
+          "path": "projects/orion/events/2026/05/E-20260527-111643-casprine-a732.md"
+        },
+        {
+          "id": "E-20260527-111650-casprine-89fa",
+          "time": "2026-05-27T11:16:50+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111650-bbfc",
+          "summary": "Created ticket T-20260527-111650-bbfc.",
+          "path": "projects/orion/events/2026/05/E-20260527-111650-casprine-89fa.md"
+        },
+        {
+          "id": "E-20260527-111652-casprine-2c60",
+          "time": "2026-05-27T11:16:52+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111652-b01f",
+          "summary": "Created ticket T-20260527-111652-b01f.",
+          "path": "projects/orion/events/2026/05/E-20260527-111652-casprine-2c60.md"
+        },
+        {
+          "id": "E-20260527-111653-casprine-50ce",
+          "time": "2026-05-27T11:16:53+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111653-3a22",
+          "summary": "Created ticket T-20260527-111653-3a22.",
+          "path": "projects/orion/events/2026/05/E-20260527-111653-casprine-50ce.md"
+        },
+        {
+          "id": "E-20260527-111700-codex-11f7",
+          "time": "2026-05-27T11:17:00+02:00",
+          "actor": "codex",
+          "project_key": "orion",
+          "type": "ticket.claimed",
+          "object_id": "T-20260527-111650-bbfc",
+          "expires": "2026-05-27T13:17:00+02:00",
+          "summary": "Claimed ticket T-20260527-111650-bbfc until 2026-05-27T13:17:00+02:00.",
+          "path": "projects/orion/events/2026/05/E-20260527-111700-codex-11f7.md"
+        },
+        {
+          "id": "E-20260527-111704-casprine-29fc",
+          "time": "2026-05-27T11:17:04+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111704-c955",
+          "summary": "Created ticket T-20260527-111704-c955.",
+          "path": "projects/orion/events/2026/05/E-20260527-111704-casprine-29fc.md"
+        },
+        {
+          "id": "E-20260527-111705-casprine-46aa",
+          "time": "2026-05-27T11:17:05+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111705-6c56",
+          "summary": "Created ticket T-20260527-111705-6c56.",
+          "path": "projects/orion/events/2026/05/E-20260527-111705-casprine-46aa.md"
+        },
+        {
+          "id": "E-20260527-111712-casprine-f148",
+          "time": "2026-05-27T11:17:12+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111712-cd6c",
+          "summary": "Created ticket T-20260527-111712-cd6c.",
+          "path": "projects/orion/events/2026/05/E-20260527-111712-casprine-f148.md"
+        },
+        {
+          "id": "E-20260527-111715-casprine-f372",
+          "time": "2026-05-27T11:17:15+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111715-8985",
+          "summary": "Created ticket T-20260527-111715-8985.",
+          "path": "projects/orion/events/2026/05/E-20260527-111715-casprine-f372.md"
+        },
+        {
+          "id": "E-20260527-111722-casprine-bdbb",
+          "time": "2026-05-27T11:17:22+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111722-5dc7",
+          "summary": "Created ticket T-20260527-111722-5dc7.",
+          "path": "projects/orion/events/2026/05/E-20260527-111722-casprine-bdbb.md"
+        },
+        {
+          "id": "E-20260527-111722-casprine-ca3d",
+          "time": "2026-05-27T11:17:22+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260527-111722-d43b",
+          "summary": "Created goal G-20260527-111722-d43b.",
+          "path": "projects/orion/events/2026/05/E-20260527-111722-casprine-ca3d.md"
+        },
+        {
+          "id": "E-20260527-111724-casprine-417d",
+          "time": "2026-05-27T11:17:24+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111724-8c57",
+          "summary": "Created ticket T-20260527-111724-8c57.",
+          "path": "projects/orion/events/2026/05/E-20260527-111724-casprine-417d.md"
+        },
+        {
+          "id": "E-20260527-111737-casprine-98b8",
+          "time": "2026-05-27T11:17:37+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111737-edb2",
+          "summary": "Created ticket T-20260527-111737-edb2.",
+          "path": "projects/orion/events/2026/05/E-20260527-111737-casprine-98b8.md"
+        },
+        {
+          "id": "E-20260527-111740-casprine-e0e7",
+          "time": "2026-05-27T11:17:40+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260527-111527-9607",
+          "summary": "Created six alert rollout goals and implementation tickets: G-20260527-111545-bf8a/T-20260527-111635-c668, G-20260527-111552-9b04/T-20260527-111643-1e77, G-20260527-111600-870c/T-20260527-111652-b01f, G-20260527-111606-93ee/T-20260527-111704-c955, G-20260527-111615-4778/T-20260527-111712-cd6c, G-20260527-111622-2004/T-20260527-111722-5dc7.",
+          "path": "projects/orion/events/2026/05/E-20260527-111740-casprine-e0e7.md"
+        },
+        {
+          "id": "E-20260527-111744-casprine-a93a",
+          "time": "2026-05-27T11:17:44+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111744-5e0f",
+          "summary": "Created ticket T-20260527-111744-5e0f.",
+          "path": "projects/orion/events/2026/05/E-20260527-111744-casprine-a93a.md"
+        },
+        {
+          "id": "E-20260527-111749-casprine-fad5",
+          "time": "2026-05-27T11:17:49+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111749-59d7",
+          "summary": "Created ticket T-20260527-111749-59d7.",
+          "path": "projects/orion/events/2026/05/E-20260527-111749-casprine-fad5.md"
+        },
+        {
+          "id": "E-20260527-111756-casprine-5d49",
+          "time": "2026-05-27T11:17:56+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111756-99a1",
+          "summary": "Created ticket T-20260527-111756-99a1.",
+          "path": "projects/orion/events/2026/05/E-20260527-111756-casprine-5d49.md"
+        },
+        {
+          "id": "E-20260527-111759-casprine-9cc9",
+          "time": "2026-05-27T11:17:59+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111759-a920",
+          "summary": "Created ticket T-20260527-111759-a920.",
+          "path": "projects/orion/events/2026/05/E-20260527-111759-casprine-9cc9.md"
+        },
+        {
+          "id": "E-20260527-111805-casprine-8946",
+          "time": "2026-05-27T11:18:05+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111805-ddfe",
+          "summary": "Created ticket T-20260527-111805-ddfe.",
+          "path": "projects/orion/events/2026/05/E-20260527-111805-casprine-8946.md"
+        },
+        {
+          "id": "E-20260527-111815-casprine-dd77",
+          "time": "2026-05-27T11:18:15+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111815-c7af",
+          "summary": "Created ticket T-20260527-111815-c7af.",
+          "path": "projects/orion/events/2026/05/E-20260527-111815-casprine-dd77.md"
+        },
+        {
+          "id": "E-20260527-111824-casprine-469a",
+          "time": "2026-05-27T11:18:24+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111824-6353",
+          "summary": "Created ticket T-20260527-111824-6353.",
+          "path": "projects/orion/events/2026/05/E-20260527-111824-casprine-469a.md"
+        },
+        {
+          "id": "E-20260527-111824-casprine-dfce",
+          "time": "2026-05-27T11:18:24+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111824-5de4",
+          "summary": "Created ticket T-20260527-111824-5de4.",
+          "path": "projects/orion/events/2026/05/E-20260527-111824-casprine-dfce.md"
+        },
+        {
+          "id": "E-20260527-111827-casprine-bab5",
+          "time": "2026-05-27T11:18:27+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260527-111527-9607",
+          "summary": "Completed ticket T-20260527-111527-9607.",
+          "evidence": [
+            "Created six phase goals and six implementation tickets in Maat, then removed docs/plans/alert-routing-redesign.md in commit b3361bd."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260527-111827-casprine-bab5.md"
+        },
+        {
+          "id": "E-20260527-111831-casprine-c15e",
+          "time": "2026-05-27T11:18:31+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260527-111831-92fb",
+          "summary": "Created goal G-20260527-111831-92fb.",
+          "path": "projects/orion/events/2026/05/E-20260527-111831-casprine-c15e.md"
+        },
+        {
+          "id": "E-20260527-111835-casprine-f9ad",
+          "time": "2026-05-27T11:18:35+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111835-b813",
+          "summary": "Created ticket T-20260527-111835-b813.",
+          "path": "projects/orion/events/2026/05/E-20260527-111835-casprine-f9ad.md"
+        },
+        {
+          "id": "E-20260527-111841-casprine-b8be",
+          "time": "2026-05-27T11:18:41+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111841-7b56",
+          "summary": "Created ticket T-20260527-111841-7b56.",
+          "path": "projects/orion/events/2026/05/E-20260527-111841-casprine-b8be.md"
+        },
+        {
+          "id": "E-20260527-111846-casprine-7cad",
+          "time": "2026-05-27T11:18:46+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111846-2d78",
+          "summary": "Created ticket T-20260527-111846-2d78.",
+          "path": "projects/orion/events/2026/05/E-20260527-111846-casprine-7cad.md"
+        },
+        {
+          "id": "E-20260527-111850-casprine-e24b",
+          "time": "2026-05-27T11:18:50+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111850-3136",
+          "summary": "Created ticket T-20260527-111850-3136.",
+          "path": "projects/orion/events/2026/05/E-20260527-111850-casprine-e24b.md"
+        },
+        {
+          "id": "E-20260527-111856-casprine-a780",
+          "time": "2026-05-27T11:18:56+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111856-87f6",
+          "summary": "Created ticket T-20260527-111856-87f6.",
+          "path": "projects/orion/events/2026/05/E-20260527-111856-casprine-a780.md"
+        },
+        {
+          "id": "E-20260527-111858-casprine-1695",
+          "time": "2026-05-27T11:18:58+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111858-0c88",
+          "summary": "Created ticket T-20260527-111858-0c88.",
+          "path": "projects/orion/events/2026/05/E-20260527-111858-casprine-1695.md"
+        },
+        {
+          "id": "E-20260527-111907-casprine-1138",
+          "time": "2026-05-27T11:19:07+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111907-0678",
+          "summary": "Created ticket T-20260527-111907-0678.",
+          "path": "projects/orion/events/2026/05/E-20260527-111907-casprine-1138.md"
+        },
+        {
+          "id": "E-20260527-111907-casprine-fa88",
+          "time": "2026-05-27T11:19:07+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111907-416e",
+          "summary": "Created ticket T-20260527-111907-416e.",
+          "path": "projects/orion/events/2026/05/E-20260527-111907-casprine-fa88.md"
+        },
+        {
+          "id": "E-20260527-111916-casprine-9815",
+          "time": "2026-05-27T11:19:16+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "goal.created",
+          "object_id": "G-20260527-111916-0d5c",
+          "summary": "Created goal G-20260527-111916-0d5c.",
+          "path": "projects/orion/events/2026/05/E-20260527-111916-casprine-9815.md"
+        },
+        {
+          "id": "E-20260527-111918-casprine-2c9b",
+          "time": "2026-05-27T11:19:18+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111918-7ad7",
+          "summary": "Created ticket T-20260527-111918-7ad7.",
+          "path": "projects/orion/events/2026/05/E-20260527-111918-casprine-2c9b.md"
+        },
+        {
+          "id": "E-20260527-111924-casprine-56c1",
+          "time": "2026-05-27T11:19:24+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111924-f068",
+          "summary": "Created ticket T-20260527-111924-f068.",
+          "path": "projects/orion/events/2026/05/E-20260527-111924-casprine-56c1.md"
+        },
+        {
+          "id": "E-20260527-111931-casprine-cb46",
+          "time": "2026-05-27T11:19:31+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111931-a4dc",
+          "summary": "Created ticket T-20260527-111931-a4dc.",
+          "path": "projects/orion/events/2026/05/E-20260527-111931-casprine-cb46.md"
+        },
+        {
+          "id": "E-20260527-111933-casprine-ec4d",
+          "time": "2026-05-27T11:19:33+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.created",
+          "object_id": "T-20260527-111933-f32c",
+          "summary": "Created ticket T-20260527-111933-f32c.",
+          "path": "projects/orion/events/2026/05/E-20260527-111933-casprine-ec4d.md"
         }
       ]
     }
@@ -8122,6 +9465,96 @@
       "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-110431-codex-goal-owner-catalog-storage-c7b6 |\n| Time | 2026-05-27T11:04:31+02:00 |\n| Actor | codex-goal-owner-catalog-storage |\n| Project | maat |\n| Type | ticket.completed |\n| Object | T-20260527-104659-e047 |\n\n## Summary\n\nCompleted ticket T-20260527-104659-e047.\n\n## Evidence\n\n- External storage now contains seeded catalog Markdown for 4 apps and 4 patterns; maat catalog list apps returned the seeded objects and maat validate passed with zero issues.\n"
     },
     {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260527-110715-codex-catalog-cli-owner-ef0c.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-110715-codex-catalog-cli-owner-ef0c |\n| Time | 2026-05-27T11:07:15+02:00 |\n| Actor | codex-catalog-cli-owner |\n| Project | maat |\n| Type | ticket.completed |\n| Object | T-20260527-104709-0092 |\n\n## Summary\n\nCompleted ticket T-20260527-104709-0092.\n\n## Evidence\n\n- Materialized completion after fix 0f6a508; original implementation commit f925017 and go test ./... passed.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260527-110729-codex-catalog-json-worker-018b.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-110729-codex-catalog-json-worker-018b |\n| Time | 2026-05-27T11:07:29+02:00 |\n| Actor | codex-catalog-json-worker |\n| Project | maat |\n| Type | ticket.completed |\n| Object | T-20260527-104719-ccfc |\n\n## Summary\n\nCompleted ticket T-20260527-104719-ccfc.\n\n## Evidence\n\n- Materialized completion after fix 0f6a508; JSON behavior implemented in f925017 and go test ./... passed.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260527-110751-codex-catalog-search-worker-4359.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-110751-codex-catalog-search-worker-4359 |\n| Time | 2026-05-27T11:07:51+02:00 |\n| Actor | codex-catalog-search-worker |\n| Project | maat |\n| Type | ticket.completed |\n| Object | T-20260527-104730-5c29 |\n\n## Summary\n\nCompleted ticket T-20260527-104730-5c29.\n\n## Evidence\n\n- Materialized completion after fix 0f6a508; catalog search behavior implemented in f925017 and go test ./... passed.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260527-110800-codex-goal-owner-catalog-storage-0f3e.md",
+      "title": "Event: ticket.status.materialized",
+      "content": "# Event: ticket.status.materialized\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-110800-codex-goal-owner-catalog-storage-0f3e |\n| Time | 2026-05-27T11:08:00+02:00 |\n| Actor | codex-goal-owner-catalog-storage |\n| Project | maat |\n| Type | ticket.status.materialized |\n| Object | T-20260527-104650-0f3e |\n\n## Summary\n\nMaterialized T-20260527-104650-0f3e status as done.\n\n## Evidence\n\n- Ticket has completion event E-20260527-110418-codex-goal-owner-catalog-storage-601c with loader and validation evidence.\n- go test ./internal/maat and go test ./... passed.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260527-110800-codex-goal-owner-catalog-storage-64e4.md",
+      "title": "Event: ticket.status.materialized",
+      "content": "# Event: ticket.status.materialized\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-110800-codex-goal-owner-catalog-storage-64e4 |\n| Time | 2026-05-27T11:08:00+02:00 |\n| Actor | codex-goal-owner-catalog-storage |\n| Project | maat |\n| Type | ticket.status.materialized |\n| Object | T-20260527-104640-64e4 |\n\n## Summary\n\nMaterialized T-20260527-104640-64e4 status as done.\n\n## Evidence\n\n- Ticket has completion event E-20260527-110402-codex-goal-owner-catalog-storage-e42c with schema evidence.\n- External storage validation passed after catalog schema and seed work.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260527-110800-codex-goal-owner-catalog-storage-e047.md",
+      "title": "Event: ticket.status.materialized",
+      "content": "# Event: ticket.status.materialized\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-110800-codex-goal-owner-catalog-storage-e047 |\n| Time | 2026-05-27T11:08:00+02:00 |\n| Actor | codex-goal-owner-catalog-storage |\n| Project | maat |\n| Type | ticket.status.materialized |\n| Object | T-20260527-104659-e047 |\n\n## Summary\n\nMaterialized T-20260527-104659-e047 status as done.\n\n## Evidence\n\n- Ticket has completion event E-20260527-110431-codex-goal-owner-catalog-storage-c7b6 with seed catalog evidence.\n- Seeded app and pattern catalog objects validate from Markdown.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260527-110801-codex-goal-owner-catalog-storage-c842.md",
+      "title": "Event: goal.completed",
+      "content": "# Event: goal.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-110801-codex-goal-owner-catalog-storage-c842 |\n| Time | 2026-05-27T11:08:01+02:00 |\n| Actor | codex-goal-owner-catalog-storage |\n| Project | maat |\n| Type | goal.completed |\n| Object | G-20260527-104558-c842 |\n\n## Summary\n\nCompleted goal G-20260527-104558-c842 after verifying all catalog storage tickets.\n\n## Evidence\n\n- T-20260527-104640-64e4, T-20260527-104650-0f3e, and T-20260527-104659-e047 are materialized as done.\n- Product commit f925017 contains catalog schema, loader, validation, tests, and indexing support.\n- External storage validation passed with no issues.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260527-111059-casprine-770e.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111059-casprine-770e |\n| Time | 2026-05-27T11:10:59+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.commented |\n| Object | T-20260527-104741-731b |\n\n## Summary\n\nMother-agent review: product commit 3610f24 adds catalog discovery mode, and final verification passed with go test ./... plus storage validation.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260527-111138-casprine-cb71.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111138-casprine-cb71 |\n| Time | 2026-05-27T11:11:38+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.completed |\n| Object | T-20260527-104741-731b |\n\n## Summary\n\nCompleted ticket T-20260527-104741-731b.\n\n## Evidence\n\n- Verified by mother agent: product commit 3610f24 includes catalog discovery TUI mode; GOCACHE=/private/tmp/maat-go-cache go test ./... passed; maat validate --storage /Users/casprine/Desktop/vendor/personal/maat-storage passed.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260527-111147-casprine-8b28.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111147-casprine-8b28 |\n| Time | 2026-05-27T11:11:47+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.commented |\n| Object | T-20260527-104752-bb33 |\n\n## Summary\n\nMother-agent review: project list to board to detail flow is present, commit c50e18d made it primary, commit 3610f24 kept it integrated with the catalog refresh, and final tests passed.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260527-111159-casprine-7c2f.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111159-casprine-7c2f |\n| Time | 2026-05-27T11:11:59+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.completed |\n| Object | T-20260527-104752-bb33 |\n\n## Summary\n\nCompleted ticket T-20260527-104752-bb33.\n\n## Evidence\n\n- Verified by mother agent: project list -\u003e board -\u003e ticket detail flow is implemented in commits c50e18d and 3610f24; GOCACHE=/private/tmp/maat-go-cache go test ./... passed; maat validate --storage /Users/casprine/Desktop/vendor/personal/maat-storage passed.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260527-111209-casprine-a834.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111209-casprine-a834 |\n| Time | 2026-05-27T11:12:09+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.commented |\n| Object | T-20260527-104802-f29d |\n\n## Summary\n\nMother-agent review: final verification covered go test ./..., storage validation, and TUI lane evidence from Beauvoir for keyboard and no-color checks.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260527-111219-casprine-f43b.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111219-casprine-f43b |\n| Time | 2026-05-27T11:12:19+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | ticket.completed |\n| Object | T-20260527-104802-f29d |\n\n## Summary\n\nCompleted ticket T-20260527-104802-f29d.\n\n## Evidence\n\n- Verified by mother agent: TUI tests passed via GOCACHE=/private/tmp/maat-go-cache go test ./...; storage validation passed; Beauvoir reported keyboard and no-color verification for the TUI lane.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260527-111320-casprine-2bfb.md",
+      "title": "Event: goal.completed",
+      "content": "# Event: goal.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111320-casprine-2bfb |\n| Time | 2026-05-27T11:13:20+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | goal.completed |\n| Object | G-20260527-104606-2bfb |\n\n## Summary\n\nCompleted goal G-20260527-104606-2bfb after mother-agent verification of the catalog CLI and search tickets.\n\n## Evidence\n\n- T-20260527-104709-0092, T-20260527-104719-ccfc, and T-20260527-104730-5c29 are materialized as done.\n- Product commits f925017 and 0f6a508 include catalog CLI, JSON output, search indexing, and status materialization.\n- GOCACHE=/private/tmp/maat-go-cache go test ./... passed.\n- maat validate --storage /Users/casprine/Desktop/vendor/personal/maat-storage passed.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/maat/events/2026/05/E-20260527-111321-casprine-2535.md",
+      "title": "Event: goal.completed",
+      "content": "# Event: goal.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111321-casprine-2535 |\n| Time | 2026-05-27T11:13:21+02:00 |\n| Actor | casprine |\n| Project | maat |\n| Type | goal.completed |\n| Object | G-20260527-104618-2535 |\n\n## Summary\n\nCompleted goal G-20260527-104618-2535 after mother-agent verification of the refreshed TUI catalog discovery tickets.\n\n## Evidence\n\n- T-20260527-104741-731b, T-20260527-104752-bb33, and T-20260527-104802-f29d are materialized as done.\n- Product commits c50e18d and 3610f24 include the project list to board to detail flow and catalog discovery mode.\n- GOCACHE=/private/tmp/maat-go-cache go test ./... passed.\n- maat validate --storage /Users/casprine/Desktop/vendor/personal/maat-storage passed.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/maat/goals/G-20260526-215622-b461.md",
       "title": "Goal: Enable autonomous agent project management",
@@ -8179,19 +9612,19 @@
       "type": "goal",
       "path": "projects/maat/goals/G-20260527-104558-c842.md",
       "title": "Goal: Build terminal app catalog storage",
-      "content": "# Goal: Build terminal app catalog storage\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-104558-c842 |\n| Project | maat |\n| Status | active |\n| Created | 2026-05-27T10:45:58+02:00 |\n\n## Outcome\n\nMaat stores terminal app catalog apps, patterns, decisions, and review events as Markdown objects that validate cleanly and remain readable without generated indexes.\n"
+      "content": "# Goal: Build terminal app catalog storage\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-104558-c842 |\n| Project | maat |\n| Status | done |\n| Created | 2026-05-27T10:45:58+02:00 |\n\n## Outcome\n\nMaat stores terminal app catalog apps, patterns, decisions, and review events as Markdown objects that validate cleanly and remain readable without generated indexes.\n"
     },
     {
       "type": "goal",
       "path": "projects/maat/goals/G-20260527-104606-2bfb.md",
       "title": "Goal: Ship catalog CLI and search",
-      "content": "# Goal: Ship catalog CLI and search\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-104606-2bfb |\n| Project | maat |\n| Status | active |\n| Created | 2026-05-27T10:46:06+02:00 |\n\n## Outcome\n\nHumans and agents can list, inspect, validate, and search terminal app catalog entries from the Maat CLI with stable JSON output and Markdown-backed search.\n"
+      "content": "# Goal: Ship catalog CLI and search\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-104606-2bfb |\n| Project | maat |\n| Status | done |\n| Created | 2026-05-27T10:46:06+02:00 |\n\n## Outcome\n\nHumans and agents can list, inspect, validate, and search terminal app catalog entries from the Maat CLI with stable JSON output and Markdown-backed search.\n"
     },
     {
       "type": "goal",
       "path": "projects/maat/goals/G-20260527-104618-2535.md",
       "title": "Goal: Refresh TUI around catalog discovery",
-      "content": "# Goal: Refresh TUI around catalog discovery\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-104618-2535 |\n| Project | maat |\n| Status | active |\n| Created | 2026-05-27T10:46:18+02:00 |\n\n## Outcome\n\nThe TUI presents a keyboard-first project and catalog experience with scannable lists, Kanban/project boards, detail panes, no-color readability, and clear routes from observations to Maat tickets.\n"
+      "content": "# Goal: Refresh TUI around catalog discovery\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-104618-2535 |\n| Project | maat |\n| Status | done |\n| Created | 2026-05-27T10:46:18+02:00 |\n\n## Outcome\n\nThe TUI presents a keyboard-first project and catalog experience with scannable lists, Kanban/project boards, detail panes, no-color readability, and clear routes from observations to Maat tickets.\n"
     },
     {
       "type": "project",
@@ -8479,55 +9912,55 @@
       "type": "ticket",
       "path": "projects/maat/tickets/T-20260527-104640-64e4.md",
       "title": "Ticket: Define catalog Markdown schema",
-      "content": "# Ticket: Define catalog Markdown schema\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-104640-64e4 |\n| Project | maat |\n| Goal | G-20260527-104558-c842 |\n| Status | active |\n| Created | 2026-05-27T10:46:40+02:00 |\n\n## Description\n\nDocument the Markdown object shapes for catalog apps, reusable patterns, decisions, opportunities, and catalog review events under projects/maat/catalog. Include required fields, stable IDs, links between patterns and Maat work, and plain-Markdown examples.\n\n## Acceptance\n\n- docs/schema.md or a dedicated catalog schema doc defines required fields for apps, patterns, decisions, opportunities, and events.\n- The documented paths match projects/maat/catalog/apps, patterns, decisions, opportunities, and events.\n- At least one complete example app and one complete pattern are readable without generated indexes.\n"
+      "content": "# Ticket: Define catalog Markdown schema\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-104640-64e4 |\n| Project | maat |\n| Goal | G-20260527-104558-c842 |\n| Status | done |\n| Created | 2026-05-27T10:46:40+02:00 |\n\n## Description\n\nDocument the Markdown object shapes for catalog apps, reusable patterns, decisions, opportunities, and catalog review events under projects/maat/catalog. Include required fields, stable IDs, links between patterns and Maat work, and plain-Markdown examples.\n\n## Acceptance\n\n- docs/schema.md or a dedicated catalog schema doc defines required fields for apps, patterns, decisions, opportunities, and events.\n- The documented paths match projects/maat/catalog/apps, patterns, decisions, opportunities, and events.\n- At least one complete example app and one complete pattern are readable without generated indexes.\n"
     },
     {
       "type": "ticket",
       "path": "projects/maat/tickets/T-20260527-104650-0f3e.md",
       "title": "Ticket: Implement catalog loader and validation",
-      "content": "# Ticket: Implement catalog loader and validation\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-104650-0f3e |\n| Project | maat |\n| Goal | G-20260527-104558-c842 |\n| Status | active |\n| Created | 2026-05-27T10:46:50+02:00 |\n\n## Description\n\nAdd Go types and loading/validation logic for catalog app, pattern, decision, and opportunity Markdown files. Validation should catch missing IDs, malformed links, duplicate slugs, invalid decision states, and broken references to goals or tickets when those links are present.\n\n## Acceptance\n\n- Catalog loader returns typed objects from Markdown files under projects/\u003cproject-key\u003e/catalog.\n- Validation reports missing required fields, duplicate object IDs or slugs, invalid states, and broken object links.\n- Unit tests cover valid fixtures and at least three malformed catalog objects.\n"
+      "content": "# Ticket: Implement catalog loader and validation\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-104650-0f3e |\n| Project | maat |\n| Goal | G-20260527-104558-c842 |\n| Status | done |\n| Created | 2026-05-27T10:46:50+02:00 |\n\n## Description\n\nAdd Go types and loading/validation logic for catalog app, pattern, decision, and opportunity Markdown files. Validation should catch missing IDs, malformed links, duplicate slugs, invalid decision states, and broken references to goals or tickets when those links are present.\n\n## Acceptance\n\n- Catalog loader returns typed objects from Markdown files under projects/\u003cproject-key\u003e/catalog.\n- Validation reports missing required fields, duplicate object IDs or slugs, invalid states, and broken object links.\n- Unit tests cover valid fixtures and at least three malformed catalog objects.\n"
     },
     {
       "type": "ticket",
       "path": "projects/maat/tickets/T-20260527-104659-e047.md",
       "title": "Ticket: Seed first catalog observations",
-      "content": "# Ticket: Seed first catalog observations\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-104659-e047 |\n| Project | maat |\n| Goal | G-20260527-104558-c842 |\n| Status | active |\n| Created | 2026-05-27T10:46:59+02:00 |\n\n## Description\n\nCreate initial catalog fixtures or sample objects from the IA: lazygit, btop, gh-dash, and superfile as apps; focused detail pane, keyboard model, background refresh, and empty states as patterns. Keep metadata honest when unknown by marking it unknown instead of inventing values.\n\n## Acceptance\n\n- Initial catalog objects exist as plain Markdown and validate successfully.\n- Each seeded app has name, slug, summary, source link, category, tags, and last reviewed date.\n- Each seeded pattern explains the problem solved, observed apps, Maat relevance, and at least one related goal or ticket link where known.\n"
+      "content": "# Ticket: Seed first catalog observations\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-104659-e047 |\n| Project | maat |\n| Goal | G-20260527-104558-c842 |\n| Status | done |\n| Created | 2026-05-27T10:46:59+02:00 |\n\n## Description\n\nCreate initial catalog fixtures or sample objects from the IA: lazygit, btop, gh-dash, and superfile as apps; focused detail pane, keyboard model, background refresh, and empty states as patterns. Keep metadata honest when unknown by marking it unknown instead of inventing values.\n\n## Acceptance\n\n- Initial catalog objects exist as plain Markdown and validate successfully.\n- Each seeded app has name, slug, summary, source link, category, tags, and last reviewed date.\n- Each seeded pattern explains the problem solved, observed apps, Maat relevance, and at least one related goal or ticket link where known.\n"
     },
     {
       "type": "ticket",
       "path": "projects/maat/tickets/T-20260527-104709-0092.md",
       "title": "Ticket: Add catalog list and show commands",
-      "content": "# Ticket: Add catalog list and show commands\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-104709-0092 |\n| Project | maat |\n| Goal | G-20260527-104606-2bfb |\n| Status | active |\n| Created | 2026-05-27T10:47:09+02:00 |\n\n## Description\n\nAdd maat catalog list and maat catalog show commands for humans. List should support apps, patterns, decisions, and opportunities with compact scannable columns. Show should render a structured detail view for one object.\n\n## Acceptance\n\n- maat catalog list apps shows app name, summary, language, license, category, and review date when present.\n- maat catalog list patterns shows title, category, observed apps, and related Maat work.\n- maat catalog show \u003cid-or-slug\u003e renders summary, metadata, links, notes, related patterns, and related goals or tickets.\n"
+      "content": "# Ticket: Add catalog list and show commands\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-104709-0092 |\n| Project | maat |\n| Goal | G-20260527-104606-2bfb |\n| Status | done |\n| Created | 2026-05-27T10:47:09+02:00 |\n\n## Description\n\nAdd maat catalog list and maat catalog show commands for humans. List should support apps, patterns, decisions, and opportunities with compact scannable columns. Show should render a structured detail view for one object.\n\n## Acceptance\n\n- maat catalog list apps shows app name, summary, language, license, category, and review date when present.\n- maat catalog list patterns shows title, category, observed apps, and related Maat work.\n- maat catalog show \u003cid-or-slug\u003e renders summary, metadata, links, notes, related patterns, and related goals or tickets.\n"
     },
     {
       "type": "ticket",
       "path": "projects/maat/tickets/T-20260527-104719-ccfc.md",
       "title": "Ticket: Expose catalog JSON for agents",
-      "content": "# Ticket: Expose catalog JSON for agents\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-104719-ccfc |\n| Project | maat |\n| Goal | G-20260527-104606-2bfb |\n| Status | active |\n| Created | 2026-05-27T10:47:19+02:00 |\n\n## Description\n\nAdd --json output for catalog list and show so agents can consume stable catalog object IDs, linked source apps, linked patterns, related goals, related tickets, and decision states without scraping human text.\n\n## Acceptance\n\n- catalog list --json emits stable arrays for apps, patterns, decisions, and opportunities.\n- catalog show --json emits one typed object with stable ID or slug, object kind, metadata, links, and related Maat work.\n- JSON tests assert field names for agent-facing IDs and links remain stable.\n"
+      "content": "# Ticket: Expose catalog JSON for agents\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-104719-ccfc |\n| Project | maat |\n| Goal | G-20260527-104606-2bfb |\n| Status | done |\n| Created | 2026-05-27T10:47:19+02:00 |\n\n## Description\n\nAdd --json output for catalog list and show so agents can consume stable catalog object IDs, linked source apps, linked patterns, related goals, related tickets, and decision states without scraping human text.\n\n## Acceptance\n\n- catalog list --json emits stable arrays for apps, patterns, decisions, and opportunities.\n- catalog show --json emits one typed object with stable ID or slug, object kind, metadata, links, and related Maat work.\n- JSON tests assert field names for agent-facing IDs and links remain stable.\n"
     },
     {
       "type": "ticket",
       "path": "projects/maat/tickets/T-20260527-104730-5c29.md",
       "title": "Ticket: Index catalog objects for search",
-      "content": "# Ticket: Index catalog objects for search\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-104730-5c29 |\n| Project | maat |\n| Goal | G-20260527-104606-2bfb |\n| Status | active |\n| Created | 2026-05-27T10:47:30+02:00 |\n\n## Description\n\nExtend the existing Markdown and SQLite search paths so catalog apps, patterns, decisions, opportunities, and review events are searchable alongside projects, goals, tickets, and events.\n\n## Acceptance\n\n- maat search can find catalog app summaries and notes.\n- maat search can find catalog pattern problem statements, Maat relevance, and related ticket IDs.\n- SQLite rebuild includes catalog objects without making SQLite authoritative.\n- Search tests cover catalog objects through both direct Markdown fallback and SQLite-backed search where applicable.\n"
+      "content": "# Ticket: Index catalog objects for search\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-104730-5c29 |\n| Project | maat |\n| Goal | G-20260527-104606-2bfb |\n| Status | done |\n| Created | 2026-05-27T10:47:30+02:00 |\n\n## Description\n\nExtend the existing Markdown and SQLite search paths so catalog apps, patterns, decisions, opportunities, and review events are searchable alongside projects, goals, tickets, and events.\n\n## Acceptance\n\n- maat search can find catalog app summaries and notes.\n- maat search can find catalog pattern problem statements, Maat relevance, and related ticket IDs.\n- SQLite rebuild includes catalog objects without making SQLite authoritative.\n- Search tests cover catalog objects through both direct Markdown fallback and SQLite-backed search where applicable.\n"
     },
     {
       "type": "ticket",
       "path": "projects/maat/tickets/T-20260527-104741-731b.md",
       "title": "Ticket: Add catalog mode to the TUI",
-      "content": "# Ticket: Add catalog mode to the TUI\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-104741-731b |\n| Project | maat |\n| Goal | G-20260527-104618-2535 |\n| Status | active |\n| Created | 2026-05-27T10:47:41+02:00 |\n\n## Description\n\nAdd a TUI mode based on docs/terminal-apps-ia.md with apps, patterns, and detail panes. It should support apps, patterns, decisions, and opportunities modes while keeping keyboard navigation fast and predictable.\n\n## Acceptance\n\n- The TUI exposes a catalog mode reachable from the normal dashboard without hiding the project list flow.\n- Apps and patterns can be scanned in adjacent panes with a detail pane for the selected object.\n- tab switches panes or modes, / searches, f filters, enter inspects, r refreshes, and q quits.\n"
+      "content": "# Ticket: Add catalog mode to the TUI\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-104741-731b |\n| Project | maat |\n| Goal | G-20260527-104618-2535 |\n| Status | done |\n| Created | 2026-05-27T10:47:41+02:00 |\n\n## Description\n\nAdd a TUI mode based on docs/terminal-apps-ia.md with apps, patterns, and detail panes. It should support apps, patterns, decisions, and opportunities modes while keeping keyboard navigation fast and predictable.\n\n## Acceptance\n\n- The TUI exposes a catalog mode reachable from the normal dashboard without hiding the project list flow.\n- Apps and patterns can be scanned in adjacent panes with a detail pane for the selected object.\n- tab switches panes or modes, / searches, f filters, enter inspects, r refreshes, and q quits.\n"
     },
     {
       "type": "ticket",
       "path": "projects/maat/tickets/T-20260527-104752-bb33.md",
       "title": "Ticket: Polish project board detail flow",
-      "content": "# Ticket: Polish project board detail flow\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-104752-bb33 |\n| Project | maat |\n| Goal | G-20260527-104618-2535 |\n| Status | active |\n| Created | 2026-05-27T10:47:52+02:00 |\n\n## Description\n\nRefine the primary TUI path so a human can see all projects, open one into a Kanban-style board, move through board items, and read a focused detail view with title, description, acceptance criteria, status, ownership, related goal, and recent events.\n\n## Acceptance\n\n- Project list remains the first TUI screen for project-management use.\n- Opening a project leads to a board-like ticket view, and opening a ticket leads to a readable detail view.\n- The ticket detail includes description, acceptance criteria, current status, owner or claim information, related goal, and recent comments or completion evidence when available.\n- Back navigation returns from detail to board and from board to project list.\n"
+      "content": "# Ticket: Polish project board detail flow\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-104752-bb33 |\n| Project | maat |\n| Goal | G-20260527-104618-2535 |\n| Status | done |\n| Created | 2026-05-27T10:47:52+02:00 |\n\n## Description\n\nRefine the primary TUI path so a human can see all projects, open one into a Kanban-style board, move through board items, and read a focused detail view with title, description, acceptance criteria, status, ownership, related goal, and recent events.\n\n## Acceptance\n\n- Project list remains the first TUI screen for project-management use.\n- Opening a project leads to a board-like ticket view, and opening a ticket leads to a readable detail view.\n- The ticket detail includes description, acceptance criteria, current status, owner or claim information, related goal, and recent comments or completion evidence when available.\n- Back navigation returns from detail to board and from board to project list.\n"
     },
     {
       "type": "ticket",
       "path": "projects/maat/tickets/T-20260527-104802-f29d.md",
       "title": "Ticket: Verify keyboard and no-color readability",
-      "content": "# Ticket: Verify keyboard and no-color readability\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-104802-f29d |\n| Project | maat |\n| Goal | G-20260527-104618-2535 |\n| Status | active |\n| Created | 2026-05-27T10:48:02+02:00 |\n\n## Description\n\nAdd focused verification for the refreshed TUI at realistic terminal widths and no-color output. The checks should cover project list, project board, ticket detail, catalog apps, catalog patterns, empty states, and filtered states.\n\n## Acceptance\n\n- TUI tests or golden snapshots cover narrow, medium, and wide terminal widths.\n- No-color output remains readable and does not depend on color alone for selected, status, or empty-state meaning.\n- Keyboard-only paths for project board detail and catalog inspection are documented and tested.\n- go test ./internal/maatui and go test ./... pass after the refresh.\n"
+      "content": "# Ticket: Verify keyboard and no-color readability\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-104802-f29d |\n| Project | maat |\n| Goal | G-20260527-104618-2535 |\n| Status | done |\n| Created | 2026-05-27T10:48:02+02:00 |\n\n## Description\n\nAdd focused verification for the refreshed TUI at realistic terminal widths and no-color output. The checks should cover project list, project board, ticket detail, catalog apps, catalog patterns, empty states, and filtered states.\n\n## Acceptance\n\n- TUI tests or golden snapshots cover narrow, medium, and wide terminal widths.\n- No-color output remains readable and does not depend on color alone for selected, status, or empty-state meaning.\n- Keyboard-only paths for project board detail and catalog inspection are documented and tested.\n- go test ./internal/maatui and go test ./... pass after the refresh.\n"
     },
     {
       "type": "event",
@@ -8950,6 +10383,336 @@
       "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-110307-casprine-12f0 |\n| Time | 2026-05-27T11:03:07+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260527-105659-e52b |\n\n## Summary\n\nCompleted ticket T-20260527-105659-e52b.\n\n## Evidence\n\n- Updated docs/plans/core-managed-monitors.md and committed 5be99d1 docs(core): split monitor worker plan; no additional Maat goals or implementation tickets were created after the owner requested review before loading.\n"
     },
     {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111350-casprine-837a.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111350-casprine-837a |\n| Time | 2026-05-27T11:13:50+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111350-220a |\n\n## Summary\n\nCreated ticket T-20260527-111350-220a.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111358-codex-6bc9.md",
+      "title": "Event: ticket.claimed",
+      "content": "# Event: ticket.claimed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111358-codex-6bc9 |\n| Time | 2026-05-27T11:13:58+02:00 |\n| Actor | codex |\n| Project | orion |\n| Type | ticket.claimed |\n| Object | T-20260527-111350-220a |\n| Expires | 2026-05-27T13:13:58+02:00 |\n\n## Summary\n\nClaimed ticket T-20260527-111350-220a until 2026-05-27T13:13:58+02:00.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111522-casprine-c300.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111522-casprine-c300 |\n| Time | 2026-05-27T11:15:22+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260527-111522-f2ee |\n\n## Summary\n\nCreated goal G-20260527-111522-f2ee.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111527-casprine-5796.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111527-casprine-5796 |\n| Time | 2026-05-27T11:15:27+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111527-9607 |\n\n## Summary\n\nCreated ticket T-20260527-111527-9607.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111535-codex-e9ac.md",
+      "title": "Event: ticket.claimed",
+      "content": "# Event: ticket.claimed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111535-codex-e9ac |\n| Time | 2026-05-27T11:15:35+02:00 |\n| Actor | codex |\n| Project | orion |\n| Type | ticket.claimed |\n| Object | T-20260527-111527-9607 |\n| Expires | 2026-05-27T13:15:35+02:00 |\n\n## Summary\n\nClaimed ticket T-20260527-111527-9607 until 2026-05-27T13:15:35+02:00.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111543-casprine-95c1.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111543-casprine-95c1 |\n| Time | 2026-05-27T11:15:43+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260527-111543-5f4e |\n\n## Summary\n\nCreated goal G-20260527-111543-5f4e.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111545-casprine-fca3.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111545-casprine-fca3 |\n| Time | 2026-05-27T11:15:45+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260527-111545-bf8a |\n\n## Summary\n\nCreated goal G-20260527-111545-bf8a.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111552-casprine-d901.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111552-casprine-d901 |\n| Time | 2026-05-27T11:15:52+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260527-111552-9b04 |\n\n## Summary\n\nCreated goal G-20260527-111552-9b04.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111553-casprine-8c78.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111553-casprine-8c78 |\n| Time | 2026-05-27T11:15:53+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260527-111553-dcc5 |\n\n## Summary\n\nCreated goal G-20260527-111553-dcc5.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111600-casprine-865c.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111600-casprine-865c |\n| Time | 2026-05-27T11:16:00+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260527-111600-870c |\n\n## Summary\n\nCreated goal G-20260527-111600-870c.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111602-casprine-3a95.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111602-casprine-3a95 |\n| Time | 2026-05-27T11:16:02+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260527-111602-3269 |\n\n## Summary\n\nCreated goal G-20260527-111602-3269.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111606-casprine-2ea7.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111606-casprine-2ea7 |\n| Time | 2026-05-27T11:16:06+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260527-111606-93ee |\n\n## Summary\n\nCreated goal G-20260527-111606-93ee.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111615-casprine-aac5.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111615-casprine-aac5 |\n| Time | 2026-05-27T11:16:15+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260527-111615-4778 |\n\n## Summary\n\nCreated goal G-20260527-111615-4778.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111616-casprine-af4e.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111616-casprine-af4e |\n| Time | 2026-05-27T11:16:16+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260527-111616-a92c |\n\n## Summary\n\nCreated goal G-20260527-111616-a92c.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111622-casprine-b5b4.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111622-casprine-b5b4 |\n| Time | 2026-05-27T11:16:22+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260527-111622-2004 |\n\n## Summary\n\nCreated goal G-20260527-111622-2004.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111626-casprine-22c2.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111626-casprine-22c2 |\n| Time | 2026-05-27T11:16:26+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260527-111626-e3b0 |\n\n## Summary\n\nCreated goal G-20260527-111626-e3b0.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111635-casprine-1bfe.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111635-casprine-1bfe |\n| Time | 2026-05-27T11:16:35+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111635-c668 |\n\n## Summary\n\nCreated ticket T-20260527-111635-c668.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111641-casprine-bf76.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111641-casprine-bf76 |\n| Time | 2026-05-27T11:16:41+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111641-85ec |\n\n## Summary\n\nCreated ticket T-20260527-111641-85ec.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111643-casprine-a732.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111643-casprine-a732 |\n| Time | 2026-05-27T11:16:43+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111643-1e77 |\n\n## Summary\n\nCreated ticket T-20260527-111643-1e77.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111650-casprine-89fa.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111650-casprine-89fa |\n| Time | 2026-05-27T11:16:50+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111650-bbfc |\n\n## Summary\n\nCreated ticket T-20260527-111650-bbfc.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111652-casprine-2c60.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111652-casprine-2c60 |\n| Time | 2026-05-27T11:16:52+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111652-b01f |\n\n## Summary\n\nCreated ticket T-20260527-111652-b01f.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111653-casprine-50ce.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111653-casprine-50ce |\n| Time | 2026-05-27T11:16:53+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111653-3a22 |\n\n## Summary\n\nCreated ticket T-20260527-111653-3a22.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111700-codex-11f7.md",
+      "title": "Event: ticket.claimed",
+      "content": "# Event: ticket.claimed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111700-codex-11f7 |\n| Time | 2026-05-27T11:17:00+02:00 |\n| Actor | codex |\n| Project | orion |\n| Type | ticket.claimed |\n| Object | T-20260527-111650-bbfc |\n| Expires | 2026-05-27T13:17:00+02:00 |\n\n## Summary\n\nClaimed ticket T-20260527-111650-bbfc until 2026-05-27T13:17:00+02:00.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111704-casprine-29fc.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111704-casprine-29fc |\n| Time | 2026-05-27T11:17:04+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111704-c955 |\n\n## Summary\n\nCreated ticket T-20260527-111704-c955.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111705-casprine-46aa.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111705-casprine-46aa |\n| Time | 2026-05-27T11:17:05+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111705-6c56 |\n\n## Summary\n\nCreated ticket T-20260527-111705-6c56.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111712-casprine-f148.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111712-casprine-f148 |\n| Time | 2026-05-27T11:17:12+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111712-cd6c |\n\n## Summary\n\nCreated ticket T-20260527-111712-cd6c.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111715-casprine-f372.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111715-casprine-f372 |\n| Time | 2026-05-27T11:17:15+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111715-8985 |\n\n## Summary\n\nCreated ticket T-20260527-111715-8985.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111722-casprine-bdbb.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111722-casprine-bdbb |\n| Time | 2026-05-27T11:17:22+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111722-5dc7 |\n\n## Summary\n\nCreated ticket T-20260527-111722-5dc7.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111722-casprine-ca3d.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111722-casprine-ca3d |\n| Time | 2026-05-27T11:17:22+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260527-111722-d43b |\n\n## Summary\n\nCreated goal G-20260527-111722-d43b.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111724-casprine-417d.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111724-casprine-417d |\n| Time | 2026-05-27T11:17:24+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111724-8c57 |\n\n## Summary\n\nCreated ticket T-20260527-111724-8c57.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111737-casprine-98b8.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111737-casprine-98b8 |\n| Time | 2026-05-27T11:17:37+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111737-edb2 |\n\n## Summary\n\nCreated ticket T-20260527-111737-edb2.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111740-casprine-e0e7.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111740-casprine-e0e7 |\n| Time | 2026-05-27T11:17:40+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260527-111527-9607 |\n\n## Summary\n\nCreated six alert rollout goals and implementation tickets: G-20260527-111545-bf8a/T-20260527-111635-c668, G-20260527-111552-9b04/T-20260527-111643-1e77, G-20260527-111600-870c/T-20260527-111652-b01f, G-20260527-111606-93ee/T-20260527-111704-c955, G-20260527-111615-4778/T-20260527-111712-cd6c, G-20260527-111622-2004/T-20260527-111722-5dc7.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111744-casprine-a93a.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111744-casprine-a93a |\n| Time | 2026-05-27T11:17:44+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111744-5e0f |\n\n## Summary\n\nCreated ticket T-20260527-111744-5e0f.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111749-casprine-fad5.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111749-casprine-fad5 |\n| Time | 2026-05-27T11:17:49+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111749-59d7 |\n\n## Summary\n\nCreated ticket T-20260527-111749-59d7.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111756-casprine-5d49.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111756-casprine-5d49 |\n| Time | 2026-05-27T11:17:56+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111756-99a1 |\n\n## Summary\n\nCreated ticket T-20260527-111756-99a1.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111759-casprine-9cc9.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111759-casprine-9cc9 |\n| Time | 2026-05-27T11:17:59+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111759-a920 |\n\n## Summary\n\nCreated ticket T-20260527-111759-a920.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111805-casprine-8946.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111805-casprine-8946 |\n| Time | 2026-05-27T11:18:05+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111805-ddfe |\n\n## Summary\n\nCreated ticket T-20260527-111805-ddfe.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111815-casprine-dd77.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111815-casprine-dd77 |\n| Time | 2026-05-27T11:18:15+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111815-c7af |\n\n## Summary\n\nCreated ticket T-20260527-111815-c7af.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111824-casprine-469a.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111824-casprine-469a |\n| Time | 2026-05-27T11:18:24+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111824-6353 |\n\n## Summary\n\nCreated ticket T-20260527-111824-6353.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111824-casprine-dfce.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111824-casprine-dfce |\n| Time | 2026-05-27T11:18:24+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111824-5de4 |\n\n## Summary\n\nCreated ticket T-20260527-111824-5de4.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111827-casprine-bab5.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111827-casprine-bab5 |\n| Time | 2026-05-27T11:18:27+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260527-111527-9607 |\n\n## Summary\n\nCompleted ticket T-20260527-111527-9607.\n\n## Evidence\n\n- Created six phase goals and six implementation tickets in Maat, then removed docs/plans/alert-routing-redesign.md in commit b3361bd.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111831-casprine-c15e.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111831-casprine-c15e |\n| Time | 2026-05-27T11:18:31+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260527-111831-92fb |\n\n## Summary\n\nCreated goal G-20260527-111831-92fb.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111835-casprine-f9ad.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111835-casprine-f9ad |\n| Time | 2026-05-27T11:18:35+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111835-b813 |\n\n## Summary\n\nCreated ticket T-20260527-111835-b813.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111841-casprine-b8be.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111841-casprine-b8be |\n| Time | 2026-05-27T11:18:41+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111841-7b56 |\n\n## Summary\n\nCreated ticket T-20260527-111841-7b56.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111846-casprine-7cad.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111846-casprine-7cad |\n| Time | 2026-05-27T11:18:46+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111846-2d78 |\n\n## Summary\n\nCreated ticket T-20260527-111846-2d78.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111850-casprine-e24b.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111850-casprine-e24b |\n| Time | 2026-05-27T11:18:50+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111850-3136 |\n\n## Summary\n\nCreated ticket T-20260527-111850-3136.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111856-casprine-a780.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111856-casprine-a780 |\n| Time | 2026-05-27T11:18:56+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111856-87f6 |\n\n## Summary\n\nCreated ticket T-20260527-111856-87f6.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111858-casprine-1695.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111858-casprine-1695 |\n| Time | 2026-05-27T11:18:58+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111858-0c88 |\n\n## Summary\n\nCreated ticket T-20260527-111858-0c88.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111907-casprine-1138.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111907-casprine-1138 |\n| Time | 2026-05-27T11:19:07+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111907-0678 |\n\n## Summary\n\nCreated ticket T-20260527-111907-0678.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111907-casprine-fa88.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111907-casprine-fa88 |\n| Time | 2026-05-27T11:19:07+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111907-416e |\n\n## Summary\n\nCreated ticket T-20260527-111907-416e.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111916-casprine-9815.md",
+      "title": "Event: goal.created",
+      "content": "# Event: goal.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111916-casprine-9815 |\n| Time | 2026-05-27T11:19:16+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | goal.created |\n| Object | G-20260527-111916-0d5c |\n\n## Summary\n\nCreated goal G-20260527-111916-0d5c.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111918-casprine-2c9b.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111918-casprine-2c9b |\n| Time | 2026-05-27T11:19:18+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111918-7ad7 |\n\n## Summary\n\nCreated ticket T-20260527-111918-7ad7.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111924-casprine-56c1.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111924-casprine-56c1 |\n| Time | 2026-05-27T11:19:24+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111924-f068 |\n\n## Summary\n\nCreated ticket T-20260527-111924-f068.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111931-casprine-cb46.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111931-casprine-cb46 |\n| Time | 2026-05-27T11:19:31+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111931-a4dc |\n\n## Summary\n\nCreated ticket T-20260527-111931-a4dc.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260527-111933-casprine-ec4d.md",
+      "title": "Event: ticket.created",
+      "content": "# Event: ticket.created\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260527-111933-casprine-ec4d |\n| Time | 2026-05-27T11:19:33+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.created |\n| Object | T-20260527-111933-f32c |\n\n## Summary\n\nCreated ticket T-20260527-111933-f32c.\n"
+    },
+    {
       "type": "goal",
       "path": "projects/orion/goals/G-20260526-214751-82ed.md",
       "title": "Goal: Adopt Maat project memory",
@@ -9032,6 +10795,96 @@
       "path": "projects/orion/goals/G-20260526-215353-2af7.md",
       "title": "Goal: Establish continuous verification coverage",
       "content": "# Goal: Establish continuous verification coverage\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260526-215353-2af7 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-26T21:53:53+02:00 |\n\n## Outcome\n\nThe repository has a normal CI baseline for Core, Agent, Console, and generated contract checks so regressions are caught continuously instead of only during manual release passes.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260527-111522-f2ee.md",
+      "title": "Goal: M1: Core owner, worker app, and HTTP MVP",
+      "content": "# Goal: M1: Core owner, worker app, and HTTP MVP\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-111522-f2ee |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-27T11:15:22+02:00 |\n\n## Outcome\n\nA Core-owned HTTP monitor can be created by API, claimed and executed by the Core monitor worker, reported into monitor_reports, and shown in the existing monitor list.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260527-111543-5f4e.md",
+      "title": "Goal: M2: Console creation workflow",
+      "content": "# Goal: M2: Console creation workflow\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-111543-5f4e |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-27T11:15:43+02:00 |\n\n## Outcome\n\nA user can create, test, pause, resume, edit, delete, filter, and inspect Core monitors from Console without editing Agent YAML.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260527-111545-bf8a.md",
+      "title": "Goal: Make current alerts honest",
+      "content": "# Goal: Make current alerts honest\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-111545-bf8a |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-27T11:15:45+02:00 |\n\n## Outcome\n\nConsole and Core present the existing alert system accurately, including webhook and email destinations, test actions, expanded delivery logs, and visible global alert rules.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260527-111552-9b04.md",
+      "title": "Goal: Add reusable SMTP alert services",
+      "content": "# Goal: Add reusable SMTP alert services\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-111552-9b04 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-27T11:15:52+02:00 |\n\n## Outcome\n\nOrion supports reusable SMTP service configuration and email destinations with secret-safe API responses, connection testing, and legacy email-channel compatibility.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260527-111553-dcc5.md",
+      "title": "Goal: M3: Heartbeats",
+      "content": "# Goal: M3: Heartbeats\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-111553-dcc5 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-27T11:15:53+02:00 |\n\n## Outcome\n\nCore supports cron, backup, script, and scheduled-job monitoring through generated heartbeat endpoints and worker-side missed-heartbeat reconciliation.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260527-111600-870c.md",
+      "title": "Goal: Add explicit alert routes",
+      "content": "# Goal: Add explicit alert routes\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-111600-870c |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-27T11:16:00+02:00 |\n\n## Outcome\n\nAlert delivery decisions are controlled by explicit routes with event, severity, owner, maintenance, destination, and dry-run behavior instead of implicit channel subscriptions.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260527-111602-3269.md",
+      "title": "Goal: M4: Better incident controls",
+      "content": "# Goal: M4: Better incident controls\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-111602-3269 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-27T11:16:02+02:00 |\n\n## Outcome\n\nCore monitors have enough noise controls to be useful in production without opening incidents for short transient failures.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260527-111606-93ee.md",
+      "title": "Goal: Add alert grouping policies",
+      "content": "# Goal: Add alert grouping policies\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-111606-93ee |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-27T11:16:06+02:00 |\n\n## Outcome\n\nOrion can group related alert events by incident, monitor, service label, owner, or severity, including delayed summaries and visible grouped or suppressed delivery history.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260527-111615-4778.md",
+      "title": "Goal: Queue and retry alert delivery",
+      "content": "# Goal: Queue and retry alert delivery\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-111615-4778 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-27T11:16:15+02:00 |\n\n## Outcome\n\nAlert delivery runs through durable delivery and attempt records with retry scheduling, backoff, worker execution, and transport-specific failure stages for SMTP and webhooks.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260527-111616-a92c.md",
+      "title": "Goal: M5: Components and status page groundwork",
+      "content": "# Goal: M5: Components and status page groundwork\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-111616-a92c |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-27T11:16:16+02:00 |\n\n## Outcome\n\nCore and Agent monitors can be mapped to service and status-page components so incidents identify impacted components and future status pages can consume monitor health.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260527-111622-2004.md",
+      "title": "Goal: Add rich alert templates and integrations",
+      "content": "# Goal: Add rich alert templates and integrations\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-111622-2004 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-27T11:16:22+02:00 |\n\n## Outcome\n\nOrion supports versioned alert payloads, richer email templates, signing helpers, and additional notification integrations once core routing and grouping are stable.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260527-111626-e3b0.md",
+      "title": "Goal: M6: Full monitor catalog expansion",
+      "content": "# Goal: M6: Full monitor catalog expansion\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-111626-e3b0 |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-27T11:16:26+02:00 |\n\n## Outcome\n\nOrion implements the full now-scope monitor catalog through the Core monitor worker with clear safety limits, report shapes, and incident behavior.\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260527-111722-d43b.md",
+      "title": "Goal: Ship manual public status pages",
+      "content": "# Goal: Ship manual public status pages\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-111722-d43b |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-27T11:17:22+02:00 |\n\n## Outcome\n\nAdministrators can create, preview, and publish a public status page with safe component health, manual incidents, and scheduled maintenance\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260527-111831-92fb.md",
+      "title": "Goal: Integrate status pages with incidents",
+      "content": "# Goal: Integrate status pages with incidents\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-111831-92fb |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-27T11:18:31+02:00 |\n\n## Outcome\n\nInternal incidents can be safely translated into public status page incidents with suggested affected components, public updates, resolution flow, and auditability\n"
+    },
+    {
+      "type": "goal",
+      "path": "projects/orion/goals/G-20260527-111916-0d5c.md",
+      "title": "Goal: Add status page uptime and history",
+      "content": "# Goal: Add status page uptime and history\n\n| Field | Value |\n|---|---|\n| Goal ID | G-20260527-111916-0d5c |\n| Project | orion |\n| Status | active |\n| Created | 2026-05-27T11:19:16+02:00 |\n\n## Outcome\n\nPublished status pages show component uptime, incident history, and cached public history views derived from existing monitor uptime and public incident data\n"
     },
     {
       "type": "project",
@@ -9194,6 +11047,216 @@
       "path": "projects/orion/tickets/T-20260527-105659-e52b.md",
       "title": "Ticket: Update Core monitor plan for worker app",
       "content": "# Ticket: Update Core monitor plan for worker app\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-105659-e52b |\n| Project | orion |\n| Goal | G-20260526-215257-e70b |\n| Status | active |\n| Created | 2026-05-27T10:56:59+02:00 |\n\n## Description\n\nRevise the Core-managed monitor plan so monitor execution is handled by a separate Core worker app/process instead of the Core API main instance, including ownership, deployment, scheduling, locking, and task breakdown implications.\n\n## Acceptance\n\n- The plan document recommends a separate Core monitor worker, explains API versus worker responsibilities, includes deployment and concurrency implications, and Maat has a review note for the decision.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111350-220a.md",
+      "title": "Ticket: Convert Core monitor milestones into Maat rows",
+      "content": "# Ticket: Convert Core monitor milestones into Maat rows\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111350-220a |\n| Project | orion |\n| Goal | G-20260526-215257-e70b |\n| Status | active |\n| Created | 2026-05-27T11:13:50+02:00 |\n\n## Description\n\nConvert the Core-managed monitor plan milestones into row-based milestone and ticket tables, then load the approved milestone structure into Maat as milestone goals with implementation tickets under each goal.\n\n## Acceptance\n\n- The plan document shows milestone rows with ticket rows under each milestone; matching Maat goals and tickets are created with outcomes, descriptions, and acceptance criteria; the conversion ticket is completed with doc commit and Maat evidence.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111527-9607.md",
+      "title": "Ticket: Convert alert rollout phases into Maat goals",
+      "content": "# Ticket: Convert alert rollout phases into Maat goals\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111527-9607 |\n| Project | orion |\n| Goal | G-20260526-215126-c321 |\n| Status | active |\n| Created | 2026-05-27T11:15:27+02:00 |\n\n## Description\n\nConvert the alert routing redesign rollout phases into concrete Maat goals and implementation tickets, then remove the temporary planning document from the repository.\n\n## Acceptance\n\n- Maat contains one alert rollout goal per phase with at least one acceptance-backed ticket under each, the conversion ticket records evidence, and docs/plans/alert-routing-redesign.md is removed from the repo in a commit.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111635-c668.md",
+      "title": "Ticket: Expose current alert destinations and tests",
+      "content": "# Ticket: Expose current alert destinations and tests\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111635-c668 |\n| Project | orion |\n| Goal | G-20260527-111545-bf8a |\n| Status | active |\n| Created | 2026-05-27T11:16:35+02:00 |\n\n## Description\n\nUpdate the existing alert product surface so Console no longer behaves as webhook-only: show email channels if present, use destination language where possible, add webhook/email test notification actions, expand delivery log filters, and make current global alert rules understandable.\n\n## Acceptance\n\n- Console and Core expose existing webhook and email alert behavior honestly, test notification actions work for supported channel types, delivery logs can be filtered by type/channel/event/incident, and the rules view explains global cooldown and recovery behavior.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111641-85ec.md",
+      "title": "Ticket: Design Core monitor ownership and migration",
+      "content": "# Ticket: Design Core monitor ownership and migration\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111641-85ec |\n| Project | orion |\n| Goal | G-20260527-111522-f2ee |\n| Status | active |\n| Created | 2026-05-27T11:16:41+02:00 |\n\n## Description\n\nChoose and document the database ownership model for Core-managed monitors, including Core owner rows or owner_kind fields, incident compatibility, monitor response fields, and migration order.\n\n## Acceptance\n\n- Ownership design is recorded, migration steps are clear, existing Agent monitors keep working, and required Core/API/Console response changes are identified.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111643-1e77.md",
+      "title": "Ticket: Model SMTP services and email destinations",
+      "content": "# Ticket: Model SMTP services and email destinations\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111643-1e77 |\n| Project | orion |\n| Goal | G-20260527-111552-9b04 |\n| Status | active |\n| Created | 2026-05-27T11:16:43+02:00 |\n\n## Description\n\nAdd reusable SMTP service records and email destinations that reference them, migrate secret storage away from duplicated per-channel fields, provide connection and send-test flows, and keep legacy email channels readable during migration.\n\n## Acceptance\n\n- Core persists SMTP services and email destinations with redacted API responses, Console can create/test them, existing email channels remain readable, and alert delivery can send through the new SMTP service model.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111650-bbfc.md",
+      "title": "Ticket: Convert status page plan into Maat rollout",
+      "content": "# Ticket: Convert status page plan into Maat rollout\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111650-bbfc |\n| Project | orion |\n| Goal | G-20260526-215139-6a2a |\n| Status | active |\n| Created | 2026-05-27T11:16:50+02:00 |\n\n## Description\n\nTranslate docs/architecture/status-pages.md implementation phases and open decisions into concrete Maat goals and tickets without duplicating existing component mapping work\n\n## Acceptance\n\n- Maat contains actionable status-page goals and tickets for manual pages, incident integration, uptime/history, subscriptions, customization, and architectural decisions\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111652-b01f.md",
+      "title": "Ticket: Implement explicit alert routes and dry runs",
+      "content": "# Ticket: Implement explicit alert routes and dry runs\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111652-b01f |\n| Project | orion |\n| Goal | G-20260527-111600-870c |\n| Status | active |\n| Created | 2026-05-27T11:16:52+02:00 |\n\n## Description\n\nCreate alert routes that replace implicit channel event subscriptions over time, with filters for event type, severity, monitor owner, and maintenance behavior, target destinations, and a dry-run endpoint for explaining route decisions.\n\n## Acceptance\n\n- Alert routes can be created, read, updated, and evaluated; route dry-run returns match, suppression, grouping, and destination decisions; existing channel subscriptions are represented by a generated default route during migration.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111653-3a22.md",
+      "title": "Ticket: Build Core monitor worker app foundation",
+      "content": "# Ticket: Build Core monitor worker app foundation\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111653-3a22 |\n| Project | orion |\n| Goal | G-20260527-111522-f2ee |\n| Status | active |\n| Created | 2026-05-27T11:16:53+02:00 |\n\n## Description\n\nAdd the initial Core monitor worker binary under the agreed app path, sharing Core config, logging, database setup, migrations, and service construction without running API routes.\n\n## Acceptance\n\n- The worker can start, connect to the Core database or internal API path, expose basic health logging, shut down gracefully, and run without blocking or embedding the Core API server.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111704-c955.md",
+      "title": "Ticket: Implement alert grouping policies and summaries",
+      "content": "# Ticket: Implement alert grouping policies and summaries\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111704-c955 |\n| Project | orion |\n| Goal | G-20260527-111606-93ee |\n| Status | active |\n| Created | 2026-05-27T11:17:04+02:00 |\n\n## Description\n\nAdd grouping policies for related alert events by incident, monitor, service label, owner, or severity, including delayed summary notifications and visible grouped or suppressed delivery decisions.\n\n## Acceptance\n\n- Routes can use grouping policies, Core stores alert groups and grouped decisions, delayed summaries are delivered, and the delivery log shows grouped or suppressed events with reasons.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111705-6c56.md",
+      "title": "Ticket: Add due-check leasing and scheduling",
+      "content": "# Ticket: Add due-check leasing and scheduling\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111705-6c56 |\n| Project | orion |\n| Goal | G-20260527-111522-f2ee |\n| Status | active |\n| Created | 2026-05-27T11:17:05+02:00 |\n\n## Description\n\nImplement the worker scheduling loop and due-check claim mechanism for Core monitor configs using leases or an equivalent durable coordination model.\n\n## Acceptance\n\n- Due Core monitor configs can be claimed once, overdue checks recover after restart, leases expire safely, paused monitors are skipped, and tests cover duplicate-claim prevention.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111712-cd6c.md",
+      "title": "Ticket: Add alert delivery queue and retry attempts",
+      "content": "# Ticket: Add alert delivery queue and retry attempts\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111712-cd6c |\n| Project | orion |\n| Goal | G-20260527-111615-4778 |\n| Status | active |\n| Created | 2026-05-27T11:17:12+02:00 |\n\n## Description\n\nSplit alert deliveries from transport attempts, add retry scheduling with backoff, run delivery through a worker, and record SMTP/webhook failure stages for operational debugging.\n\n## Acceptance\n\n- Core stores delivery attempts separately from deliveries, retries transient failures with bounded backoff, exposes attempt history in the API, and delivery logs show transport-specific failure stage and retry status.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111715-8985.md",
+      "title": "Ticket: Add HTTP status monitor runner",
+      "content": "# Ticket: Add HTTP status monitor runner\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111715-8985 |\n| Project | orion |\n| Goal | G-20260527-111522-f2ee |\n| Status | active |\n| Created | 2026-05-27T11:17:15+02:00 |\n\n## Description\n\nImplement the first Core worker check runner for HTTP and HTTPS status checks, including timeout handling, redirect policy, status matching, latency metrics, and structured report payloads.\n\n## Acceptance\n\n- A Core-owned HTTP status monitor can be executed by the worker, report up/down results with latency and error context, and pass focused runner tests.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111722-5dc7.md",
+      "title": "Ticket: Add rich alert payloads and integrations",
+      "content": "# Ticket: Add rich alert payloads and integrations\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111722-5dc7 |\n| Project | orion |\n| Goal | G-20260527-111622-2004 |\n| Status | active |\n| Created | 2026-05-27T11:17:22+02:00 |\n\n## Description\n\nAdd versioned webhook payloads, richer email templates, signing helpers, and additional destination integrations such as Slack or Discord after the routing and grouping foundation is stable.\n\n## Acceptance\n\n- Alert destinations can choose a stable payload/template version, webhook signing can be configured and verified, HTML email templates are available, and at least one additional integration is planned or implemented behind the destination model.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111724-8c57.md",
+      "title": "Ticket: Wire Core monitor reports into incident reconciliation",
+      "content": "# Ticket: Wire Core monitor reports into incident reconciliation\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111724-8c57 |\n| Project | orion |\n| Goal | G-20260527-111522-f2ee |\n| Status | active |\n| Created | 2026-05-27T11:17:24+02:00 |\n\n## Description\n\nRoute worker-produced Core monitor reports through the existing monitor health and incident reconciliation path without regressing Agent monitor report behavior.\n\n## Acceptance\n\n- Worker reports update monitor health, create and resolve incidents, preserve Agent report behavior, and are covered by integration tests for failing and recovering Core monitors.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111737-edb2.md",
+      "title": "Ticket: Add Core worker diagnostics and deployment wiring",
+      "content": "# Ticket: Add Core worker diagnostics and deployment wiring\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111737-edb2 |\n| Project | orion |\n| Goal | G-20260527-111522-f2ee |\n| Status | active |\n| Created | 2026-05-27T11:17:37+02:00 |\n\n## Description\n\nAdd deployment and diagnostics support for running the Core API and Core monitor worker as separate processes in local development and Docker Compose.\n\n## Acceptance\n\n- Deployment docs/config start the API and worker separately, diagnostics expose worker state, and Core API health remains distinct from worker monitor execution health.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111744-5e0f.md",
+      "title": "Ticket: Add status page publication schema",
+      "content": "# Ticket: Add status page publication schema\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111744-5e0f |\n| Project | orion |\n| Goal | G-20260527-111722-d43b |\n| Status | active |\n| Created | 2026-05-27T11:17:44+02:00 |\n\n## Description\n\nAdd Core migrations and models for status_pages, status_page_sections, status_page_components, component mappings, public incidents, and public incident updates as a publication layer over existing Core data\n\n## Acceptance\n\n- Core has migrated tables and model/service tests proving pages, sections, components, mappings, incidents, and updates can be created without changing Agent reporting behavior\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111749-59d7.md",
+      "title": "Ticket: Add Core monitor create/edit/test API",
+      "content": "# Ticket: Add Core monitor create/edit/test API\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111749-59d7 |\n| Project | orion |\n| Goal | G-20260527-111543-5f4e |\n| Status | active |\n| Created | 2026-05-27T11:17:49+02:00 |\n\n## Description\n\nAdd admin API routes for creating, editing, pausing, resuming, deleting, testing, and retrieving redacted configs for Core-managed monitors.\n\n## Acceptance\n\n- Routes validate monitor config, return redacted data, support test-now behavior, regenerate OpenAPI and SDK when needed, and include API tests for validation and lifecycle actions.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111756-99a1.md",
+      "title": "Ticket: Build status page admin API",
+      "content": "# Ticket: Build status page admin API\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111756-99a1 |\n| Project | orion |\n| Goal | G-20260527-111722-d43b |\n| Status | active |\n| Created | 2026-05-27T11:17:56+02:00 |\n\n## Description\n\nAdd JWT-protected Core routes for listing, creating, editing, previewing, publishing, and unpublishing status pages, sections, components, mappings, and manual public incidents\n\n## Acceptance\n\n- Admin routes are documented in OpenAPI, covered by Core tests, and regenerate the Console SDK without hand-editing generated files\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111759-a920.md",
+      "title": "Ticket: Build Console Core monitor create workflow",
+      "content": "# Ticket: Build Console Core monitor create workflow\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111759-a920 |\n| Project | orion |\n| Goal | G-20260527-111543-5f4e |\n| Status | active |\n| Created | 2026-05-27T11:17:59+02:00 |\n\n## Description\n\nBuild the Console workflow for choosing a Core monitor type, entering target settings, configuring success criteria, testing the monitor, and saving it.\n\n## Acceptance\n\n- A user can create a Core monitor from Console, test failures show actionable errors, saved monitors appear immediately, and the Console build passes.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111805-ddfe.md",
+      "title": "Ticket: Build Console status page editor",
+      "content": "# Ticket: Build Console status page editor\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111805-ddfe |\n| Project | orion |\n| Goal | G-20260527-111722-d43b |\n| Status | active |\n| Created | 2026-05-27T11:18:05+02:00 |\n\n## Description\n\nAdd Console screens for status page list, draft editor, sections, public components, internal resource mapping, preview, and publish controls\n\n## Acceptance\n\n- An admin can create a draft page, configure sections and components, map monitors or agents, preview the public DTO, and publish from the Console with URL-backed state where appropriate\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111815-c7af.md",
+      "title": "Ticket: Serve public status page payloads",
+      "content": "# Ticket: Serve public status page payloads\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111815-c7af |\n| Project | orion |\n| Goal | G-20260527-111722-d43b |\n| Status | active |\n| Created | 2026-05-27T11:18:15+02:00 |\n\n## Description\n\nAdd unauthenticated public read routes for published status pages that return a dedicated sanitized public DTO instead of internal Console API structs\n\n## Acceptance\n\n- GET /status/:slug returns only published page, component, public incident, and maintenance fields with no internal ids, raw payloads, secrets, or private incident notes\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111824-5de4.md",
+      "title": "Ticket: Add status page publish validation",
+      "content": "# Ticket: Add status page publish validation\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111824-5de4 |\n| Project | orion |\n| Goal | G-20260527-111722-d43b |\n| Status | active |\n| Created | 2026-05-27T11:18:24+02:00 |\n\n## Description\n\nBlock or warn before publishing unsafe or incomplete status pages, including empty pages, unmapped components without manual status, conflicting slugs, and private-looking labels\n\n## Acceptance\n\n- Publish attempts return actionable validation results and tests cover missing mappings, duplicate slugs, no visible components, and labels that look like internal hosts or IPs\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111824-6353.md",
+      "title": "Ticket: Add Console owner and monitor type filters",
+      "content": "# Ticket: Add Console owner and monitor type filters\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111824-6353 |\n| Project | orion |\n| Goal | G-20260527-111543-5f4e |\n| Status | active |\n| Created | 2026-05-27T11:18:24+02:00 |\n\n## Description\n\nUpdate Console monitor list filtering so users can filter by owner kind, owner name, monitor type, and Core versus Agent monitor source.\n\n## Acceptance\n\n- Monitor lists expose stable owner/type filters, URL state stays consistent with existing table patterns, and Core/Agent ownership is visually clear in rows.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111835-b813.md",
+      "title": "Ticket: Add Core monitor detail config summary",
+      "content": "# Ticket: Add Core monitor detail config summary\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111835-b813 |\n| Project | orion |\n| Goal | G-20260527-111543-5f4e |\n| Status | active |\n| Created | 2026-05-27T11:18:35+02:00 |\n\n## Description\n\nUpdate monitor detail views to show Core monitor ownership, schedule, next run, last run, target summary, redacted config, latest report, and worker execution context.\n\n## Acceptance\n\n- Core monitor detail pages explain what is checked, who checks it, when it runs next, what the latest result was, and never expose secret values.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111841-7b56.md",
+      "title": "Ticket: Link internal incidents to public incidents",
+      "content": "# Ticket: Link internal incidents to public incidents\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111841-7b56 |\n| Project | orion |\n| Goal | G-20260527-111831-92fb |\n| Status | active |\n| Created | 2026-05-27T11:18:41+02:00 |\n\n## Description\n\nAllow an admin to create a draft public status page incident linked to an existing internal Orion incident while keeping public title, status, severity, impact, and updates separate from internal incident events\n\n## Acceptance\n\n- A linked public incident can be drafted, published, and resolved without exposing internal incident notes, ids, alert delivery state, or raw monitor details\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111846-2d78.md",
+      "title": "Ticket: Redact Core monitor secrets in Console and API responses",
+      "content": "# Ticket: Redact Core monitor secrets in Console and API responses\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111846-2d78 |\n| Project | orion |\n| Goal | G-20260527-111543-5f4e |\n| Status | active |\n| Created | 2026-05-27T11:18:46+02:00 |\n\n## Description\n\nEnsure Core monitor secrets such as headers, tokens, credentials, and browser-flow secret values are write-only or redacted in API responses, logs, reports, and Console views.\n\n## Acceptance\n\n- Secret-bearing fields are redacted on read, raw reports and logs do not leak secrets, update flows preserve or replace secrets intentionally, and tests cover redaction.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111850-3136.md",
+      "title": "Ticket: Suggest affected status page components",
+      "content": "# Ticket: Suggest affected status page components\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111850-3136 |\n| Project | orion |\n| Goal | G-20260527-111831-92fb |\n| Status | active |\n| Created | 2026-05-27T11:18:50+02:00 |\n\n## Description\n\nUse status page component mappings to suggest which public components are affected when an internal incident is opened or updated\n\n## Acceptance\n\n- Console can show suggested affected public components for an internal incident, and Core tests cover monitor-to-component and agent-to-component mapping suggestions\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111856-87f6.md",
+      "title": "Ticket: Add heartbeat token and ingest routes",
+      "content": "# Ticket: Add heartbeat token and ingest routes\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111856-87f6 |\n| Project | orion |\n| Goal | G-20260527-111553-dcc5 |\n| Status | active |\n| Created | 2026-05-27T11:18:56+02:00 |\n\n## Description\n\nAdd generated heartbeat monitor tokens and public ingest routes for success and failure signals from cron jobs, backups, scripts, and scheduled tasks.\n\n## Acceptance\n\n- Heartbeat success and failure routes validate tokens, store report payloads with truncation, update last signal timestamps, and reject invalid or deleted monitor tokens.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111858-0c88.md",
+      "title": "Ticket: Implement public incident update workflow",
+      "content": "# Ticket: Implement public incident update workflow\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111858-0c88 |\n| Project | orion |\n| Goal | G-20260527-111831-92fb |\n| Status | active |\n| Created | 2026-05-27T11:18:58+02:00 |\n\n## Description\n\nAdd API and Console flows for drafting, publishing, editing, and resolving public status page incident updates with public statuses investigating, identified, monitoring, resolved, and scheduled\n\n## Acceptance\n\n- Admins can publish public incident timeline updates and resolution messages, while public pages show only published updates in chronological order\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111907-0678.md",
+      "title": "Ticket: Record status page publish audit events",
+      "content": "# Ticket: Record status page publish audit events\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111907-0678 |\n| Project | orion |\n| Goal | G-20260527-111831-92fb |\n| Status | active |\n| Created | 2026-05-27T11:19:07+02:00 |\n\n## Description\n\nRecord auditable events for status page publish, unpublish, public incident publish, public incident update, resolution, and component mapping changes\n\n## Acceptance\n\n- Audit records identify the action, status page, affected object, timestamp, and actor without storing secrets or raw incident payloads\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111907-416e.md",
+      "title": "Ticket: Add heartbeat missed-check reconciliation worker",
+      "content": "# Ticket: Add heartbeat missed-check reconciliation worker\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111907-416e |\n| Project | orion |\n| Goal | G-20260527-111553-dcc5 |\n| Status | active |\n| Created | 2026-05-27T11:19:07+02:00 |\n\n## Description\n\nAdd worker-side reconciliation that marks heartbeat monitors down or stale when expected signals are missed beyond their configured interval and grace period.\n\n## Acceptance\n\n- Missed heartbeat checks open incidents after the grace period, recovery signals resolve incidents through the shared reconciliation path, and tests cover pending, missed, failed, and recovered states.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111918-7ad7.md",
+      "title": "Ticket: Add heartbeat Console copy and setup affordances",
+      "content": "# Ticket: Add heartbeat Console copy and setup affordances\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111918-7ad7 |\n| Project | orion |\n| Goal | G-20260527-111553-dcc5 |\n| Status | active |\n| Created | 2026-05-27T11:19:18+02:00 |\n\n## Description\n\nAdd Console UI for heartbeat setup, including copyable success and failure endpoints, example curl snippets, last signal state, and setup guidance without turning the page into marketing copy.\n\n## Acceptance\n\n- Users can copy heartbeat endpoints, see pending and last-signal state, inspect setup examples, and complete the workflow without editing backend files.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111924-f068.md",
+      "title": "Ticket: Aggregate public component uptime",
+      "content": "# Ticket: Aggregate public component uptime\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111924-f068 |\n| Project | orion |\n| Goal | G-20260527-111916-0d5c |\n| Status | active |\n| Created | 2026-05-27T11:19:24+02:00 |\n\n## Description\n\nCompute public component uptime from mapped monitor uptime rollups and recent raw monitor report data using each component's configured uptime rollup strategy\n\n## Acceptance\n\n- Public component uptime returns daily buckets and overall uptime for mapped monitors, handles multiple mappings deterministically, and hides raw report counts by default\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111931-a4dc.md",
+      "title": "Ticket: Add heartbeat failure payload inspection",
+      "content": "# Ticket: Add heartbeat failure payload inspection\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111931-a4dc |\n| Project | orion |\n| Goal | G-20260527-111553-dcc5 |\n| Status | active |\n| Created | 2026-05-27T11:19:31+02:00 |\n\n## Description\n\nExpose heartbeat failure payloads and recent heartbeat events in monitor detail views and incident timelines while enforcing truncation and redaction limits.\n\n## Acceptance\n\n- Heartbeat details show recent success/failure payload context, incident timelines include heartbeat evidence, payloads are bounded, and secrets remain redacted.\n"
+    },
+    {
+      "type": "ticket",
+      "path": "projects/orion/tickets/T-20260527-111933-f32c.md",
+      "title": "Ticket: Add public status history routes",
+      "content": "# Ticket: Add public status history routes\n\n| Field | Value |\n|---|---|\n| Ticket ID | T-20260527-111933-f32c |\n| Project | orion |\n| Goal | G-20260527-111916-0d5c |\n| Status | active |\n| Created | 2026-05-27T11:19:33+02:00 |\n\n## Description\n\nAdd public read routes for status page history, public incident history, and individual public incident detail using sanitized status page DTOs\n\n## Acceptance\n\n- GET /status/:slug/history, GET /status/:slug/incidents, and GET /status/:slug/incidents/:incident_id return only published public data with bounded date ranges and tests for hidden draft incidents\n"
     }
   ]
 }
