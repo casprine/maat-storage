@@ -17699,6 +17699,40 @@
             "Opened draft PR https://github.com/sunday-studio/orion/pull/1 from codex-status-pages-manual to main after pushing the branch. Narrow incident-only integration was attempted in clean worktrees but worker commits depend on unpublished local alert/status-page base commits, so the PR preserves the composed branch for review."
           ],
           "path": "projects/orion/events/2026/05/E-20260529-142934-casprine-3d39.md"
+        },
+        {
+          "id": "E-20260529-144247-codex-44f0",
+          "time": "2026-05-29T14:42:47+02:00",
+          "actor": "codex",
+          "project_key": "orion",
+          "type": "ticket.claimed",
+          "object_id": "T-20260526-214802-29db",
+          "expires": "2026-05-29T16:42:47+02:00",
+          "summary": "Claimed ticket T-20260526-214802-29db until 2026-05-29T16:42:47+02:00.",
+          "path": "projects/orion/events/2026/05/E-20260529-144247-codex-44f0.md"
+        },
+        {
+          "id": "E-20260529-144253-casprine-dadc",
+          "time": "2026-05-29T14:42:53+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260526-214802-29db",
+          "summary": "Claimed conflict resolution for AGENTS.md on detached HEAD/main rebase state.",
+          "path": "projects/orion/events/2026/05/E-20260529-144253-casprine-dadc.md"
+        },
+        {
+          "id": "E-20260529-144830-casprine-d468",
+          "time": "2026-05-29T14:48:30+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260526-214802-29db",
+          "summary": "Completed ticket T-20260526-214802-29db.",
+          "evidence": [
+            "Resolved main rebase conflicts; amended commit 83a6a58; verified with GOCACHE=/private/tmp/orion-go-cache GOMODCACHE=/private/tmp/orion-go-mod go test ./... in apps/core."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260529-144830-casprine-d468.md"
         }
       ]
     }
@@ -25935,6 +25969,24 @@
       "path": "projects/orion/events/2026/05/E-20260529-142934-casprine-3d39.md",
       "title": "Event: ticket.completed",
       "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-142934-casprine-3d39 |\n| Time | 2026-05-29T14:29:34+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260529-142221-a539 |\n\n## Summary\n\nCompleted ticket T-20260529-142221-a539.\n\n## Evidence\n\n- Opened draft PR https://github.com/sunday-studio/orion/pull/1 from codex-status-pages-manual to main after pushing the branch. Narrow incident-only integration was attempted in clean worktrees but worker commits depend on unpublished local alert/status-page base commits, so the PR preserves the composed branch for review.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-144247-codex-44f0.md",
+      "title": "Event: ticket.claimed",
+      "content": "# Event: ticket.claimed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-144247-codex-44f0 |\n| Time | 2026-05-29T14:42:47+02:00 |\n| Actor | codex |\n| Project | orion |\n| Type | ticket.claimed |\n| Object | T-20260526-214802-29db |\n| Expires | 2026-05-29T16:42:47+02:00 |\n\n## Summary\n\nClaimed ticket T-20260526-214802-29db until 2026-05-29T16:42:47+02:00.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-144253-casprine-dadc.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-144253-casprine-dadc |\n| Time | 2026-05-29T14:42:53+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260526-214802-29db |\n\n## Summary\n\nClaimed conflict resolution for AGENTS.md on detached HEAD/main rebase state.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-144830-casprine-d468.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-144830-casprine-d468 |\n| Time | 2026-05-29T14:48:30+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260526-214802-29db |\n\n## Summary\n\nCompleted ticket T-20260526-214802-29db.\n\n## Evidence\n\n- Resolved main rebase conflicts; amended commit 83a6a58; verified with GOCACHE=/private/tmp/orion-go-cache GOMODCACHE=/private/tmp/orion-go-mod go test ./... in apps/core.\n"
     },
     {
       "type": "goal",
