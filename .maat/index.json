@@ -26461,6 +26461,315 @@
           "object_id": "T-20260529-191541-a7ef",
           "summary": "Incident lifecycle Playwright flow passes after harness generates SDK and starts Core with loopback monitor testing enabled.",
           "path": "projects/orion/events/2026/05/E-20260529-192837-casprine-7761.md"
+        },
+        {
+          "id": "E-20260529-192840-casprine-b095",
+          "time": "2026-05-29T19:28:40+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260529-191142-e0cc",
+          "summary": "Added Settings invalid validation plus manual rollup and archive browser coverage in commit fafba37; pnpm test:e2e passed 7 tests; PR https://github.com/sunday-studio/orion/pull/16.",
+          "path": "projects/orion/events/2026/05/E-20260529-192840-casprine-b095.md"
+        },
+        {
+          "id": "E-20260529-192847-casprine-824e",
+          "time": "2026-05-29T19:28:47+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260529-191142-e0cc",
+          "summary": "Completed ticket T-20260529-191142-e0cc.",
+          "evidence": [
+            "commit fafba37; PR https://github.com/sunday-studio/orion/pull/16; apps/console pnpm test:e2e passed 7 tests"
+          ],
+          "path": "projects/orion/events/2026/05/E-20260529-192847-casprine-824e.md"
+        },
+        {
+          "id": "E-20260529-192856-casprine-12f3",
+          "time": "2026-05-29T19:28:56+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260529-191721-0457",
+          "summary": "Completed ticket T-20260529-191721-0457.",
+          "evidence": [
+            "Commit 7b9c4bb and PR https://github.com/sunday-studio/orion/pull/20 define first-release monitor scope in README and docs/plans/core-managed-monitors.md; stale-copy scan found no first-release Playwright/full-catalog claims."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260529-192856-casprine-12f3.md"
+        },
+        {
+          "id": "E-20260529-192856-casprine-72c2",
+          "time": "2026-05-29T19:28:56+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260529-190327-fd04",
+          "summary": "Removed non-webhook alert destinations; committed bad9ed1 after focused Core tests, SDK generation, and Console build passed.",
+          "path": "projects/orion/events/2026/05/E-20260529-192856-casprine-72c2.md"
+        },
+        {
+          "id": "E-20260529-192904-casprine-7b00",
+          "time": "2026-05-29T19:29:04+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260529-191721-8097",
+          "summary": "Completed ticket T-20260529-191721-8097.",
+          "evidence": [
+            "Commit 7b9c4bb and PR https://github.com/sunday-studio/orion/pull/20 update README, docs/deployment/core-docker.md, docs/milestones/m6-core-monitor-catalog.md, and docs/plans/core-managed-monitors.md to separate backend runner history from product support."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260529-192904-casprine-7b00.md"
+        },
+        {
+          "id": "E-20260529-192906-casprine-796b",
+          "time": "2026-05-29T19:29:06+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260529-190327-fd04",
+          "summary": "Completed ticket T-20260529-190327-fd04.",
+          "evidence": [
+            "commit bad9ed1; commands: make generate-sdk; GOCACHE=/private/tmp/orion-go-cache go test ./internal/db ./internal/service ./internal/api -run 'TestMigrate|AlertService|TestAlert(ReadEndpoints|ChannelWrite|RouteWrite|RuleWrite|Removed)'; GOCACHE=/private/tmp/orion-go-cache go test ./internal/api -run 'TestAlertChannelTestEndpointSendsConfiguredWebhook'; pnpm run build"
+          ],
+          "path": "projects/orion/events/2026/05/E-20260529-192906-casprine-796b.md"
+        },
+        {
+          "id": "E-20260529-192910-casprine-8106",
+          "time": "2026-05-29T19:29:10+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260529-191723-ed33",
+          "summary": "Completed ticket T-20260529-191723-ed33.",
+          "evidence": [
+            "commit dee8b17, PR https://github.com/sunday-studio/orion/pull/21, pnpm run lint, pnpm run build"
+          ],
+          "path": "projects/orion/events/2026/05/E-20260529-192910-casprine-8106.md"
+        },
+        {
+          "id": "E-20260529-192910-casprine-aead",
+          "time": "2026-05-29T19:29:10+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260529-191721-7de6",
+          "summary": "Completed ticket T-20260529-191721-7de6.",
+          "evidence": [
+            "Commit 7b9c4bb and PR https://github.com/sunday-studio/orion/pull/20 update Console monitor create copy and type filters; npm run lint, touched-file oxfmt check, and git diff --check passed."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260529-192910-casprine-aead.md"
+        },
+        {
+          "id": "E-20260529-192911-casprine-e365",
+          "time": "2026-05-29T19:29:11+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260529-191722-5145",
+          "summary": "Completed ticket T-20260529-191722-5145.",
+          "evidence": [
+            "commit dee8b17, PR https://github.com/sunday-studio/orion/pull/21, pnpm run lint, pnpm run build"
+          ],
+          "path": "projects/orion/events/2026/05/E-20260529-192911-casprine-e365.md"
+        },
+        {
+          "id": "E-20260529-192912-casprine-472c",
+          "time": "2026-05-29T19:29:12+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260529-191723-b276",
+          "summary": "Completed ticket T-20260529-191723-b276.",
+          "evidence": [
+            "commit dee8b17, PR https://github.com/sunday-studio/orion/pull/21, pnpm run lint, pnpm run build"
+          ],
+          "path": "projects/orion/events/2026/05/E-20260529-192912-casprine-472c.md"
+        },
+        {
+          "id": "E-20260529-192912-casprine-c1d3",
+          "time": "2026-05-29T19:29:12+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260529-191748-287b",
+          "summary": "PR opened: https://github.com/sunday-studio/orion/pull/22",
+          "path": "projects/orion/events/2026/05/E-20260529-192912-casprine-c1d3.md"
+        },
+        {
+          "id": "E-20260529-192913-casprine-eec5",
+          "time": "2026-05-29T19:29:13+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260529-191723-3166",
+          "summary": "Completed ticket T-20260529-191723-3166.",
+          "evidence": [
+            "PR https://github.com/sunday-studio/orion/pull/21 opened from codex/monitor-detail-usefulness into main; commit dee8b17; pnpm run lint; pnpm run build"
+          ],
+          "path": "projects/orion/events/2026/05/E-20260529-192913-casprine-eec5.md"
+        },
+        {
+          "id": "E-20260529-192916-casprine-5951",
+          "time": "2026-05-29T19:29:16+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260529-191722-8001",
+          "summary": "Completed ticket T-20260529-191722-8001.",
+          "evidence": [
+            "PR https://github.com/sunday-studio/orion/pull/20 is open against main from branch codex/monitor-readiness-scope-honest with commit 7b9c4bb and verification notes."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260529-192916-casprine-5951.md"
+        },
+        {
+          "id": "E-20260529-192921-casprine-62f5",
+          "time": "2026-05-29T19:29:21+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260529-191756-56aa",
+          "summary": "PR opened: https://github.com/sunday-studio/orion/pull/22",
+          "path": "projects/orion/events/2026/05/E-20260529-192921-casprine-62f5.md"
+        },
+        {
+          "id": "E-20260529-192928-casprine-db51",
+          "time": "2026-05-29T19:29:28+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260529-191805-b276",
+          "summary": "PR opened: https://github.com/sunday-studio/orion/pull/22",
+          "path": "projects/orion/events/2026/05/E-20260529-192928-casprine-db51.md"
+        },
+        {
+          "id": "E-20260529-192929-casprine-ba6e",
+          "time": "2026-05-29T19:29:29+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260529-191619-b5bf",
+          "summary": "Started isolated branch codex/status-pages-subscriber-ops from origin/main; implementing admin subscriber routes in separate worktree /private/tmp/orion-status-pages-subscriber-ops.",
+          "path": "projects/orion/events/2026/05/E-20260529-192929-casprine-ba6e.md"
+        },
+        {
+          "id": "E-20260529-192946-casprine-38b5",
+          "time": "2026-05-29T19:29:46+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260529-191533-494e",
+          "summary": "Completed ticket T-20260529-191533-494e.",
+          "evidence": [
+            "Commit 9085c4c updates Console smoke navigation from Agents to Servers and PR https://github.com/sunday-studio/orion/pull/24 includes verification: pnpm exec playwright test, pnpm run build, touched-file oxfmt check."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260529-192946-casprine-38b5.md"
+        },
+        {
+          "id": "E-20260529-192958-casprine-1e09",
+          "time": "2026-05-29T19:29:58+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260529-191541-a7ef",
+          "summary": "Completed ticket T-20260529-191541-a7ef.",
+          "evidence": [
+            "Commit 9085c4c makes the Playwright smoke harness generate the ignored SDK and enables loopback Core monitor targets for local smoke; incident lifecycle flow passed in pnpm exec playwright test; PR https://github.com/sunday-studio/orion/pull/24."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260529-192958-casprine-1e09.md"
+        },
+        {
+          "id": "E-20260529-193008-casprine-6e8b",
+          "time": "2026-05-29T19:30:08+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.completed",
+          "object_id": "T-20260529-191551-43f7",
+          "summary": "Completed ticket T-20260529-191551-43f7.",
+          "evidence": [
+            "Commit 9085c4c adds Console Playwright regression navigating from /incidents?agent=seed-agent-03-down to seed-incident-seed-monitor-seed-agent-03-down-http detail; full pnpm exec playwright test passed; PR https://github.com/sunday-studio/orion/pull/24."
+          ],
+          "path": "projects/orion/events/2026/05/E-20260529-193008-casprine-6e8b.md"
+        },
+        {
+          "id": "E-20260529-193016-casprine-01a0",
+          "time": "2026-05-29T19:30:16+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260529-191258-1a52",
+          "summary": "Implemented settings audit event recording with actor and safe metadata in clean PR worktree",
+          "path": "projects/orion/events/2026/05/E-20260529-193016-casprine-01a0.md"
+        },
+        {
+          "id": "E-20260529-193017-casprine-581f",
+          "time": "2026-05-29T19:30:17+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260529-191306-4465",
+          "summary": "Implemented manual rollup and archive audit events with result status and safe counts",
+          "path": "projects/orion/events/2026/05/E-20260529-193017-casprine-581f.md"
+        },
+        {
+          "id": "E-20260529-193018-casprine-df50",
+          "time": "2026-05-29T19:30:18+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260529-191725-a80c",
+          "summary": "Removed Playwright and playwright_transaction from Core monitor kind normalization/support and added API regression coverage for rejection.",
+          "path": "projects/orion/events/2026/05/E-20260529-193018-casprine-df50.md"
+        },
+        {
+          "id": "E-20260529-193024-casprine-d8ad",
+          "time": "2026-05-29T19:30:24+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260529-191314-46d0",
+          "summary": "Added Logs filters and event projection for data lifecycle audit event types",
+          "path": "projects/orion/events/2026/05/E-20260529-193024-casprine-d8ad.md"
+        },
+        {
+          "id": "E-20260529-193025-casprine-69b0",
+          "time": "2026-05-29T19:30:25+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260529-191725-75cb",
+          "summary": "Removed the Playwright type filter from Console and removed Playwright runner/env guidance from deployment and catalog docs.",
+          "path": "projects/orion/events/2026/05/E-20260529-193025-casprine-69b0.md"
+        },
+        {
+          "id": "E-20260529-193030-casprine-0b8e",
+          "time": "2026-05-29T19:30:30+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260529-191324-730b",
+          "summary": "Corrected PR branch evidence after rebase: release readiness commit is c242e78 on PR https://github.com/sunday-studio/orion/pull/9; branch now contains only the release-readiness commit on origin/main.",
+          "path": "projects/orion/events/2026/05/E-20260529-193030-casprine-0b8e.md"
+        },
+        {
+          "id": "E-20260529-193030-casprine-4f84",
+          "time": "2026-05-29T19:30:30+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260529-191324-4d9c",
+          "summary": "Corrected PR branch evidence after rebase: release readiness commit is c242e78 on PR https://github.com/sunday-studio/orion/pull/9; branch now contains only the release-readiness commit on origin/main.",
+          "path": "projects/orion/events/2026/05/E-20260529-193030-casprine-4f84.md"
+        },
+        {
+          "id": "E-20260529-193030-casprine-e7b3",
+          "time": "2026-05-29T19:30:30+02:00",
+          "actor": "casprine",
+          "project_key": "orion",
+          "type": "ticket.commented",
+          "object_id": "T-20260529-191325-baf7",
+          "summary": "Corrected PR branch evidence after rebase: release readiness commit is c242e78 on PR https://github.com/sunday-studio/orion/pull/9; branch now contains only the release-readiness commit on origin/main.",
+          "path": "projects/orion/events/2026/05/E-20260529-193030-casprine-e7b3.md"
         }
       ]
     }
@@ -38183,6 +38492,168 @@
       "path": "projects/orion/events/2026/05/E-20260529-192837-casprine-7761.md",
       "title": "Event: ticket.commented",
       "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-192837-casprine-7761 |\n| Time | 2026-05-29T19:28:37+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260529-191541-a7ef |\n\n## Summary\n\nIncident lifecycle Playwright flow passes after harness generates SDK and starts Core with loopback monitor testing enabled.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-192840-casprine-b095.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-192840-casprine-b095 |\n| Time | 2026-05-29T19:28:40+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260529-191142-e0cc |\n\n## Summary\n\nAdded Settings invalid validation plus manual rollup and archive browser coverage in commit fafba37; pnpm test:e2e passed 7 tests; PR https://github.com/sunday-studio/orion/pull/16.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-192847-casprine-824e.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-192847-casprine-824e |\n| Time | 2026-05-29T19:28:47+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260529-191142-e0cc |\n\n## Summary\n\nCompleted ticket T-20260529-191142-e0cc.\n\n## Evidence\n\n- commit fafba37; PR https://github.com/sunday-studio/orion/pull/16; apps/console pnpm test:e2e passed 7 tests\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-192856-casprine-12f3.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-192856-casprine-12f3 |\n| Time | 2026-05-29T19:28:56+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260529-191721-0457 |\n\n## Summary\n\nCompleted ticket T-20260529-191721-0457.\n\n## Evidence\n\n- Commit 7b9c4bb and PR https://github.com/sunday-studio/orion/pull/20 define first-release monitor scope in README and docs/plans/core-managed-monitors.md; stale-copy scan found no first-release Playwright/full-catalog claims.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-192856-casprine-72c2.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-192856-casprine-72c2 |\n| Time | 2026-05-29T19:28:56+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260529-190327-fd04 |\n\n## Summary\n\nRemoved non-webhook alert destinations; committed bad9ed1 after focused Core tests, SDK generation, and Console build passed.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-192904-casprine-7b00.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-192904-casprine-7b00 |\n| Time | 2026-05-29T19:29:04+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260529-191721-8097 |\n\n## Summary\n\nCompleted ticket T-20260529-191721-8097.\n\n## Evidence\n\n- Commit 7b9c4bb and PR https://github.com/sunday-studio/orion/pull/20 update README, docs/deployment/core-docker.md, docs/milestones/m6-core-monitor-catalog.md, and docs/plans/core-managed-monitors.md to separate backend runner history from product support.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-192906-casprine-796b.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-192906-casprine-796b |\n| Time | 2026-05-29T19:29:06+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260529-190327-fd04 |\n\n## Summary\n\nCompleted ticket T-20260529-190327-fd04.\n\n## Evidence\n\n- commit bad9ed1; commands: make generate-sdk; GOCACHE=/private/tmp/orion-go-cache go test ./internal/db ./internal/service ./internal/api -run 'TestMigrate|AlertService|TestAlert(ReadEndpoints|ChannelWrite|RouteWrite|RuleWrite|Removed)'; GOCACHE=/private/tmp/orion-go-cache go test ./internal/api -run 'TestAlertChannelTestEndpointSendsConfiguredWebhook'; pnpm run build\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-192910-casprine-8106.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-192910-casprine-8106 |\n| Time | 2026-05-29T19:29:10+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260529-191723-ed33 |\n\n## Summary\n\nCompleted ticket T-20260529-191723-ed33.\n\n## Evidence\n\n- commit dee8b17, PR https://github.com/sunday-studio/orion/pull/21, pnpm run lint, pnpm run build\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-192910-casprine-aead.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-192910-casprine-aead |\n| Time | 2026-05-29T19:29:10+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260529-191721-7de6 |\n\n## Summary\n\nCompleted ticket T-20260529-191721-7de6.\n\n## Evidence\n\n- Commit 7b9c4bb and PR https://github.com/sunday-studio/orion/pull/20 update Console monitor create copy and type filters; npm run lint, touched-file oxfmt check, and git diff --check passed.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-192911-casprine-e365.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-192911-casprine-e365 |\n| Time | 2026-05-29T19:29:11+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260529-191722-5145 |\n\n## Summary\n\nCompleted ticket T-20260529-191722-5145.\n\n## Evidence\n\n- commit dee8b17, PR https://github.com/sunday-studio/orion/pull/21, pnpm run lint, pnpm run build\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-192912-casprine-472c.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-192912-casprine-472c |\n| Time | 2026-05-29T19:29:12+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260529-191723-b276 |\n\n## Summary\n\nCompleted ticket T-20260529-191723-b276.\n\n## Evidence\n\n- commit dee8b17, PR https://github.com/sunday-studio/orion/pull/21, pnpm run lint, pnpm run build\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-192912-casprine-c1d3.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-192912-casprine-c1d3 |\n| Time | 2026-05-29T19:29:12+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260529-191748-287b |\n\n## Summary\n\nPR opened: https://github.com/sunday-studio/orion/pull/22\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-192913-casprine-eec5.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-192913-casprine-eec5 |\n| Time | 2026-05-29T19:29:13+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260529-191723-3166 |\n\n## Summary\n\nCompleted ticket T-20260529-191723-3166.\n\n## Evidence\n\n- PR https://github.com/sunday-studio/orion/pull/21 opened from codex/monitor-detail-usefulness into main; commit dee8b17; pnpm run lint; pnpm run build\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-192916-casprine-5951.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-192916-casprine-5951 |\n| Time | 2026-05-29T19:29:16+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260529-191722-8001 |\n\n## Summary\n\nCompleted ticket T-20260529-191722-8001.\n\n## Evidence\n\n- PR https://github.com/sunday-studio/orion/pull/20 is open against main from branch codex/monitor-readiness-scope-honest with commit 7b9c4bb and verification notes.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-192921-casprine-62f5.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-192921-casprine-62f5 |\n| Time | 2026-05-29T19:29:21+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260529-191756-56aa |\n\n## Summary\n\nPR opened: https://github.com/sunday-studio/orion/pull/22\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-192928-casprine-db51.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-192928-casprine-db51 |\n| Time | 2026-05-29T19:29:28+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260529-191805-b276 |\n\n## Summary\n\nPR opened: https://github.com/sunday-studio/orion/pull/22\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-192929-casprine-ba6e.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-192929-casprine-ba6e |\n| Time | 2026-05-29T19:29:29+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260529-191619-b5bf |\n\n## Summary\n\nStarted isolated branch codex/status-pages-subscriber-ops from origin/main; implementing admin subscriber routes in separate worktree /private/tmp/orion-status-pages-subscriber-ops.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-192946-casprine-38b5.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-192946-casprine-38b5 |\n| Time | 2026-05-29T19:29:46+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260529-191533-494e |\n\n## Summary\n\nCompleted ticket T-20260529-191533-494e.\n\n## Evidence\n\n- Commit 9085c4c updates Console smoke navigation from Agents to Servers and PR https://github.com/sunday-studio/orion/pull/24 includes verification: pnpm exec playwright test, pnpm run build, touched-file oxfmt check.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-192958-casprine-1e09.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-192958-casprine-1e09 |\n| Time | 2026-05-29T19:29:58+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260529-191541-a7ef |\n\n## Summary\n\nCompleted ticket T-20260529-191541-a7ef.\n\n## Evidence\n\n- Commit 9085c4c makes the Playwright smoke harness generate the ignored SDK and enables loopback Core monitor targets for local smoke; incident lifecycle flow passed in pnpm exec playwright test; PR https://github.com/sunday-studio/orion/pull/24.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-193008-casprine-6e8b.md",
+      "title": "Event: ticket.completed",
+      "content": "# Event: ticket.completed\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-193008-casprine-6e8b |\n| Time | 2026-05-29T19:30:08+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.completed |\n| Object | T-20260529-191551-43f7 |\n\n## Summary\n\nCompleted ticket T-20260529-191551-43f7.\n\n## Evidence\n\n- Commit 9085c4c adds Console Playwright regression navigating from /incidents?agent=seed-agent-03-down to seed-incident-seed-monitor-seed-agent-03-down-http detail; full pnpm exec playwright test passed; PR https://github.com/sunday-studio/orion/pull/24.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-193016-casprine-01a0.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-193016-casprine-01a0 |\n| Time | 2026-05-29T19:30:16+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260529-191258-1a52 |\n\n## Summary\n\nImplemented settings audit event recording with actor and safe metadata in clean PR worktree\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-193017-casprine-581f.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-193017-casprine-581f |\n| Time | 2026-05-29T19:30:17+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260529-191306-4465 |\n\n## Summary\n\nImplemented manual rollup and archive audit events with result status and safe counts\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-193018-casprine-df50.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-193018-casprine-df50 |\n| Time | 2026-05-29T19:30:18+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260529-191725-a80c |\n\n## Summary\n\nRemoved Playwright and playwright_transaction from Core monitor kind normalization/support and added API regression coverage for rejection.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-193024-casprine-d8ad.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-193024-casprine-d8ad |\n| Time | 2026-05-29T19:30:24+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260529-191314-46d0 |\n\n## Summary\n\nAdded Logs filters and event projection for data lifecycle audit event types\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-193025-casprine-69b0.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-193025-casprine-69b0 |\n| Time | 2026-05-29T19:30:25+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260529-191725-75cb |\n\n## Summary\n\nRemoved the Playwright type filter from Console and removed Playwright runner/env guidance from deployment and catalog docs.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-193030-casprine-0b8e.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-193030-casprine-0b8e |\n| Time | 2026-05-29T19:30:30+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260529-191324-730b |\n\n## Summary\n\nCorrected PR branch evidence after rebase: release readiness commit is c242e78 on PR https://github.com/sunday-studio/orion/pull/9; branch now contains only the release-readiness commit on origin/main.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-193030-casprine-4f84.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-193030-casprine-4f84 |\n| Time | 2026-05-29T19:30:30+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260529-191324-4d9c |\n\n## Summary\n\nCorrected PR branch evidence after rebase: release readiness commit is c242e78 on PR https://github.com/sunday-studio/orion/pull/9; branch now contains only the release-readiness commit on origin/main.\n"
+    },
+    {
+      "type": "event",
+      "path": "projects/orion/events/2026/05/E-20260529-193030-casprine-e7b3.md",
+      "title": "Event: ticket.commented",
+      "content": "# Event: ticket.commented\n\n| Field | Value |\n|---|---|\n| Event ID | E-20260529-193030-casprine-e7b3 |\n| Time | 2026-05-29T19:30:30+02:00 |\n| Actor | casprine |\n| Project | orion |\n| Type | ticket.commented |\n| Object | T-20260529-191325-baf7 |\n\n## Summary\n\nCorrected PR branch evidence after rebase: release readiness commit is c242e78 on PR https://github.com/sunday-studio/orion/pull/9; branch now contains only the release-readiness commit on origin/main.\n"
     },
     {
       "type": "goal",
