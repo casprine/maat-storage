@@ -1,0 +1,15 @@
+# Event: ticket.claimed
+
+| Field | Value |
+|---|---|
+| Event ID | E-20260530-125524-codex-goal-agent-dc64 |
+| Time | 2026-05-30T12:55:24+02:00 |
+| Actor | codex-goal-agent |
+| Project | driver |
+| Type | ticket.claimed |
+| Object | T-20260530-125311-7538 |
+| Expires | 2026-05-30T20:55:24+02:00 |
+
+## Summary
+
+Claimed ticket T-20260530-125311-7538 until 2026-05-30T20:55:24+02:00.
